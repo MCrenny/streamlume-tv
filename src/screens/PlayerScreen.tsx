@@ -234,6 +234,11 @@ export const PlayerScreen = () => {
       backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
     } else {
       webKeyDownHandler = (e: any) => {
+        // Wake up controls on any key press in fullscreen
+        if (isFullscreen) {
+          resetTimer();
+        }
+
         // 8 = Backspace, 27 = Escape, 461 = LG Back, 10009 = Tizen Return
         if (e.keyCode === 8 || e.keyCode === 27 || e.keyCode === 461 || e.keyCode === 10009) {
           e.preventDefault();
@@ -379,15 +384,20 @@ export const PlayerScreen = () => {
     const streamUrl = currentVariant?.url;
     if (!streamUrl) return;
 
-    try {
-      console.log(`[DEBUG] Launching external player for URL: ${streamUrl}`);
-      await Linking.openURL(streamUrl);
-    } catch (error) {
-      console.error("[DEBUG] Failed to launch external player:", error);
-      Alert.alert(
-        'Ошибка',
-        'Не удалось запустить внешний плеер. Убедитесь, что на устройстве установлен бесплатный плеер VLC или MX Player.'
-      );
+    // Ставим внутреннее видео на паузу перед запуском внешнего плеера
+    if (videoRef.current) {
+      try {
+        await videoRef.current.pauseAsync();
+        setIsPlaying(false);
+      } catch (e) {
+        console.warn("Failed to pause video", e);
+      }
+    }
+
+    if (typeof window !== 'undefined' && window.MSX && window.MSX.video) {
+      window.MSX.video.play(streamUrl);
+    } else {
+      window.open(streamUrl, '_blank');
     }
   };
 
@@ -793,48 +803,8 @@ export const PlayerScreen = () => {
                 </View>
 
                 <View style={styles.topRightControls}>
-                  <Pressable 
-                    style={[
-                      styles.iconBtn, 
-                      {marginRight: 10}, 
-                      isPlayFocused && styles.iconBtnFocused
-                    ]} 
-                    onPress={togglePlayPause}
-                    onFocus={() => {
-                      setIsPlayFocused(true);
-                      resetTimer();
-                    }}
-                    onBlur={() => setIsPlayFocused(false)}
-                    focusable={true}
-                    accessible={true}
-                    // @ts-ignore
-                    hasTVPreferredFocus={isScreenFocused}
-                  >
-                    <Ionicons name={isPlaying ? "pause" : "play"} size={24} color={isPlayFocused ? "#000000" : "#ffffff"} />
-                  </Pressable>
-
-                  <Pressable 
-                    style={[
-                      styles.iconBtn, 
-                      {marginRight: 10}, 
-                      isFavoriteFocused && styles.iconBtnFocused
-                    ]} 
-                    onPress={handleToggleFavorite}
-                    onFocus={() => {
-                      setIsFavoriteFocused(true);
-                      resetTimer();
-                    }}
-                    onBlur={() => setIsFavoriteFocused(false)}
-                    focusable={true}
-                    accessible={true}
-                  >
-                    <Ionicons 
-                      name={isFavorite ? "star" : "star-outline"} 
-                      size={24} 
-                      color={isFavoriteFocused ? "#000000" : (isFavorite ? "#FFD700" : "#ffffff")} 
-                    />
-                  </Pressable>
-
+                  {/* Removed Play and Favorite buttons from Top Bar */}
+                  
                   <Pressable 
                     style={[
                       styles.iconBtn, 
@@ -910,7 +880,104 @@ export const PlayerScreen = () => {
                 style={styles.bottomBar}
               >
                 <View style={styles.epgInfo}>
-                  {/* ... */}
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Pressable 
+                      style={[
+                        styles.iconBtn, 
+                        {marginRight: 15}, 
+                        isPlayFocused && styles.iconBtnFocused
+                      ]} 
+                      onPress={togglePlayPause}
+                      onFocus={() => {
+                        setIsPlayFocused(true);
+                        resetTimer();
+                      }}
+                      onBlur={() => setIsPlayFocused(false)}
+                      focusable={true}
+                      accessible={true}
+                      // @ts-ignore
+                      hasTVPreferredFocus={isScreenFocused}
+                    >
+                      <Ionicons name={isPlaying ? "pause" : "play"} size={28} color={isPlayFocused ? "#000000" : "#ffffff"} />
+                    </Pressable>
+
+                    <Pressable 
+                      style={[
+                        styles.iconBtn, 
+                        {marginRight: 15}, 
+                        isFavoriteFocused && styles.iconBtnFocused
+                      ]} 
+                      onPress={handleToggleFavorite}
+                      onFocus={() => {
+                        setIsFavoriteFocused(true);
+                        resetTimer();
+                      }}
+                      onBlur={() => setIsFavoriteFocused(false)}
+                      focusable={true}
+                      accessible={true}
+                    >
+                      <Ionicons 
+                        name={isFavorite ? "star" : "star-outline"} 
+                        size={28} 
+                        color={isFavoriteFocused ? "#000000" : (isFavorite ? "#FFD700" : "#ffffff")} 
+                      />
+                    </Pressable>
+
+                    <Pressable 
+                      style={[
+                        styles.iconBtn, 
+                        {marginRight: 15}, 
+                        isSortUpFocused && styles.iconBtnFocused
+                      ]} 
+                      onPress={() => {
+                        if (isArchive) {
+                          playNextArchive();
+                        } else {
+                          const currentList = activeTab === 'live' ? livePrograms : archivePrograms;
+                          const currentIndex = currentList.findIndex(p => p.id === currentChannel.id);
+                          if (currentIndex > 0) {
+                            onChannelSelect(currentList[currentIndex - 1]);
+                          }
+                        }
+                      }}
+                      onFocus={() => {
+                        setIsSortUpFocused(true);
+                        resetTimer();
+                      }}
+                      onBlur={() => setIsSortUpFocused(false)}
+                      focusable={true}
+                      accessible={true}
+                    >
+                      <Ionicons name="chevron-up" size={28} color={isSortUpFocused ? "#000000" : "#ffffff"} />
+                    </Pressable>
+
+                    <Pressable 
+                      style={[
+                        styles.iconBtn, 
+                        isSortDownFocused && styles.iconBtnFocused
+                      ]} 
+                      onPress={() => {
+                        if (isArchive) {
+                          playPrevArchive();
+                        } else {
+                          const currentList = activeTab === 'live' ? livePrograms : archivePrograms;
+                          const currentIndex = currentList.findIndex(p => p.id === currentChannel.id);
+                          if (currentIndex < currentList.length - 1) {
+                            onChannelSelect(currentList[currentIndex + 1]);
+                          }
+                        }
+                      }}
+                      onFocus={() => {
+                        setIsSortDownFocused(true);
+                        resetTimer();
+                      }}
+                      onBlur={() => setIsSortDownFocused(false)}
+                      focusable={true}
+                      accessible={true}
+                    >
+                      <Ionicons name="chevron-down" size={28} color={isSortDownFocused ? "#000000" : "#ffffff"} />
+                    </Pressable>
+                  </View>
                 </View>
               </LinearGradient>
             </Animated.View>
