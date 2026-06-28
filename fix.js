@@ -22,10 +22,13 @@ function processDir(dir) {
         fs.writeFileSync(fullPath, content, 'utf8');
       }
       if (content.includes('aspectRatio:')) {
-        console.log(`Patching aspectRatio in ${fullPath}`);
-        content = content.replace(/aspectRatio:1\.35\b/g, "aspectRatio:1.35,height:'8.5vw'");
-        content = content.replace(/aspectRatio:1\.4\b/g, "aspectRatio:1.4,height:'6vw'");
-        content = content.replace(/aspectRatio:1\.3\b/g, "aspectRatio:1.3,height:'16vw'");
+        console.log(`Patching aspectRatio and tile widths in ${fullPath}`);
+        content = content.replace(/width:'13%'/g, "width:'17.5%'");
+        content = content.replace(/width:'9%'/g, "width:'12%'");
+        content = content.replace(/width:'24%'/g, "width:'30%'");
+        content = content.replace(/aspectRatio:1\.35\b/g, "aspectRatio:1.35,height:'11vw'");
+        content = content.replace(/aspectRatio:1\.4\b/g, "aspectRatio:1.4,height:'8vw'");
+        content = content.replace(/aspectRatio:1\.3\b/g, "aspectRatio:1.3,height:'20vw'");
         fs.writeFileSync(fullPath, content, 'utf8');
       }
     } else if (file === 'index.html') {

@@ -54,6 +54,18 @@
       })();
     </script>
     <script>
+      // Smart scale for high-resolution TVs to match Android TV UI scale
+      window.addEventListener('load', function() {
+        var screenWidth = window.innerWidth;
+        if (screenWidth >= 1280) {
+          var scale = screenWidth / 960; // 960px is typical Android TV logical width
+          if (scale > 2) scale = 2;
+          if (scale < 1) scale = 1;
+          document.body.style.zoom = scale;
+        }
+      });
+    </script>
+    <script>
       (function() {
         var currentFocus = null;
         function getFocusableElements() {
