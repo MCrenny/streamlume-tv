@@ -9,7 +9,14 @@ app.use(cors());
 const followRedirectsGet = (urlStr, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   const client = urlStr.startsWith('https') ? require('https') : require('http');
-  client.get(urlStr, (proxyRes) => {
+  
+  const options = {
+    headers: {
+      'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)'
+    }
+  };
+
+  client.get(urlStr, options, (proxyRes) => {
     if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
       let redirectUrl = proxyRes.headers.location;
       if (!redirectUrl.startsWith('http')) {
@@ -23,7 +30,27 @@ const followRedirectsGet = (urlStr, res) => {
       }
     });
     res.status(proxyRes.statusCode);
-    proxyRes.pipe(res);
+    
+    if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].toLowerCase().includes('mpegurl') || urlStr.includes('.m3u')) {
+      let body = '';
+      proxyRes.on('data', chunk => body += chunk);
+      proxyRes.on('end', () => {
+        const lines = body.split('\n').map(line => {
+          const tLine = line.trim();
+          if (tLine.length === 0 || tLine.startsWith('#')) return line;
+          try {
+            return new URL(tLine, urlStr).toString();
+          } catch (e) {
+            return line;
+          }
+        });
+        const newBody = lines.join('\n');
+        res.setHeader('Content-Length', Buffer.byteLength(newBody));
+        res.send(newBody);
+      });
+    } else {
+      proxyRes.pipe(res);
+    }
   }).on('error', (err) => res.status(500).send(err.message));
 };
 
