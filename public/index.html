@@ -118,9 +118,13 @@
             if (hls) { hls.destroy(); }
             
             hls = new Hls({
-              maxBufferLength: 60,
-              maxMaxBufferLength: 120,
-              capLevelToPlayerSize: true,
+              // --- MEMORY OPTIMIZATION FOR SMART TVs ---
+              maxBufferLength: 10,        // Max 10 seconds of future video
+              maxMaxBufferLength: 15,     // Hard limit 15 seconds
+              maxBufferSize: 5 * 1000 * 1000, // Hard limit 5 MB
+              backBufferLength: 0,        // Immediately discard played video from memory
+              liveDurationInfinity: true, // Help optimize memory for live streams
+              capLevelToPlayerSize: true, // Only load quality that fits the screen
               liveSyncDurationCount: 3
             });
             hlsInstances.set(video, hls);
@@ -136,17 +140,27 @@
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
               video.play().catch(function(e){});
             });
+            
+            // --- ERROR RECOVERY ---
             hls.on(Hls.Events.ERROR, function(event, data) {
               if (data.fatal) {
+                console.warn("HLS Error:", data.type, data.details);
                 switch (data.type) {
                   case Hls.ErrorTypes.NETWORK_ERROR:
-                    hls.startLoad();
+                    // Try to reconnect after a short delay
+                    setTimeout(function() {
+                      hls.startLoad();
+                    }, 2000);
                     break;
                   case Hls.ErrorTypes.MEDIA_ERROR:
                     hls.recoverMediaError();
                     break;
                   default:
+                    // Hard Restart: destroy and recreate the whole instance
                     hls.destroy();
+                    setTimeout(function() {
+                      video.setAttribute('src', src); // This triggers handleVideo again via MutationObserver
+                    }, 2000);
                     break;
                 }
               }

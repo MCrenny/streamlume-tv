@@ -90,5 +90,8 @@ app.get('/menu.json', (req, res) => {
     }]
   });
 });
-app.use(express.static(path.join(__dirname, 'dist'), { etag: false, lastModified: false }));
+
+// Serve static files with normal caching (important for fonts and JS bundles with hashes)
+app.use(express.static(path.join(__dirname, 'dist')));
+
 app.listen(PORT, () => console.log('Server running on ' + PORT));
