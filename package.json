@@ -7,7 +7,7 @@
     "start": "node server.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo export -p web"
+    "web": "expo export -p web && node fix_import_meta.js"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
