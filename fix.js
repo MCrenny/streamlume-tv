@@ -15,8 +15,8 @@ function processDir(dir) {
     } else if (fullPath.endsWith('.js')) {
       if (file === 'fix.js' || file === 'server.js') continue;
       let content = fs.readFileSync(fullPath, 'utf8');
-      if (content.includes('({env:{MODE:"production"},url:window.location.href})')) {
-        console.log(`Fixing ({env:{MODE:"production"},url:window.location.href}) in ${fullPath}`);
+      if (content.includes('import.meta')) {
+        console.log(`Fixing import.meta in ${fullPath}`);
         content = content.replace(/import\.meta\.env/g, '({MODE:"production"})');
         content = content.replace(/import\.meta/g, '({env:{MODE:"production"},url:window.location.href})');
         fs.writeFileSync(fullPath, content, 'utf8');
