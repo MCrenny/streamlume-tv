@@ -34,5 +34,6 @@ app.get('/proxy', (req, res) => {
 });
 
 app.get(['/start.json', '/msx/start.json'], (req, res) => res.sendFile(path.join(__dirname, 'start.json')));
+app.get('/menu.json', (req, res) => res.sendFile(path.join(__dirname, 'menu.json')));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.listen(PORT, () => console.log('Server running on ' + PORT));
