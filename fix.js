@@ -9,9 +9,11 @@ function processDir(dir) {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
 
-    if (stat.isDirectory()) {
+    if (fs.statSync(fullPath).isDirectory()) {
+      if (fullPath.includes('node_modules')) return;
       processDir(fullPath);
     } else if (fullPath.endsWith('.js')) {
+      if (file === 'fix.js' || file === 'server.js') return;
       let content = fs.readFileSync(fullPath, 'utf8');
       if (content.includes('({env:{MODE:"production"},url:window.location.href})')) {
         console.log(`Fixing ({env:{MODE:"production"},url:window.location.href}) in ${fullPath}`);
@@ -21,9 +23,9 @@ function processDir(dir) {
       }
       if (content.includes('aspectRatio:')) {
         console.log(`Patching aspectRatio in ${fullPath}`);
-        content = content.replace(/aspectRatio:1\.35/g, "aspectRatio:1.3,height:'16vw'5,height:'8.5vw',height:'8.5vw'");
-        content = content.replace(/aspectRatio:1\.4/g, "aspectRatio:1.4,height:'6vw',height:'6vw'");
-        content = content.replace(/aspectRatio:1\.3/g, "aspectRatio:1.3,height:'16vw',height:'16vw'");
+        content = content.replace(/aspectRatio:1\.35\b/g, "aspectRatio:1.35,height:'8.5vw'");
+        content = content.replace(/aspectRatio:1\.4\b/g, "aspectRatio:1.4,height:'6vw'");
+        content = content.replace(/aspectRatio:1\.3\b/g, "aspectRatio:1.3,height:'16vw'");
         fs.writeFileSync(fullPath, content, 'utf8');
       }
     } else if (file === 'index.html') {
