@@ -25,6 +25,37 @@ function processDir(dir) {
         console.log(`Injecting extra polyfills into ${fullPath}`);
         const polyfills = `
     <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        var errorDiv = document.createElement('div');
+        errorDiv.style.position = 'absolute';
+        errorDiv.style.top = '0';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.background = 'red';
+        errorDiv.style.color = 'white';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.fontSize = '24px';
+        errorDiv.innerHTML = 'Error: ' + message + '<br>Source: ' + source + '<br>Line: ' + lineno + ':' + colno;
+        if(document.body) document.body.appendChild(errorDiv); else window.addEventListener('DOMContentLoaded', function(){document.body.appendChild(errorDiv);});
+        return true;
+      };
+      window.onunhandledrejection = function(event) {
+        var errorDiv = document.createElement('div');
+        errorDiv.style.position = 'absolute';
+        errorDiv.style.top = '50%';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.background = 'orange';
+        errorDiv.style.color = 'white';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.fontSize = '24px';
+        errorDiv.innerHTML = 'Promise Rejection: ' + (event.reason ? event.reason.toString() : 'Unknown');
+        if(document.body) document.body.appendChild(errorDiv); else window.addEventListener('DOMContentLoaded', function(){document.body.appendChild(errorDiv);});
+      };
+    </script>
+    <script>
       if (typeof globalThis === 'undefined') {
         Object.defineProperty(Object.prototype, '__magic__', {
             get: function() { return this; },
