@@ -364,12 +364,12 @@ export const TVHomeScreen = ({ navigation }: any) => {
             <Ionicons
               name="time-outline"
               size={20}
-              color={isClockFocused ? '#000000' : (showClock ? '#0A84FF' : '#8e8e93')}
+              color={isClockFocused ? '#000000' : (showClock ? '#FFD700' : '#8e8e93')}
             />
             {showClock && (
               <Text style={[
                 styles.viewModeText,
-                { color: isClockFocused ? '#000000' : '#0A84FF', fontVariant: ['tabular-nums'], letterSpacing: 1 }
+                { color: isClockFocused ? '#000000' : '#FFD700', fontVariant: ['tabular-nums'], letterSpacing: 1 }
               ]}>
                 {formatClock(currentTime)}
               </Text>
@@ -989,7 +989,7 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#0A84FF',
+    color: '#FFD700',
     marginRight: 16,
   },
   tvBadge: {
