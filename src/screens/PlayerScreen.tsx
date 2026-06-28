@@ -142,6 +142,8 @@ export const PlayerScreen = () => {
   const [isSortDownFocused, setIsSortDownFocused] = useState(false);
   const [isAspectFocused, setIsAspectFocused] = useState(false);
   const [isExpandFocused, setIsExpandFocused] = useState(false);
+  const [isLeftArrowFocused, setIsLeftArrowFocused] = useState(false);
+  const [isRightArrowFocused, setIsRightArrowFocused] = useState(false);
   const [isPlayFocused, setIsPlayFocused] = useState(false);
   
   const isFavorite = favorites.some(f => f.id === currentChannel.id);
@@ -873,6 +875,51 @@ export const PlayerScreen = () => {
                   </Pressable>
                 </View>
               </LinearGradient>
+
+              {/* Center Arrows */}
+              <View style={[StyleSheet.absoluteFill, { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 30 }]} pointerEvents="box-none">
+                <Pressable
+                  style={[
+                    styles.iconBtn,
+                    { backgroundColor: 'rgba(0,0,0,0.5)', width: 60, height: 60, borderRadius: 30, justifyContent: 'center', alignItems: 'center' },
+                    isLeftArrowFocused && styles.iconBtnFocused
+                  ]}
+                  onPress={() => {
+                    handlePrev();
+                    resetTimer();
+                  }}
+                  onFocus={() => {
+                    setIsLeftArrowFocused(true);
+                    resetTimer();
+                  }}
+                  onBlur={() => setIsLeftArrowFocused(false)}
+                  focusable={true}
+                  accessible={true}
+                >
+                  <Ionicons name="chevron-back" size={40} color={isLeftArrowFocused ? "#000000" : "#ffffff"} />
+                </Pressable>
+
+                <Pressable
+                  style={[
+                    styles.iconBtn,
+                    { backgroundColor: 'rgba(0,0,0,0.5)', width: 60, height: 60, borderRadius: 30, justifyContent: 'center', alignItems: 'center' },
+                    isRightArrowFocused && styles.iconBtnFocused
+                  ]}
+                  onPress={() => {
+                    handleNext();
+                    resetTimer();
+                  }}
+                  onFocus={() => {
+                    setIsRightArrowFocused(true);
+                    resetTimer();
+                  }}
+                  onBlur={() => setIsRightArrowFocused(false)}
+                  focusable={true}
+                  accessible={true}
+                >
+                  <Ionicons name="chevron-forward" size={40} color={isRightArrowFocused ? "#000000" : "#ffffff"} />
+                </Pressable>
+              </View>
 
               {/* Bottom Info Bar */}
               <LinearGradient
