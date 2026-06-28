@@ -10,10 +10,10 @@ function processDir(dir) {
     const stat = fs.statSync(fullPath);
 
     if (fs.statSync(fullPath).isDirectory()) {
-      if (fullPath.includes('node_modules')) return;
+      if (fullPath.includes('node_modules')) continue;
       processDir(fullPath);
     } else if (fullPath.endsWith('.js')) {
-      if (file === 'fix.js' || file === 'server.js') return;
+      if (file === 'fix.js' || file === 'server.js') continue;
       let content = fs.readFileSync(fullPath, 'utf8');
       if (content.includes('({env:{MODE:"production"},url:window.location.href})')) {
         console.log(`Fixing ({env:{MODE:"production"},url:window.location.href}) in ${fullPath}`);
