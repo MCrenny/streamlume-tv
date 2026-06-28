@@ -308,7 +308,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
             <Ionicons 
               name={getViewModeIcon(viewMode)} 
               size={20} 
-              color={focusedRegion === 'viewMode' ? "#000000" : "#FFD700"} 
+              color={focusedRegion === 'viewMode' ? "#000000" : "#0A84FF"} 
             />
             <Text style={[
               styles.viewModeText,
@@ -335,7 +335,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
               <Ionicons 
                 name="share-outline" 
                 size={20} 
-                color={focusedRegion === 'exportBtn' ? "#000000" : "#FFD700"} 
+                color={focusedRegion === 'exportBtn' ? "#000000" : "#0A84FF"} 
               />
               <Text style={[
                 styles.viewModeText,
@@ -357,19 +357,19 @@ export const TVHomeScreen = ({ navigation }: any) => {
           style={[
             styles.viewModeBtn,
             isClockFocused && styles.viewModeBtnFocused,
-            showClock && { backgroundColor: 'rgba(255, 215, 0, 0.12)', borderColor: 'rgba(255,215,0,0.3)' }
+            showClock && { backgroundColor: 'rgba(10, 132, 255, 0.12)', borderColor: 'rgba(10, 132, 255,0.3)' }
           ]}
         >
           <View style={styles.viewModeBtnContent}>
             <Ionicons
               name="time-outline"
               size={20}
-              color={isClockFocused ? '#000000' : (showClock ? '#FFD700' : '#8e8e93')}
+              color={isClockFocused ? '#000000' : (showClock ? '#0A84FF' : '#8e8e93')}
             />
             {showClock && (
               <Text style={[
                 styles.viewModeText,
-                { color: isClockFocused ? '#000000' : '#FFD700', fontVariant: ['tabular-nums'], letterSpacing: 1 }
+                { color: isClockFocused ? '#000000' : '#0A84FF', fontVariant: ['tabular-nums'], letterSpacing: 1 }
               ]}>
                 {formatClock(currentTime)}
               </Text>
@@ -487,7 +487,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
         {/* Сетка/Список каналов */}
         <View style={styles.gridContainer}>
           {loading ? (
-            <ActivityIndicator size="large" color="#FFD700" style={styles.loader} />
+            <ActivityIndicator size="large" color="#0A84FF" style={styles.loader} />
           ) : (
             <FlatList
               key={viewMode} // Re-creates FlatList when viewMode changes to update columns
@@ -920,7 +920,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
                     alignSelf: 'stretch', 
                     marginRight: 0, 
                     marginBottom: 16,
-                    borderColor: 'rgba(255,215,0,0.4)'
+                    borderColor: 'rgba(10, 132, 255,0.4)'
                   },
                   isChannelExportFocused && styles.modalBtnFocused
                 ]} 
@@ -935,7 +935,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
               >
                 <Text style={[
                   styles.modalBtnText,
-                  { color: '#FFD700' },
+                  { color: '#0A84FF' },
                   isChannelExportFocused && styles.modalBtnTextFocused
                 ]}>
                   📤 Экспорт Избранного (m3u)
@@ -989,13 +989,13 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#FFD700',
+    color: '#0A84FF',
     marginRight: 16,
   },
   tvBadge: {
     fontSize: 10,
-    color: '#FFD700',
-    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+    color: '#0A84FF',
+    backgroundColor: 'rgba(10, 132, 255, 0.1)',
     paddingHorizontal: 4,
     paddingVertical: 2,
     borderRadius: 4,
@@ -1004,7 +1004,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 8,
-    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+    backgroundColor: 'rgba(10, 132, 255, 0.1)',
     marginRight: 12,
     borderWidth: 1,
     borderColor: 'transparent',
@@ -1017,7 +1017,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,
-    backgroundColor: 'rgba(255, 215, 0, 0.15)',
+    backgroundColor: 'rgba(10, 132, 255, 0.15)',
     marginRight: 20,
     borderWidth: 1,
     borderColor: 'transparent',
@@ -1030,7 +1030,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,
-    backgroundColor: 'rgba(255, 215, 0, 0.15)',
+    backgroundColor: 'rgba(10, 132, 255, 0.15)',
     marginRight: 20,
     borderWidth: 1,
     borderColor: 'transparent',
@@ -1048,7 +1048,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewModeText: {
-    color: '#FFD700',
+    color: '#0A84FF',
     fontSize: 13,
     fontWeight: 'bold',
     marginLeft: 6,
@@ -1073,8 +1073,8 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
   },
   playlistChipActive: {
-    backgroundColor: 'rgba(255, 215, 0, 0.2)',
-    borderColor: '#FFD700',
+    backgroundColor: 'rgba(10, 132, 255, 0.2)',
+    borderColor: '#0A84FF',
   },
   playlistChipFocused: {
     backgroundColor: '#ffffff',
@@ -1086,7 +1086,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   playlistTextActive: {
-    color: '#FFD700',
+    color: '#0A84FF',
   },
   playlistTextFocused: {
     color: '#000000',
@@ -1252,13 +1252,13 @@ const styles = StyleSheet.create({
   
   // === СТИЛИ ДОБАВЛЕНИЯ ПЛЕЙЛИСТА И МОДАЛЬНОГО ОКНА ===
   addPlaylistChip: {
-    backgroundColor: 'rgba(255, 215, 0, 0.1)',
-    borderColor: 'rgba(255, 215, 0, 0.3)',
+    backgroundColor: 'rgba(10, 132, 255, 0.1)',
+    borderColor: 'rgba(10, 132, 255, 0.3)',
     borderStyle: 'dashed',
     borderWidth: 1.5,
   },
   addPlaylistText: {
-    color: '#FFD700',
+    color: '#0A84FF',
   },
   modalOverlay: {
     position: 'absolute',
@@ -1310,7 +1310,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255,255,255,0.1)',
   },
   modalInputFocused: {
-    borderColor: '#FFD700',
+    borderColor: '#0A84FF',
     backgroundColor: 'rgba(255,255,255,0.08)',
   },
   modalButtons: {
@@ -1331,7 +1331,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingVertical: 14,
     borderRadius: 8,
-    backgroundColor: '#FFD700',
+    backgroundColor: '#0A84FF',
     borderWidth: 1.5,
     borderColor: 'transparent',
   },
