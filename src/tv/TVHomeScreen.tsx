@@ -201,7 +201,11 @@ export const TVHomeScreen = ({ navigation }: any) => {
   };
 
   // Ротация режимов отображения
+  const lastToggleTime = useRef<number>(0);
   const toggleViewMode = () => {
+    const now = Date.now();
+    if (now - lastToggleTime.current < 300) return;
+    lastToggleTime.current = now;
     const modes: ViewMode[] = ['normal', 'small', 'large', 'list'];
     const nextIndex = (modes.indexOf(viewMode) + 1) % modes.length;
     setViewMode(modes[nextIndex]);

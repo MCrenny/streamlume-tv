@@ -147,9 +147,20 @@ export default function App() {
     );
   }
 
+  const linking = {
+    prefixes: ['https://streamlume-tv-svmorozoww.amvera.io', 'http://streamlume-tv-svmorozoww.amvera.io'],
+    config: {
+      screens: {
+        Auth: 'auth',
+        Main: 'main',
+        Player: 'player',
+      },
+    },
+  };
+
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={customDarkTheme}>
+      <NavigationContainer theme={customDarkTheme} linking={linking}>
         <StatusBar style="light" />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           {!canAccess ? (
