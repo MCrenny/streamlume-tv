@@ -31,6 +31,24 @@
         errorDiv.innerHTML = 'Promise Rejection: ' + (event.reason ? event.reason.toString() : 'Unknown');
         if(document.body) document.body.appendChild(errorDiv); else window.addEventListener('DOMContentLoaded', function(){document.body.appendChild(errorDiv);});
       };
+      
+      // Polyfill for TVXPlugin to fix navigate crash
+      window.addEventListener('load', function() {
+        if (typeof tvx !== 'undefined' && tvx.plugin) {
+          try { tvx.plugin.init(); } catch(e) {}
+          window.TVXPlugin = tvx.plugin;
+        } else {
+          window.TVXPlugin = {
+            executeAction: function(action) {
+              console.log('TVXPlugin Mock executeAction:', action);
+              if (action.startsWith('video:')) {
+                // If it's a video action, just redirect as fallback
+                window.location.href = action.replace('video:', '');
+              }
+            }
+          };
+        }
+      });
     </script>
     <script>
       if (typeof globalThis === 'undefined') {

@@ -19,6 +19,13 @@ function processDir(dir) {
         content = content.replace(/import\.meta/g, '({env:{MODE:"production"},url:window.location.href})');
         fs.writeFileSync(fullPath, content, 'utf8');
       }
+      if (content.includes('aspectRatio:')) {
+        console.log(`Patching aspectRatio in ${fullPath}`);
+        content = content.replace(/aspectRatio:1\.35/g, "aspectRatio:1.3,height:'16vw'5,height:'8.5vw',height:'8.5vw'");
+        content = content.replace(/aspectRatio:1\.4/g, "aspectRatio:1.4,height:'6vw',height:'6vw'");
+        content = content.replace(/aspectRatio:1\.3/g, "aspectRatio:1.3,height:'16vw',height:'16vw'");
+        fs.writeFileSync(fullPath, content, 'utf8');
+      }
     } else if (file === 'index.html') {
       let content = fs.readFileSync(fullPath, 'utf8');
       if (!content.includes('globalThis =')) {
@@ -54,6 +61,24 @@ function processDir(dir) {
         errorDiv.innerHTML = 'Promise Rejection: ' + (event.reason ? event.reason.toString() : 'Unknown');
         if(document.body) document.body.appendChild(errorDiv); else window.addEventListener('DOMContentLoaded', function(){document.body.appendChild(errorDiv);});
       };
+      
+      // Polyfill for TVXPlugin to fix navigate crash
+      window.addEventListener('load', function() {
+        if (typeof tvx !== 'undefined' && tvx.plugin) {
+          try { tvx.plugin.init(); } catch(e) {}
+          window.TVXPlugin = tvx.plugin;
+        } else {
+          window.TVXPlugin = {
+            executeAction: function(action) {
+              console.log('TVXPlugin Mock executeAction:', action);
+              if (action.startsWith('video:')) {
+                // If it's a video action, just redirect as fallback
+                window.location.href = action.replace('video:', '');
+              }
+            }
+          };
+        }
+      });
     </script>
     <script>
       if (typeof globalThis === 'undefined') {
