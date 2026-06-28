@@ -1,6 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+const fs = require('fs');
+const path = require('path');
+
+function processDir(dir) {
+  if (!fs.existsSync(dir)) return;
+  const files = fs.readdirSync(dir);
+
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      processDir(fullPath);
+    } else if (fullPath.endsWith('.js')) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      if (content.includes('({env:{MODE:"production"},url:window.location.href})')) {
+        console.log(`Fixing ({env:{MODE:"production"},url:window.location.href}) in ${fullPath}`);
+        content = content.replace(/import\.meta\.env/g, '({MODE:"production"})');
+        content = content.replace(/import\.meta/g, '({env:{MODE:"production"},url:window.location.href})');
+        fs.writeFileSync(fullPath, content, 'utf8');
+      }
+    } else if (file === 'index.html') {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      if (!content.includes('globalThis =')) {
+        console.log(`Injecting extra polyfills into ${fullPath}`);
+        const polyfills = `
     <script>
       if (typeof globalThis === 'undefined') {
         Object.defineProperty(Object.prototype, '__magic__', {
@@ -101,39 +124,14 @@
           }
         }, true);
       })();
-    </script>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>StreamLume</title>
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
+    </script>`;
+        content = content.replace(/<script src="https:\/\/unpkg.com\/resize-observer-polyfill[^>]+><\/script>/g, ''); // Clean up old duplicate if any
+        content = content.replace('<head>', '<head>' + polyfills);
+        fs.writeFileSync(fullPath, content, 'utf8');
       }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
-    <script type="text/javascript" src="https://msx.benzac.de/js/tvx-plugin.min.js"></script>
-  </head>
+    }
+  }
+}
 
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/_expo/static/js/web/index-f3397e2fec17fb5992a120f39737266f.js" defer></script>
-</body>
-</html>
+processDir(path.join(__dirname));
+console.log('Done fixing JS bundles and injecting polyfills.');
