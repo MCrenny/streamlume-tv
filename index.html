@@ -196,8 +196,24 @@
         errDiv.style.zIndex = '999999';
         errDiv.style.fontSize = '24px';
         errDiv.innerHTML = "<h2>Unhandled Promise</h2><p>" + (e.reason ? e.reason.stack || e.reason : 'Unknown') + "</p>";
-        document.body.appendChild(errDiv);
+        if(document.body) document.body.appendChild(errDiv); else window.addEventListener('DOMContentLoaded', function(){document.body.appendChild(errDiv);});
       };
+      
+      // Polyfill KeyboardEvent.key for older TV webviews (React Native Web requires this)
+      if (typeof KeyboardEvent !== 'undefined' && !('key' in KeyboardEvent.prototype)) {
+        Object.defineProperty(KeyboardEvent.prototype, 'key', {
+          get: function() {
+            if (this.keyCode === 13) return 'Enter';
+            if (this.keyCode === 37) return 'ArrowLeft';
+            if (this.keyCode === 38) return 'ArrowUp';
+            if (this.keyCode === 39) return 'ArrowRight';
+            if (this.keyCode === 40) return 'ArrowDown';
+            if (this.keyCode === 27 || this.keyCode === 461 || this.keyCode === 10009) return 'Escape';
+            if (this.keyCode === 32) return ' ';
+            return 'Unidentified';
+          }
+        });
+      }
     </script>
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
