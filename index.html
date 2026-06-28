@@ -113,86 +113,56 @@
           if (keyCode === 8 || keyCode === 27 || keyCode === 461 || keyCode === 10009) {
              return;
           }
-          if ([37, 38, 39, 40, 13].indexOf(keyCode) !== -1) {
-            if (keyCode === 13) {
+            if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
               if (currentFocus) {
                 focusHistoryText = currentFocus.textContent || "";
                 var r = currentFocus.getBoundingClientRect();
                 focusHistoryCx = r.left + r.width/2;
                 focusHistoryCy = r.top + r.height/2;
-
-                if (currentFocus.tagName === 'INPUT' || currentFocus.tagName === 'TEXTAREA') return;
-                e.stopPropagation(); e.preventDefault();
-                
-                // Directly invoke React's internal onClick handler
-                var triggered = false;
-                for (var key in currentFocus) {
-                  if (key.indexOf('__reactProps$') === 0 || key.indexOf('__reactEventHandlers$') === 0) {
-                    if (currentFocus[key] && typeof currentFocus[key].onClick === 'function') {
-                      try {
-                        currentFocus[key].onClick({
-                          stopPropagation: function(){},
-                          preventDefault: function(){},
-                          nativeEvent: {}
-                        });
-                        triggered = true;
-                      } catch (err) {
-                        console.error('React onClick error:', err);
-                      }
-                      break;
-                    }
+              }
+              
+              e.stopPropagation(); e.preventDefault();
+              var els = getFocusableElements();
+              if (els.length === 0) return;
+              
+              if (!currentFocus || !document.body.contains(currentFocus) || els.indexOf(currentFocus) === -1) { 
+                var bestNode = els[0];
+                if (focusHistoryText) {
+                  var matches = els.filter(function(el) { return (el.textContent || "") === focusHistoryText; });
+                  if (matches.length > 0) {
+                    bestNode = matches[0];
+                  } else {
+                    var bestDist = Infinity;
+                    els.forEach(function(el) {
+                      var r2 = el.getBoundingClientRect();
+                      var cx2 = r2.left + r2.width/2;
+                      var cy2 = r2.top + r2.height/2;
+                      var dist = Math.sqrt(Math.pow(cx2 - focusHistoryCx, 2) + Math.pow(cy2 - focusHistoryCy, 2));
+                      if (dist < bestDist) { bestDist = dist; bestNode = el; }
+                    });
                   }
                 }
-                
-                if (!triggered) {
-                  // Fallback to standard DOM click if no React handler found
-                  currentFocus.click();
+                setFocus(bestNode); 
+                return; 
+              }
+  
+              var rect1 = currentFocus.getBoundingClientRect();
+              var cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
+              var bestNode = null, bestDist = Infinity;
+              els.forEach(function(el) {
+                if (el === currentFocus) return;
+                var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
+                var dx = cx2 - cx1, dy = cy2 - cy1;
+                if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
+                    (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
+                    (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
+                    (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
+                  var dist = Math.sqrt(dx*dx + dy*dy);
+                  if (dist < bestDist) { bestDist = dist; bestNode = el; }
                 }
-              }
-              return;
+              });
+              if (bestNode) setFocus(bestNode);
             }
-            e.stopPropagation(); e.preventDefault();
-            var els = getFocusableElements();
-            if (els.length === 0) return;
-            
-            if (!currentFocus || !document.body.contains(currentFocus) || els.indexOf(currentFocus) === -1) { 
-              var bestNode = els[0];
-              if (focusHistoryText) {
-                var matches = els.filter(function(el) { return (el.textContent || "") === focusHistoryText; });
-                if (matches.length > 0) {
-                  bestNode = matches[0];
-                } else {
-                  var bestDist = Infinity;
-                  els.forEach(function(el) {
-                    var r2 = el.getBoundingClientRect();
-                    var cx2 = r2.left + r2.width/2;
-                    var cy2 = r2.top + r2.height/2;
-                    var dist = Math.sqrt(Math.pow(cx2 - focusHistoryCx, 2) + Math.pow(cy2 - focusHistoryCy, 2));
-                    if (dist < bestDist) { bestDist = dist; bestNode = el; }
-                  });
-                }
-              }
-              setFocus(bestNode); 
-              return; 
-            }
-
-            var rect1 = currentFocus.getBoundingClientRect();
-            var cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
-            var bestNode = null, bestDist = Infinity;
-            els.forEach(function(el) {
-              if (el === currentFocus) return;
-              var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
-              var dx = cx2 - cx1, dy = cy2 - cy1;
-              if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
-                  (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
-                  (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
-                  (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
-                var dist = Math.sqrt(dx*dx + dy*dy);
-                if (dist < bestDist) { bestDist = dist; bestNode = el; }
-              }
-            });
-            if (bestNode) setFocus(bestNode);
-          }
         }, true);
       })();
     </script>
