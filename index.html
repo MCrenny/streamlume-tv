@@ -50,6 +50,96 @@
         }
       });
     </script>
+    <style>
+      @font-face {
+        font-family: 'Ionicons';
+        src: url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/fonts/ionicons.ttf') format('truetype');
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <script>
+      window.addEventListener('load', function() {
+        var hlsInstances = new WeakMap();
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+              handleVideo(mutation.target);
+            }
+            if (mutation.addedNodes) {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'VIDEO') {
+                  handleVideo(node);
+                  observeVideo(node);
+                } else if (node.querySelectorAll) {
+                  var videos = node.querySelectorAll('video');
+                  videos.forEach(function(v) {
+                    handleVideo(v);
+                    observeVideo(v);
+                  });
+                }
+              });
+            }
+          });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        function observeVideo(v) {
+          new MutationObserver(function(m) {
+            m.forEach(function(mut) {
+              if (mut.type === 'attributes' && mut.attributeName === 'src') {
+                handleVideo(mut.target);
+              }
+            });
+          }).observe(v, {attributes: true});
+        }
+
+        function handleVideo(video) {
+          var src = video.getAttribute('src') || video.src;
+          if (!src) return;
+          if (src.indexOf('blob:') === 0) return; // already hls.js
+          
+          if (src.indexOf('.m3u8') !== -1 && window.Hls && Hls.isSupported()) {
+            var hls = hlsInstances.get(video);
+            if (hls) { hls.destroy(); }
+            
+            hls = new Hls({
+              maxBufferLength: 60,
+              maxMaxBufferLength: 120,
+              capLevelToPlayerSize: true,
+              liveSyncDurationCount: 3
+            });
+            hlsInstances.set(video, hls);
+            
+            // Remove native src so it doesn't conflict
+            video.removeAttribute('src');
+            if (video.src && video.src.indexOf('blob:') === -1) {
+              video.src = '';
+            }
+            
+            hls.loadSource(src);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+              video.play().catch(function(e){});
+            });
+            hls.on(Hls.Events.ERROR, function(event, data) {
+              if (data.fatal) {
+                switch (data.type) {
+                  case Hls.ErrorTypes.NETWORK_ERROR:
+                    hls.startLoad();
+                    break;
+                  case Hls.ErrorTypes.MEDIA_ERROR:
+                    hls.recoverMediaError();
+                    break;
+                  default:
+                    hls.destroy();
+                    break;
+                }
+              }
+            });
+          }
+        }
+      });
+    </script>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
