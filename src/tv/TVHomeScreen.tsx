@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { View, StyleSheet, Text, ActivityIndicator, Pressable, ScrollView, FlatList, useWindowDimensions, Modal, TextInput, Alert, Platform } from 'react-native';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { useStore } from '../store/useStore';
