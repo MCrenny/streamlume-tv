@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 80;
 app.use(cors());
 
 const followRedirectsGet = (urlStr, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   const client = urlStr.startsWith('https') ? require('https') : require('http');
   client.get(urlStr, (proxyRes) => {
     if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
@@ -16,7 +17,6 @@ const followRedirectsGet = (urlStr, res) => {
       }
       return followRedirectsGet(redirectUrl, res);
     }
-    res.setHeader('Access-Control-Allow-Origin', '*');
     Object.keys(proxyRes.headers).forEach(key => {
       if (key.toLowerCase() !== 'access-control-allow-origin' && key.toLowerCase() !== 'host') {
         try { res.setHeader(key, proxyRes.headers[key]); } catch (e) {}
