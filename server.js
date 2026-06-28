@@ -50,7 +50,18 @@ app.get(['/start.json', '/msx/start.json'], (req, res) => {
 });
 app.get('/menu.json', (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
-  res.sendFile(path.join(__dirname, 'menu.json'));
+  res.json({
+    "type": "pages",
+    "headline": "StreamLume",
+    "pages": [{
+      "items": [{
+        "type": "button",
+        "layout": "0,0,12,2",
+        "title": "Запустить StreamLume",
+        "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=" + Date.now()
+      }]
+    }]
+  });
 });
 app.use(express.static(path.join(__dirname, 'dist'), { etag: false, lastModified: false }));
 app.listen(PORT, () => console.log('Server running on ' + PORT));
