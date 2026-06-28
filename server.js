@@ -33,7 +33,24 @@ app.get('/proxy', (req, res) => {
   followRedirectsGet(targetUrl, res);
 });
 
-app.get(['/start.json', '/msx/start.json'], (req, res) => res.sendFile(path.join(__dirname, 'start.json')));
-app.get('/menu.json', (req, res) => res.sendFile(path.join(__dirname, 'menu.json')));
-app.use(express.static(path.join(__dirname, 'dist')));
+// Disable cache for HTML and JS so TV always gets fresh version
+app.use((req, res, next) => {
+  if (req.path.endsWith('.html') || req.path.endsWith('.js') || req.path === '/') {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    res.setHeader('Surrogate-Control', 'no-store');
+  }
+  next();
+});
+
+app.get(['/start.json', '/msx/start.json'], (req, res) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.sendFile(path.join(__dirname, 'start.json'));
+});
+app.get('/menu.json', (req, res) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.sendFile(path.join(__dirname, 'menu.json'));
+});
+app.use(express.static(path.join(__dirname, 'dist'), { etag: false, lastModified: false }));
 app.listen(PORT, () => console.log('Server running on ' + PORT));
