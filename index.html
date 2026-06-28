@@ -123,9 +123,31 @@
 
                 if (currentFocus.tagName === 'INPUT' || currentFocus.tagName === 'TEXTAREA') return;
                 e.stopPropagation(); e.preventDefault();
-                ['pointerdown', 'mousedown', 'touchstart', 'pointerup', 'mouseup', 'touchend', 'click'].forEach(function(type) {
-                  currentFocus.dispatchEvent(new MouseEvent(type, { bubbles: true, cancelable: true, view: window }));
-                });
+                
+                // Directly invoke React's internal onClick handler
+                var triggered = false;
+                for (var key in currentFocus) {
+                  if (key.indexOf('__reactProps$') === 0 || key.indexOf('__reactEventHandlers$') === 0) {
+                    if (currentFocus[key] && typeof currentFocus[key].onClick === 'function') {
+                      try {
+                        currentFocus[key].onClick({
+                          stopPropagation: function(){},
+                          preventDefault: function(){},
+                          nativeEvent: {}
+                        });
+                        triggered = true;
+                      } catch (err) {
+                        console.error('React onClick error:', err);
+                      }
+                      break;
+                    }
+                  }
+                }
+                
+                if (!triggered) {
+                  // Fallback to standard DOM click if no React handler found
+                  currentFocus.click();
+                }
               }
               return;
             }
