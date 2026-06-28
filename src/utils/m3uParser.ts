@@ -163,11 +163,12 @@ export const parseM3U = (content: string): { channels: Channel[], tvgUrl?: strin
     } else if (line.startsWith('http')) {
       if (currentChannel) {
         currentChannel.url = line;
-        // Генерируем стабильный id на основе URL канала (детерминированный хэш)
-        // Это гарантирует, что избранное сохраняется между перезагрузками плейлиста
+        // Генерируем стабильный id на основе параметров канала, а не URL,
+        // так как провайдеры часто меняют ключи в URL, что сбрасывает Избранное.
+        const stableString = (currentChannel.tvgId || currentChannel.tvgName || currentChannel.name || '') + (currentChannel.group || '');
         let hash = 0;
-        for (let ci = 0; ci < line.length; ci++) {
-          const chr = line.charCodeAt(ci);
+        for (let ci = 0; ci < stableString.length; ci++) {
+          const chr = stableString.charCodeAt(ci);
           hash = ((hash << 5) - hash) + chr;
           hash |= 0;
         }

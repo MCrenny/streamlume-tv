@@ -22,7 +22,7 @@ const PLAYLISTS = [
 type ViewMode = 'normal' | 'small' | 'large' | 'list';
 
 export const TVHomeScreen = ({ navigation }: any) => {
-  const { channels, setChannels, favorites, toggleFavorite, moveFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, activationKey } = useStore();
+  const { channels, setChannels, favorites, toggleFavorite, moveFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, activationKey, viewMode, setViewMode } = useStore();
   const [loading, setLoading] = useState(false);
   // On web (MSX), useIsFocused can misbehave — treat web as always focused
   const isFocusedNative = useIsFocused();
@@ -44,7 +44,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Все каналы');
   
   // Режим отображения: 'normal' (обычные плитки), 'small' (маленькие), 'large' (большие), 'list' (классический список)
-  const [viewMode, setViewMode] = useState<ViewMode>(Platform.OS === 'web' ? 'small' : 'normal');
+  // viewMode is now coming from useStore for persistence
 
   // Отслеживание текущего активного индекса для плавного скролла
   const [focusedPlaylistIdx, setFocusedPlaylistIdx] = useState(0);

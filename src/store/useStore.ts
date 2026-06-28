@@ -25,6 +25,8 @@ interface StoreState {
   removeCustomPlaylist: (id: string) => void;
   tvgUrl: string | null;
   setTvgUrl: (url: string | null) => void;
+  viewMode: 'normal' | 'small' | 'large' | 'list';
+  setViewMode: (mode: 'normal' | 'small' | 'large' | 'list') => void;
   
   // Для воспроизведения и переключения
   activePlaybackList: Channel[];
@@ -81,6 +83,8 @@ export const useStore = create<StoreState>()(
       })),
       tvgUrl: null,
       setTvgUrl: (url) => set({ tvgUrl: url }),
+      viewMode: 'small', // default for TV
+      setViewMode: (mode) => set({ viewMode: mode }),
 
       activePlaybackList: [],
       activePlaybackIndex: 0,
