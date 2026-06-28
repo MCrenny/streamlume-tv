@@ -331,6 +331,16 @@ export const PlayerScreen = () => {
     }
   }, [currentVariant]);
 
+  useEffect(() => {
+    if (!isFullscreen && isScreenFocused) {
+      const timer = setTimeout(() => {
+        const btn = document.getElementById('player-expand-btn');
+        if (btn) btn.focus();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isFullscreen, isScreenFocused]);
+
   const selectQuality = (quality: HLSQuality | null) => {
     setSelectedQuality(quality);
     setPlayerKey(prev => prev + 1);
@@ -532,7 +542,7 @@ export const PlayerScreen = () => {
 
   const getVideoStyle = () => {
     if (!isFullscreen) {
-      return StyleSheet.absoluteFill;
+      return { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%' };
     }
     
     let ratio: number | null = null;
@@ -715,6 +725,7 @@ export const PlayerScreen = () => {
                   focusable={true}
                   // @ts-ignore
                   hasTVPreferredFocus={isScreenFocused}
+                  nativeID="player-expand-btn"
                 >
                   <Ionicons name="expand" size={24} color={isExpandFocused ? "#000" : "#fff"} />
                 </Pressable>
