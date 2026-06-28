@@ -1,1 +1,1 @@
-﻿{"name": "StreamLume", "version": "1.0.9", "description": "Premium IPTV App", "parameter": "https://streamlume-tv-svmorozoww.amvera.io/index.html", "type": "plugin"}
+{"name": "StreamLume TV", "version": "1.1.0", "parameter": "content:https://streamlume-tv-svmorozoww.amvera.io/menu.json"}
