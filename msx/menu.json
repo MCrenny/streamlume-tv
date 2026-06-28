@@ -1,0 +1,25 @@
+{
+  "name": "Главное меню",
+  "version": "1.0",
+  "menu": [
+    {
+      "label": "StreamLume TV",
+      "icon": "tv",
+      "data": {
+        "pages": [
+          {
+            "items": [
+              {
+                "type": "button",
+                "layout": "0,0,12,6",
+                "label": "ЗАПУСТИТЬ STREAMLUME",
+                "icon": "play-circle-outline",
+                "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=dbg1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
