@@ -175,6 +175,38 @@
       })();
     </script>
   </head>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        var errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed';
+        errDiv.style.top = '10%';
+        errDiv.style.left = '10%';
+        errDiv.style.right = '10%';
+        errDiv.style.backgroundColor = 'red';
+        errDiv.style.color = 'white';
+        errDiv.style.padding = '20px';
+        errDiv.style.zIndex = '999999';
+        errDiv.style.fontSize = '24px';
+        errDiv.innerHTML = "<h2>CRASH!</h2><p>" + msg + "</p><p>" + url + ":" + line + ":" + col + "</p><pre>" + (error && error.stack ? error.stack : '') + "</pre>";
+        document.body.appendChild(errDiv);
+        return false;
+      };
+      window.onunhandledrejection = function(e) {
+        if (e.reason && typeof e.reason.message === 'string' && e.reason.message.indexOf('fetch') !== -1) return;
+        var errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed';
+        errDiv.style.bottom = '10%';
+        errDiv.style.left = '10%';
+        errDiv.style.right = '10%';
+        errDiv.style.backgroundColor = 'orange';
+        errDiv.style.color = 'black';
+        errDiv.style.padding = '20px';
+        errDiv.style.zIndex = '999999';
+        errDiv.style.fontSize = '24px';
+        errDiv.innerHTML = "<h2>Unhandled Promise</h2><p>" + (e.reason ? e.reason.stack || e.reason : 'Unknown') + "</p>";
+        document.body.appendChild(errDiv);
+      };
+    </script>
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript>
