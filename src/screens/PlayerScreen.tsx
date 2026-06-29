@@ -594,7 +594,8 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : [styles.playerContainer, { width: playerWidth, height: playerHeight }]
+                : [styles.playerContainer, { height: playerWidth ? playerWidth * (9 / 16) : 250 }], 
+              !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
             
