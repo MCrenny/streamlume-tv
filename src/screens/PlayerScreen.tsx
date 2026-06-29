@@ -594,7 +594,7 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : [styles.playerContainer, { height: Math.max(200, playerWidth ? playerWidth * (9 / 16) : 250) }], 
+                : styles.playerContainer, 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
@@ -1211,6 +1211,7 @@ const styles = StyleSheet.create({
   },
   playerContainer: {
     width: '100%',
+    paddingTop: '56.25%',
     position: 'relative',
     backgroundColor: '#000',
     borderRadius: 12,
