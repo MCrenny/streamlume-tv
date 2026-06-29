@@ -117,6 +117,10 @@ export const PlayerScreen = () => {
   const isScreenFocused = Platform.OS === 'web' ? true : isFocusedNative;
   const { url, title, tvgId, channel, initialFullscreen, isArchive } = route.params || {};
   const [isFullscreen, setIsFullscreen] = useState(initialFullscreen !== false);
+  const isFullscreenRef = useRef(isFullscreen);
+  useEffect(() => {
+    isFullscreenRef.current = isFullscreen;
+  }, [isFullscreen]);
   const { tvgUrl } = useStore();
   const [programs, setPrograms] = useState<EpgProgram[]>([]);
   const [loadingEpg, setLoadingEpg] = useState(true);
@@ -218,7 +222,7 @@ export const PlayerScreen = () => {
 
   useEffect(() => {
     const backAction = () => {
-      if (isFullscreen) {
+      if (isFullscreenRef.current) {
         if (initialFullscreen === false) {
           setIsFullscreen(false);
           return true;
@@ -237,7 +241,7 @@ export const PlayerScreen = () => {
     } else {
       webKeyDownHandler = (e: any) => {
         // Wake up controls on any key press in fullscreen
-        if (isFullscreen) {
+        if (isFullscreenRef.current) {
           resetTimer();
         }
 
