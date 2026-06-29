@@ -609,6 +609,9 @@ export const PlayerScreen = () => {
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
+            {/* Dummy spacer to force 16:9 aspect ratio height on old Tizen WebKit */}
+            {!isFullscreen && <View style={{ width: '100%', paddingTop: '56.25%' }} />}
+            
             <View 
               pointerEvents={isFullscreen ? "auto" : "none"} 
               style={[StyleSheet.absoluteFill, isFullscreen && { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }]}
@@ -1197,7 +1200,6 @@ const styles = StyleSheet.create({
   },
   playerContainer: {
     width: '100%',
-    paddingTop: '56.25%',
     position: 'relative',
     backgroundColor: '#000',
     borderRadius: 12,
