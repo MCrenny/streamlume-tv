@@ -118,13 +118,10 @@
             if (hls) { hls.destroy(); }
             
             hls = new Hls({
-              // --- MEMORY OPTIMIZATION FOR SMART TVs ---
-              maxBufferLength: 10,        // Max 10 seconds of future video
-              maxMaxBufferLength: 15,     // Hard limit 15 seconds
-              maxBufferSize: 5 * 1000 * 1000, // Hard limit 5 MB
-              backBufferLength: 0,        // Immediately discard played video from memory
-              liveDurationInfinity: true, // Help optimize memory for live streams
-              capLevelToPlayerSize: true, // Only load quality that fits the screen
+              maxBufferLength: 30,
+              maxMaxBufferLength: 60,
+              backBufferLength: 30,
+              capLevelToPlayerSize: true,
               liveSyncDurationCount: 3
             });
             hlsInstances.set(video, hls);
@@ -159,7 +156,7 @@
                     // Hard Restart: destroy and recreate the whole instance
                     hls.destroy();
                     setTimeout(function() {
-                      video.setAttribute('src', src); // This triggers handleVideo again via MutationObserver
+                      handleVideo(video, src);
                     }, 2000);
                     break;
                 }
