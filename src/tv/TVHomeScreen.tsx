@@ -172,9 +172,14 @@ export const TVHomeScreen = ({ navigation }: any) => {
       setLoading(true);
       setChannels([]); // Clear the array first to release memory
       try {
-        let targetUrl = activePlaylist.url;
-        if (targetUrl.startsWith('http://') && Platform.OS === 'web') {
-           targetUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+        let targetUrl;
+        if (activePlaylist.id === 'public_amvera') {
+          targetUrl = activePlaylist.url;
+        } else {
+          const encodedUrl = encodeURIComponent(activePlaylist.url);
+          targetUrl = Platform.OS === 'web' 
+            ? `/proxy?url=${encodedUrl}`
+            : `https://streamlume-tv-svmorozoww.amvera.io/proxy?url=${encodedUrl}`;
         }
         const response = await fetch(targetUrl);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
