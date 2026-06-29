@@ -645,43 +645,43 @@ export const PlayerScreen = () => {
             <>
               <View style={[styles.controlsRow, { justifyContent: 'center' }]}>
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 4}, isPrevFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 2}, isPrevFocused && styles.iconBtnFocused]}
                   onPress={handlePrev}
                   onFocus={() => setIsPrevFocused(true)}
                   onBlur={() => setIsPrevFocused(false)}
                   focusable={true}
                 >
-                  <Ionicons name="play-skip-back" size={24} color={isPrevFocused ? "#000" : "#fff"} />
+                  <Ionicons name="play-skip-back" size={20} color={isPrevFocused ? "#000" : "#fff"} />
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 4}, isPlayFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 2}, isPlayFocused && styles.iconBtnFocused]}
                   onPress={togglePlayPause}
                   onFocus={() => setIsPlayFocused(true)}
                   onBlur={() => setIsPlayFocused(false)}
                   focusable={true}
                 >
-                  <Ionicons name={isPlaying ? "pause" : "play"} size={24} color={isPlayFocused ? "#000" : "#fff"} />
+                  <Ionicons name={isPlaying ? "pause" : "play"} size={20} color={isPlayFocused ? "#000" : "#fff"} />
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 4}, isNextFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 2}, isNextFocused && styles.iconBtnFocused]}
                   onPress={handleNext}
                   onFocus={() => setIsNextFocused(true)}
                   onBlur={() => setIsNextFocused(false)}
                   focusable={true}
                 >
-                  <Ionicons name="play-skip-forward" size={24} color={isNextFocused ? "#000" : "#fff"} />
+                  <Ionicons name="play-skip-forward" size={20} color={isNextFocused ? "#000" : "#fff"} />
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 4}, isFavoriteFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 2}, isFavoriteFocused && styles.iconBtnFocused]}
                   onPress={handleToggleFavorite}
                   onFocus={() => setIsFavoriteFocused(true)}
                   onBlur={() => setIsFavoriteFocused(false)}
                   focusable={true}
                 >
-                  <Ionicons name={isFavorite ? "star" : "star-outline"} size={24} color={isFavoriteFocused ? "#000" : (isFavorite ? "#FFD700" : "#fff")} />
+                  <Ionicons name={isFavorite ? "star" : "star-outline"} size={20} color={isFavoriteFocused ? "#000" : (isFavorite ? "#FFD700" : "#fff")} />
                 </Pressable>
 
                 {/* Кнопки сортировки в Избранном — видны только когда канал в Избранном */}
@@ -690,7 +690,7 @@ export const PlayerScreen = () => {
                     <Pressable
                       style={[
                         styles.iconBtn,
-                        {marginHorizontal: 4},
+                        {marginHorizontal: 2},
                         isSortUpFocused && styles.iconBtnFocused,
                         favIdx <= 0 && { opacity: 0.35 }
                       ]}
@@ -703,13 +703,13 @@ export const PlayerScreen = () => {
                       onBlur={() => setIsSortUpFocused(false)}
                       focusable={true}
                     >
-                      <Ionicons name="chevron-up" size={24} color={isSortUpFocused ? "#000" : "#FFD700"} />
+                      <Ionicons name="chevron-up" size={20} color={isSortUpFocused ? "#000" : "#FFD700"} />
                     </Pressable>
 
                     <Pressable
                       style={[
                         styles.iconBtn,
-                        {marginHorizontal: 4},
+                        {marginHorizontal: 2},
                         isSortDownFocused && styles.iconBtnFocused,
                         favIdx >= cleanFavorites.length - 1 && { opacity: 0.35 }
                       ]}
@@ -722,13 +722,13 @@ export const PlayerScreen = () => {
                       onBlur={() => setIsSortDownFocused(false)}
                       focusable={true}
                     >
-                      <Ionicons name="chevron-down" size={24} color={isSortDownFocused ? "#000" : "#FFD700"} />
+                      <Ionicons name="chevron-down" size={20} color={isSortDownFocused ? "#000" : "#FFD700"} />
                     </Pressable>
                   </>
                 )}
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 4}, isExpandFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 2}, isExpandFocused && styles.iconBtnFocused]}
                   onPress={() => setIsFullscreen(true)}
                   onFocus={() => setIsExpandFocused(true)}
                   onBlur={() => setIsExpandFocused(false)}
@@ -737,7 +737,7 @@ export const PlayerScreen = () => {
                   hasTVPreferredFocus={isScreenFocused}
                   nativeID="player-expand-btn"
                 >
-                  <Ionicons name="expand" size={24} color={isExpandFocused ? "#000" : "#fff"} />
+                  <Ionicons name="expand" size={20} color={isExpandFocused ? "#000" : "#fff"} />
                 </Pressable>
               </View>
               
