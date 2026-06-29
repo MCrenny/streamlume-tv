@@ -156,6 +156,7 @@ export const PlayerScreen = () => {
   const favIdx = cleanFavorites.findIndex(f => f.id === currentChannel.id);
   
   const [showControls, setShowControls] = useState(true);
+  const [playerWidth, setPlayerWidth] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isBuffering, setIsBuffering] = useState(true);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
@@ -426,9 +427,18 @@ export const PlayerScreen = () => {
     setIsInitialLoading(true);
   }, [currentChannel, variantIndex]);
 
-
-
   useEffect(() => {
+    let bufferingTimer: NodeJS.Timeout;
+    if (isBuffering && isPlaying) {
+      bufferingTimer = setTimeout(() => {
+        console.log("[Player] Buffering timeout! Forcing reconnect...");
+        handleVideoError(new Error("Buffering timeout"));
+      }, 10000); // 10 seconds of buffering -> reconnect
+    }
+    return () => {
+      if (bufferingTimer) clearTimeout(bufferingTimer);
+    };
+  }, [isBuffering, isPlaying]);  useEffect(() => {
     const loadEpg = async () => {
       if (!tvgUrl || (!tvgId && !currentChannel?.tvgName && !currentChannel?.name)) {
         setLoadingEpg(false);
@@ -617,7 +627,14 @@ export const PlayerScreen = () => {
     <View style={[styles.container, !isFullscreen && { flexDirection: 'row' }]} onTouchStart={isFullscreen ? onTouchStart : undefined} onTouchEnd={isFullscreen ? onTouchEnd : undefined}>
         <StatusBar hidden={true} />
         
-        <View style={isFullscreen ? StyleSheet.absoluteFill : styles.leftPanel}>
+        <View 
+          style={isFullscreen ? StyleSheet.absoluteFill : styles.leftPanel}
+          onLayout={(e) => {
+            if (!isFullscreen) {
+              setPlayerWidth(e.nativeEvent.layout.width - 40); // 40 is horizontal padding
+            }
+          }}
+        >
           <Pressable 
             disabled={isFullscreen}
             onPress={() => setIsFullscreen(true)}
@@ -628,7 +645,7 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : [styles.playerContainer, { paddingTop: '56.25%' }], 
+                : [styles.playerContainer, { height: playerWidth ? playerWidth * (9 / 16) : 250 }], 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
