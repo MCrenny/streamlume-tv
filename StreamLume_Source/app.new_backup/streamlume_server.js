@@ -120,7 +120,7 @@ const FK_SECRET_1 = process.env.FK_SECRET_1;
 const FK_SECRET_2 = process.env.FK_SECRET_2;
 
 const ADMIN_ID = 329742659; // Твой ID
-const SERVER_URL = `https://iptvpay-svmorozoww.amvera.io`; // Твой адрес Amvera
+const SERVER_URL = `https://streamlume-tv-svmorozoww.amvera.io`; // Твой адрес Amvera
 const DOWNLOAD_URL = 'https://t.me/StreamLumeApp/1';
 
 // Инициализируем CryptoPay только если токен задан — иначе сервер крашится при старте
@@ -190,19 +190,19 @@ app.post('/api/verify', async (req, res) => {
 app.get('/api/playlist', async (req, res) => {
   const { key } = req.query;
   if (!key) {
-    return res.status(401).send('#EXTM3U\n#EXTINF:-1, Пожалуйста введите VIP-ключ в StreamLume!\nhttp://iptvpay-svmorozoww.amvera.io/auth_needed');
+    return res.status(401).send('#EXTM3U\n#EXTINF:-1, Пожалуйста введите VIP-ключ в StreamLume!\nhttp://streamlume-tv-svmorozoww.amvera.io/auth_needed');
   }
 
   const cleanKey = key.trim().toUpperCase();
   // Block legacy free-access token — must buy a real key
   if (cleanKey === 'VIP-TEST' || cleanKey.startsWith('VIP-TEST-')) {
-    return res.status(401).send('#EXTM3U\n#EXTINF:-1, Взломанный ключ. Пожалуйста купите @StreameLumeBot\nhttp://iptvpay-svmorozoww.amvera.io/auth_needed');
+    return res.status(401).send('#EXTM3U\n#EXTINF:-1, Взломанный ключ. Пожалуйста купите @StreameLumeBot\nhttp://streamlume-tv-svmorozoww.amvera.io/auth_needed');
   }
 
   try {
     const isValid = await verifyKey(key);
     if (!isValid) {
-      return res.status(401).send('#EXTM3U\n#EXTINF:-1, Неверный или истекший VIP-ключ!\nhttp://iptvpay-svmorozoww.amvera.io/auth_invalid');
+      return res.status(401).send('#EXTM3U\n#EXTINF:-1, Неверный или истекший VIP-ключ!\nhttp://streamlume-tv-svmorozoww.amvera.io/auth_invalid');
     }
 
     const fs = require('fs');
@@ -222,7 +222,7 @@ app.get('/api/playlist', async (req, res) => {
       if (fs.existsSync(PLAYLIST_CACHE_FILE)) {
         return servePlaylistWithKey(PLAYLIST_CACHE_FILE, res);
       }
-      return res.status(500).send('#EXTM3U\n#EXTINF:-1, Ошибка генерации плейлиста на сервере\nhttp://iptvpay-svmorozoww.amvera.io/error');
+      return res.status(500).send('#EXTM3U\n#EXTINF:-1, Ошибка генерации плейлиста на сервере\nhttp://streamlume-tv-svmorozoww.amvera.io/error');
     }
   } catch (e) {
     console.error('Playlist API error:', e);
@@ -676,7 +676,7 @@ bot.hears('📖 Инструкция', async (ctx) => {
     '1. Установите приложение с сайта или из официальных магазинов, либо скачайте APK-файл ниже.\n' +
     '2. Запустите приложение и введите свой Premium-ключ.\n\n' +
     '📺 *Где скачать:*\n' +
-    '• 🌐 [Официальный сайт](https://iptvpay-svmorozoww.amvera.io)\n' +
+    '• 🌐 [Официальный сайт](https://streamlume-tv-svmorozoww.amvera.io)\n' +
     '• [Google Play](https://play.google.com/store/apps/details?id=com.sergey.streamlume)\n' +
     '• [RuStore](https://apps.rustore.ru/app/com.sergey.streamlume)\n\n' +
     '📺 Приятного просмотра!', { parse_mode: 'Markdown', disable_web_page_preview: true });
@@ -686,11 +686,11 @@ bot.hears('📖 Инструкция', async (ctx) => {
       await ctx.replyWithDocument({ source: apkPath, filename: 'StreamLume.apk' });
     } catch (e) {
       console.error('Failed to send APK:', e);
-      ctx.reply(`🚀 Скачайте приложение по ссылкам:\n\n• 🌐 [Официальный сайт](https://iptvpay-svmorozoww.amvera.io)\n• [Google Play](https://play.google.com/store/apps/details?id=com.sergey.streamlume)\n• [RuStore](https://apps.rustore.ru/app/com.sergey.streamlume)`, { parse_mode: 'Markdown', disable_web_page_preview: true });
+      ctx.reply(`🚀 Скачайте приложение по ссылкам:\n\n• 🌐 [Официальный сайт](https://streamlume-tv-svmorozoww.amvera.io)\n• [Google Play](https://play.google.com/store/apps/details?id=com.sergey.streamlume)\n• [RuStore](https://apps.rustore.ru/app/com.sergey.streamlume)`, { parse_mode: 'Markdown', disable_web_page_preview: true });
     }
   } else {
     try {
-      await ctx.reply(`🚀 Скачайте приложение по ссылкам:\n\n• 🌐 [Официальный сайт](https://iptvpay-svmorozoww.amvera.io)\n• [Google Play](https://play.google.com/store/apps/details?id=com.sergey.streamlume)\n• [RuStore](https://apps.rustore.ru/app/com.sergey.streamlume)`, { parse_mode: 'Markdown', disable_web_page_preview: true });
+      await ctx.reply(`🚀 Скачайте приложение по ссылкам:\n\n• 🌐 [Официальный сайт](https://streamlume-tv-svmorozoww.amvera.io)\n• [Google Play](https://play.google.com/store/apps/details?id=com.sergey.streamlume)\n• [RuStore](https://apps.rustore.ru/app/com.sergey.streamlume)`, { parse_mode: 'Markdown', disable_web_page_preview: true });
       
       // Отправка APK файла напрямую через Telegram
       await ctx.replyWithDocument('BQACAgIAAxkBAA07agijg_t85kEjqw6OYQER0BJlnhcAAi6bAAK0-khIfr9HSAFiTAo7BA', {
@@ -713,7 +713,7 @@ bot.hears('📺 Для Smart TV (Samsung/LG)', (ctx) => {
     '2. Найдите и установите бесплатное приложение *Media Station X*.\n' +
     '3. Запустите его, зайдите в *Settings* (Настройки) ➡️ *Start Parameter* (Стартовый параметр) ➡️ *Setup*.\n' +
     '4. Включите *Security Lock* (замочек должен быть закрыт) для работы по защищенному протоколу HTTPS.\n' +
-    '5. Введите адрес нашего сервера: `iptvpay-svmorozoww.amvera.io` и сохраните.\n' +
+    '5. Введите адрес нашего сервера: `streamlume-tv-svmorozoww.amvera.io` и сохраните.\n' +
     '6. Нажмите "Yes" (Да) для подтверждения перезапуска.\n\n' +
     '✅ *Готово!* StreamLume TV запустится автоматически. Теперь интерфейс полностью поддерживает управление вашим пультом!', { parse_mode: 'Markdown' });
 });
