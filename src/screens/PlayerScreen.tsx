@@ -149,6 +149,8 @@ export const PlayerScreen = () => {
   const [isLeftArrowFocused, setIsLeftArrowFocused] = useState(false);
   const [isRightArrowFocused, setIsRightArrowFocused] = useState(false);
   const [isPlayFocused, setIsPlayFocused] = useState(false);
+  const [isPrevFocused, setIsPrevFocused] = useState(false);
+  const [isNextFocused, setIsNextFocused] = useState(false);
   
   const isFavorite = favorites.some(f => f.id === currentChannel.id);
   // Позиция текущего канала в списке Избранного (без 18+ контента)
@@ -640,6 +642,16 @@ export const PlayerScreen = () => {
             <>
               <View style={[styles.controlsRow, { justifyContent: 'center' }]}>
                 <Pressable 
+                  style={[styles.iconBtn, {marginHorizontal: 8}, isPrevFocused && styles.iconBtnFocused]}
+                  onPress={handlePrev}
+                  onFocus={() => setIsPrevFocused(true)}
+                  onBlur={() => setIsPrevFocused(false)}
+                  focusable={true}
+                >
+                  <Ionicons name="play-skip-back" size={24} color={isPrevFocused ? "#000" : "#fff"} />
+                </Pressable>
+
+                <Pressable 
                   style={[styles.iconBtn, {marginHorizontal: 8}, isPlayFocused && styles.iconBtnFocused]}
                   onPress={togglePlayPause}
                   onFocus={() => setIsPlayFocused(true)}
@@ -647,6 +659,16 @@ export const PlayerScreen = () => {
                   focusable={true}
                 >
                   <Ionicons name={isPlaying ? "pause" : "play"} size={24} color={isPlayFocused ? "#000" : "#fff"} />
+                </Pressable>
+
+                <Pressable 
+                  style={[styles.iconBtn, {marginHorizontal: 8}, isNextFocused && styles.iconBtnFocused]}
+                  onPress={handleNext}
+                  onFocus={() => setIsNextFocused(true)}
+                  onBlur={() => setIsNextFocused(false)}
+                  focusable={true}
+                >
+                  <Ionicons name="play-skip-forward" size={24} color={isNextFocused ? "#000" : "#fff"} />
                 </Pressable>
 
                 <Pressable 
