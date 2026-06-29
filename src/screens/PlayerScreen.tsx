@@ -444,19 +444,7 @@ export const PlayerScreen = () => {
     };
   }, [isBuffering, isPlaying]);
 
-  // Watchdog for frozen video (positionMillis stopped updating but not throwing error)
-  useEffect(() => {
-    const watchdog = setInterval(() => {
-      if (isPlaying && !isInitialLoading && !isErrorReconnecting) {
-        const timeSinceLastUpdate = Date.now() - lastPositionTimeRef.current;
-        if (timeSinceLastUpdate > 12000) { // If position hasn't changed for 12 seconds
-          console.warn("[Player] Watchdog detected frozen video (position stalled). Forcing reconnect...");
-          handleVideoError(new Error("Video frozen watchdog"));
-        }
-      }
-    }, 3000);
-    return () => clearInterval(watchdog);
-  }, [isPlaying, isInitialLoading, isErrorReconnecting]);
+  // Watchdog removed because it breaks live IPTV streams (positionMillis stays 0)
 
   useEffect(() => {
     const loadEpg = async () => {
