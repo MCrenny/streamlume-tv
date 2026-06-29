@@ -170,7 +170,12 @@ export const TVHomeScreen = ({ navigation }: any) => {
       setLoading(true);
       setChannels([]); // Clear the array first to release memory
       try {
-        const response = await fetch(activePlaylist.url);
+        let targetUrl = activePlaylist.url;
+        if (targetUrl.startsWith('http://') && Platform.OS === 'web') {
+           targetUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+        }
+        const response = await fetch(targetUrl);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const text = await response.text();
         const parsed = parseM3U(text);
         setChannels(parsed.channels || parsed);

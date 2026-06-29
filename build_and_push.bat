@@ -3,5 +3,5 @@ call npm install --save-dev @babel/plugin-transform-optional-catch-binding@^7 @b
 call npx expo export -p web -c
 node fix_import_meta.js
 git add .
-git commit -m "fix(web): replace unsupported aspectRatio css with paddingBottom hack for small player on Tizen 3"
+git commit -m "fix(web): use allorigins proxy for HTTP playlists to bypass mixed content blocking on web TVs"
 git push
