@@ -72,6 +72,12 @@ app.get('/proxy', (req, res) => {
   const targetUrl = req.query.url;
   if (!targetUrl) return res.status(400).send('Missing url parameter');
   
+  if (targetUrl === '/api/public.m3u') {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Content-Type', 'audio/x-mpegurl');
+    return res.send(publicPlaylistCache);
+  }
+  
   if (proxyCache.has(targetUrl)) {
     const cached = proxyCache.get(targetUrl);
     if (Date.now() - cached.timestamp < CACHE_TTL_MS) {
