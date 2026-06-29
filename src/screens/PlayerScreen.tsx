@@ -1074,6 +1074,10 @@ export const PlayerScreen = () => {
                 keyExtractor={(item: any) => item.id}
                 renderItem={renderProgramItem}
                 contentContainerStyle={styles.listContent}
+                removeClippedSubviews={true}
+                initialNumToRender={10}
+                maxToRenderPerBatch={10}
+                windowSize={5}
                 ListEmptyComponent={
                   <View style={styles.emptyContainer}>
                     <Text style={styles.noDataText}>
