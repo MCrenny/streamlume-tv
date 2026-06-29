@@ -19,48 +19,53 @@ const followRedirectsGet = (urlStr, res, originalUrl = null) => {
     }
   };
 
-  client.get(urlStr, options, (proxyRes) => {
-    if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
-      let redirectUrl = proxyRes.headers.location;
-      if (!redirectUrl.startsWith('http')) {
-        redirectUrl = new URL(redirectUrl, urlStr).toString();
-      }
-      return followRedirectsGet(redirectUrl, res, originalUrl);
-    }
-    Object.keys(proxyRes.headers).forEach(key => {
-      if (key.toLowerCase() !== 'access-control-allow-origin' && key.toLowerCase() !== 'host') {
-        try { res.setHeader(key, proxyRes.headers[key]); } catch (e) {}
-      }
-    });
-    res.status(proxyRes.statusCode);
-    
-    if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].toLowerCase().includes('mpegurl') || urlStr.includes('.m3u')) {
-      let body = '';
-      proxyRes.on('data', chunk => body += chunk);
-      proxyRes.on('end', () => {
-        const lines = body.split('\n').map(line => {
-          const tLine = line.trim();
-          if (tLine.length === 0 || tLine.startsWith('#')) return line;
-          try {
-            return new URL(tLine, urlStr).toString();
-          } catch (e) {
-            return line;
-          }
-        });
-        const newBody = lines.join('\n');
-        if (originalUrl) {
-          proxyCache.set(originalUrl, {
-            data: newBody,
-            timestamp: Date.now()
-          });
+  try {
+    client.get(urlStr, options, (proxyRes) => {
+      if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
+        let redirectUrl = proxyRes.headers.location;
+        if (!redirectUrl.startsWith('http')) {
+          redirectUrl = new URL(redirectUrl, urlStr).toString();
         }
-        res.setHeader('Content-Length', Buffer.byteLength(newBody));
-        res.send(newBody);
+        return followRedirectsGet(redirectUrl, res, originalUrl);
+      }
+      Object.keys(proxyRes.headers).forEach(key => {
+        if (key.toLowerCase() !== 'access-control-allow-origin' && key.toLowerCase() !== 'host') {
+          try { res.setHeader(key, proxyRes.headers[key]); } catch (e) {}
+        }
       });
-    } else {
-      proxyRes.pipe(res);
-    }
-  }).on('error', (err) => res.status(500).send(err.message));
+      res.status(proxyRes.statusCode);
+      
+      if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].toLowerCase().includes('mpegurl') || urlStr.includes('.m3u')) {
+        let body = '';
+        proxyRes.on('data', chunk => body += chunk);
+        proxyRes.on('end', () => {
+          const lines = body.split('\n').map(line => {
+            const tLine = line.trim();
+            if (tLine.length === 0 || tLine.startsWith('#')) return line;
+            try {
+              return new URL(tLine, urlStr).toString();
+            } catch (e) {
+              return line;
+            }
+          });
+          const newBody = lines.join('\n');
+          if (originalUrl) {
+            proxyCache.set(originalUrl, {
+              data: newBody,
+              timestamp: Date.now()
+            });
+          }
+          res.setHeader('Content-Length', Buffer.byteLength(newBody));
+          res.send(newBody);
+        });
+      } else {
+        proxyRes.pipe(res);
+      }
+    }).on('error', (err) => res.status(500).send(err.message));
+  } catch (err) {
+    console.error('Proxy Error: Invalid URL or request failed', err.message);
+    res.status(400).send('Invalid URL');
+  }
 };
 
 app.get('/proxy', (req, res) => {
