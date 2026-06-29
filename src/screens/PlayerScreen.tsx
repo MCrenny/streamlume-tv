@@ -628,13 +628,13 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : styles.playerContainer, 
+                : [styles.playerContainer, { height: (width * 0.4 - 40) * (9 / 16) }], 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
             <View 
               pointerEvents={isFullscreen ? "auto" : "none"} 
-              style={[StyleSheet.absoluteFill, isFullscreen && { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }]}
+              style={[StyleSheet.absoluteFill, { width: '100%', height: '100%' }, isFullscreen && { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }]}
             >
               <Video
                 key={`${selectedQuality ? selectedQuality.url : (currentVariant?.url || '')}_${playerKey}`}
@@ -1212,7 +1212,6 @@ const styles = StyleSheet.create({
   },
   playerContainer: {
     width: '100%',
-    paddingBottom: '56.25%', // hack for 16:9 aspect ratio without using unsupported 'aspect-ratio' property
     backgroundColor: '#000',
     borderRadius: 12,
     overflow: 'hidden',

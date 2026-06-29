@@ -3,5 +3,5 @@ call npm install --save-dev @babel/plugin-transform-optional-catch-binding@^7 @b
 call npx expo export -p web -c
 node fix_import_meta.js
 git add .
-git commit -m "fix(web): use allorigins proxy for HTTP playlists to bypass mixed content blocking on web TVs"
+git commit -m "fix(web): force exact pixel height for small player and 100% dimensions on video wrapper to fix invisible video on old Tizen"
 git push
