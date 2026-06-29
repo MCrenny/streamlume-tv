@@ -3,5 +3,5 @@ call npm install --save-dev @babel/plugin-transform-optional-catch-binding@^7 @b
 call npx expo export -p web -c
 node fix_import_meta.js
 git add .
-git commit -m "fix(web): properly order babel preset-env to transform ALL modern syntax (including regex flags) to ES5"
+git commit -m "feat(web): add core-js and polyfills for deep backwards compatibility with ancient Smart TVs"
 git push

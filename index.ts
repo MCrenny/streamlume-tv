@@ -1,3 +1,7 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import 'whatwg-fetch';
+import 'raf/polyfill';
 
 import { registerRootComponent } from 'expo';
 
