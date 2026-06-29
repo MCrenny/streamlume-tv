@@ -107,6 +107,9 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
 
     rl.on('close', () => {
       fileStream.end();
+    });
+    
+    fileStream.on('finish', () => {
       safeCallback(null);
     });
     
