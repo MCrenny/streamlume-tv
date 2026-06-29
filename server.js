@@ -1,71 +1,68 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+const crypto = require('crypto');
+const readline = require('readline');
+const https = require('https');
+const http = require('http');
+
 const app = express();
 const PORT = process.env.PORT || 80;
 
 app.use(cors());
 
-const proxyCache = new Map();
+const CACHE_DIR = path.join(__dirname, 'cache');
+if (!fs.existsSync(CACHE_DIR)) {
+  fs.mkdirSync(CACHE_DIR);
+}
+
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
-const followRedirectsGet = (urlStr, res, originalUrl = null) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  const client = urlStr.startsWith('https') ? require('https') : require('http');
-  
-  const options = {
-    headers: {
-      'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)'
-    }
-  };
+// Helper to download and parse M3U to a file using streams (Zero RAM usage)
+const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback) => {
+  const client = urlStr.startsWith('https') ? https : http;
+  const options = { headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)' } };
 
-  try {
-    client.get(urlStr, options, (proxyRes) => {
-      if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
-        let redirectUrl = proxyRes.headers.location;
-        if (!redirectUrl.startsWith('http')) {
-          redirectUrl = new URL(redirectUrl, urlStr).toString();
-        }
-        return followRedirectsGet(redirectUrl, res, originalUrl);
+  client.get(urlStr, options, (res) => {
+    if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+      let redirectUrl = res.headers.location;
+      if (!redirectUrl.startsWith('http')) {
+        redirectUrl = new URL(redirectUrl, urlStr).toString();
       }
-      Object.keys(proxyRes.headers).forEach(key => {
-        if (key.toLowerCase() !== 'access-control-allow-origin' && key.toLowerCase() !== 'host') {
-          try { res.setHeader(key, proxyRes.headers[key]); } catch (e) {}
-        }
-      });
-      res.status(proxyRes.statusCode);
-      
-      if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].toLowerCase().includes('mpegurl') || urlStr.includes('.m3u')) {
-        let body = '';
-        proxyRes.on('data', chunk => body += chunk);
-        proxyRes.on('end', () => {
-          const lines = body.split('\n').map(line => {
-            const tLine = line.trim();
-            if (tLine.length === 0 || tLine.startsWith('#')) return line;
-            try {
-              return new URL(tLine, urlStr).toString();
-            } catch (e) {
-              return line;
-            }
-          });
-          const newBody = lines.join('\n');
-          if (originalUrl) {
-            proxyCache.set(originalUrl, {
-              data: newBody,
-              timestamp: Date.now()
-            });
-          }
-          res.setHeader('Content-Length', Buffer.byteLength(newBody));
-          res.send(newBody);
-        });
+      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, callback);
+    }
+    
+    if (res.statusCode !== 200) {
+      return callback(new Error(`Failed with status ${res.statusCode}`));
+    }
+
+    const fileStream = fs.createWriteStream(destPath);
+    const rl = readline.createInterface({ input: res, crlfDelay: Infinity });
+
+    rl.on('line', (line) => {
+      const tLine = line.trim();
+      if (tLine.length === 0 || tLine.startsWith('#')) {
+        fileStream.write(line + '\n');
       } else {
-        proxyRes.pipe(res);
+        try {
+          fileStream.write(new URL(tLine, originalUrl).toString() + '\n');
+        } catch (e) {
+          fileStream.write(line + '\n');
+        }
       }
-    }).on('error', (err) => res.status(500).send(err.message));
-  } catch (err) {
-    console.error('Proxy Error: Invalid URL or request failed', err.message);
-    res.status(400).send('Invalid URL');
-  }
+    });
+
+    rl.on('close', () => {
+      fileStream.end();
+      callback(null);
+    });
+    
+    res.on('error', (err) => {
+      fileStream.end();
+      callback(err);
+    });
+  }).on('error', callback);
 };
 
 app.get('/proxy', (req, res) => {
@@ -75,22 +72,38 @@ app.get('/proxy', (req, res) => {
   if (targetUrl === '/api/public.m3u') {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'audio/x-mpegurl');
-    return res.send(publicPlaylistCache);
-  }
-  
-  if (proxyCache.has(targetUrl)) {
-    const cached = proxyCache.get(targetUrl);
-    if (Date.now() - cached.timestamp < CACHE_TTL_MS) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Content-Type', 'audio/x-mpegurl');
-      res.setHeader('Content-Length', Buffer.byteLength(cached.data));
-      return res.send(cached.data);
+    const publicPath = path.join(CACHE_DIR, 'public.m3u');
+    if (fs.existsSync(publicPath)) {
+      return res.sendFile(publicPath); // Zero-copy disk serve
     } else {
-      proxyCache.delete(targetUrl);
+      return res.status(404).send('Public playlist not ready');
     }
   }
-  
-  followRedirectsGet(targetUrl, res, targetUrl);
+
+  const urlHash = crypto.createHash('md5').update(targetUrl).digest('hex');
+  const cacheFilePath = path.join(CACHE_DIR, `${urlHash}.m3u`);
+
+  const serveCachedFile = () => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Content-Type', 'audio/x-mpegurl');
+    res.sendFile(cacheFilePath); // Zero-copy disk serve
+  };
+
+  if (fs.existsSync(cacheFilePath)) {
+    const stats = fs.statSync(cacheFilePath);
+    if (Date.now() - stats.mtimeMs < CACHE_TTL_MS) {
+      return serveCachedFile();
+    }
+  }
+
+  // If not cached or expired, download streaming to disk
+  downloadAndParseM3U(targetUrl, cacheFilePath, targetUrl, (err) => {
+    if (err) {
+      console.error('Proxy Error:', err.message);
+      return res.status(400).send('Invalid URL or request failed');
+    }
+    serveCachedFile();
+  });
 });
 
 // Disable cache for HTML and JS so TV always gets fresh version
@@ -109,45 +122,47 @@ const PUBLIC_SOURCES = [
   'https://smolnp.github.io/IPTVru//IPTVru.m3u'
 ];
 
-let publicPlaylistCache = '#EXTM3U\n';
 let isParsing = false;
 
 const updatePublicPlaylist = () => {
-  if (isParsing) return;
+  if (isParsing || PUBLIC_SOURCES.length === 0) return;
   isParsing = true;
-  console.log('Бот-парсер начал сбор общедоступных плейлистов...');
+  console.log('Бот-парсер начал сбор общедоступных плейлистов на диск...');
   
-  const https = require('https');
-  let newContent = '#EXTM3U\n';
-  let completed = 0;
+  const publicPath = path.join(CACHE_DIR, 'public.m3u');
+  const tempPath = path.join(CACHE_DIR, 'public_temp.m3u');
+  const fileStream = fs.createWriteStream(tempPath);
+  fileStream.write('#EXTM3U\n');
   
-  if (PUBLIC_SOURCES.length === 0) {
-    isParsing = false;
-    return;
-  }
-  
-  PUBLIC_SOURCES.forEach(urlStr => {
+  const processSource = (index) => {
+    if (index >= PUBLIC_SOURCES.length) {
+      fileStream.end(() => {
+        // Atomic replace old file with new file
+        fs.renameSync(tempPath, publicPath);
+        console.log('Бот-парсер успешно обновил общедоступный плейлист на диске.');
+        isParsing = false;
+      });
+      return;
+    }
+    
+    const urlStr = PUBLIC_SOURCES[index];
     https.get(urlStr, (res) => {
-      let body = '';
-      res.on('data', chunk => body += chunk);
-      res.on('end', () => {
-        // Убираем #EXTM3U из скачанных файлов, чтобы не было дублей заголовка
-        const lines = body.split('\n').filter(line => !line.includes('#EXTM3U'));
-        newContent += lines.join('\n') + '\n';
-        
-        completed++;
-        if (completed === PUBLIC_SOURCES.length) {
-          publicPlaylistCache = newContent;
-          console.log('Бот-парсер успешно обновил общедоступный плейлист.');
-          isParsing = false;
+      const rl = readline.createInterface({ input: res, crlfDelay: Infinity });
+      rl.on('line', (line) => {
+        if (!line.includes('#EXTM3U')) {
+          fileStream.write(line + '\n');
         }
+      });
+      rl.on('close', () => {
+        processSource(index + 1);
       });
     }).on('error', (err) => {
       console.error('Ошибка бота-парсера для', urlStr, err.message);
-      completed++;
-      if (completed === PUBLIC_SOURCES.length) isParsing = false;
+      processSource(index + 1);
     });
-  });
+  };
+  
+  processSource(0);
 };
 
 // Запускаем парсер при старте и раз в сутки (24 часа)
@@ -157,7 +172,12 @@ setInterval(updatePublicPlaylist, 24 * 60 * 60 * 1000);
 app.get('/api/public.m3u', (req, res) => {
   res.setHeader('Content-Type', 'audio/x-mpegurl');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
-  res.send(publicPlaylistCache);
+  const publicPath = path.join(CACHE_DIR, 'public.m3u');
+  if (fs.existsSync(publicPath)) {
+    res.sendFile(publicPath);
+  } else {
+    res.status(404).send('Playlist not ready');
+  }
 });
 // ----------------------------------------
 
@@ -181,7 +201,7 @@ app.get('/menu.json', (req, res) => {
   });
 });
 
-// Serve static files with normal caching (important for fonts and JS bundles with hashes)
+// Serve static files with normal caching
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.listen(PORT, () => console.log('Server running on ' + PORT));

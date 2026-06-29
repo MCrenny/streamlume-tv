@@ -525,10 +525,10 @@ export const TVHomeScreen = ({ navigation }: any) => {
               keyExtractor={(item, index) => item.id + index}
               numColumns={getNumColumns(viewMode)}
               showsVerticalScrollIndicator={false}
-              removeClippedSubviews={false} // Keeps views mounted so they remain reachable by spatial D-pad engine
+              removeClippedSubviews={true} // Strict virtualization for TV performance (unmounts offscreen nodes)
               initialNumToRender={15}
-              maxToRenderPerBatch={10}
-              windowSize={3}
+              maxToRenderPerBatch={15}
+              windowSize={5}
               contentContainerStyle={styles.channelsGrid}
               renderItem={({ item, index }) => {
                 const cardStyle = getCardStyle(viewMode);
