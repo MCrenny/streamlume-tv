@@ -6,7 +6,10 @@ const PORT = process.env.PORT || 80;
 
 app.use(cors());
 
-const followRedirectsGet = (urlStr, res) => {
+const proxyCache = new Map();
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+
+const followRedirectsGet = (urlStr, res, originalUrl = null) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   const client = urlStr.startsWith('https') ? require('https') : require('http');
   
@@ -22,7 +25,7 @@ const followRedirectsGet = (urlStr, res) => {
       if (!redirectUrl.startsWith('http')) {
         redirectUrl = new URL(redirectUrl, urlStr).toString();
       }
-      return followRedirectsGet(redirectUrl, res);
+      return followRedirectsGet(redirectUrl, res, originalUrl);
     }
     Object.keys(proxyRes.headers).forEach(key => {
       if (key.toLowerCase() !== 'access-control-allow-origin' && key.toLowerCase() !== 'host') {
@@ -45,6 +48,12 @@ const followRedirectsGet = (urlStr, res) => {
           }
         });
         const newBody = lines.join('\n');
+        if (originalUrl) {
+          proxyCache.set(originalUrl, {
+            data: newBody,
+            timestamp: Date.now()
+          });
+        }
         res.setHeader('Content-Length', Buffer.byteLength(newBody));
         res.send(newBody);
       });
@@ -57,7 +66,20 @@ const followRedirectsGet = (urlStr, res) => {
 app.get('/proxy', (req, res) => {
   const targetUrl = req.query.url;
   if (!targetUrl) return res.status(400).send('Missing url parameter');
-  followRedirectsGet(targetUrl, res);
+  
+  if (proxyCache.has(targetUrl)) {
+    const cached = proxyCache.get(targetUrl);
+    if (Date.now() - cached.timestamp < CACHE_TTL_MS) {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Content-Type', 'audio/x-mpegurl');
+      res.setHeader('Content-Length', Buffer.byteLength(cached.data));
+      return res.send(cached.data);
+    } else {
+      proxyCache.delete(targetUrl);
+    }
+  }
+  
+  followRedirectsGet(targetUrl, res, targetUrl);
 });
 
 // Disable cache for HTML and JS so TV always gets fresh version
