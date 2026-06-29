@@ -83,10 +83,25 @@
         height: 100% !important;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mux.js/7.0.3/mux.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.compiled.js"></script>
     <script>
       window.addEventListener('load', function() {
-        var hlsInstances = new WeakMap();
+        if (!window.shaka) return;
+        shaka.polyfill.installAll();
+        if (!shaka.Player.isBrowserSupported()) {
+          console.error('Browser not supported!');
+          return;
+        }
+
+        shaka.net.NetworkingEngine.registerRequestFilter(function(type, request) {
+          var PROXY_BASE = window.location.origin + '/proxy?url=';
+          if (request.uris[0].indexOf('iptvin.ru') === -1 && request.uris[0].indexOf('/proxy') === -1 && request.uris[0].indexOf('blob:') !== 0) {
+            request.uris[0] = PROXY_BASE + encodeURIComponent(request.uris[0]);
+          }
+        });
+
+        var shakaInstances = new WeakMap();
         var observer = new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
@@ -123,59 +138,44 @@
         function handleVideo(video) {
           var src = video.getAttribute('src') || video.src;
           if (!src) return;
-          if (src.indexOf('blob:') === 0) return; // already hls.js
+          if (src.indexOf('blob:') === 0) return; // already shaka
           
-          var isSmartTV = navigator.userAgent.indexOf('Tizen') !== -1 || navigator.userAgent.indexOf('Web0S') !== -1;
-          
-          if (src && src.indexOf('blob:') !== 0 && window.Hls && Hls.isSupported() && !isSmartTV) {
-            var hls = hlsInstances.get(video);
-            if (hls) { hls.destroy(); }
-            
-            hls = new Hls({
-              maxBufferLength: 30,
-              maxMaxBufferLength: 60,
-              backBufferLength: 30,
-              capLevelToPlayerSize: true,
-              liveSyncDurationCount: 3
-            });
-            hlsInstances.set(video, hls);
-            
-            // Remove native src so it doesn't conflict
-            video.removeAttribute('src');
-            if (video.src && video.src.indexOf('blob:') === -1) {
-              video.src = '';
+          if (src && window.shaka) {
+            var player = shakaInstances.get(video);
+            if (player) {
+              player.destroy().then(startNewLoad);
+            } else {
+              startNewLoad();
             }
             
-            hls.loadSource(src);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-              video.play().catch(function(e){});
-            });
-            
-            // --- ERROR RECOVERY ---
-            hls.on(Hls.Events.ERROR, function(event, data) {
-              if (data.fatal) {
-                console.warn("HLS Error:", data.type, data.details);
-                switch (data.type) {
-                  case Hls.ErrorTypes.NETWORK_ERROR:
-                    // Try to reconnect after a short delay
-                    setTimeout(function() {
-                      hls.startLoad();
-                    }, 2000);
-                    break;
-                  case Hls.ErrorTypes.MEDIA_ERROR:
-                    hls.recoverMediaError();
-                    break;
-                  default:
-                    // Hard Restart: destroy and recreate the whole instance
-                    hls.destroy();
-                    setTimeout(function() {
-                      handleVideo(video, src);
-                    }, 2000);
-                    break;
-                }
+            function startNewLoad() {
+              player = new shaka.Player(video);
+              shakaInstances.set(video, player);
+              
+              video.removeAttribute('src');
+              if (video.src && video.src.indexOf('blob:') === -1) {
+                video.src = '';
               }
-            });
+              
+              player.configure({
+                streaming: {
+                  bufferingGoal: 30,
+                  rebufferingGoal: 2,
+                  bufferBehind: 30,
+                },
+                manifest: {
+                  retryParameters: {
+                    maxAttempts: 3,
+                  }
+                }
+              });
+              
+              player.load(src).then(function() {
+                video.play().catch(function(e){});
+              }).catch(function(e) {
+                console.error('Shaka Error', e); video.src = src; video.play().catch(function(){});
+              });
+            }
           }
         }
       });
