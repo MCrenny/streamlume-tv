@@ -38,7 +38,15 @@ setInterval(() => {
 
 // Helper to download and parse M3U to a file using streams (Zero RAM usage)
 const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCount = 0) => {
-  if (redirectCount > 5) return callback(new Error('Too many redirects'));
+  let cbCalled = false;
+  const safeCallback = (err) => {
+    if (!cbCalled) {
+      cbCalled = true;
+      callback(err);
+    }
+  };
+
+  if (redirectCount > 5) return safeCallback(new Error('Too many redirects'));
   const client = urlStr.startsWith('https') ? https : http;
   const options = { headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)' } };
 
@@ -48,11 +56,11 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
       if (!redirectUrl.startsWith('http')) {
         redirectUrl = new URL(redirectUrl, urlStr).toString();
       }
-      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, callback, redirectCount + 1);
+      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, safeCallback, redirectCount + 1);
     }
     
     if (res.statusCode !== 200) {
-      return callback(new Error(`Failed with status ${res.statusCode}`));
+      return safeCallback(new Error(`Failed with status ${res.statusCode}`));
     }
 
     const fileStream = fs.createWriteStream(destPath);
@@ -73,14 +81,14 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
 
     rl.on('close', () => {
       fileStream.end();
-      callback(null);
+      safeCallback(null);
     });
     
     res.on('error', (err) => {
       fileStream.end();
-      callback(err);
+      safeCallback(err);
     });
-  }).on('error', callback);
+  }).on('error', safeCallback);
 };
 
 app.get('/proxy', (req, res) => {

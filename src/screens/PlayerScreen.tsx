@@ -1213,6 +1213,7 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'relative',
     backgroundColor: '#000',
+    borderRadius: 12,
     borderWidth: 2,
     borderColor: '#3a3a3c',
     marginBottom: 10,
