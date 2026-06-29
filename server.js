@@ -245,6 +245,11 @@ app.get('/api/public.m3u', (req, res) => {
 });
 // ----------------------------------------
 
+// Короткие ссылки для ввода в Media Station X
+app.get(['/s', '/m', '/tv', '/msx', '/777'], (req, res) => {
+  res.redirect('/start.json');
+});
+
 app.get(['/start.json', '/msx/start.json'], (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   res.sendFile(path.join(__dirname, 'start.json'));
@@ -263,6 +268,17 @@ app.get('/menu.json', (req, res) => {
       }]
     }]
   });
+});
+
+app.get('/', (req, res, next) => {
+  const accept = req.headers.accept || '';
+  const ua = req.headers['user-agent'] || '';
+  // Serve start.json if it's an API/XHR fetch (no text/html preference) or MSX User-Agent
+  if (accept.indexOf('text/html') === -1 || ua.indexOf('MSX') !== -1 || ua.indexOf('TVX') !== -1 || ua.indexOf('Media Station X') !== -1) {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+    return res.sendFile(path.join(__dirname, 'start.json'));
+  }
+  next();
 });
 
 // Serve static files with normal caching
