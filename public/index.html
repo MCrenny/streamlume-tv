@@ -94,7 +94,12 @@
           return;
         }
 
+        var isSmartTV = navigator.userAgent.indexOf('Tizen') !== -1 || navigator.userAgent.indexOf('Web0S') !== -1;
         shaka.net.NetworkingEngine.registerRequestFilter(function(type, request) {
+          // On Smart TVs (Tizen/WebOS), apps usually have CORS disabled via config.xml.
+          // Bypassing the proxy on TV prevents our Datacenter IP from being blocked (403).
+          if (isSmartTV) return;
+
           var PROXY_BASE = window.location.origin + '/proxy?url=';
           if (request.uris[0].indexOf('iptvin.ru') === -1 && request.uris[0].indexOf('/proxy') === -1 && request.uris[0].indexOf('blob:') !== 0) {
             request.uris[0] = PROXY_BASE + encodeURIComponent(request.uris[0]);
