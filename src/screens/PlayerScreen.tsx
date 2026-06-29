@@ -628,7 +628,7 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : styles.playerContainer, 
+                : [styles.playerContainer, { height: Math.max(200, ((width || 1280) * 0.4 - 40) * (9 / 16)) }], 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
@@ -639,7 +639,7 @@ export const PlayerScreen = () => {
               <Video
                 key={`${selectedQuality ? selectedQuality.url : (currentVariant?.url || '')}_${playerKey}`}
                 ref={videoRef}
-                style={getVideoStyle()}
+                style={[getVideoStyle(), !isFullscreen && { borderRadius: 10, overflow: 'hidden' }]}
                 source={{
                   uri: selectedQuality ? selectedQuality.url : (currentVariant?.url || ''),
                   headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)', ...(currentVariant?.headers || {}) }
@@ -1212,7 +1212,6 @@ const styles = StyleSheet.create({
   },
   playerContainer: {
     width: '100%',
-    aspectRatio: 16 / 9,
     backgroundColor: '#000',
     borderRadius: 12,
     overflow: 'hidden',
