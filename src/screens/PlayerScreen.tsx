@@ -116,7 +116,7 @@ export const PlayerScreen = () => {
   
   // Calculate exact pixel dimensions for Tizen WebKit compatibility
   const leftPanelWidth = width * 0.40;
-  const playerWidth = leftPanelWidth - 40; // padding 20 * 2
+  const playerWidth = Math.max(300, leftPanelWidth - 40); // padding 20 * 2, guarantee at least 300px width
   const playerHeight = playerWidth * (9 / 16);
   useKeepAwake(); // Prevents the screen from turning off while PlayerScreen is active
   const isScreenFocused = Platform.OS === 'web' ? true : isFocusedNative;
@@ -594,7 +594,7 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : [styles.playerContainer, { height: playerWidth ? playerWidth * (9 / 16) : 250 }], 
+                : [styles.playerContainer, { height: Math.max(200, playerWidth ? playerWidth * (9 / 16) : 250) }], 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
