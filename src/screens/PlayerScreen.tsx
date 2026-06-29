@@ -583,18 +583,11 @@ export const PlayerScreen = () => {
         <StatusBar hidden={true} />
         
         <View style={isFullscreen ? StyleSheet.absoluteFill : styles.leftPanel}>
-          <Pressable 
-            disabled={isFullscreen}
-            onPress={() => setIsFullscreen(true)}
-            onFocus={() => setIsEpgPlayerFocused(true)}
-            onBlur={() => setIsEpgPlayerFocused(false)}
-            focusable={!isFullscreen}
-            accessible={!isFullscreen}
+          <View 
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : styles.playerContainer, 
-              !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
+                : styles.playerContainer
             ]}
           >
             {/* Dummy spacer to force 16:9 aspect ratio height on old Tizen WebKit */}
@@ -607,7 +600,7 @@ export const PlayerScreen = () => {
               <Video
                 key={`${selectedQuality ? selectedQuality.url : (currentVariant?.url || '')}_${playerKey}`}
                 ref={videoRef}
-                style={[StyleSheet.absoluteFill, !isFullscreen && { borderRadius: 10, overflow: 'hidden' }]}
+                style={[StyleSheet.absoluteFill]}
                 source={{
                   uri: selectedQuality ? selectedQuality.url : (currentVariant?.url || ''),
                   headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)', ...(currentVariant?.headers || {}) }
@@ -641,7 +634,7 @@ export const PlayerScreen = () => {
                 onError={handleVideoError}
               />
             </View>
-          </Pressable>
+          </View>
 
           {!isFullscreen && (
             <>
@@ -1190,15 +1183,12 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'relative',
     backgroundColor: '#000',
-    borderRadius: 12,
-    overflow: 'hidden',
     borderWidth: 2,
     borderColor: '#3a3a3c',
     marginBottom: 10,
   },
   playerContainerFocused: {
     borderColor: '#fff',
-    transform: [{ scale: 1.02 }],
   },
   controlsRow: {
     flexDirection: 'row',
