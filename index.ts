@@ -2,6 +2,13 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
 import 'raf/polyfill';
+import ResizeObserver from 'resize-observer-polyfill';
+import 'intersection-observer';
+
+// Установка глобального полифилла ResizeObserver, если его нет
+if (typeof window !== 'undefined' && !window.ResizeObserver) {
+  window.ResizeObserver = ResizeObserver;
+}
 
 import { registerRootComponent } from 'expo';
 
