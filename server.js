@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const readline = require('readline');
 const https = require('https');
 const http = require('http');
+const zlib = require('zlib');
 
 const app = express();
 const PORT = process.env.PORT || 80;
@@ -70,17 +71,26 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
       return safeCallback(new Error(`Failed with status ${res.statusCode}`));
     }
 
+    let dataStream = res;
+    if (res.headers['content-encoding'] === 'gzip') {
+      dataStream = res.pipe(zlib.createGunzip());
+    }
+
     const fileStream = fs.createWriteStream(destPath);
     
     // If it's an XML file, pipe it directly (don't parse line by line)
     if (isEpg || urlStr.toLowerCase().endsWith('.xml')) {
-      res.pipe(fileStream);
-      res.on('end', () => safeCallback(null));
-      res.on('error', (err) => safeCallback(err));
+      dataStream.pipe(fileStream);
+      fileStream.on('finish', () => safeCallback(null));
+      fileStream.on('error', (err) => safeCallback(err));
+      dataStream.on('error', (err) => {
+        fileStream.end();
+        safeCallback(err);
+      });
       return;
     }
 
-    const rl = readline.createInterface({ input: res, crlfDelay: Infinity });
+    const rl = readline.createInterface({ input: dataStream, crlfDelay: Infinity });
 
     rl.on('line', (line) => {
       const tLine = line.trim();
