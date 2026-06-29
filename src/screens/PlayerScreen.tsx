@@ -113,6 +113,11 @@ export const PlayerScreen = () => {
   const { width, height } = useWindowDimensions();
   // On web (MSX), useIsFocused can misbehave — treat web as always focused
   const isFocusedNative = useIsFocused();
+  
+  // Calculate exact pixel dimensions for Tizen WebKit compatibility
+  const leftPanelWidth = width * 0.40;
+  const playerWidth = leftPanelWidth - 40; // padding 20 * 2
+  const playerHeight = playerWidth * (9 / 16);
   useKeepAwake(); // Prevents the screen from turning off while PlayerScreen is active
   const isScreenFocused = Platform.OS === 'web' ? true : isFocusedNative;
   const { url, title, tvgId, channel, initialFullscreen, isArchive } = route.params || {};
@@ -589,11 +594,9 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : styles.playerContainer
+                : [styles.playerContainer, { width: playerWidth, height: playerHeight }]
             ]}
           >
-            {/* Dummy spacer to force 16:9 aspect ratio height on old Tizen WebKit */}
-            {!isFullscreen && <View style={{ width: '100%', paddingTop: '56.25%' }} />}
             
             <View 
               pointerEvents={isFullscreen ? "auto" : "none"} 
@@ -642,7 +645,7 @@ export const PlayerScreen = () => {
             <>
               <View style={[styles.controlsRow, { justifyContent: 'center' }]}>
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 8}, isPrevFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 4}, isPrevFocused && styles.iconBtnFocused]}
                   onPress={handlePrev}
                   onFocus={() => setIsPrevFocused(true)}
                   onBlur={() => setIsPrevFocused(false)}
@@ -652,7 +655,7 @@ export const PlayerScreen = () => {
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 8}, isPlayFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 4}, isPlayFocused && styles.iconBtnFocused]}
                   onPress={togglePlayPause}
                   onFocus={() => setIsPlayFocused(true)}
                   onBlur={() => setIsPlayFocused(false)}
@@ -662,7 +665,7 @@ export const PlayerScreen = () => {
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 8}, isNextFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 4}, isNextFocused && styles.iconBtnFocused]}
                   onPress={handleNext}
                   onFocus={() => setIsNextFocused(true)}
                   onBlur={() => setIsNextFocused(false)}
@@ -672,7 +675,7 @@ export const PlayerScreen = () => {
                 </Pressable>
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 8}, isFavoriteFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 4}, isFavoriteFocused && styles.iconBtnFocused]}
                   onPress={handleToggleFavorite}
                   onFocus={() => setIsFavoriteFocused(true)}
                   onBlur={() => setIsFavoriteFocused(false)}
@@ -687,7 +690,7 @@ export const PlayerScreen = () => {
                     <Pressable
                       style={[
                         styles.iconBtn,
-                        {marginHorizontal: 8},
+                        {marginHorizontal: 4},
                         isSortUpFocused && styles.iconBtnFocused,
                         favIdx <= 0 && { opacity: 0.35 }
                       ]}
@@ -706,7 +709,7 @@ export const PlayerScreen = () => {
                     <Pressable
                       style={[
                         styles.iconBtn,
-                        {marginHorizontal: 8},
+                        {marginHorizontal: 4},
                         isSortDownFocused && styles.iconBtnFocused,
                         favIdx >= cleanFavorites.length - 1 && { opacity: 0.35 }
                       ]}
@@ -725,7 +728,7 @@ export const PlayerScreen = () => {
                 )}
 
                 <Pressable 
-                  style={[styles.iconBtn, {marginHorizontal: 8}, isExpandFocused && styles.iconBtnFocused]}
+                  style={[styles.iconBtn, {marginHorizontal: 4}, isExpandFocused && styles.iconBtnFocused]}
                   onPress={() => setIsFullscreen(true)}
                   onFocus={() => setIsExpandFocused(true)}
                   onBlur={() => setIsExpandFocused(false)}
@@ -1365,7 +1368,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   iconBtn: {
-    padding: 10,
+    padding: 6,
     backgroundColor: 'rgba(255,255,255,0.1)',
     borderRadius: 50,
     borderWidth: 1.5,
@@ -1375,7 +1378,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     borderColor: '#ffffff',
     borderWidth: 2,
-    transform: [{ scale: 1.15 }],
+    transform: [{ scale: 1.1 }],
   },
   centerControls: {
     flex: 1,
