@@ -83,7 +83,7 @@ export const useStore = create<StoreState>()(
       })),
       tvgUrl: null,
       setTvgUrl: (url) => set({ tvgUrl: url }),
-      viewMode: 'small', // default for TV
+      viewMode: 'normal', // default for TV
       setViewMode: (mode) => set({ viewMode: mode }),
 
       activePlaybackList: [],
@@ -116,7 +116,8 @@ export const useStore = create<StoreState>()(
         trialStartDate: state.trialStartDate,
         activationKey: state.activationKey,
         favorites: state.favorites, 
-        customPlaylists: state.customPlaylists 
+        customPlaylists: state.customPlaylists,
+        viewMode: state.viewMode 
       }),
     }
   )

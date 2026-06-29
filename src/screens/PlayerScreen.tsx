@@ -418,12 +418,17 @@ export const PlayerScreen = () => {
     }, 3000);
   };
 
+  const lastPositionRef = useRef<number>(0);
+  const lastPositionTimeRef = useRef<number>(Date.now());
+
   useEffect(() => {
     if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
     setPlayerKey(0);
     setIsErrorReconnecting(false);
     setIsBuffering(true);
     setIsInitialLoading(true);
+    lastPositionRef.current = 0;
+    lastPositionTimeRef.current = Date.now();
   }, [currentChannel, variantIndex]);
 
   useEffect(() => {
@@ -437,7 +442,23 @@ export const PlayerScreen = () => {
     return () => {
       if (bufferingTimer) clearTimeout(bufferingTimer);
     };
-  }, [isBuffering, isPlaying]);  useEffect(() => {
+  }, [isBuffering, isPlaying]);
+
+  // Watchdog for frozen video (positionMillis stopped updating but not throwing error)
+  useEffect(() => {
+    const watchdog = setInterval(() => {
+      if (isPlaying && !isInitialLoading && !isErrorReconnecting) {
+        const timeSinceLastUpdate = Date.now() - lastPositionTimeRef.current;
+        if (timeSinceLastUpdate > 12000) { // If position hasn't changed for 12 seconds
+          console.warn("[Player] Watchdog detected frozen video (position stalled). Forcing reconnect...");
+          handleVideoError(new Error("Video frozen watchdog"));
+        }
+      }
+    }, 3000);
+    return () => clearInterval(watchdog);
+  }, [isPlaying, isInitialLoading, isErrorReconnecting]);
+
+  useEffect(() => {
     const loadEpg = async () => {
       if (!tvgUrl || (!tvgId && !currentChannel?.tvgName && !currentChannel?.name)) {
         setLoadingEpg(false);
@@ -606,6 +627,14 @@ export const PlayerScreen = () => {
                   if (status.isLoaded) {
                     setIsErrorReconnecting(false);
                     setIsBuffering(status.isBuffering);
+                    
+                    if (status.isPlaying && status.positionMillis !== undefined) {
+                      if (status.positionMillis !== lastPositionRef.current) {
+                        lastPositionRef.current = status.positionMillis;
+                        lastPositionTimeRef.current = Date.now();
+                      }
+                    }
+
                     if (status.didJustFinish) {
                       handleNext();
                     }
