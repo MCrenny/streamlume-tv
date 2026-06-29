@@ -1212,7 +1212,7 @@ const styles = StyleSheet.create({
   },
   playerContainer: {
     width: '100%',
-    aspectRatio: 16 / 9,
+    paddingBottom: '56.25%', // hack for 16:9 aspect ratio without using unsupported 'aspect-ratio' property
     backgroundColor: '#000',
     borderRadius: 12,
     overflow: 'hidden',
