@@ -14,7 +14,7 @@
       window.fetch = function(url, options) {
         if (typeof url === 'string') {
           var cleanUrl = url.split('?')[0];
-          var isPlaylist = cleanUrl.endsWith('.m3u') || cleanUrl.endsWith('.m3u8');
+          var isPlaylist = cleanUrl.endsWith('.m3u'); // EXCLUDE .m3u8 (live streams) so TV fetches directly
           var isEpg = url.indexOf('epg') !== -1 && !cleanUrl.endsWith('.ts');
           var isPicon = url.indexOf('/p/') !== -1 && !cleanUrl.endsWith('.ts');
           
@@ -29,7 +29,7 @@
       window.XMLHttpRequest.prototype.open = function(method, url) {
         if (typeof url === 'string') {
           var cleanUrl = url.split('?')[0];
-          var isPlaylist = cleanUrl.endsWith('.m3u') || cleanUrl.endsWith('.m3u8');
+          var isPlaylist = cleanUrl.endsWith('.m3u'); // EXCLUDE .m3u8 (live streams) so TV fetches directly
           var isEpg = url.indexOf('epg') !== -1 && !cleanUrl.endsWith('.ts');
           var isPicon = url.indexOf('/p/') !== -1 && !cleanUrl.endsWith('.ts');
 
