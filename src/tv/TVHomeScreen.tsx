@@ -525,7 +525,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
               keyExtractor={(item, index) => item.id + index}
               numColumns={getNumColumns(viewMode)}
               showsVerticalScrollIndicator={false}
-              removeClippedSubviews={true} // Strict virtualization for TV performance (unmounts offscreen nodes)
+              removeClippedSubviews={false} // Tizen spatial navigation breaks if subviews are unmounted
               initialNumToRender={15}
               maxToRenderPerBatch={15}
               windowSize={5}
