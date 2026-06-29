@@ -156,7 +156,6 @@ export const PlayerScreen = () => {
   const favIdx = cleanFavorites.findIndex(f => f.id === currentChannel.id);
   
   const [showControls, setShowControls] = useState(true);
-  const [playerWidth, setPlayerWidth] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isBuffering, setIsBuffering] = useState(true);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
@@ -566,60 +565,7 @@ export const PlayerScreen = () => {
     return ResizeMode.STRETCH;
   };
 
-  const getVideoStyle = () => {
-    if (!isFullscreen) {
-      return { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%' };
-    }
-    
-    let ratio: number | null = null;
-    switch (currentAspect) {
-      case '16:9':
-        ratio = 16 / 9;
-        break;
-      case '16:10':
-        ratio = 16 / 10;
-        break;
-      case '4:3':
-        ratio = 4 / 3;
-        break;
-      case '5:4':
-        ratio = 5 / 4;
-        break;
-      case '1.85:1':
-        ratio = 1.85 / 1;
-        break;
-      case '2.35:1':
-        ratio = 2.35 / 1;
-        break;
-      default:
-        ratio = null;
-    }
 
-    if (ratio === null) {
-      return StyleSheet.absoluteFill;
-    }
-
-    const screenWidth = Math.max(width, height);
-    const screenHeight = Math.min(width, height);
-    const screenRatio = screenWidth / screenHeight;
-
-    let videoW = screenWidth;
-    let videoH = screenHeight;
-
-    if (screenRatio > ratio) {
-      videoH = screenHeight;
-      videoW = screenHeight * ratio;
-    } else {
-      videoW = screenWidth;
-      videoH = screenWidth / ratio;
-    }
-
-    return {
-      width: videoW,
-      height: videoH,
-      alignSelf: 'center' as const,
-    };
-  };
 
 
 
@@ -627,14 +573,7 @@ export const PlayerScreen = () => {
     <View style={[styles.container, !isFullscreen && { flexDirection: 'row' }]} onTouchStart={isFullscreen ? onTouchStart : undefined} onTouchEnd={isFullscreen ? onTouchEnd : undefined}>
         <StatusBar hidden={true} />
         
-        <View 
-          style={isFullscreen ? StyleSheet.absoluteFill : styles.leftPanel}
-          onLayout={(e) => {
-            if (!isFullscreen) {
-              setPlayerWidth(e.nativeEvent.layout.width - 40); // 40 is horizontal padding
-            }
-          }}
-        >
+        <View style={isFullscreen ? StyleSheet.absoluteFill : styles.leftPanel}>
           <Pressable 
             disabled={isFullscreen}
             onPress={() => setIsFullscreen(true)}
@@ -645,18 +584,18 @@ export const PlayerScreen = () => {
             style={[
               isFullscreen 
                 ? [StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }] 
-                : [styles.playerContainer, { height: playerWidth ? playerWidth * (9 / 16) : 250 }], 
+                : styles.playerContainer, 
               !isFullscreen && isEpgPlayerFocused && styles.playerContainerFocused
             ]}
           >
             <View 
               pointerEvents={isFullscreen ? "auto" : "none"} 
-              style={[StyleSheet.absoluteFill, { width: '100%', height: '100%' }, isFullscreen && { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }]}
+              style={[StyleSheet.absoluteFill, isFullscreen && { justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }]}
             >
               <Video
                 key={`${selectedQuality ? selectedQuality.url : (currentVariant?.url || '')}_${playerKey}`}
                 ref={videoRef}
-                style={[getVideoStyle(), !isFullscreen && { borderRadius: 10, overflow: 'hidden' }]}
+                style={[StyleSheet.absoluteFill, !isFullscreen && { borderRadius: 10, overflow: 'hidden' }]}
                 source={{
                   uri: selectedQuality ? selectedQuality.url : (currentVariant?.url || ''),
                   headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)', ...(currentVariant?.headers || {}) }
@@ -1216,7 +1155,7 @@ export const PlayerScreen = () => {
 
 const styles = StyleSheet.create({
   leftPanel: {
-    flex: 4, // 40% width
+    width: '40%',
     backgroundColor: '#0a0a0c',
     borderRightWidth: 1,
     borderRightColor: '#1c1c1e',
@@ -1224,19 +1163,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   rightPanel: {
-    flex: 6, // 60% width
+    width: '60%',
     backgroundColor: '#111113',
   },
   playerContainer: {
     width: '100%',
+    paddingTop: '56.25%',
+    position: 'relative',
     backgroundColor: '#000',
     borderRadius: 12,
     overflow: 'hidden',
     borderWidth: 2,
     borderColor: '#3a3a3c',
     marginBottom: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   playerContainerFocused: {
     borderColor: '#fff',
