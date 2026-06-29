@@ -19,8 +19,26 @@ if (!fs.existsSync(CACHE_DIR)) {
 
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
+// Cleanup old cache files to prevent disk exhaustion
+setInterval(() => {
+  fs.readdir(CACHE_DIR, (err, files) => {
+    if (err) return;
+    const now = Date.now();
+    files.forEach(file => {
+      if (file === 'public.m3u') return; // keep public playlist
+      const filePath = path.join(CACHE_DIR, file);
+      fs.stat(filePath, (err, stats) => {
+        if (!err && now - stats.mtimeMs > 2 * CACHE_TTL_MS) {
+          fs.unlink(filePath, () => {});
+        }
+      });
+    });
+  });
+}, 30 * 60 * 1000); // Check every 30 mins
+
 // Helper to download and parse M3U to a file using streams (Zero RAM usage)
-const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback) => {
+const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCount = 0) => {
+  if (redirectCount > 5) return callback(new Error('Too many redirects'));
   const client = urlStr.startsWith('https') ? https : http;
   const options = { headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)' } };
 
@@ -30,7 +48,7 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback) => {
       if (!redirectUrl.startsWith('http')) {
         redirectUrl = new URL(redirectUrl, urlStr).toString();
       }
-      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, callback);
+      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, callback, redirectCount + 1);
     }
     
     if (res.statusCode !== 200) {
@@ -89,9 +107,13 @@ app.get('/proxy', (req, res) => {
     res.sendFile(cacheFilePath); // Zero-copy disk serve
   };
 
+  // Do not cache .m3u8 live streams for more than 2 seconds, but cache main .m3u playlists for 1 hour
+  const isLiveStream = targetUrl.split('?')[0].endsWith('.m3u8');
+  const dynamicCacheTtl = isLiveStream ? 2000 : CACHE_TTL_MS;
+
   if (fs.existsSync(cacheFilePath)) {
     const stats = fs.statSync(cacheFilePath);
-    if (Date.now() - stats.mtimeMs < CACHE_TTL_MS) {
+    if (Date.now() - stats.mtimeMs < dynamicCacheTtl) {
       return serveCachedFile();
     }
   }
@@ -100,6 +122,10 @@ app.get('/proxy', (req, res) => {
   downloadAndParseM3U(targetUrl, cacheFilePath, targetUrl, (err) => {
     if (err) {
       console.error('Proxy Error:', err.message);
+      // Fallback to old cache if possible
+      if (fs.existsSync(cacheFilePath)) {
+        return serveCachedFile();
+      }
       return res.status(400).send('Invalid URL or request failed');
     }
     serveCachedFile();

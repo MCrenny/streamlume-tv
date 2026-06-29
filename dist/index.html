@@ -13,7 +13,12 @@
       var originalFetch = window.fetch;
       window.fetch = function(url, options) {
         if (typeof url === 'string') {
-          if ((url.indexOf('.m3u') !== -1 || url.indexOf('/p/') !== -1 || url.indexOf('epg') !== -1) && url.indexOf('iptvin.ru') === -1) {
+          var cleanUrl = url.split('?')[0];
+          var isPlaylist = cleanUrl.endsWith('.m3u') || cleanUrl.endsWith('.m3u8');
+          var isEpg = url.indexOf('epg') !== -1 && !cleanUrl.endsWith('.ts');
+          var isPicon = url.indexOf('/p/') !== -1 && !cleanUrl.endsWith('.ts');
+          
+          if ((isPlaylist || isEpg || isPicon) && url.indexOf('iptvin.ru') === -1) {
             arguments[0] = window.location.origin + '/proxy?url=' + encodeURIComponent(url);
           }
         }
@@ -23,8 +28,15 @@
       var originalXhrOpen = window.XMLHttpRequest.prototype.open;
       window.XMLHttpRequest.prototype.open = function(method, url) {
         if (typeof url === 'string') {
+          var cleanUrl = url.split('?')[0];
+          var isPlaylist = cleanUrl.endsWith('.m3u') || cleanUrl.endsWith('.m3u8');
+          var isEpg = url.indexOf('epg') !== -1 && !cleanUrl.endsWith('.ts');
+          var isPicon = url.indexOf('/p/') !== -1 && !cleanUrl.endsWith('.ts');
+
           if ((url.indexOf('http://') === 0 || url.indexOf('https://') === 0) && url.indexOf(window.location.hostname) === -1 && url.indexOf('iptvin.ru') === -1) {
-            arguments[1] = window.location.origin + '/proxy?url=' + encodeURIComponent(url);
+            if (isPlaylist || isEpg || isPicon) {
+              arguments[1] = window.location.origin + '/proxy?url=' + encodeURIComponent(url);
+            }
           }
         }
         return originalXhrOpen.apply(this, arguments);
