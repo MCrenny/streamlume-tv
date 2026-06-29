@@ -71,6 +71,63 @@ app.use((req, res, next) => {
   next();
 });
 
+// --- БОТ-ПАРСЕР ОБЩЕДОСТУПНЫХ ПЛЕЙЛИСТОВ ---
+const PUBLIC_SOURCES = [
+  'https://smolnp.github.io/IPTVru//IPTVru.m3u'
+];
+
+let publicPlaylistCache = '#EXTM3U\n';
+let isParsing = false;
+
+const updatePublicPlaylist = () => {
+  if (isParsing) return;
+  isParsing = true;
+  console.log('Бот-парсер начал сбор общедоступных плейлистов...');
+  
+  const https = require('https');
+  let newContent = '#EXTM3U\n';
+  let completed = 0;
+  
+  if (PUBLIC_SOURCES.length === 0) {
+    isParsing = false;
+    return;
+  }
+  
+  PUBLIC_SOURCES.forEach(urlStr => {
+    https.get(urlStr, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        // Убираем #EXTM3U из скачанных файлов, чтобы не было дублей заголовка
+        const lines = body.split('\n').filter(line => !line.includes('#EXTM3U'));
+        newContent += lines.join('\n') + '\n';
+        
+        completed++;
+        if (completed === PUBLIC_SOURCES.length) {
+          publicPlaylistCache = newContent;
+          console.log('Бот-парсер успешно обновил общедоступный плейлист.');
+          isParsing = false;
+        }
+      });
+    }).on('error', (err) => {
+      console.error('Ошибка бота-парсера для', urlStr, err.message);
+      completed++;
+      if (completed === PUBLIC_SOURCES.length) isParsing = false;
+    });
+  });
+};
+
+// Запускаем парсер при старте и раз в сутки (24 часа)
+updatePublicPlaylist();
+setInterval(updatePublicPlaylist, 24 * 60 * 60 * 1000);
+
+app.get('/api/public.m3u', (req, res) => {
+  res.setHeader('Content-Type', 'audio/x-mpegurl');
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.send(publicPlaylistCache);
+});
+// ----------------------------------------
+
 app.get(['/start.json', '/msx/start.json'], (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   res.sendFile(path.join(__dirname, 'start.json'));

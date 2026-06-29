@@ -94,15 +94,13 @@ export const HomeScreen = ({ navigation }: any) => {
   // isFreeMode = after trial expired, user chose "continue free" → restricted
 
   const allPlaylists = useMemo(() => {
-    const premiumList = { 
-      id: 'premium_amvera', 
-      name: '🆓 Общедоступные', 
-      url: `https://iptvpay-svmorozoww.amvera.io/api/playlist?key=${activationKey || 'VIP-TEST'}` 
+    const publicList = { 
+      id: 'public_amvera', 
+      name: '🆓 Общедоступный', 
+      url: Platform.OS === 'web' ? '/api/public.m3u' : 'https://streamlume-tv-svmorozoww.amvera.io/api/public.m3u' 
     };
-    // Free users only get the public playlist
-    if (isFreeMode && !isPro) return [premiumList];
-    return [premiumList, ...PLAYLISTS, ...customPlaylists];
-  }, [customPlaylists, activationKey, isFreeMode, isPro]);
+    return [publicList, ...PLAYLISTS, ...customPlaylists];
+  }, [customPlaylists]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
@@ -188,6 +186,14 @@ export const HomeScreen = ({ navigation }: any) => {
                 isLandscape={isLandscape}
                 hasTVPreferredFocus={pl.id === activePlaylistId}
                 onPress={() => {
+                  if (!isPro && pl.id !== 'public_amvera') {
+                    Alert.alert(
+                      '💎 КУПИТЬ PRO версию',
+                      'Этот плейлист доступен только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
+                      [{ text: 'Понятно', style: 'cancel' }]
+                    );
+                    return;
+                  }
                   const isActive = activePlaylistId === pl.id;
                   if (isActive && isCustom) {
                     Alert.alert('Управление плейлистом', pl.name, [
@@ -216,13 +222,21 @@ export const HomeScreen = ({ navigation }: any) => {
               />
             );
           })}
-          {/* Only PRO users can add custom playlists */}
-          {isPro && (
-            <AddSourceButton
-              isLandscape={isLandscape}
-              onPress={() => setModalVisible(true)}
-            />
-          )}
+          {/* PRO feature: Custom playlists */}
+          <AddSourceButton
+            isLandscape={isLandscape}
+            onPress={() => {
+              if (!isPro) {
+                Alert.alert(
+                  '💎 КУПИТЬ PRO версию',
+                  'Добавление своих плейлистов доступно только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
+                  [{ text: 'Понятно', style: 'cancel' }]
+                );
+                return;
+              }
+              setModalVisible(true);
+            }}
+          />
         </ScrollView>
         {!isLandscape && (
           <TextInput
