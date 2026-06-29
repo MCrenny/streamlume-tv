@@ -187,6 +187,12 @@ export const TVHomeScreen = ({ navigation }: any) => {
         const parsed = parseM3U(text);
         setChannels(parsed.channels || parsed);
         setSelectedCategory('Все каналы');
+        
+        // Use provided EPG URL or a fallback uncompressed EPG source
+        const fallbackEpgUrl = 'http://epg.it999.ru/epg.xml';
+        const finalTvgUrl = parsed.tvgUrl || fallbackEpgUrl;
+        
+        useStore.getState().setTvgUrl(finalTvgUrl);
       } catch (error) {
         console.error('Ошибка загрузки плейлиста:', error);
       } finally {

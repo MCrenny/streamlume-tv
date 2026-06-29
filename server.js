@@ -47,8 +47,15 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
   };
 
   if (redirectCount > 5) return safeCallback(new Error('Too many redirects'));
+
   const client = urlStr.startsWith('https') ? https : http;
-  const options = { headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)' } };
+  
+  const isEpg = urlStr.includes('epg');
+  const userAgent = isEpg 
+    ? 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' 
+    : 'Televizo/1.9.3.4 (Linux;Android 11)';
+    
+  const options = { headers: { 'User-Agent': userAgent } };
 
   client.get(urlStr, options, (res) => {
     if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
