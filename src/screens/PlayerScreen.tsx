@@ -605,7 +605,7 @@ export const PlayerScreen = () => {
               <Video
                 key={`${selectedQuality ? selectedQuality.url : (currentVariant?.url || '')}_${playerKey}`}
                 ref={videoRef}
-                style={[StyleSheet.absoluteFill]}
+                style={[StyleSheet.absoluteFill, { width: '100%', height: '100%' }]}
                 source={{
                   uri: selectedQuality ? selectedQuality.url : (currentVariant?.url || ''),
                   headers: { 'User-Agent': 'Televizo/1.9.3.4 (Linux;Android 11)', ...(currentVariant?.headers || {}) }
