@@ -71,6 +71,15 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
     }
 
     const fileStream = fs.createWriteStream(destPath);
+    
+    // If it's an XML file, pipe it directly (don't parse line by line)
+    if (isEpg || urlStr.toLowerCase().endsWith('.xml')) {
+      res.pipe(fileStream);
+      res.on('end', () => safeCallback(null));
+      res.on('error', (err) => safeCallback(err));
+      return;
+    }
+
     const rl = readline.createInterface({ input: res, crlfDelay: Infinity });
 
     rl.on('line', (line) => {
