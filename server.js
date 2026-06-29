@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 80;
 app.use(cors());
 
 const CACHE_DIR = path.join(__dirname, 'cache');
-if (!fs.existsSync(CACHE_DIR)) {
-  fs.mkdirSync(CACHE_DIR);
+if (fs.existsSync(CACHE_DIR)) {
+  fs.rmSync(CACHE_DIR, { recursive: true, force: true });
 }
+fs.mkdirSync(CACHE_DIR);
 
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
