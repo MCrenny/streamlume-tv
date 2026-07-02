@@ -327,18 +327,23 @@
                 var isVertical = (keyCode === 38 || keyCode === 40);
 
                 if (!isVertical) {
-                  // Left/right: nearest in the same row band, correct direction
+                  // Left/right: nearest in the same row, correct direction.
+                  // Use centers and a generous vertical tolerance because RNW
+                  // tiles can have small sub-pixel offsets between siblings.
+                  var cy0 = r0.top + r0.height / 2;
+                  var cx0 = r0.left + r0.width / 2;
+                  var tol = Math.max(r0.height * 0.5, 20);
                   var best = null, bestDist = Infinity;
                   gridEls.forEach(function(el) {
                     if (el === origin) return;
                     var r2 = el.getBoundingClientRect();
                     if (r2.width === 0 || r2.height === 0) return;
-                    var dx = r2.left - r0.left;
-                    // same row = vertically overlapping
-                    var sameRow = !(r2.bottom < r0.top + 4 || r2.top > r0.bottom - 4);
-                    var inDir = (keyCode === 39 && dx > 0) || (keyCode === 37 && dx < 0);
+                    var cy2 = r2.top + r2.height / 2;
+                    var cx2 = r2.left + r2.width / 2;
+                    var sameRow = Math.abs(cy2 - cy0) < tol;
+                    var inDir = (keyCode === 39 && cx2 > cx0) || (keyCode === 37 && cx2 < cx0);
                     if (sameRow && inDir) {
-                      var d = Math.abs(dx);
+                      var d = Math.abs(cx2 - cx0);
                       if (d < bestDist) { bestDist = d; best = el; }
                     }
                   });
@@ -397,6 +402,27 @@
                   p = p.parentElement;
                 }
                 bestNode = scoped.length ? findNeighbor(scoped, currentFocus) : findNeighbor(els, currentFocus);
+              }
+              // Last-resort horizontal move in the grid: pick the closest tile
+              // sharing the same vertical center, in the pressed direction.
+              // Guarantees left/right never gets stuck even if scoping missed.
+              if (!bestNode && (keyCode === 37 || keyCode === 39) && grid) {
+                var r0h = currentFocus.getBoundingClientRect();
+                var cy0h = r0h.top + r0h.height / 2;
+                var cx0h = r0h.left + r0h.width / 2;
+                var tolh = Math.max(r0h.height * 0.6, 24);
+                var hb = null, hbd = Infinity;
+                grid.forEach(function(el){
+                  if (el === currentFocus) return;
+                  var rr = el.getBoundingClientRect();
+                  if (rr.width === 0) return;
+                  var cyx = rr.top + rr.height / 2, cxx = rr.left + rr.width / 2;
+                  if (Math.abs(cyx - cy0h) < tolh) {
+                    var inDir = (keyCode === 39 && cxx > cx0h) || (keyCode === 37 && cxx < cx0h);
+                    if (inDir) { var dd = Math.abs(cxx - cx0h); if (dd < hbd) { hbd = dd; hb = el; } }
+                  }
+                });
+                if (hb) bestNode = hb;
               }
               if (bestNode) setFocus(bestNode);
             }
