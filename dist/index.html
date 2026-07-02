@@ -264,18 +264,6 @@
              return;
           }
             if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
-              // ===== DIAGNOSTIC OVERLAY (temporary) =====
-              window.__sl_lastKey = {37:'LEFT',38:'UP',39:'RIGHT',40:'DOWN'}[keyCode];
-              window.__sl_lastFocus = currentFocus;
-              (function(){
-                var dbg = document.getElementById('__sl_dbg');
-                if(!dbg){
-                  dbg = document.createElement('div'); dbg.id='__sl_dbg';
-                  dbg.style.cssText='position:fixed;left:8px;bottom:8px;z-index:9999999;background:#000;color:#0f0;font:12px monospace;padding:6px 10px;max-width:70vw;white-space:pre;border:2px solid #0f0;border-radius:6px;pointer-events:none;';
-                  document.body.appendChild(dbg);
-                }
-              })();
-              // ===== END DIAGNOSTIC =====
               if (currentFocus) {
                 focusHistoryText = currentFocus.textContent || "";
                 var r = currentFocus.getBoundingClientRect();
@@ -399,8 +387,29 @@
               }
 
               var bestNode = null;
+              var inGrid = grid && grid.indexOf(currentFocus) !== -1;
+
+              // BRIDGE: cursor is in the sidebar (categories) and user presses
+              // RIGHT -> jump into the channel grid (first tile to the right).
+              // LEFT from grid -> handled below by the geometric fallback.
+              if (!inGrid && keyCode === 39 && grid) {
+                var r0b = currentFocus.getBoundingClientRect();
+                var cy0b = r0b.top + r0b.height / 2;
+                var best = null, bestDist = Infinity;
+                grid.forEach(function(el){
+                  var rr = el.getBoundingClientRect();
+                  if (rr.width === 0 || rr.height === 0) return;
+                  if (rr.left > r0b.right - 20) { // clearly to the right
+                    var cy2 = rr.top + rr.height / 2;
+                    var d = Math.abs(cy2 - cy0b) + (rr.left - r0b.right) * 0.1;
+                    if (d < bestDist) { bestDist = d; best = el; }
+                  }
+                });
+                if (best) { setFocus(best); return; }
+              }
+
               // In the grid -> use strict table navigation (keeps column on up/down)
-              if (grid && grid.indexOf(currentFocus) !== -1) {
+              if (inGrid) {
                 bestNode = findGridNeighbor(grid, currentFocus);
               }
               // Not a grid (sidebar/header) or grid gave nothing sideways -> geometric
@@ -436,25 +445,6 @@
                 });
                 if (hb) bestNode = hb;
               }
-              // ===== DIAGNOSTIC: show what was found =====
-              (function(){
-                var dbg = document.getElementById('__sl_dbg');
-                if (dbg) {
-                  var k = window.__sl_lastKey;
-                  var f = window.__sl_lastFocus;
-                  var fr = f ? f.getBoundingClientRect() : null;
-                  var ft = f ? (f.textContent||'').trim().slice(0,14) : 'NULL';
-                  var nr = bestNode ? bestNode.getBoundingClientRect() : null;
-                  var nt = bestNode ? (bestNode.textContent||'').trim().slice(0,14) : 'NONE';
-                  dbg.textContent =
-                    'KEY:'+k+
-                    '\nGRID:'+(grid?('yes('+grid.length+')'):'no')+
-                    '\nIN_GRID:'+(grid&&f?(grid.indexOf(f)!==-1?'yes':'NO'):'?')+
-                    '\nFOCUS:'+ft+' ['+(fr?Math.round(fr.left)+','+Math.round(fr.top):'?')+']'+
-                    '\nNEXT:'+nt+(nr?(' ['+Math.round(nr.left)+','+Math.round(nr.top)+']'):'');
-                }
-              })();
-              // ===== END DIAGNOSTIC =====
               if (bestNode) setFocus(bestNode);
             }
         }, true);
