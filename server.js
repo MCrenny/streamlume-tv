@@ -1,3 +1,12 @@
+// Prevent server crash on unhandled errors (Kubernetes/Amvera otherwise
+// restarts the container in a loop). Must be the very first thing.
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err.message, err.stack);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled Rejection:', reason);
+});
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -284,4 +293,22 @@ app.get('/', (req, res, next) => {
 // Serve static files with normal caching
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.listen(PORT, () => console.log('Server running on ' + PORT));
+// Global error handler (Express 5 compatibility) - prevents process crash
+app.use((err, req, res, next) => {
+  console.error('Express error:', err.message);
+  if (!res.headersSent) {
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+const server = app.listen(PORT, () => console.log('Server running on ' + PORT));
+
+// Catch listen() errors (EADDRINUSE, EACCES) explicitly
+server.on('error', (err) => {
+  console.error('SERVER FATAL ERROR:', err.code, '-', err.message);
+  if (err.code === 'EADDRINUSE') {
+    console.error('Port', PORT, 'is already in use.');
+  } else if (err.code === 'EACCES') {
+    console.error('Port', PORT, 'requires privileges. Set PORT env var.');
+  }
+});
