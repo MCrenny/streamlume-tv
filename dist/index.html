@@ -226,7 +226,7 @@
           if (currentFocus) {
             currentFocus.classList.add('tv-focus');
             currentFocus.focus();
-            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
           }
         }
         window.addEventListener('load', function() {
@@ -235,7 +235,15 @@
           document.head.appendChild(style);
           setTimeout(function() {
             var els = getFocusableElements();
-            if (els.length > 0) setFocus(els[0]);
+            if (els.length === 0) return;
+            // Prefer a focusable that is lower on the page (channel grid),
+            // not the top header buttons, so initial focus lands on content.
+            var best = els[0];
+            for (var i = 0; i < els.length; i++) {
+              var r = els[i].getBoundingClientRect();
+              if (r.top > 40 && r.width > 80 && r.height > 40) { best = els[i]; break; }
+            }
+            setFocus(best);
           }, 1500);
         });
         window.addEventListener('keydown', function(e) {
@@ -276,21 +284,45 @@
                 return; 
               }
   
-              var rect1 = currentFocus.getBoundingClientRect();
-              var cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
-              var bestNode = null, bestDist = Infinity;
-              els.forEach(function(el) {
-                if (el === currentFocus) return;
-                var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
-                var dx = cx2 - cx1, dy = cy2 - cy1;
-                if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
-                    (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
-                    (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
-                    (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
-                  var dist = Math.sqrt(dx*dx + dy*dy);
-                  if (dist < bestDist) { bestDist = dist; bestNode = el; }
-                }
-              });
+              // Find nearest focusable in a given direction among a candidate list
+              function findNeighbor(candidates, origin) {
+                var r0 = origin.getBoundingClientRect();
+                var ox = r0.left + r0.width / 2, oy = r0.top + r0.height / 2;
+                var best = null, bestDist = Infinity;
+                candidates.forEach(function(el) {
+                  if (el === origin) return;
+                  var r2 = el.getBoundingClientRect();
+                  if (r2.width === 0 || r2.height === 0) return;
+                  var cx2 = r2.left + r2.width / 2, cy2 = r2.top + r2.height / 2;
+                  var dx = cx2 - ox, dy = cy2 - oy;
+                  if ((keyCode === 39 && dx > 0 && Math.abs(dx) >= Math.abs(dy)) ||
+                      (keyCode === 37 && dx < 0 && Math.abs(dx) >= Math.abs(dy)) ||
+                      (keyCode === 40 && dy > 0 && Math.abs(dy) >= Math.abs(dx)) ||
+                      (keyCode === 38 && dy < 0 && Math.abs(dy) >= Math.abs(dx))) {
+                    var dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < bestDist) { bestDist = dist; best = el; }
+                  }
+                });
+                return best;
+              }
+
+              // 1) Prefer neighbors inside the SAME scroll/container area (the channel grid),
+              //    so the cursor stays in its region instead of jumping to sidebar/header.
+              var scoped = [];
+              var p = currentFocus.parentElement;
+              while (p && p !== document.body) {
+                var scopedEls = Array.from(p.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
+                var visibleScoped = scopedEls.filter(function(el) {
+                  var rr = el.getBoundingClientRect();
+                  return rr.width > 0 && rr.height > 0;
+                });
+                if (visibleScoped.length > 1) { scoped = visibleScoped; break; }
+                p = p.parentElement;
+              }
+              var scopedBest = scoped.length ? findNeighbor(scoped, currentFocus) : null;
+
+              // 2) Fallback: full page if nothing found in scope
+              var bestNode = scopedBest || findNeighbor(els, currentFocus);
               if (bestNode) setFocus(bestNode);
             }
         }, true);
