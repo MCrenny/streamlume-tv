@@ -1,14 +1,13 @@
 {
   "type": "pages",
-  "ready": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html",
-  "headline": "StreamLume TV",
+  "headline": "StreamLume",
   "pages": [
     {
       "items": [
         {
           "type": "button",
           "layout": "0,0,12,2",
-          "title": "Загрузка StreamLume...",
+          "title": "Запустить StreamLume",
           "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html"
         }
       ]
