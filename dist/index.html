@@ -226,7 +226,19 @@
           if (currentFocus) {
             currentFocus.classList.add('tv-focus');
             currentFocus.focus();
-            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+            // Manual minimal scroll: only move if the element is OUT of view,
+            // and only by the amount needed. Avoids the "jump to center" jerk
+            // and the FlatList/scrollIntoView fight that pulled content up.
+            try {
+              var rect = el.getBoundingClientRect();
+              var vh = window.innerHeight || document.documentElement.clientHeight;
+              var margin = 40;
+              if (rect.top < margin) {
+                window.scrollBy(0, rect.top - margin);
+              } else if (rect.bottom > vh - margin) {
+                window.scrollBy(0, rect.bottom - (vh - margin));
+              }
+            } catch (err) {}
           }
         }
         window.addEventListener('load', function() {
@@ -284,7 +296,7 @@
                 return; 
               }
   
-              // Find nearest focusable in a given direction among a candidate list
+              // Geometric neighbor search within a candidate list (for left/right & sidebar)
               function findNeighbor(candidates, origin) {
                 var r0 = origin.getBoundingClientRect();
                 var ox = r0.left + r0.width / 2, oy = r0.top + r0.height / 2;
@@ -306,23 +318,86 @@
                 return best;
               }
 
-              // 1) Prefer neighbors inside the SAME scroll/container area (the channel grid),
-              //    so the cursor stays in its region instead of jumping to sidebar/header.
-              var scoped = [];
-              var p = currentFocus.parentElement;
-              while (p && p !== document.body) {
-                var scopedEls = Array.from(p.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
-                var visibleScoped = scopedEls.filter(function(el) {
-                  var rr = el.getBoundingClientRect();
-                  return rr.width > 0 && rr.height > 0;
-                });
-                if (visibleScoped.length > 1) { scoped = visibleScoped; break; }
-                p = p.parentElement;
-              }
-              var scopedBest = scoped.length ? findNeighbor(scoped, currentFocus) : null;
+              // TABLE navigation for the channel grid: move up/down by ROWS in the
+              // SAME column, so the cursor walks straight down instead of jumping
+              // sideways or pulling the page up. Left/right stays in the same row.
+              function findGridNeighbor(gridEls, origin) {
+                var r0 = origin.getBoundingClientRect();
+                var colLeft = r0.left, colRight = r0.right;
+                var isVertical = (keyCode === 38 || keyCode === 40);
 
-              // 2) Fallback: full page if nothing found in scope
-              var bestNode = scopedBest || findNeighbor(els, currentFocus);
+                if (!isVertical) {
+                  // Left/right: nearest in the same row band, correct direction
+                  var best = null, bestDist = Infinity;
+                  gridEls.forEach(function(el) {
+                    if (el === origin) return;
+                    var r2 = el.getBoundingClientRect();
+                    if (r2.width === 0 || r2.height === 0) return;
+                    var dx = r2.left - r0.left;
+                    // same row = vertically overlapping
+                    var sameRow = !(r2.bottom < r0.top + 4 || r2.top > r0.bottom - 4);
+                    var inDir = (keyCode === 39 && dx > 0) || (keyCode === 37 && dx < 0);
+                    if (sameRow && inDir) {
+                      var d = Math.abs(dx);
+                      if (d < bestDist) { bestDist = d; best = el; }
+                    }
+                  });
+                  return best;
+                }
+
+                // Vertical: find element in the SAME COLUMN, next/prev row.
+                // "Same column" = horizontal overlap with the origin tile.
+                var colBest = null, colBestDist = Infinity;
+                gridEls.forEach(function(el) {
+                  if (el === origin) return;
+                  var r2 = el.getBoundingClientRect();
+                  if (r2.width === 0 || r2.height === 0) return;
+                  var dy = r2.top - r0.top;
+                  var inDir = (keyCode === 40 && dy > 2) || (keyCode === 38 && dy < -2);
+                  // horizontal overlap: same column
+                  var overlap = !(r2.right < colLeft + 4 || r2.left > colRight - 4);
+                  if (inDir && overlap) {
+                    var d = Math.abs(dy);
+                    if (d < colBestDist) { colBestDist = d; colBest = el; }
+                  }
+                });
+                if (colBest) return colBest;
+
+                // No tile below/above in this column yet (e.g. FlatList hasn't
+                // rendered the next row). Return null - do NOT fall back to
+                // full-page here, otherwise the cursor escapes the grid.
+                return null;
+              }
+
+              // Detect the channel grid: the scrollable area holding many tiles.
+              // Heuristic: a container with >2 focusable children that wrap in rows.
+              var grid = null;
+              var pg = currentFocus.parentElement;
+              while (pg && pg !== document.body) {
+                var ge = Array.from(pg.querySelectorAll('[tabindex="0"], [role="button"], [role="link"]')).filter(function(el){
+                  var rr = el.getBoundingClientRect(); return rr.width > 0 && rr.height > 0;
+                });
+                if (ge.length > 2) { grid = ge; break; }
+                pg = pg.parentElement;
+              }
+
+              var bestNode = null;
+              // In the grid -> use strict table navigation (keeps column on up/down)
+              if (grid && grid.indexOf(currentFocus) !== -1) {
+                bestNode = findGridNeighbor(grid, currentFocus);
+              }
+              // Not a grid (sidebar/header) or grid gave nothing sideways -> geometric
+              if (!bestNode) {
+                var scoped = [];
+                var p = currentFocus.parentElement;
+                while (p && p !== document.body) {
+                  var scopedEls = Array.from(p.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
+                  var visibleScoped = scopedEls.filter(function(el){ var rr = el.getBoundingClientRect(); return rr.width > 0 && rr.height > 0; });
+                  if (visibleScoped.length > 1) { scoped = visibleScoped; break; }
+                  p = p.parentElement;
+                }
+                bestNode = scoped.length ? findNeighbor(scoped, currentFocus) : findNeighbor(els, currentFocus);
+              }
               if (bestNode) setFocus(bestNode);
             }
         }, true);
