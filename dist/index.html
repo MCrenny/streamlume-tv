@@ -300,26 +300,33 @@
       // ====================================================================
       // Универсальный фикс высоты плиток каналов (для старых Tizen/webOS).
       //
-      // Проблема: React Native Web переводит aspectRatio:1.35/1.4/1.3 из
-      // исходника в CSS-свойство `aspect-ratio`, которое поддерживается
-      // только в Chrome 79+ (2020). Старые Tizen 2.x-4.x / webOS 1-3
-      // (Chrome 38-56) его игнорируют -> у карточек нет высоты -> плитки
-      // "плоские/резиновые". На Android TV (новый WebView) работает само.
+      // Проблема: React Native Web берёт aspectRatio:1.35/1.4/1.3 из
+      // исходника и в рантайме генерирует CSS-правило `aspect-ratio` для
+      // атомарного класса вида r-xxxxxx (НЕ inline!). Это CSS-свойство
+      // поддерживается только в Chrome 79+ (2020). Старые Tizen 2.x-4.x /
+      // webOS 1-3 (Chrome 38-56) его игнорируют -> у карточек нет высоты
+      // -> плитки "плоские/резиновые" высотой в одну строку текста. На
+      // Android TV (новый WebView) aspect-ratio работает -> там идеально.
       //
       // Решение (ОДНО для всех устройств, без определения модели):
-      // измерить реальную ширину карточки и задать ей явную высоту
-      // width / ratio. offsetWidth доступен везде, с 1990-х. На Android
-      // результат совпадает с тем, что давал aspect-ratio (нет регрессии);
-      // на старом Tizen плитки получают корректную высоту и заполняют
-      // область. Режим (6/8/4 колонки или список) определяется по числу
-      // карточек в ряду в живом DOM — универсально, без имён режимов.
+      // измерить реальную ширину карточки и задать ей явную inline-высоту
+      // width / ratio (inline перебивает любые классы). offsetWidth доступен
+      // везде, с 1990-х. На Android результат совпадает с тем, что давал
+      // aspect-ratio (нет регрессии); на старом Tizen плитки получают
+      // корректную высоту и заполняют область.
+      //
+      // Как находим плитки: НЕ по стилю (aspect-ratio не в inline), а по
+      // СТРУКТУРЕ DOM. Карточка канала = [role=button], лежащая в РЯДУ
+      // сетки (несколько кнопок на одной горизонтали). Sidebar-категории и
+      // UI-кнопки так не лежат -> не задеваем. Режим (6/8/4 колонки или
+      // список) определяется по числу кнопок в ряду — универсально.
       //
       // Безопасность: НЕ трогает движок навигации, .tv-focus, выбор
-      // [role=button]. Карточки списка (без aspect-ratio) не затрагиваются.
-      // Если скрипт не отработал — поведение ровно как раньше (не хуже).
+      // [role=button]. Список (1 колонка) и UI не затрагиваются. При любом
+      // сбое — поведение ровно как раньше (не хуже).
       // ====================================================================
       (function () {
-        // Соотношение сторон по числу колонок в ряду (из исходника):
+        // Соотношение сторон по числу колонок (из исходника):
         // normal=6 -> 1.35, small=8 -> 1.4, large=4 -> 1.3.
         function ratioForColumns(n) {
           if (n <= 1) return 0;            // список — не трогаем
@@ -328,38 +335,41 @@
           return 1.4;                       // маленькие (>=7)
         }
 
-        // Это плитка канала? Признак: элемент [role=button] с inline
-        // стилем aspect-ratio (ставит RNW из aspectRatio:1.35/1.4/1.3).
-        // Карточки списка (width:'96%', без aspect-ratio) сюда не попадают.
-        function isChannelTile(el) {
-          if (!el || el.getAttribute('role') !== 'button') return false;
-          var st = el.style && el.style.aspectRatio;
-          if (st) return true;            // современный DOM inline style
-          // Запасной путь: getComputedStyle (inline, не cascaded) — старые
-          // движки могут не держать style.aspectRatio как свойство, но
-          // getComputedStyle.cssText обычно содержит "aspect-ratio:".
-          try {
-            var ct = el.style && el.style.cssText;
-            if (ct && ct.indexOf('aspect-ratio') !== -1) return true;
-          } catch (e) {}
-          return false;
-        }
-
-        // Сколько плиток в одном ряду (по Y-центру)? Универсальное
-        // определение числа колонок без знания режима или устройства.
-        function detectColumns(tiles) {
-          if (tiles.length === 0) return 0;
-          // Возьмём первый ряд: плитки, чей Y-центр близок к первой.
-          var first = tiles[0].getBoundingClientRect();
-          var y0 = first.top + first.height / 2;
-          var tol = Math.max(8, first.height * 0.5);
-          var count = 0;
-          for (var i = 0; i < tiles.length; i++) {
-            var r = tiles[i].getBoundingClientRect();
-            var yc = r.top + r.height / 2;
-            if (Math.abs(yc - y0) <= tol) count++;
+        // Сгруппировать видимые [role=button] в ряды по Y-центру.
+        // Возвращает { rows: [[el,...], ...], cols: N } где cols — число
+        // элементов в "самом полном" ряду (= число колонок сетки).
+        function analyzeButtons(btns) {
+          var visible = [];
+          for (var i = 0; i < btns.length; i++) {
+            var r = btns[i].getBoundingClientRect();
+            if (r.width > 1 && r.height > 1) visible.push({ el: btns[i], yc: r.top + r.height / 2 });
           }
-          return count;
+          if (visible.length === 0) return { rows: [], cols: 0 };
+          // Сортируем по Y, группируем с допуском.
+          visible.sort(function (a, b) { return a.yc - b.yc; });
+          var rows = [];
+          var cur = [visible[0].el];
+          var curY = visible[0].yc;
+          for (var j = 1; j < visible.length; j++) {
+            // Допуск: 40% от высоты первой плитки ряда — устойчиво к
+            // субпиксельным смещениям между соседними плитками.
+            var tol = Math.max(10, (cur[0].getBoundingClientRect().height) * 0.4);
+            if (Math.abs(visible[j].yc - curY) <= tol) {
+              cur.push(visible[j].el);
+            } else {
+              rows.push(cur);
+              cur = [visible[j].el];
+              curY = visible[j].yc;
+            }
+          }
+          rows.push(cur);
+          // Колонки = максимальное число кнопок в ряду. Ряды из 1 кнопки
+          // (sidebar-категории, UI) не влияют на определение сетки.
+          var cols = 0;
+          for (var k = 0; k < rows.length; k++) {
+            if (rows[k].length > cols) cols = rows[k].length;
+          }
+          return { rows: rows, cols: cols };
         }
 
         var running = false;
@@ -367,26 +377,28 @@
           if (running) return;
           running = true;
           try {
-            // Все [role=button] на странице, оставляем только плитки.
-            var cand = document.querySelectorAll('[role="button"]');
-            var tiles = [];
-            for (var i = 0; i < cand.length; i++) {
-              if (isChannelTile(cand[i])) tiles.push(cand[i]);
-            }
-            if (tiles.length === 0) { running = false; return; }
+            var btns = document.querySelectorAll('[role="button"]');
+            var info = analyzeButtons(btns);
+            // Плитки — это ряды из 2+ кнопок (сетка). Ряды из 1 кнопки
+            // (sidebar/UI) и режим "список" (cols==1) не трогаем.
+            if (info.cols < 2) { running = false; return; }
 
-            var cols = detectColumns(tiles);
-            var ratio = ratioForColumns(cols);
-            if (!ratio) { running = false; return; } // список — пропускаем
+            var ratio = ratioForColumns(info.cols);
+            if (!ratio) { running = false; return; }
 
-            for (var j = 0; j < tiles.length; j++) {
-              var el = tiles[j];
-              var w = el.offsetWidth;
-              if (!w) continue;
-              // box-sizing:border-box, чтобы padding/border не раздували
-              // плитку поверх заданной высоты.
-              el.style.boxSizing = 'border-box';
-              el.style.height = Math.round(w / ratio) + 'px';
+            for (var i = 0; i < info.rows.length; i++) {
+              var row = info.rows[i];
+              if (row.length < 2) continue; // одинокие кнопки — не плитки
+              for (var j = 0; j < row.length; j++) {
+                var el = row[j];
+                var w = el.offsetWidth;
+                if (!w) continue;
+                // box-sizing:border-box, чтобы padding/border не раздували
+                // плитку поверх заданной высоты. Inline height перебивает
+                // сгенерированный RNW класс с aspect-ratio.
+                el.style.boxSizing = 'border-box';
+                el.style.height = Math.round(w / ratio) + 'px';
+              }
             }
           } catch (e) {
             // Молча: любой сбой -> поведение как раньше (без фикс), не краш.
@@ -412,9 +424,9 @@
           // Первичный проход — после того, как каналы отрендерились.
           // Несколько попыток с задержкой (данные грузятся асинхронно).
           schedule();
-          setTimeout(schedule, 600);
-          setTimeout(schedule, 1500);
-          setTimeout(schedule, 3000);
+          setTimeout(schedule, 800);
+          setTimeout(schedule, 2000);
+          setTimeout(schedule, 4000);
 
           // Пересчёт при появлении новых рядов (виртуализация, смена
           // категории/режима). Observer на document — плоско и надёжно.
