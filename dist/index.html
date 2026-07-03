@@ -226,19 +226,7 @@
           if (currentFocus) {
             currentFocus.classList.add('tv-focus');
             currentFocus.focus();
-            // Manual minimal scroll: only move if the element is OUT of view,
-            // and only by the amount needed. Avoids the "jump to center" jerk
-            // and the FlatList/scrollIntoView fight that pulled content up.
-            try {
-              var rect = el.getBoundingClientRect();
-              var vh = window.innerHeight || document.documentElement.clientHeight;
-              var margin = 40;
-              if (rect.top < margin) {
-                window.scrollBy(0, rect.top - margin);
-              } else if (rect.bottom > vh - margin) {
-                window.scrollBy(0, rect.bottom - (vh - margin));
-              }
-            } catch (err) {}
+            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
           }
         }
         window.addEventListener('load', function() {
@@ -247,15 +235,7 @@
           document.head.appendChild(style);
           setTimeout(function() {
             var els = getFocusableElements();
-            if (els.length === 0) return;
-            // Prefer a focusable that is lower on the page (channel grid),
-            // not the top header buttons, so initial focus lands on content.
-            var best = els[0];
-            for (var i = 0; i < els.length; i++) {
-              var r = els[i].getBoundingClientRect();
-              if (r.top > 40 && r.width > 80 && r.height > 40) { best = els[i]; break; }
-            }
-            setFocus(best);
+            if (els.length > 0) setFocus(els[0]);
           }, 1500);
         });
         window.addEventListener('keydown', function(e) {
@@ -296,155 +276,21 @@
                 return; 
               }
   
-              // Geometric neighbor search within a candidate list (for left/right & sidebar)
-              function findNeighbor(candidates, origin) {
-                var r0 = origin.getBoundingClientRect();
-                var ox = r0.left + r0.width / 2, oy = r0.top + r0.height / 2;
-                var best = null, bestDist = Infinity;
-                candidates.forEach(function(el) {
-                  if (el === origin) return;
-                  var r2 = el.getBoundingClientRect();
-                  if (r2.width === 0 || r2.height === 0) return;
-                  var cx2 = r2.left + r2.width / 2, cy2 = r2.top + r2.height / 2;
-                  var dx = cx2 - ox, dy = cy2 - oy;
-                  if ((keyCode === 39 && dx > 0 && Math.abs(dx) >= Math.abs(dy)) ||
-                      (keyCode === 37 && dx < 0 && Math.abs(dx) >= Math.abs(dy)) ||
-                      (keyCode === 40 && dy > 0 && Math.abs(dy) >= Math.abs(dx)) ||
-                      (keyCode === 38 && dy < 0 && Math.abs(dy) >= Math.abs(dx))) {
-                    var dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist < bestDist) { bestDist = dist; best = el; }
-                  }
-                });
-                return best;
-              }
-
-              // TABLE navigation for the channel grid: move up/down by ROWS in the
-              // SAME column, so the cursor walks straight down instead of jumping
-              // sideways or pulling the page up. Left/right stays in the same row.
-              function findGridNeighbor(gridEls, origin) {
-                var r0 = origin.getBoundingClientRect();
-                var colLeft = r0.left, colRight = r0.right;
-                var isVertical = (keyCode === 38 || keyCode === 40);
-
-                if (!isVertical) {
-                  // Left/right: nearest in the same row, correct direction.
-                  // Use centers and a generous vertical tolerance because RNW
-                  // tiles can have small sub-pixel offsets between siblings.
-                  var cy0 = r0.top + r0.height / 2;
-                  var cx0 = r0.left + r0.width / 2;
-                  var tol = Math.max(r0.height * 0.5, 20);
-                  var best = null, bestDist = Infinity;
-                  gridEls.forEach(function(el) {
-                    if (el === origin) return;
-                    var r2 = el.getBoundingClientRect();
-                    if (r2.width === 0 || r2.height === 0) return;
-                    var cy2 = r2.top + r2.height / 2;
-                    var cx2 = r2.left + r2.width / 2;
-                    var sameRow = Math.abs(cy2 - cy0) < tol;
-                    var inDir = (keyCode === 39 && cx2 > cx0) || (keyCode === 37 && cx2 < cx0);
-                    if (sameRow && inDir) {
-                      var d = Math.abs(cx2 - cx0);
-                      if (d < bestDist) { bestDist = d; best = el; }
-                    }
-                  });
-                  return best;
+              var rect1 = currentFocus.getBoundingClientRect();
+              var cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
+              var bestNode = null, bestDist = Infinity;
+              els.forEach(function(el) {
+                if (el === currentFocus) return;
+                var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
+                var dx = cx2 - cx1, dy = cy2 - cy1;
+                if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
+                    (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
+                    (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
+                    (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
+                  var dist = Math.sqrt(dx*dx + dy*dy);
+                  if (dist < bestDist) { bestDist = dist; bestNode = el; }
                 }
-
-                // Vertical: find element in the SAME COLUMN, next/prev row.
-                // "Same column" = horizontal overlap with the origin tile.
-                var colBest = null, colBestDist = Infinity;
-                gridEls.forEach(function(el) {
-                  if (el === origin) return;
-                  var r2 = el.getBoundingClientRect();
-                  if (r2.width === 0 || r2.height === 0) return;
-                  var dy = r2.top - r0.top;
-                  var inDir = (keyCode === 40 && dy > 2) || (keyCode === 38 && dy < -2);
-                  // horizontal overlap: same column
-                  var overlap = !(r2.right < colLeft + 4 || r2.left > colRight - 4);
-                  if (inDir && overlap) {
-                    var d = Math.abs(dy);
-                    if (d < colBestDist) { colBestDist = d; colBest = el; }
-                  }
-                });
-                if (colBest) return colBest;
-
-                // No tile below/above in this column yet (e.g. FlatList hasn't
-                // rendered the next row). Return null - do NOT fall back to
-                // full-page here, otherwise the cursor escapes the grid.
-                return null;
-              }
-
-              // Detect the channel grid: the scrollable area holding many tiles.
-              // Heuristic: a container with >2 focusable children that wrap in rows.
-              var grid = null;
-              var pg = currentFocus.parentElement;
-              while (pg && pg !== document.body) {
-                var ge = Array.from(pg.querySelectorAll('[tabindex="0"], [role="button"], [role="link"]')).filter(function(el){
-                  var rr = el.getBoundingClientRect(); return rr.width > 0 && rr.height > 0;
-                });
-                if (ge.length > 2) { grid = ge; break; }
-                pg = pg.parentElement;
-              }
-
-              var bestNode = null;
-              var inGrid = grid && grid.indexOf(currentFocus) !== -1;
-
-              // BRIDGE: cursor is in the sidebar (categories) and user presses
-              // RIGHT -> jump into the channel grid (first tile to the right).
-              // LEFT from grid -> handled below by the geometric fallback.
-              if (!inGrid && keyCode === 39 && grid) {
-                var r0b = currentFocus.getBoundingClientRect();
-                var cy0b = r0b.top + r0b.height / 2;
-                var best = null, bestDist = Infinity;
-                grid.forEach(function(el){
-                  var rr = el.getBoundingClientRect();
-                  if (rr.width === 0 || rr.height === 0) return;
-                  if (rr.left > r0b.right - 20) { // clearly to the right
-                    var cy2 = rr.top + rr.height / 2;
-                    var d = Math.abs(cy2 - cy0b) + (rr.left - r0b.right) * 0.1;
-                    if (d < bestDist) { bestDist = d; best = el; }
-                  }
-                });
-                if (best) { setFocus(best); return; }
-              }
-
-              // In the grid -> use strict table navigation (keeps column on up/down)
-              if (inGrid) {
-                bestNode = findGridNeighbor(grid, currentFocus);
-              }
-              // Not a grid (sidebar/header) or grid gave nothing sideways -> geometric
-              if (!bestNode) {
-                var scoped = [];
-                var p = currentFocus.parentElement;
-                while (p && p !== document.body) {
-                  var scopedEls = Array.from(p.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
-                  var visibleScoped = scopedEls.filter(function(el){ var rr = el.getBoundingClientRect(); return rr.width > 0 && rr.height > 0; });
-                  if (visibleScoped.length > 1) { scoped = visibleScoped; break; }
-                  p = p.parentElement;
-                }
-                bestNode = scoped.length ? findNeighbor(scoped, currentFocus) : findNeighbor(els, currentFocus);
-              }
-              // Last-resort horizontal move in the grid: pick the closest tile
-              // sharing the same vertical center, in the pressed direction.
-              // Guarantees left/right never gets stuck even if scoping missed.
-              if (!bestNode && (keyCode === 37 || keyCode === 39) && grid) {
-                var r0h = currentFocus.getBoundingClientRect();
-                var cy0h = r0h.top + r0h.height / 2;
-                var cx0h = r0h.left + r0h.width / 2;
-                var tolh = Math.max(r0h.height * 0.6, 24);
-                var hb = null, hbd = Infinity;
-                grid.forEach(function(el){
-                  if (el === currentFocus) return;
-                  var rr = el.getBoundingClientRect();
-                  if (rr.width === 0) return;
-                  var cyx = rr.top + rr.height / 2, cxx = rr.left + rr.width / 2;
-                  if (Math.abs(cyx - cy0h) < tolh) {
-                    var inDir = (keyCode === 39 && cxx > cx0h) || (keyCode === 37 && cxx < cx0h);
-                    if (inDir) { var dd = Math.abs(cxx - cx0h); if (dd < hbd) { hbd = dd; hb = el; } }
-                  }
-                });
-                if (hb) bestNode = hb;
-              }
+              });
               if (bestNode) setFocus(bestNode);
             }
         }, true);
