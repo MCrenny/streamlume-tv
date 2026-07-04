@@ -1,5 +1,4 @@
-// Prevent server crash on unhandled errors (Kubernetes/Amvera otherwise
-// restarts the container in a loop). Must be the very first thing.
+require('dotenv').config();
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err.message, err.stack);
 });
@@ -11,32 +10,46 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
-const crypto = require('crypto');
-const readline = require('readline');
 const https = require('https');
 const http = require('http');
 const zlib = require('zlib');
+const readline = require('readline');
+const crypto = require('crypto');
 
 const app = express();
 const PORT = process.env.PORT || 80;
 
-app.use(cors());
+// Основной сервер с плейлистами и ботом
+const IPTVPAY_URL = process.env.IPTVPAY_URL || 'https://iptvpay-svmorozoww.amvera.io';
 
+// CORS — только свои домены
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || [
+  'https://streamlume-tv-svmorozoww.amvera.io',
+  'https://iptvpay-svmorozoww.amvera.io',
+  'http://localhost:8081',
+  'http://localhost:19006'
+].join(',')).split(',').map(s => s.trim());
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Разрешаем запросы без origin (TV-браузеры, MSX, curl)
+    if (!origin || ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
+    callback(new Error('CORS: origin not allowed'));
+  }
+}));
+
+// --- Кэш для /proxy ---
 const CACHE_DIR = path.join(__dirname, 'cache');
-if (fs.existsSync(CACHE_DIR)) {
-  fs.rmSync(CACHE_DIR, { recursive: true, force: true });
-}
-fs.mkdirSync(CACHE_DIR);
+if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 
-const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 час
 
-// Cleanup old cache files to prevent disk exhaustion
+// Очистка старого кэша каждые 30 минут
 setInterval(() => {
   fs.readdir(CACHE_DIR, (err, files) => {
     if (err) return;
     const now = Date.now();
     files.forEach(file => {
-      if (file === 'public.m3u') return; // keep public playlist
       const filePath = path.join(CACHE_DIR, file);
       fs.stat(filePath, (err, stats) => {
         if (!err && now - stats.mtimeMs > 2 * CACHE_TTL_MS) {
@@ -45,270 +58,183 @@ setInterval(() => {
       });
     });
   });
-}, 30 * 60 * 1000); // Check every 30 mins
+}, 30 * 60 * 1000);
 
-// Helper to download and parse M3U to a file using streams (Zero RAM usage)
+// Скачивание и парсинг M3U на диск (стриминг, без RAM)
 const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCount = 0) => {
   let cbCalled = false;
-  const safeCallback = (err) => {
-    if (!cbCalled) {
-      cbCalled = true;
-      callback(err);
-    }
-  };
+  const done = (err) => { if (!cbCalled) { cbCalled = true; callback(err); } };
 
-  if (redirectCount > 5) return safeCallback(new Error('Too many redirects'));
+  if (redirectCount > 5) return done(new Error('Too many redirects'));
 
   const client = urlStr.startsWith('https') ? https : http;
-  
   const isEpg = urlStr.includes('epg');
-  const userAgent = isEpg 
-    ? 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' 
+  const ua = isEpg
+    ? 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     : 'Televizo/1.9.3.4 (Linux;Android 11)';
-    
-  const options = { headers: { 'User-Agent': userAgent } };
 
-  client.get(urlStr, options, (res) => {
+  client.get(urlStr, { headers: { 'User-Agent': ua } }, (res) => {
     if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-      let redirectUrl = res.headers.location;
-      if (!redirectUrl.startsWith('http')) {
-        redirectUrl = new URL(redirectUrl, urlStr).toString();
-      }
-      return downloadAndParseM3U(redirectUrl, destPath, originalUrl, safeCallback, redirectCount + 1);
+      let loc = res.headers.location;
+      if (!loc.startsWith('http')) loc = new URL(loc, urlStr).toString();
+      return downloadAndParseM3U(loc, destPath, originalUrl, done, redirectCount + 1);
     }
-    
-    if (res.statusCode !== 200) {
-      return safeCallback(new Error(`Failed with status ${res.statusCode}`));
-    }
+    if (res.statusCode !== 200) return done(new Error(`HTTP ${res.statusCode}`));
 
-    let dataStream = res;
-    if (res.headers['content-encoding'] === 'gzip') {
-      dataStream = res.pipe(zlib.createGunzip());
-    }
+    let stream = res;
+    if (res.headers['content-encoding'] === 'gzip') stream = res.pipe(zlib.createGunzip());
 
     const fileStream = fs.createWriteStream(destPath);
-    
-    // If it's an XML file, pipe it directly (don't parse line by line)
+
     if (isEpg || urlStr.toLowerCase().endsWith('.xml')) {
-      dataStream.pipe(fileStream);
-      fileStream.on('finish', () => safeCallback(null));
-      fileStream.on('error', (err) => safeCallback(err));
-      dataStream.on('error', (err) => {
-        fileStream.end();
-        safeCallback(err);
-      });
+      stream.pipe(fileStream);
+      fileStream.on('finish', () => done(null));
+      fileStream.on('error', done);
+      stream.on('error', (e) => { fileStream.end(); done(e); });
       return;
     }
 
-    const rl = readline.createInterface({ input: dataStream, crlfDelay: Infinity });
-
+    const rl = readline.createInterface({ input: stream, crlfDelay: Infinity });
     rl.on('line', (line) => {
-      const tLine = line.trim();
-      if (tLine.length === 0 || tLine.startsWith('#')) {
+      const t = line.trim();
+      if (!t || t.startsWith('#')) {
         fileStream.write(line + '\n');
       } else {
-        try {
-          fileStream.write(new URL(tLine, originalUrl).toString() + '\n');
-        } catch (e) {
-          fileStream.write(line + '\n');
-        }
+        try { fileStream.write(new URL(t, originalUrl).toString() + '\n'); }
+        catch { fileStream.write(line + '\n'); }
       }
     });
-
-    rl.on('close', () => {
-      fileStream.end();
-    });
-    
-    fileStream.on('finish', () => {
-      safeCallback(null);
-    });
-    
-    res.on('error', (err) => {
-      fileStream.end();
-      safeCallback(err);
-    });
-  }).on('error', safeCallback);
+    rl.on('close', () => fileStream.end());
+    fileStream.on('finish', () => done(null));
+    res.on('error', (e) => { fileStream.end(); done(e); });
+  }).on('error', done);
 };
 
-app.get('/proxy', (req, res) => {
+// --- /proxy — проксирование внешних плейлистов с проверкой ключа ---
+app.get('/proxy', async (req, res) => {
   const targetUrl = req.query.url;
+  const key = req.query.key;
+
   if (!targetUrl) return res.status(400).send('Missing url parameter');
-  
-  if (targetUrl === '/api/public.m3u') {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Content-Type', 'audio/x-mpegurl');
-    const publicPath = path.join(CACHE_DIR, 'public.m3u');
-    if (fs.existsSync(publicPath)) {
-      return res.sendFile(publicPath); // Zero-copy disk serve
-    } else {
-      return res.status(404).send('Public playlist not ready');
+
+  // Проверяем ключ через основной сервер
+  if (!key) return res.status(401).send('#EXTM3U\n#EXTINF:-1,Требуется ключ доступа\nhttp://invalid\n');
+
+  try {
+    const verifyRes = await fetch(`${IPTVPAY_URL}/api/verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key })
+    });
+    const verifyData = await verifyRes.json();
+    if (!verifyData.valid) {
+      return res.status(401).send('#EXTM3U\n#EXTINF:-1,Неверный или истёкший ключ\nhttp://invalid\n');
     }
+  } catch (e) {
+    console.error('[Proxy] Key verify error:', e.message);
+    return res.status(502).send('Key verification failed');
   }
 
   const urlHash = crypto.createHash('md5').update(targetUrl).digest('hex');
   const cacheFilePath = path.join(CACHE_DIR, `${urlHash}.m3u`);
 
-  const serveCachedFile = () => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+  const serve = () => {
     res.setHeader('Content-Type', 'audio/x-mpegurl');
-    res.sendFile(cacheFilePath); // Zero-copy disk serve
+    res.sendFile(cacheFilePath);
   };
 
-  // Do not cache .m3u8 live streams for more than 2 seconds, but cache main .m3u playlists for 1 hour
-  const isLiveStream = targetUrl.split('?')[0].endsWith('.m3u8');
-  const dynamicCacheTtl = isLiveStream ? 2000 : CACHE_TTL_MS;
+  const isLive = targetUrl.split('?')[0].endsWith('.m3u8');
+  const ttl = isLive ? 2000 : CACHE_TTL_MS;
 
   if (fs.existsSync(cacheFilePath)) {
-    const stats = fs.statSync(cacheFilePath);
-    if (Date.now() - stats.mtimeMs < dynamicCacheTtl) {
-      return serveCachedFile();
-    }
+    const age = Date.now() - fs.statSync(cacheFilePath).mtimeMs;
+    if (age < ttl) return serve();
   }
 
-  // If not cached or expired, download streaming to disk
   downloadAndParseM3U(targetUrl, cacheFilePath, targetUrl, (err) => {
     if (err) {
-      console.error('Proxy Error:', err.message);
-      // Fallback to old cache if possible
-      if (fs.existsSync(cacheFilePath)) {
-        return serveCachedFile();
-      }
+      console.error('[Proxy] Error:', err.message);
+      if (fs.existsSync(cacheFilePath)) return serve();
       return res.status(400).send('Invalid URL or request failed');
     }
-    serveCachedFile();
+    serve();
   });
 });
 
-// Disable cache for HTML and JS so TV always gets fresh version
+// --- /api/playlist — проксируем к основному серверу (убираем дублирование) ---
+app.get('/api/playlist', async (req, res) => {
+  const { key } = req.query;
+  if (!key) return res.status(401).send('#EXTM3U\n#EXTINF:-1,Требуется ключ\nhttp://invalid\n');
+
+  try {
+    const upstream = await fetch(`${IPTVPAY_URL}/api/playlist?key=${encodeURIComponent(key)}`);
+    res.setHeader('Content-Type', upstream.headers.get('content-type') || 'audio/x-mpegurl');
+    res.status(upstream.status);
+    const text = await upstream.text();
+    res.send(text);
+  } catch (e) {
+    console.error('[Playlist proxy] Error:', e.message);
+    res.status(502).send('Upstream error');
+  }
+});
+
+// --- /api/public.m3u — проксируем публичный плейлист с основного сервера ---
+app.get('/api/public.m3u', async (req, res) => {
+  try {
+    const upstream = await fetch(`${IPTVPAY_URL}/api/playlist?key=PUBLIC`);
+    res.setHeader('Content-Type', 'audio/x-mpegurl');
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+    const text = await upstream.text();
+    res.send(text);
+  } catch (e) {
+    console.error('[Public playlist proxy] Error:', e.message);
+    res.status(502).send('Upstream error');
+  }
+});
+
+// Отключаем кэш для HTML/JS
 app.use((req, res, next) => {
   if (req.path.endsWith('.html') || req.path.endsWith('.js') || req.path === '/') {
     res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
-    res.setHeader('Surrogate-Control', 'no-store');
   }
   next();
 });
 
-// --- БОТ-ПАРСЕР ОБЩЕДОСТУПНЫХ ПЛЕЙЛИСТОВ ---
-const PUBLIC_SOURCES = [
-  'https://smolnp.github.io/IPTVru//IPTVru.m3u'
-];
-
-let isParsing = false;
-
-const updatePublicPlaylist = () => {
-  if (isParsing || PUBLIC_SOURCES.length === 0) return;
-  isParsing = true;
-  console.log('Бот-парсер начал сбор общедоступных плейлистов на диск...');
-  
-  const publicPath = path.join(CACHE_DIR, 'public.m3u');
-  const tempPath = path.join(CACHE_DIR, 'public_temp.m3u');
-  const fileStream = fs.createWriteStream(tempPath);
-  fileStream.write('#EXTM3U\n');
-  
-  const processSource = (index) => {
-    if (index >= PUBLIC_SOURCES.length) {
-      fileStream.end(() => {
-        // Atomic replace old file with new file
-        fs.renameSync(tempPath, publicPath);
-        console.log('Бот-парсер успешно обновил общедоступный плейлист на диске.');
-        isParsing = false;
-      });
-      return;
-    }
-    
-    const urlStr = PUBLIC_SOURCES[index];
-    https.get(urlStr, (res) => {
-      const rl = readline.createInterface({ input: res, crlfDelay: Infinity });
-      rl.on('line', (line) => {
-        if (!line.includes('#EXTM3U')) {
-          fileStream.write(line + '\n');
-        }
-      });
-      rl.on('close', () => {
-        processSource(index + 1);
-      });
-    }).on('error', (err) => {
-      console.error('Ошибка бота-парсера для', urlStr, err.message);
-      processSource(index + 1);
-    });
-  };
-  
-  processSource(0);
-};
-
-// Запускаем парсер при старте и раз в сутки (24 часа)
-updatePublicPlaylist();
-setInterval(updatePublicPlaylist, 24 * 60 * 60 * 1000);
-
-app.get('/api/public.m3u', (req, res) => {
-  res.setHeader('Content-Type', 'audio/x-mpegurl');
-  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
-  const publicPath = path.join(CACHE_DIR, 'public.m3u');
-  if (fs.existsSync(publicPath)) {
-    res.sendFile(publicPath);
-  } else {
-    res.status(404).send('Playlist not ready');
-  }
-});
-// ----------------------------------------
-
-// Короткие ссылки для ввода в Media Station X
-app.get(['/s', '/m', '/tv', '/msx', '/777'], (req, res) => {
-  res.redirect('/start.json');
-});
+// Короткие ссылки для MSX
+app.get(['/s', '/m', '/tv', '/msx', '/777'], (req, res) => res.redirect('/start.json'));
 
 app.get(['/start.json', '/msx/start.json'], (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   res.sendFile(path.join(__dirname, 'start.json'));
 });
+
 app.get('/menu.json', (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   res.json({
-    "type": "pages",
-    "headline": "StreamLume",
-    "pages": [{
-      "items": [{
-        "type": "button",
-        "layout": "0,0,12,2",
-        "title": "Запустить StreamLume",
-        "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=" + Date.now()
-      }]
-    }]
+    type: 'pages',
+    headline: 'StreamLume',
+    pages: [{ items: [{ type: 'button', layout: '0,0,12,2', title: 'Запустить StreamLume', action: 'link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=' + Date.now() }] }]
   });
 });
 
 app.get('/', (req, res, next) => {
   const accept = req.headers.accept || '';
   const ua = req.headers['user-agent'] || '';
-  // Serve start.json if it's an API/XHR fetch (no text/html preference) or MSX User-Agent
-  if (accept.indexOf('text/html') === -1 || ua.indexOf('MSX') !== -1 || ua.indexOf('TVX') !== -1 || ua.indexOf('Media Station X') !== -1) {
+  if (accept.indexOf('text/html') === -1 || ua.includes('MSX') || ua.includes('TVX') || ua.includes('Media Station X')) {
     res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
     return res.sendFile(path.join(__dirname, 'start.json'));
   }
   next();
 });
 
-// Serve static files with normal caching
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Global error handler (Express 5 compatibility) - prevents process crash
 app.use((err, req, res, next) => {
   console.error('Express error:', err.message);
-  if (!res.headersSent) {
-    res.status(500).send('Internal Server Error');
-  }
+  if (!res.headersSent) res.status(500).send('Internal Server Error');
 });
 
-const server = app.listen(PORT, () => console.log('Server running on ' + PORT));
-
-// Catch listen() errors (EADDRINUSE, EACCES) explicitly
-server.on('error', (err) => {
-  console.error('SERVER FATAL ERROR:', err.code, '-', err.message);
-  if (err.code === 'EADDRINUSE') {
-    console.error('Port', PORT, 'is already in use.');
-  } else if (err.code === 'EACCES') {
-    console.error('Port', PORT, 'requires privileges. Set PORT env var.');
-  }
-});
+const server = app.listen(PORT, () => console.log(`[StreamLume TV] Server running on port ${PORT}`));
+server.on('error', (err) => console.error('SERVER ERROR:', err.code, err.message));

@@ -30,15 +30,23 @@ export const TVHomeScreen = ({ navigation }: any) => {
   
   const isPro = isAuthorized;
 
-  // Объединяем плейлисты, добавляя наш Premium в самое начало
+  const API_BASE = Platform.OS === 'web' ? '' : 'https://streamlume-tv-svmorozoww.amvera.io';
+
+  // Основной плейлист с сервера (полный для VIP, публичный для остальных)
   const allPlaylists = useMemo(() => {
-    const publicList = { 
-      id: 'public_amvera', 
-      name: '🆓 Общедоступный', 
-      url: Platform.OS === 'web' ? '/api/public.m3u' : 'https://streamlume-tv-svmorozoww.amvera.io/api/public.m3u' 
+    const mainList = {
+      id: 'main_server',
+      name: isPro ? '💎 VIP Плейлист' : '🆓 Общедоступный',
+      url: isPro && activationKey
+        ? `${API_BASE}/api/playlist?key=${encodeURIComponent(activationKey)}`
+        : `${API_BASE}/api/public.m3u`
     };
-    return [publicList, ...PLAYLISTS, ...customPlaylists];
-  }, [customPlaylists]);
+    if (!isPro) return [mainList];
+    return [mainList, ...PLAYLISTS.map(pl => ({
+      ...pl,
+      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}&key=${encodeURIComponent(activationKey || '')}`
+    })), ...customPlaylists];
+  }, [customPlaylists, activationKey, isPro]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
@@ -172,15 +180,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
       setLoading(true);
       setChannels([]); // Clear the array first to release memory
       try {
-        let targetUrl;
-        if (activePlaylist.id === 'public_amvera') {
-          targetUrl = activePlaylist.url;
-        } else {
-          const encodedUrl = encodeURIComponent(activePlaylist.url);
-          targetUrl = Platform.OS === 'web' 
-            ? `/proxy?url=${encodedUrl}`
-            : `https://streamlume-tv-svmorozoww.amvera.io/proxy?url=${encodedUrl}`;
-        }
+        const targetUrl = activePlaylist.url;
         const response = await fetch(targetUrl);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const text = await response.text();

@@ -2,3 +2,4 @@ node_modules/
 .expo/
 *.log
 !dist/assets/node_modules/
+.env

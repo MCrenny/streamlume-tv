@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { View, FlatList, StyleSheet, Text, ActivityIndicator, TextInput, TouchableOpacity, TouchableHighlight, Pressable, Modal, Alert, ScrollView, useWindowDimensions } from 'react-native';
+import { View, FlatList, StyleSheet, Text, ActivityIndicator, TextInput, TouchableOpacity, TouchableHighlight, Pressable, Modal, Alert, ScrollView, useWindowDimensions, Platform } from 'react-native';
 import { useStore } from '../store/useStore';
 import { ChannelCard } from '../components/ChannelCard';
 import { parseM3U, groupChannels, ChannelGroup } from '../utils/m3uParser';
@@ -93,14 +93,22 @@ export const HomeScreen = ({ navigation }: any) => {
   const isPro = isAuthorized || isTrialActive; // PRO = paid key OR active trial
   // isFreeMode = after trial expired, user chose "continue free" → restricted
 
+  const API_BASE = Platform.OS === 'web' ? '' : 'https://streamlume-tv-svmorozoww.amvera.io';
+
   const allPlaylists = useMemo(() => {
-    const publicList = { 
-      id: 'public_amvera', 
-      name: '🆓 Общедоступный', 
-      url: Platform.OS === 'web' ? '/api/public.m3u' : 'https://streamlume-tv-svmorozoww.amvera.io/api/public.m3u' 
+    const mainList = {
+      id: 'main_server',
+      name: isPro ? '💎 VIP Плейлист' : '🆓 Общедоступный',
+      url: isPro && activationKey
+        ? `${API_BASE}/api/playlist?key=${encodeURIComponent(activationKey)}`
+        : `${API_BASE}/api/public.m3u`
     };
-    return [publicList, ...PLAYLISTS, ...customPlaylists];
-  }, [customPlaylists]);
+    if (!isPro) return [mainList];
+    return [mainList, ...PLAYLISTS.map(pl => ({
+      ...pl,
+      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}&key=${encodeURIComponent(activationKey || '')}`
+    })), ...customPlaylists];
+  }, [customPlaylists, activationKey, isPro]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
