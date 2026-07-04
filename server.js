@@ -40,7 +40,7 @@ app.use(cors({
 
 // --- Кэш для /proxy ---
 const CACHE_DIR = path.join(__dirname, 'cache');
-if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
+fs.mkdirSync(CACHE_DIR, { recursive: true });
 
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 час
 

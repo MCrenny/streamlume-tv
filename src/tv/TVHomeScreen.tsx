@@ -409,7 +409,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
               <Pressable 
                 key={pl.id}
                 onPress={() => {
-                  if (!isPro && pl.id !== 'public_amvera') {
+                  if (!isPro && pl.id !== 'main_server') {
                     Alert.alert(
                       '💎 КУПИТЬ PRO версию',
                       'Этот плейлист доступен только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
