@@ -409,14 +409,6 @@ export const TVHomeScreen = ({ navigation }: any) => {
               <Pressable 
                 key={pl.id}
                 onPress={() => {
-                  if (!isPro && pl.id !== 'main_server') {
-                    Alert.alert(
-                      '💎 КУПИТЬ PRO версию',
-                      'Этот плейлист доступен только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
-                      [{ text: 'Понятно', style: 'cancel' }]
-                    );
-                    return;
-                  }
                   if (isCustom) {
                     setSelectedActionPlaylist(pl);
                     setActionModalVisible(true);
@@ -450,14 +442,6 @@ export const TVHomeScreen = ({ navigation }: any) => {
           {/* Кнопка добавления пользовательского плейлиста */}
           <Pressable
             onPress={() => {
-              if (!isPro) {
-                Alert.alert(
-                  '💎 КУПИТЬ PRO версию',
-                  'Добавление своих плейлистов доступно только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
-                  [{ text: 'Понятно', style: 'cancel' }]
-                );
-                return;
-              }
               setAddModalVisible(true);
             }}
             onFocus={() => {
@@ -925,14 +909,6 @@ export const TVHomeScreen = ({ navigation }: any) => {
                   isChannelFavFocused && styles.modalBtnFocused
                 ]} 
                 onPress={() => {
-                  if (!isPro) {
-                    Alert.alert(
-                      '💎 КУПИТЬ PRO версию',
-                      'Избранное доступно только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
-                      [{ text: 'Понятно', style: 'cancel' }]
-                    );
-                    return;
-                  }
                   if (selectedChannel) {
                     toggleFavorite(selectedChannel);
                   }

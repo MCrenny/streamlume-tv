@@ -132,7 +132,7 @@ export const AuthScreen = () => {
         </Pressable>
 
         <Text style={{ color: '#636366', fontSize: 12, marginTop: 15, textAlign: 'center' }}>
-          После пробного периода — от 49 ₽/мес
+          Бесплатно
         </Text>
       </View>
 

@@ -42,7 +42,7 @@ export const useStore = create<StoreState>()(
       channels: [],
       favorites: [],
       customPlaylists: [],
-      isAuthorized: false,
+      isAuthorized: true,
       isFreeMode: false,
       trialStartDate: null,
       activationKey: null,
