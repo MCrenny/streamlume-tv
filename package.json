@@ -7,7 +7,7 @@
     "start": "node server.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo export -p web && node fix_import_meta.js"
+    "web": "expo export -p web -c && node fix_import_meta.js"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
@@ -61,5 +61,10 @@
     "@babel/preset-env": "^7.29.7",
     "babel-preset-expo": "^56.0.15"
   },
-  "private": true
+  "private": true,
+  "browserslist": [
+    "chrome >= 38",
+    "safari >= 8",
+    "ie >= 11"
+  ]
 }
