@@ -194,7 +194,7 @@ app.get(['/start.json', '/msx/start.json'], (req, res) => {
 
 app.get('/menu.json', (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
-  const actionStr = `plugin:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`;
+  const actionStr = `link:https://streamlume-tv-svmorozoww.amvera.io/index.html`;
   res.json({
     "type": "pages",
     "headline": "StreamLume TV",
