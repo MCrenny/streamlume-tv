@@ -205,7 +205,7 @@ app.get('/menu.json', (req, res) => {
       }]
     }],
     "ready": {
-      "action": `plugin:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
+      "action": `interaction:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
     }
   });
 });
