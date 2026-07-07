@@ -197,15 +197,8 @@ app.get('/menu.json', (req, res) => {
   res.json({
     "name": "StreamLume TV",
     "version": "1.1.0",
-    "type": "pages",
-    "pages": [{
-      "items": [{
-        "type": "button",
-        "layout": "0,0,12,2",
-        "title": "Запустить StreamLume",
-        "action": `interaction:load:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
-      }]
-    }]
+    "type": "plugin",
+    "parameter": `https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
   });
 });
 
