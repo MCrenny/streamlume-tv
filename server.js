@@ -113,27 +113,9 @@ const downloadAndParseM3U = (urlStr, destPath, originalUrl, callback, redirectCo
 // --- /proxy — проксирование внешних плейлистов с проверкой ключа ---
 app.get('/proxy', async (req, res) => {
   const targetUrl = req.query.url;
-  const key = req.query.key;
 
   if (!targetUrl) return res.status(400).send('Missing url parameter');
 
-  // Проверяем ключ через основной сервер
-  if (!key) return res.status(401).send('#EXTM3U\n#EXTINF:-1,Требуется ключ доступа\nhttp://invalid\n');
-
-  try {
-    const verifyRes = await fetch(`${IPTVPAY_URL}/api/verify`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ key })
-    });
-    const verifyData = await verifyRes.json();
-    if (!verifyData.valid) {
-      return res.status(401).send('#EXTM3U\n#EXTINF:-1,Неверный или истёкший ключ\nhttp://invalid\n');
-    }
-  } catch (e) {
-    console.error('[Proxy] Key verify error:', e.message);
-    return res.status(502).send('Key verification failed');
-  }
 
   const urlHash = crypto.createHash('md5').update(targetUrl).digest('hex');
   const cacheFilePath = path.join(CACHE_DIR, `${urlHash}.m3u`);

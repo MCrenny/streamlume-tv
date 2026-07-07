@@ -32,21 +32,18 @@ export const TVHomeScreen = ({ navigation }: any) => {
 
   const API_BASE = Platform.OS === 'web' ? '' : 'https://streamlume-tv-svmorozoww.amvera.io';
 
-  // Основной плейлист с сервера (полный для VIP, публичный для остальных)
+  // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
     const mainList = {
       id: 'main_server',
-      name: isPro ? '💎 VIP Плейлист' : '🆓 Общедоступный',
-      url: isPro && activationKey
-        ? `${API_BASE}/api/playlist?key=${encodeURIComponent(activationKey)}`
-        : `${API_BASE}/api/public.m3u`
+      name: '📺 Общедоступный',
+      url: `${API_BASE}/api/public.m3u`
     };
-    if (!isPro) return [mainList];
     return [mainList, ...PLAYLISTS.map(pl => ({
       ...pl,
-      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}&key=${encodeURIComponent(activationKey || '')}`
+      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}`
     })), ...customPlaylists];
-  }, [customPlaylists, activationKey, isPro]);
+  }, [customPlaylists]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
