@@ -212,12 +212,17 @@ app.get(['/start.json', '/msx/start.json'], (req, res) => {
 
 app.get('/menu.json', (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
-  const appUrl = 'https://streamlume-tv-svmorozoww.amvera.io/index.html?v=' + Date.now();
   res.json({
-    type: 'pages',
-    headline: 'StreamLume TV',
-    ready: 'link:' + appUrl,
-    pages: [{ items: [{ type: 'button', layout: '0,0,12,2', title: 'Запустить StreamLume', action: 'link:' + appUrl }] }]
+    "type": "pages",
+    "headline": "StreamLume",
+    "pages": [{
+      "items": [{
+        "type": "button",
+        "layout": "0,0,12,2",
+        "title": "Запустить StreamLume",
+        "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=" + Date.now()
+      }]
+    }]
   });
 });
 
