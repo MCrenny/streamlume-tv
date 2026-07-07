@@ -200,13 +200,12 @@ app.get('/menu.json', (req, res) => {
     "type": "pages",
     "pages": [{
       "items": [{
-        "type": "space",
-        "layout": "0,0,12,6"
+        "type": "button",
+        "layout": "0,0,12,2",
+        "title": "Запустить StreamLume",
+        "action": `interaction:load:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
       }]
-    }],
-    "ready": {
-      "action": `interaction:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
-    }
+    }]
   });
 });
 
