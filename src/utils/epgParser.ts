@@ -22,7 +22,7 @@ export const parseEpgForChannel = (xmlContent: string, channelIds: string[]): Ep
   validIds.forEach(id => targetChannelIds.add(id));
   
   // Look through <channel> blocks to map display-name to id
-  const channelRegex = /<channel id=["']([^"']+)["']>(.*?)<\/channel>/gs;
+  const channelRegex = /<channel id=["']([^"']+)["']>([\s\S]*?)<\/channel>/g;
   let channelMatch;
   while ((channelMatch = channelRegex.exec(xmlContent)) !== null) {
     const id = channelMatch[1];
@@ -35,7 +35,7 @@ export const parseEpgForChannel = (xmlContent: string, channelIds: string[]): Ep
     }
     
     // Extract display-names
-    const nameRegex = /<display-name[^>]*>(.*?)<\/display-name>/gs;
+    const nameRegex = /<display-name[^>]*>([\s\S]*?)<\/display-name>/g;
     let nameMatch;
     while ((nameMatch = nameRegex.exec(inner)) !== null) {
       const name = nameMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim().toLowerCase();
@@ -49,7 +49,7 @@ export const parseEpgForChannel = (xmlContent: string, channelIds: string[]): Ep
   
   // 2. Now extract programmes for the matched channel IDs
   const idPattern = Array.from(targetChannelIds).map(id => id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
-  const regex = new RegExp(`<programme[^>]*channel=["'](${idPattern})["'][^>]*>(.*?)</programme>`, 'gs');
+  const regex = new RegExp(`<programme[^>]*channel=["'](${idPattern})["'][^>]*>([\\s\\S]*?)</programme>`, 'g');
   
   let match;
   while ((match = regex.exec(xmlContent)) !== null) {
@@ -64,8 +64,8 @@ export const parseEpgForChannel = (xmlContent: string, channelIds: string[]): Ep
       const startStr = startMatch[1];
       const stopStr = stopMatch[1];
       
-      const titleMatch = innerContent.match(/<title[^>]*>(.*?)<\/title>/s);
-      const descMatch = innerContent.match(/<desc[^>]*>(.*?)<\/desc>/s);
+      const titleMatch = innerContent.match(/<title[^>]*>([\s\S]*?)<\/title>/);
+      const descMatch = innerContent.match(/<desc[^>]*>([\s\S]*?)<\/desc>/);
       
       const title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim() : 'Unknown';
       const desc = descMatch ? descMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim() : '';
