@@ -195,16 +195,18 @@ app.get(['/start.json', '/msx/start.json'], (req, res) => {
 app.get('/menu.json', (req, res) => {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
   res.json({
+    "name": "StreamLume TV",
+    "version": "1.1.0",
     "type": "pages",
-    "headline": "StreamLume",
     "pages": [{
       "items": [{
-        "type": "button",
-        "layout": "0,0,12,2",
-        "title": "Запустить StreamLume",
-        "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=" + Date.now()
+        "type": "space",
+        "layout": "0,0,12,6"
       }]
-    }]
+    }],
+    "ready": {
+      "action": `plugin:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
+    }
   });
 });
 
