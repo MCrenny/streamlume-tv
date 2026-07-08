@@ -114,6 +114,11 @@
     </script>
     
     <script>
+      // Polyfill globalThis for older WebKit (Tizen 2016-2018)
+      if (typeof globalThis === 'undefined') {
+        window.globalThis = window;
+      }
+      
       // Global error handler for TV debugging
       window.onerror = function(msg, url, line, col, error) {
         var errDiv = document.createElement('div');
