@@ -14,7 +14,6 @@ import { useStore } from './src/store/useStore';
 import { Audio } from 'expo-av';
 import { isTVDevice } from './src/utils/TVLayoutManager';
 import { TVHomeScreen } from './src/tv/TVHomeScreen';
-import { TVHomeScreen } from './src/tv/TVHomeScreen';
 
 // Enable audio even in silent mode
 Audio.setAudioModeAsync({

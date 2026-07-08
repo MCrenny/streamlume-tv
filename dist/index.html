@@ -11,6 +11,7 @@
       html,
       body {
         height: 100%;
+        background-color: #000;
       }
       /* These styles disable body scrolling if you are using <ScrollView> */
       body {
@@ -23,8 +24,130 @@
         flex: 1;
       }
     </style>
-  </head>
+    
+    <!-- MSX TVX Plugin -->
+    <script type="text/javascript" src="https://msx.benzac.de/js/tvx-plugin.min.js"></script>
+    
+    <script>
+      (function() {
+        var currentFocus = null;
+        var focusHistoryText = "";
+        var focusHistoryCx = 0;
+        var focusHistoryCy = 0;
 
+        function getFocusableElements() {
+          var els = Array.from(document.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
+          return els.filter(function(el) {
+            var rect = el.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0 && window.getComputedStyle(el).visibility !== 'hidden' && window.getComputedStyle(el).display !== 'none';
+          });
+        }
+        function setFocus(el) {
+          if (currentFocus) {
+            currentFocus.classList.remove('tv-focus');
+            currentFocus.blur();
+          }
+          currentFocus = el;
+          if (currentFocus) {
+            currentFocus.classList.add('tv-focus');
+            currentFocus.focus();
+            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+          }
+        }
+        window.addEventListener('load', function() {
+          var style = document.createElement('style');
+          style.innerHTML = '.tv-focus { outline: 4px solid #00f0ff !important; box-shadow: 0 0 15px #00f0ff !important; border-radius: 8px; z-index: 9999; position: relative; }';
+          document.head.appendChild(style);
+          setTimeout(function() {
+            var els = getFocusableElements();
+            if (els.length > 0) setFocus(els[0]);
+          }, 1500);
+        });
+        window.addEventListener('keydown', function(e) {
+          var keyCode = e.keyCode;
+          if (keyCode === 8 || keyCode === 27 || keyCode === 461 || keyCode === 10009) return;
+          if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
+            if (currentFocus) {
+              focusHistoryText = currentFocus.textContent || "";
+              var r = currentFocus.getBoundingClientRect();
+              focusHistoryCx = r.left + r.width/2;
+              focusHistoryCy = r.top + r.height/2;
+            }
+            e.stopPropagation(); e.preventDefault();
+            var els = getFocusableElements();
+            if (els.length === 0) return;
+            if (!currentFocus || !document.body.contains(currentFocus) || els.indexOf(currentFocus) === -1) { 
+              var bestNode = els[0];
+              if (focusHistoryText) {
+                var matches = els.filter(function(el) { return (el.textContent || "") === focusHistoryText; });
+                if (matches.length > 0) bestNode = matches[0];
+                else {
+                  var bestDist = Infinity;
+                  els.forEach(function(el) {
+                    var r2 = el.getBoundingClientRect(), cx2 = r2.left + r2.width/2, cy2 = r2.top + r2.height/2;
+                    var dist = Math.sqrt(Math.pow(cx2 - focusHistoryCx, 2) + Math.pow(cy2 - focusHistoryCy, 2));
+                    if (dist < bestDist) { bestDist = dist; bestNode = el; }
+                  });
+                }
+              }
+              setFocus(bestNode); 
+              return; 
+            }
+            var rect1 = currentFocus.getBoundingClientRect(), cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
+            var bestNode = null, bestDist = Infinity;
+            els.forEach(function(el) {
+              if (el === currentFocus) return;
+              var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
+              var dx = cx2 - cx1, dy = cy2 - cy1;
+              if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
+                  (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
+                  (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
+                  (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
+                var dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < bestDist) { bestDist = dist; bestNode = el; }
+              }
+            });
+            if (bestNode) setFocus(bestNode);
+          }
+        }, true);
+      })();
+    </script>
+    
+    <script>
+      // Global error handler for TV debugging
+      window.onerror = function(msg, url, line, col, error) {
+        var errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed';
+        errDiv.style.top = '10%';
+        errDiv.style.left = '10%';
+        errDiv.style.right = '10%';
+        errDiv.style.backgroundColor = 'red';
+        errDiv.style.color = 'white';
+        errDiv.style.padding = '20px';
+        errDiv.style.zIndex = '999999';
+        errDiv.style.fontSize = '24px';
+        errDiv.innerHTML = "<h2>GLOBAL CRASH!</h2><p>" + msg + "</p><p>" + url + ":" + line + ":" + col + "</p><pre>" + (error && error.stack ? error.stack : '') + "</pre>";
+        document.body.appendChild(errDiv);
+        return false;
+      };
+
+      // Polyfill KeyboardEvent.key for older TV webviews (React Native Web requires this)
+      if (typeof KeyboardEvent !== 'undefined' && !('key' in KeyboardEvent.prototype)) {
+        Object.defineProperty(KeyboardEvent.prototype, 'key', {
+          get: function() {
+            if (this.keyCode === 13) return 'Enter';
+            if (this.keyCode === 37) return 'ArrowLeft';
+            if (this.keyCode === 38) return 'ArrowUp';
+            if (this.keyCode === 39) return 'ArrowRight';
+            if (this.keyCode === 40) return 'ArrowDown';
+            if (this.keyCode === 27 || this.keyCode === 461 || this.keyCode === 10009) return 'Escape';
+            if (this.keyCode === 32) return ' ';
+            return 'Unidentified';
+          }
+        });
+      }
+    </script>
+  </head>
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript>
@@ -32,6 +155,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/_expo/static/js/web/index-d124f27370fcf7baf71cbb1c7511ddfa.js" defer></script>
+  <script src="/_expo/static/js/web/index-6dae59b0788e3089db31fcff1033a68f.js" defer></script>
 </body>
 </html>
