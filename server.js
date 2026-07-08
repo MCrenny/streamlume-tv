@@ -202,7 +202,7 @@ app.get('/menu.json', (req, res) => {
         "type": "button",
         "layout": "0,0,12,2",
         "title": "Загрузка StreamLume...",
-        "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html"
+        "action": `link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=${Date.now()}`
       }]
     }]
   });
