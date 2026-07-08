@@ -35,15 +35,15 @@ export const TVHomeScreen = ({ navigation }: any) => {
   // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
     const mainList = {
-      id: 'main_server',
+      id: 'premium_amvera',
       name: '📺 Общедоступный',
-      url: `${API_BASE}/api/public.m3u`
+      url: `https://iptvpay-svmorozoww.amvera.io/api/playlist?key=${activationKey || 'VIP-TEST'}`
     };
     return [mainList, ...PLAYLISTS.map(pl => ({
       ...pl,
       url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}`
     })), ...customPlaylists];
-  }, [customPlaylists]);
+  }, [customPlaylists, activationKey]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
@@ -57,7 +57,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
   const [focusedPlaylistIdx, setFocusedPlaylistIdx] = useState(0);
   const [focusedCategoryIdx, setFocusedCategoryIdx] = useState(0);
   const [focusedChannelIdx, setFocusedChannelIdx] = useState(0);
-  const [focusedRegion, setFocusedRegion] = useState<'playlists' | 'categories' | 'channels' | 'viewMode' | 'exportBtn' | 'editBtn' | 'clockBtn'>('channels');
+  const [focusedRegion, setFocusedRegion] = useState<'playlists' | 'categories' | 'channels' | 'viewMode' | 'exportBtn' | 'editBtn' | 'clockBtn' | 'supportBtn'>('channels');
 
   // Часы
   const [showClock, setShowClock] = useState(true);
@@ -330,6 +330,34 @@ export const TVHomeScreen = ({ navigation }: any) => {
               focusedRegion === 'viewMode' && styles.viewModeTextFocused
             ]}>
               {getViewModeText(viewMode)}
+            </Text>
+          </View>
+        </Pressable>
+
+        {/* Кнопка поддержки */}
+        <Pressable
+          onPress={() => Alert.alert('Поддержите проект', 'Спасибо, что пользуетесь StreamLume TV!\nВы можете поддержать развитие бесплатного приложения через нашего Telegram-бота: @StreameLumeBot')}
+          onFocus={() => { setIsClockFocused(false); setFocusedRegion('supportBtn'); }}
+          focusable={!isAddModalVisible && !isActionModalVisible && !isChannelModalVisible}
+          accessible={true}
+          style={[
+            styles.exportBtn,
+            focusedRegion === 'supportBtn' && styles.exportBtnFocused,
+            { backgroundColor: 'rgba(255, 45, 85, 0.15)' }
+          ]}
+        >
+          <View style={styles.viewModeBtnContent}>
+            <Ionicons 
+              name="heart" 
+              size={20} 
+              color={focusedRegion === 'supportBtn' ? "#000000" : "#FF2D55"} 
+            />
+            <Text style={[
+              styles.viewModeText,
+              { color: '#FF2D55' },
+              focusedRegion === 'supportBtn' && styles.viewModeTextFocused
+            ]}>
+              Поддержите проект
             </Text>
           </View>
         </Pressable>
