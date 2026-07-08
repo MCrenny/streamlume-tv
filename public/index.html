@@ -128,6 +128,22 @@
         window.globalThis = window;
       }
       
+      // Force UI scaling for TVs that ignore viewport meta tags
+      (function() {
+        try {
+          var targetWidth = 720; // Force 720p logical width for massive UI
+          var currentWidth = window.innerWidth;
+          if (currentWidth && currentWidth > 0) {
+            var zoomLevel = currentWidth / targetWidth;
+            // Apply zoom to body
+            document.body.style.zoom = zoomLevel;
+            console.log("[TV Scale] Applied zoom: " + zoomLevel);
+          }
+        } catch (e) {
+          console.error("Zoom error:", e);
+        }
+      })();
+      
       // Global error handler for TV debugging
       window.onerror = function(msg, url, line, col, error) {
         var errDiv = document.createElement('div');
