@@ -21,7 +21,10 @@ const PLAYLISTS = [
 
 type ViewMode = 'normal' | 'small' | 'large' | 'list';
 
+import { useKeepAwake } from 'expo-keep-awake';
+
 export const TVHomeScreen = ({ navigation }: any) => {
+  useKeepAwake(); // Prevent screensaver
   const { channels, setChannels, favorites, toggleFavorite, moveFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, activationKey, viewMode, setViewMode, isAuthorized } = useStore();
   const [loading, setLoading] = useState(false);
   // On web (MSX), useIsFocused can misbehave — treat web as always focused
