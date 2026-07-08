@@ -20,8 +20,12 @@
       /* These styles make the root element full-height */
       #root {
         display: flex;
-        height: 100%;
-        flex: 1;
+        
+        /* Force 2x scaling for TVs */
+        transform: scale(2);
+        transform-origin: top left;
+        width: 50% !important;
+        height: 50% !important;
       }
       /* Force HTML5 video to stretch on older TVs */
       video {
@@ -127,22 +131,6 @@
       if (typeof globalThis === 'undefined') {
         window.globalThis = window;
       }
-      
-      // Force UI scaling for TVs that ignore viewport meta tags
-      (function() {
-        try {
-          var targetWidth = 720; // Force 720p logical width for massive UI
-          var currentWidth = window.innerWidth;
-          if (currentWidth && currentWidth > 0) {
-            var zoomLevel = currentWidth / targetWidth;
-            // Apply zoom to body
-            document.body.style.zoom = zoomLevel;
-            console.log("[TV Scale] Applied zoom: " + zoomLevel);
-          }
-        } catch (e) {
-          console.error("Zoom error:", e);
-        }
-      })();
       
       // Global error handler for TV debugging
       window.onerror = function(msg, url, line, col, error) {
