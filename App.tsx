@@ -14,7 +14,7 @@ import { useStore } from './src/store/useStore';
 import { Audio } from 'expo-av';
 import { isTVDevice } from './src/utils/TVLayoutManager';
 import { TVHomeScreen } from './src/tv/TVHomeScreen';
-import * as FileSystem from 'expo-file-system/legacy';
+import { TVHomeScreen } from './src/tv/TVHomeScreen';
 
 // Enable audio even in silent mode
 Audio.setAudioModeAsync({
@@ -27,27 +27,7 @@ Audio.setAudioModeAsync({
   playThroughEarpieceAndroid: false,
 });
 
-const cleanCache = async () => {
-  try {
-    const cacheDir = FileSystem.cacheDirectory;
-    if (cacheDir) {
-      console.log("[Cache Cleaner] Starting cache cleanup...");
-      const files = await FileSystem.readDirectoryAsync(cacheDir);
-      console.log(`[Cache Cleaner] Found ${files.length} items to clean.`);
-      for (const file of files) {
-        try {
-          await FileSystem.deleteAsync(cacheDir + file, { idempotent: true });
-        } catch (err: any) {
-          console.warn(`[Cache Cleaner] Failed to delete ${file}:`, err.message);
-        }
-      }
-      console.log("[Cache Cleaner] Cache cleanup completed successfully.");
-    }
-  } catch (error: any) {
-    console.error("[Cache Cleaner] Error during cache cleanup:", error.message);
-  }
-};
-
+// Removed cleanCache function to prevent Web crashes on older TVs
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -111,8 +91,6 @@ export default function App() {
   const isPro = isAuthorized || isTrialActive;
 
   React.useEffect(() => {
-    cleanCache();
-    
     // Fallback: if hydration fails or hangs, force ready state after 1.5s
     const timer = setTimeout(() => {
       setIsReady(true);
