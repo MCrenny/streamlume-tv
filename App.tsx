@@ -82,13 +82,22 @@ const MainTabs = ({ isPro }: { isPro: boolean }) => {
 
 import { View, ActivityIndicator } from 'react-native';
 
+import { ErrorBoundary } from './src/components/ErrorBoundary';
+
 const MainScreen = ({ navigation }: any) => {
   const isAuthorized = useStore(state => state.isAuthorized);
   const trialStartDate = useStore(state => state.trialStartDate);
   const isTrialActive = trialStartDate != null && (Date.now() - trialStartDate <= 3 * 24 * 60 * 60 * 1000);
   const isPro = isAuthorized || isTrialActive;
 
-  return isTVDevice() ? <TVHomeScreen navigation={navigation} /> : <MainTabs isPro={isPro} />;
+  if (isTVDevice()) {
+    return (
+      <ErrorBoundary>
+        <TVHomeScreen navigation={navigation} />
+      </ErrorBoundary>
+    );
+  }
+  return <MainTabs isPro={isPro} />;
 };
 
 export default function App() {
