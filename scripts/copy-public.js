@@ -2,11 +2,12 @@
  * Пост-сборочный скрипт: подготовка dist/ для деплоя на Netlify/Vercel.
  *
  * Что делает:
- *  1. msx/*.json    → dist/msx/*.json    (MSX запрашивает /msx/start.json по hostname)
- *  2. public/*      → dist/*             (стартовые конфиги, КРОМЕ index.html)
+ *  1. msx/*.json       → dist/msx/*.json       (MSX запрашивает /msx/start.json по hostname)
+ *  2. public/*         → dist/*                (стартовые конфиги, КРОМЕ index.html)
  *  3. public/index.html (шаблон с polyfills/MSX-плагином) +
  *     загрузчик бандла из Expo-сгенерированного dist/index.html
  *     → итоговый dist/index.html
+ *  4. playlists/*.m3u  → dist/playlists/*.m3u  (скачанные плейлисты для автономной работы)
  *
  * Почему так: public/index.html содержит важные TV- polyfills
  * (фокус-менеджер пульта, MSX TVX-плагин, обработчик ошибок, globalThis),
@@ -14,13 +15,19 @@
  * <script src="/_expo/static/js/web/index-HASH.js" defer> в dist/index.html.
  * Мы находим этот тег и вшиваем в шаблон — иначе приложение не загрузится.
  *
+ * Плейлисты скачиваются раз в сутки GitHub Action'ом (.github/workflows/update-playlists.yml)
+ * и коммитятся в playlists/. Если при сборке их там нет (например, свежий клон) —
+ * запускаем scripts/fetch-playlists.js на лету как fallback.
+ *
  * Содержимое JSON-файлов не модифицируется.
  */
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const publicDir = path.join(__dirname, '..', 'public');
 const msxDir = path.join(__dirname, '..', 'msx');
+const playlistsDir = path.join(__dirname, '..', 'playlists');
 const distDir = path.join(__dirname, '..', 'dist');
 
 if (!fs.existsSync(distDir)) {
@@ -63,7 +70,33 @@ copyFilesExcludingIndex(publicDir, distDir);
 //    и вшиваем его в шаблон public/index.html, сохраняя все polyfills.
 injectBundleScript(distDir, publicDir);
 
+// 4. playlists/ → dist/playlists/  (плейлисты для автономной работы приложения).
+//    Если папка пустая/отсутствует — запускаем fetch-playlists.js как fallback
+//    (нужно для случая, когда GitHub Action ещё не успел или репозиторий только склонировали).
+ensurePlaylists(playlistsDir, distDir);
+
 console.log('[copy-public] Done');
+
+// Гарантирует, что в playlists/ есть .m3u файлы.
+// Если их нет — запускает scripts/fetch-playlists.js.
+// Затем копирует playlists/ → dist/playlists/.
+function ensurePlaylists(srcPlaylistsDir, distDir) {
+  let needFetch = !fs.existsSync(srcPlaylistsDir);
+  if (!needFetch) {
+    const files = fs.readdirSync(srcPlaylistsDir).filter(f => f.endsWith('.m3u'));
+    if (files.length === 0) needFetch = true;
+  }
+  if (needFetch) {
+    console.log('[copy-public] playlists/ empty or missing — running fetch-playlists.js as fallback');
+    try {
+      execSync('node scripts/fetch-playlists.js', { stdio: 'inherit', cwd: path.join(__dirname, '..') });
+    } catch (e) {
+      console.warn('[copy-public] WARNING: fetch-playlists.js fallback failed:', e.message);
+      console.warn('[copy-public] The app will start without pre-fetched playlists (it will try to fetch on demand)');
+    }
+  }
+  copyFiles(srcPlaylistsDir, path.join(distDir, 'playlists'), 'playlists/');
+}
 
 // Копирует файлы из srcDir в destDir, пропуская index.html
 function copyFilesExcludingIndex(srcDir, destDir) {

@@ -1,0 +1,147 @@
+#EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 15.07.26 21:48 User: yuri1245 IP: 31.31.20.133 channels 73 
+http://ex.iptvin.ru/iptvin.ru.mp4
+#EXTINF:-1 group-title="Познавательные",24 техно
+http://158.101.222.193:88/georgia_play.php?id=24techno
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
+https://stream8.cinerama.uz/1043/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x220.png" logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x132-tr.png" channelId="5216" tvg-id="big-planet",Big Planet
+http://45.145.32.13:20440/bigplanet/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.sostav.ru/app/public/images/news/2014/03/12/FIRE_DC_HD_BLACK_RGB.jpg" logo="https://trinity-tv.net/storage/channels/dark_theme_336.png" channelId="341" tvg-id="discovery-channel",Discovery
+https://stream8.cinerama.uz/1039/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://89.tv-internet.pro/wp-content/uploads/2019/12/160-%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B-%D0%93%D0%B0%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-HD.png" channelId="391" tvg-id="galaxy-tv",Galaxy
+http://45.145.32.13:20440/outdoor_channel/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные",Insight TV HD
+https://stream8.cinerama.uz/1416/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Motorvision TV
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=535
+#EXTINF:-1 group-title="Познавательные",NAT GEO WILD
+https://stream8.cinerama.uz/1042/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
+https://stream8.cinerama.uz/1041/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
+http://178.124.153.123:44400/rtg
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
+http://hls127.freeott.top:8080/RTG_TV/video.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x220.png" logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x132-tr.png" channelId="596" tvg-id="travel-adventure",Travel+Adventure
+http://45.145.32.13:20440/travel_adventure/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
+http://45.145.32.13:20440/viasat_explore/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
+https://stream8.cinerama.uz/1045/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
+http://158.101.222.193:88/georgia_play.php?id=viasathist
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
+http://45.145.32.13:20440/viasat_history/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
+https://stream8.cinerama.uz/1046/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+http://158.101.222.193:88/georgia_play.php?id=viasatnat
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+http://45.145.32.13:20440/viasat_nature/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Viasat explore
+http://158.101.222.193:88/georgia_play.php?id=viasatexp
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
+http://158.101.222.193:88/georgia_play.php?id=auto24
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
+https://stream8.cinerama.uz/1430/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто Плюс
+https://stream8.cinerama.uz/1036/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто плюс
+http://158.101.222.193:88/georgia_play.php?id=autoplus
+#EXTINF:-1 group-title="Познавательные",В Мире животных
+https://stream8.cinerama.uz/1404/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/6262.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%20%D0%B8%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.png" channelId="250" tvg-id="voprosy-i-otvety",Вопросы и ответы
+https://stream8.cinerama.uz/1429/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Глазами Туриста
+https://stream8.cinerama.uz/1423/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
+http://hls127.freeott.top:8080/Dikiy/video.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
+http://185.46.16.239:8000/Doktor
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
+https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
+https://stream8.cinerama.uz/1421/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/dd858945401f5872e3f9f253673443d2.png" logo="http://ex.iptvin.ru/pic/2/6112098224542f3016cf23a7296ad0f9.png" channelId="562" tvg-id="zhivaya-planeta",Живая Планета
+https://stream8.cinerama.uz/1250/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/0a21faa72320f5575674b336636499a1.png" logo="http://ex.iptvin.ru/pic/2/9ed07c9026d0b5b70b7f9d2d55d07be5.png" channelId="1815" tvg-id="zhivaya-priroda",Живая Природа HD
+https://stream8.cinerama.uz/1411/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/dd858945401f5872e3f9f253673443d2.png" logo="http://ex.iptvin.ru/pic/2/6112098224542f3016cf23a7296ad0f9.png" channelId="562" tvg-id="zhivaya-planeta",Живая планета
+http://185.46.16.239:8000/Zhivaya_Planeta
+#EXTINF:-1 group-title="Познавательные",Живи Активно HD
+https://stream8.cinerama.uz/1405/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",Живи
+https://stream8.cinerama.uz/1419/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",ЗЖ
+http://185.57.68.33/40/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Zagorodniy-220x220.png" logo="https://i115.fastpic.org/big/2021/0914/38/23ad3af058423f8340f88d4a6da02838.png" channelId="389" tvg-id="zagorodny",Загородный
+https://stream8.cinerama.uz/1410/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/6265.png" logo="http://epg.openboxfan.com/picon/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5%D1%82%D0%B2.png" channelId="247" tvg-id="zdorovoe-tv",Здоровое ТВ
+https://stream8.cinerama.uz/1428/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Зоопарк
+http://158.101.222.193:88/georgia_play.php?id=zoo
+#EXTINF:-1 group-title="Познавательные",Зоопарк
+https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",МЕГА HD
+http://176.122.125.10:8080/mega/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="53" tvg-id="moya-planeta",Моя Планета
+https://stream8.cinerama.uz/1247/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/398.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Моя планета HD
+http://185.46.16.239:8000/Planeta_HD
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Muzhskoj-280x280.png" logo="https://i.postimg.cc/QM4HFf7F/6af0402151028746a625767550547828.png" channelId="323" tvg-id="muzhskoy",Мужской
+http://158.101.222.193:88/georgia_play.php?id=muzhskoy
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/tvico-n167.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9D%D0%B0%D1%83%D0%BA%D0%B0%202.0.png" channelId="173" tvg-id="nauka-20",Наука 2.0
+http://185.46.16.239:8000/Nauka_2.0
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+http://178.134.1.158:8081/nauka/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+http://hls127.freeott.top:8080/NAUKA/video.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+https://stream8.cinerama.uz/1248/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/ohota-i-ribalka-icon.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20%D0%B8%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.png" channelId="221" tvg-id="oxota-i-rybalka",Охота и рыбалка
+https://stream8.cinerama.uz/1038/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/22cca564450dbfc57a7e47e797e57ab1.png" logo="http://ex.iptvin.ru/pic/2/1f206a2ea46909c23ac33baf846138a5.png" channelId="335" tvg-id="oxotnik-i-rybolov-hd",Охотник и рыболов HD
+https://stream8.cinerama.uz/1413/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/0d3994e9d39d16c0885269ae6735152d.jpg" logo="http://ex.iptvin.ru/pic/2/Pervyj-Kosmicheskij-960x286-tr.png" channelId="1800" tvg-id="eureka-hd",Первый Космический
+https://stream8.cinerama.uz/1415/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/5eaaf2491af8ff0165ad365d5821c173.png" logo="http://ex.iptvin.ru/pic/2/Priklyucheniya-220x132-tr.png" channelId="3925" tvg-id="prikluchenia-hd",Приключения
+https://stream8.cinerama.uz/1420/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Рыбалка
+http://iptv.prosto.tv:7000/ch344/video.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/19110.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A2%D0%BE%D1%87%D0%BA%D0%B0%20%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%B0%20HD.png" channelId="3705" tvg-id="tochka-otryva",Точка Отрыва
+https://stream8.cinerama.uz/1031/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Точка
+https://stream8.cinerama.uz/1222/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
+https://stream8.cinerama.uz/1427/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
+http://37.186.70.39:40/play/113/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/Discovery-Channel-220x220.png" logo="http://ex.iptvin.ru/pic/2/Discovery-Channel-220x132-tr.png" channelId="57" tvg-id="discovery-channel",Discovery Channel
+http://37.186.70.39:40/play/118/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
+http://37.186.70.39:40/play/105/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто Плюс
+http://37.186.70.39:40/play/103/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/04ae9f3537063ac965be96d757ed53ac.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%B8%D0%BA%D0%B0%D1%8F%20%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20HD.png" channelId="3881" tvg-id="dikaya-oxota-hd",Дикая охота HD
+http://37.186.70.39:40/play/38/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа",Дикая рыбалка
+http://37.186.70.39:40/play/31/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
+http://37.186.70.39:40/play/84/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/Zagorodniy-220x220.png" logo="https://i115.fastpic.org/big/2021/0914/38/23ad3af058423f8340f88d4a6da02838.png" channelId="389" tvg-id="zagorodny",Загородный
+http://37.186.70.39:40/play/109/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/post-61433-0-98709300-1527708336-thumb.jpg" logo="http://ex.iptvin.ru/pic/2/zoo-tv.png" channelId="299" tvg-id="zootv",Зоо ТВ
+http://37.186.70.39:40/play/110/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Моя планета
+http://37.186.70.39:40/play/45/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+http://37.186.70.39:40/play/51/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/67efdf96655dfd50a1a29ab027ce9bbd.png" logo="http://ex.iptvin.ru/pic/2/6b2a7fd7cd4d65ab96784fee692c2ea1.png" channelId="300" tvg-id="oxotnik-i-rybolov-hd",Охотник и рыболов
+http://37.186.70.39:40/play/108/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/9044af12a4a9dbc01e92a76ffc00c365.png" logo="https://i.postimg.cc/WbLYFqDT/e5f45a4fdbc8482ca5946a1c4d987d8c.png" channelId="3295" tvg-id="poexali",Поехали!
+http://37.186.70.39:40/play/36/index.m3u8
+#EXTINF:-1 group-title="Джиэнси-Альфа" tvg-logo="http://ex.iptvin.ru/pic/2/858b33fe748dda9fb3c559d999714773.png" logo="http://ex.iptvin.ru/pic/2/8527603a877883b4cdb226f75b613fa8.png" channelId="302" tvg-id="teleputeshestvia",Телепутешествия
+http://37.186.70.39:40/play/53/index.m3u8

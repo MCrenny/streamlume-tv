@@ -1,0 +1,20 @@
+# Автоматически генерируемые плейлисты — не показывать diff в PR/коммитах.
+# Файлы обновляются раз в сутки GitHub Action'ом, изменения не информативны
+# для ревьювера, но раздули бы историю и делали бы коммиты нечитаемыми.
+playlists/*.m3u -diff
+playlists/*.m3u merge=ours
+
+# Большие бинарные ассеты (шрифты) — тоже не показывать diff
+*.ttf -diff
+*.png -diff
+*.jpg -diff
+*.jpeg -diff
+
+# Хэши файлов в _expo и assets — экспо-генерируемые, diff неинформативен
+dist/_expo/** -diff
+dist/assets/** -diff
+
+# Нормализуем переводы строк (Windows/Linux согласованность)
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
