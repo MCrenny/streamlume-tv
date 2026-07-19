@@ -188,14 +188,9 @@ export const HomeScreen = ({ navigation }: any) => {
                 isLandscape={isLandscape}
                 hasTVPreferredFocus={pl.id === activePlaylistId}
                 onPress={() => {
-                  if (!isPro && pl.id !== 'public_amvera') {
-                    Alert.alert(
-                      '💎 КУПИТЬ PRO версию',
-                      'Этот плейлист доступен только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
-                      [{ text: 'Понятно', style: 'cancel' }]
-                    );
-                    return;
-                  }
+                  // Все вшитые плейлисты (PLAYLISTS) доступны всем бесплатно.
+                  // PRO-ограничение оставляем только для кастомных плейлистов (добавленных пользователем).
+                  const isCustom = customPlaylists.some(c => c.id === pl.id);
                   const isActive = activePlaylistId === pl.id;
                   if (isActive && isCustom) {
                     Alert.alert('Управление плейлистом', pl.name, [
