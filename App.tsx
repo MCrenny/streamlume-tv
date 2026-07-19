@@ -8,8 +8,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { FavoritesScreen } from './src/screens/FavoritesScreen';
 import { PlayerScreen } from './src/screens/PlayerScreen';
-
-import { AuthScreen } from './src/screens/AuthScreen';
 import { useStore } from './src/store/useStore';
 import { Audio } from 'expo-av';
 import { isTVDevice } from './src/utils/TVLayoutManager';
@@ -64,11 +62,6 @@ import { View, ActivityIndicator } from 'react-native';
 import { ErrorBoundary } from './src/components/ErrorBoundary';
 
 const MainScreen = ({ navigation }: any) => {
-  const isAuthorized = useStore(state => state.isAuthorized);
-  const trialStartDate = useStore(state => state.trialStartDate);
-  const isTrialActive = trialStartDate != null && (Date.now() - trialStartDate <= 3 * 24 * 60 * 60 * 1000);
-  const isPro = isAuthorized || isTrialActive;
-
   if (isTVDevice()) {
     return (
       <ErrorBoundary>
@@ -76,18 +69,11 @@ const MainScreen = ({ navigation }: any) => {
       </ErrorBoundary>
     );
   }
-  return <MainTabs isPro={isPro} />;
+  return <MainTabs isPro={true} />;
 };
 
 export default function App() {
-  const isAuthorized = useStore(state => state.isAuthorized);
-  const isFreeMode = useStore(state => state.isFreeMode);
-  const trialStartDate = useStore(state => state.trialStartDate);
-  
   const [isReady, setIsReady] = React.useState(false);
-
-  const isTrialActive = trialStartDate != null && (Date.now() - trialStartDate <= 3 * 24 * 60 * 60 * 1000);
-  const isPro = isAuthorized || isTrialActive;
 
   React.useEffect(() => {
     // Fallback: if hydration fails or hangs, force ready state after 1.5s
@@ -113,8 +99,6 @@ export default function App() {
     };
   }, []);
 
-  const canAccess = isPro || isFreeMode;
-
   const customDarkTheme = {
     ...DarkTheme,
     colors: {
@@ -133,8 +117,11 @@ export default function App() {
     );
   }
 
+  // Динамический URL — работает на любом домене (Vercel, Amvera, локально)
+  const appUrl = typeof window !== 'undefined' ? window.location.origin : 'https://streamlume-tv.vercel.app';
+  
   const linking = {
-    prefixes: ['https://streamlume-tv-svmorozoww.amvera.io', 'http://streamlume-tv-svmorozoww.amvera.io'],
+    prefixes: [appUrl],
     config: {
       screens: {
         Auth: 'auth',
@@ -149,9 +136,6 @@ export default function App() {
       <NavigationContainer theme={customDarkTheme} linking={linking}>
         <StatusBar style="light" />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          {!canAccess ? (
-            <Stack.Screen name="Auth" component={AuthScreen} />
-          ) : (
             <>
               <Stack.Screen 
                 name="Main" 
@@ -160,7 +144,6 @@ export default function App() {
 
               <Stack.Screen name="Player" component={PlayerScreen} />
             </>
-          )}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

@@ -2,7 +2,8 @@ import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { View, FlatList, StyleSheet, Text, ActivityIndicator, TextInput, TouchableOpacity, TouchableHighlight, Pressable, Modal, Alert, ScrollView, useWindowDimensions, Platform } from 'react-native';
 import { useStore } from '../store/useStore';
 import { ChannelCard } from '../components/ChannelCard';
-import { parseM3U, groupChannels, ChannelGroup } from '../utils/m3uParser';
+import { Channel, ChannelGroup, parseM3U } from '../utils/m3uParser';
+import { fetchAndCachePlaylist } from '../utils/playlistCache';
 
 const PLAYLISTS = [
   { id: 'pl1', name: 'Playlist 1', url: 'http://iptvin.ru/p/?web1t&yuri1245&FnY2zctuSXJG3u2' },
@@ -93,19 +94,14 @@ export const HomeScreen = ({ navigation }: any) => {
   const isPro = isAuthorized || isTrialActive; // PRO = paid key OR active trial
   // isFreeMode = after trial expired, user chose "continue free" → restricted
 
-  const API_BASE = Platform.OS === 'web' ? '' : 'https://streamlume-tv-svmorozoww.amvera.io';
-
   // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
     const mainList = {
       id: 'main_server',
       name: '📺 Общедоступный',
-      url: `${API_BASE}/api/public.m3u`
+      url: `https://iptv-org.github.io/iptv/countries/ru.m3u` // Или любой другой базовый
     };
-    return [mainList, ...PLAYLISTS.map(pl => ({
-      ...pl,
-      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}`
-    })), ...customPlaylists];
+    return [mainList, ...PLAYLISTS, ...customPlaylists];
   }, [customPlaylists]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
@@ -117,11 +113,7 @@ export const HomeScreen = ({ navigation }: any) => {
       setChannels([]); // Clear the array first to release memory
       try {
         console.log(`[DEBUG] Loading playlist from: ${activePlaylist.url}`);
-        const response = await fetch(activePlaylist.url);
-        if (!response.ok) {
-          throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
-        }
-        const text = await response.text();
+        const text = await fetchAndCachePlaylist(activePlaylist.url);
         console.log(`[DEBUG] Fetched ${text.length} bytes`);
         const parsed = parseM3U(text);
         console.log(`[DEBUG] Parsed ${parsed.channels.length} channels`);

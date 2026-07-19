@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, ActivityIndicator, Pressable, ScrollView, FlatL
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { useStore } from '../store/useStore';
 import { parseM3U, Channel, isAdultContent } from '../utils/m3uParser';
+import { fetchAndCachePlaylist } from '../utils/playlistCache';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 // FileSystem and Sharing are native-only; import conditionally to avoid web crashes
@@ -33,20 +34,15 @@ export const TVHomeScreen = ({ navigation }: any) => {
   
   const isPro = isAuthorized;
 
-  const API_BASE = Platform.OS === 'web' ? '' : 'https://streamlume-tv-svmorozoww.amvera.io';
-
   // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
     const mainList = {
       id: 'premium_amvera',
       name: '📺 Общедоступный',
-      url: `https://iptvpay-svmorozoww.amvera.io/api/playlist?key=${activationKey || 'VIP-TEST'}`
+      url: `https://iptv-org.github.io/iptv/countries/ru.m3u`
     };
-    return [mainList, ...PLAYLISTS.map(pl => ({
-      ...pl,
-      url: `${API_BASE}/proxy?url=${encodeURIComponent(pl.url)}`
-    })), ...customPlaylists];
-  }, [customPlaylists, activationKey]);
+    return [mainList, ...PLAYLISTS, ...customPlaylists];
+  }, [customPlaylists]);
 
   const [activePlaylistId, setActivePlaylistId] = useState(allPlaylists[0].id);
   const activePlaylist = useMemo(() => allPlaylists.find(p => p.id === activePlaylistId) || allPlaylists[0], [allPlaylists, activePlaylistId]);
@@ -181,9 +177,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
       setChannels([]); // Clear the array first to release memory
       try {
         const targetUrl = activePlaylist.url;
-        const response = await fetch(targetUrl);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const text = await response.text();
+        const text = await fetchAndCachePlaylist(targetUrl);
         const parsed = parseM3U(text);
         setChannels(parsed.channels || parsed);
         setSelectedCategory('Все каналы');

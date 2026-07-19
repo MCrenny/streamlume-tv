@@ -6,16 +6,8 @@ import { Channel, isAdultContent } from '../utils/m3uParser';
 interface StoreState {
   channels: Channel[];
   favorites: Channel[];
-  isAuthorized: boolean;
-  isFreeMode: boolean;
-  trialStartDate: number | null;
-  activationKey: string | null;
   hasHydrated: boolean; // New flag
   setHasHydrated: (status: boolean) => void;
-  setAuthorized: (status: boolean) => void;
-  setFreeMode: (status: boolean) => void;
-  startTrial: () => void;
-  setActivationKey: (key: string | null) => void;
   setChannels: (channels: Channel[]) => void;
   toggleFavorite: (channel: Channel) => void;
   reorderFavorites: (newOrder: string[]) => void;
@@ -42,16 +34,8 @@ export const useStore = create<StoreState>()(
       channels: [],
       favorites: [],
       customPlaylists: [],
-      isAuthorized: true,
-      isFreeMode: false,
-      trialStartDate: null,
-      activationKey: null,
       hasHydrated: false,
       setHasHydrated: (status) => set({ hasHydrated: status }),
-      setAuthorized: (status) => set({ isAuthorized: status }),
-      setFreeMode: (status) => set({ isFreeMode: status }),
-      startTrial: () => set({ trialStartDate: Date.now(), isFreeMode: false }),
-      setActivationKey: (key) => set({ activationKey: key }),
       setChannels: (channels) => set({ channels }),
       toggleFavorite: (channel) => set((state) => {
         const exists = state.favorites.some(f => f.id === channel.id);
@@ -111,10 +95,6 @@ export const useStore = create<StoreState>()(
         state?.setHasHydrated(true);
       },
       partialize: (state) => ({ 
-        isAuthorized: state.isAuthorized, 
-        isFreeMode: state.isFreeMode,
-        trialStartDate: state.trialStartDate,
-        activationKey: state.activationKey,
         favorites: state.favorites, 
         customPlaylists: state.customPlaylists,
         viewMode: state.viewMode 

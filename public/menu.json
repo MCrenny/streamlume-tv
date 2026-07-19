@@ -1,7 +1,7 @@
 {
   "type": "pages",
   "headline": "StreamLume TV",
-  "ready": "link:https://streamlume-tv.netlify.app/index.html",
+  "ready": "link:index.html",
   "pages": [
     {
       "items": [
@@ -9,7 +9,7 @@
           "type": "button",
           "layout": "0,0,12,2",
           "title": "Запустить StreamLume",
-          "action": "link:https://streamlume-tv.netlify.app/index.html"
+          "action": "link:index.html"
         }
       ]
     }

@@ -14,7 +14,7 @@
                 "layout": "0,0,12,6",
                 "label": "ЗАПУСТИТЬ STREAMLUME",
                 "icon": "play-circle-outline",
-                "action": "link:https://streamlume-tv-svmorozoww.amvera.io/index.html?v=dbg1"
+                "action": "link:https://streamlume-tv.netlify.app/index.html?v=dbg1"
               }
             ]
           }
