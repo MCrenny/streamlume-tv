@@ -2,4 +2,29 @@ node_modules/
 .expo/
 *.log
 !dist/assets/node_modules/
+
+# Secrets / env (никогда не коммитить)
 .env
+.env.*
+*.env
+**/.env
+**/.env.*
+*.key
+*.pem
+client_secret*.json
+credentials*.json
+
+# ZCode session dumps — содержат лог сессии, могут включать секреты
+zcode_*.txt
+zcode_*.json
+query_zcode.py
+tmp_dirs.txt
+*.tiles
+*.dump.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
