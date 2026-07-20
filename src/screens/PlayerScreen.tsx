@@ -139,11 +139,7 @@ export const PlayerScreen = () => {
   const currentVariant = variants[variantIndex] || variants[0];
   
   const videoRef = useRef<any>(null);
-  const { favorites, toggleFavorite, moveFavorite, playNextChannel, playPrevChannel, isAuthorized, activationKey, isFreeMode, trialStartDate } = useStore();
-  const isTrialActive = trialStartDate != null && (Date.now() - trialStartDate <= 3 * 24 * 60 * 60 * 1000);
-  const isPremium = isAuthorized || isTrialActive;
-
-
+  const { favorites, toggleFavorite, moveFavorite, playNextChannel, playPrevChannel } = useStore();
 
   const [isBackFocused, setIsBackFocused] = useState(false);
   const [isFavoriteFocused, setIsFavoriteFocused] = useState(false);
@@ -169,29 +165,7 @@ export const PlayerScreen = () => {
   const [isErrorReconnecting, setIsErrorReconnecting] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  const showPremiumToast = () => {
-    setToastMessage("Режим доступен только в Премиум подписке.");
-    setTimeout(() => setToastMessage(null), 3000);
-  };
-
-  const withPremium = (action: () => void) => {
-    return () => {
-      if (!isPremium) {
-        showPremiumToast();
-      }
-      action();
-    };
-  };
-
   const handleToggleFavorite = () => {
-    if (!isPremium) {
-      Alert.alert(
-        '🔒 Функция PRO',
-        'Избранное доступно только в PRO-версии StreamLume.\n\nПолучите ключ через @StreameLumeBot.',
-        [{ text: 'Понятно', style: 'cancel' }]
-      );
-      return;
-    }
     toggleFavorite(currentChannel);
   };
 
