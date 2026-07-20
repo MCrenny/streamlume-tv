@@ -11,13 +11,13 @@ const FileSystem = Platform.OS !== 'web' ? require('expo-file-system/legacy') : 
 const Sharing = Platform.OS !== 'web' ? require('expo-sharing') : null;
 
 const PLAYLISTS = [
-  { id: 'pl1', name: 'Playlist 1', url: 'http://iptvin.ru/p/?web1t&yuri1245&FnY2zctuSXJG3u2' },
-  { id: 'pl2', name: 'Playlist 2', url: 'http://iptvin.ru/p/?web3-3&yuri1245&FnY2zctuSXJG3u2' },
-  { id: 'pl3', name: 'Playlist 3', url: 'http://iptvin.ru/p/?web4&yuri1245&FnY2zctuSXJG3u2' },
-  { id: 'pl4', name: 'Playlist 4', url: 'http://iptvin.ru/p/?web9u&yuri1245&FnY2zctuSXJG3u2' },
-  { id: 'pl5', name: 'Playlist 5', url: 'http://iptvin.ru/p/?web10&yuri1245&FnY2zctuSXJG3u2' },
-  { id: 'pl6', name: 'Playlist 6', url: 'https://smolnp.github.io/IPTVru//IPTVru.m3u' },
-  { id: 'pl7', name: 'Playlist 7', url: 'http://iptvin.ru/p/?web6i&yuri1245&FnY2zctuSXJG3u2' }
+  { id: 'pl1', name: 'Playlist 1', url: '/playlists/pl1.m3u' },
+  { id: 'pl2', name: 'Playlist 2', url: '/playlists/pl2.m3u' },
+  { id: 'pl3', name: 'Playlist 3', url: '/playlists/pl3.m3u' },
+  { id: 'pl4', name: 'Playlist 4', url: '/playlists/pl4.m3u' },
+  { id: 'pl5', name: 'Playlist 5', url: '/playlists/pl5.m3u' },
+  { id: 'pl6', name: 'Playlist 6', url: '/playlists/pl6.m3u' },
+  { id: 'pl7', name: 'Playlist 7', url: '/playlists/pl7.m3u' }
 ];
 
 type ViewMode = 'normal' | 'small' | 'large' | 'list';
@@ -39,7 +39,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
     const mainList = {
       id: 'premium_amvera',
       name: '📺 Общедоступный',
-      url: `https://iptv-org.github.io/iptv/countries/ru.m3u`
+      url: `/playlists/public.m3u`
     };
     return [mainList, ...PLAYLISTS, ...customPlaylists];
   }, [customPlaylists]);
