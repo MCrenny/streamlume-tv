@@ -32,37 +32,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Fetch playlists
         run: node scripts/fetch-playlists.js
 
-      - name: Check for changes
+      - name: Stage and check for changes
         id: changes
         run: |
-          if [ -n "$(git status --porcelain playlists/)" ]; then
+          # Сначала git add, чтобы .gitattributes применил нормализацию CRLF→LF.
+          # Иначе git status покажет изменения, а git commit потом скажет
+          # "nothing to commit" и упадёт с exit 1 под bash -e.
+          git add playlists/
+          # Проверяем ИМЕННО staging (а не working tree) — это надёжно.
+          changed_files=$(git diff --cached --name-only playlists/)
+          if [ -n "$changed_files" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "::notice::Playlists updated"
+            echo "::notice::Playlists changed: $(echo "$changed_files" | tr '\n' ' ')"
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "::notice::No changes — playlists are up to date"
+            echo "::notice::No changes — playlists are byte-identical to previous version"
           fi
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
+        # `|| true` — страховка: даже если git commit скажет "nothing to commit"
+        # в каком-то граничном случае, workflow не упадёт.
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add playlists/
+          # [skip ci] предотвращает рекурсивный запуск (двойная защита с paths-filter).
           git commit -m "chore(playlists): daily auto-update [skip ci]
 
           Automated by .github/workflows/update-playlists.yml
-          Source: scripts/playlist-manifest.json"
+          Source: scripts/playlist-manifest.json" || echo "Nothing to commit — already up to date"
           git push
 
       - name: Summary
