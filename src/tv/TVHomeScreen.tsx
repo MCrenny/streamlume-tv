@@ -301,15 +301,6 @@ export const TVHomeScreen = ({ navigation }: any) => {
       <View style={styles.container}>
       <LinearGradient colors={['#1a1a1c', '#0a0a0c']} style={StyleSheet.absoluteFillObject} />
 
-      {/* TV Debug Overlay — visible only on web */}
-      {Platform.OS === 'web' && (
-        <View style={{ position: 'absolute', top: 8, left: 8, zIndex: 99999, backgroundColor: 'rgba(0,0,0,0.8)', padding: 6, borderRadius: 6 }}>
-          <Text style={{ color: '#0f0', fontSize: 11, fontFamily: 'monospace' }}>
-            region={focusedRegion} ch={focusedChannelIdx}/{filteredChannels.length} cat={focusedCategoryIdx} pl={focusedPlaylistIdx}
-          </Text>
-        </View>
-      )}
-
       {/* Шапка плейлистов */}
       <View style={styles.header}>
         <Text style={styles.logo}>StreamLume <Text style={styles.tvBadge}>TV</Text></Text>
@@ -1195,10 +1186,10 @@ const styles = StyleSheet.create({
   
   // === СТИЛИ КАРТОЧЕК ДЛЯ РАЗНЫХ РЕЖИМОВ ===
   
-  // 1. Обычные плитки (5 колонок)
+  // 1. Обычные плитки (6 колонок)
   channelCardNormal: {
     flex: 1,
-    aspectRatio: 1.35,
+    height: 90,
     backgroundColor: '#1c1c1e',
     borderRadius: 12,
     margin: 4,
@@ -1216,10 +1207,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // 2. Маленькие плитки (7 колонок)
+  // 2. Маленькие плитки (8 колонок)
   channelCardSmall: {
     flex: 1,
-    aspectRatio: 1.4,
+    height: 70,
     backgroundColor: '#1c1c1e',
     borderRadius: 8,
     margin: 3,
@@ -1237,10 +1228,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // 3. Большие плитки (3 колонки)
+  // 3. Большие плитки (4 колонки)
   channelCardLarge: {
     flex: 1,
-    aspectRatio: 1.3,
+    height: 130,
     backgroundColor: '#1c1c1e',
     borderRadius: 14,
     margin: 6,
@@ -1261,6 +1252,7 @@ const styles = StyleSheet.create({
   // 4. Классический список (одна колонка во всю ширину)
   channelCardList: {
     width: '96%',
+    height: 48,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#1c1c1e',
@@ -1268,7 +1260,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
     marginVertical: 4,
     paddingHorizontal: 16,
-    paddingVertical: 12,
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.05)',
   },

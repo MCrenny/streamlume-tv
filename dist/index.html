@@ -47,22 +47,6 @@
         var focusHistoryText = "";
         var focusHistoryCx = 0;
         var focusHistoryCy = 0;
-        var keyLog = [];
-
-        // Debug overlay for TV testing
-        var debugDiv = null;
-        function updateDebug(msg) {
-          if (!debugDiv) {
-            debugDiv = document.createElement('div');
-            debugDiv.id = 'tv-debug';
-            debugDiv.style.cssText = 'position:fixed;bottom:8px;right:8px;background:rgba(0,0,0,0.85);color:#0f0;font:bold 13px monospace;padding:8px 12px;z-index:999999;border-radius:6px;max-width:400px;pointer-events:none;';
-            document.body.appendChild(debugDiv);
-          }
-          var now = new Date().toLocaleTimeString('ru-RU');
-          keyLog.unshift(now + ' ' + msg);
-          if (keyLog.length > 6) keyLog.pop();
-          debugDiv.innerHTML = keyLog.join('<br>');
-        }
 
         function getFocusableElements() {
           var els = Array.from(document.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
@@ -110,7 +94,6 @@
           setTimeout(function() {
             var els = getFocusableElements();
             if (els.length > 0) setFocus(els[0]);
-            updateDebug('init: ' + els.length + ' focusable els');
           }, 1500);
         });
 
@@ -118,7 +101,6 @@
           var keyCode = e.keyCode;
           if (keyCode === 8 || keyCode === 27 || keyCode === 461 || keyCode === 10009) return;
           if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
-            var dir = {37:'L',38:'U',39:'R',40:'D'}[keyCode] || '?';
             if (currentFocus) {
               focusHistoryText = currentFocus.textContent || "";
               var r = currentFocus.getBoundingClientRect();
@@ -145,7 +127,6 @@
                 }
               }
               setFocus(bestNode);
-              updateDebug('recover -> ' + dir);
               return;
             }
 
@@ -173,13 +154,7 @@
             });
 
             if (bestNode) {
-              var targetRegion = getElementRegion(bestNode);
-              var oldText = (currentFocus.textContent || '').substring(0, 20).trim();
-              var newText = (bestNode.textContent || '').substring(0, 20).trim();
-              updateDebug(dir + ' | ' + oldText + ' -> ' + newText);
               setFocus(bestNode);
-            } else {
-              updateDebug(dir + ' | no target');
             }
           }
         }, true);
@@ -233,6 +208,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-    <script src="/_expo/static/js/web/index-892c466f8f49dd356a0b40c06f1e3da6.js" defer></script>
+    <script src="/_expo/static/js/web/index-481aacb1b565049701dd4a1cc8fbe713.js" defer></script>
 </body>
 </html>
