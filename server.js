@@ -82,7 +82,7 @@ app.use(express.static(distPath, {
 }));
 
 // SPA fallback — все маршруты отдаём index.html
-app.get('*', (req, res) => {
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 

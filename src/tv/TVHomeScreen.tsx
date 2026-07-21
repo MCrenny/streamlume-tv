@@ -301,6 +301,15 @@ export const TVHomeScreen = ({ navigation }: any) => {
       <View style={styles.container}>
       <LinearGradient colors={['#1a1a1c', '#0a0a0c']} style={StyleSheet.absoluteFillObject} />
 
+      {/* TV Debug Overlay — visible only on web */}
+      {Platform.OS === 'web' && (
+        <View style={{ position: 'absolute', top: 8, left: 8, zIndex: 99999, backgroundColor: 'rgba(0,0,0,0.8)', padding: 6, borderRadius: 6 }}>
+          <Text style={{ color: '#0f0', fontSize: 11, fontFamily: 'monospace' }}>
+            region={focusedRegion} ch={focusedChannelIdx}/{filteredChannels.length} cat={focusedCategoryIdx} pl={focusedPlaylistIdx}
+          </Text>
+        </View>
+      )}
+
       {/* Шапка плейлистов */}
       <View style={styles.header}>
         <Text style={styles.logo}>StreamLume <Text style={styles.tvBadge}>TV</Text></Text>

@@ -47,6 +47,22 @@
         var focusHistoryText = "";
         var focusHistoryCx = 0;
         var focusHistoryCy = 0;
+        var keyLog = [];
+
+        // Debug overlay for TV testing
+        var debugDiv = null;
+        function updateDebug(msg) {
+          if (!debugDiv) {
+            debugDiv = document.createElement('div');
+            debugDiv.id = 'tv-debug';
+            debugDiv.style.cssText = 'position:fixed;bottom:8px;right:8px;background:rgba(0,0,0,0.85);color:#0f0;font:bold 13px monospace;padding:8px 12px;z-index:999999;border-radius:6px;max-width:400px;pointer-events:none;';
+            document.body.appendChild(debugDiv);
+          }
+          var now = new Date().toLocaleTimeString('ru-RU');
+          keyLog.unshift(now + ' ' + msg);
+          if (keyLog.length > 6) keyLog.pop();
+          debugDiv.innerHTML = keyLog.join('<br>');
+        }
 
         function getFocusableElements() {
           var els = Array.from(document.querySelectorAll('[tabindex="0"], a, button, input, [role="button"], [role="link"]'));
@@ -55,6 +71,25 @@
             return rect.width > 0 && rect.height > 0 && window.getComputedStyle(el).visibility !== 'hidden' && window.getComputedStyle(el).display !== 'none';
           });
         }
+
+        // Find which region an element belongs to (for zone-based navigation)
+        function getElementRegion(el) {
+          var p = el;
+          while (p && p !== document.body) {
+            var test = p;
+            // Check by data attribute or className patterns
+            if (test.getAttribute && test.getAttribute('data-region')) return test.getAttribute('data-region');
+            // Check by role and position
+            var cl = test.className || '';
+            if (typeof cl === 'string') {
+              if (cl.indexOf('groupItem') !== -1 || cl.indexOf('sidebar') !== -1) return 'categories';
+              if (cl.indexOf('playlistChip') !== -1 || cl.indexOf('viewMode') !== -1 || cl.indexOf('exportBtn') !== -1) return 'header';
+            }
+            p = p.parentElement;
+          }
+          return 'channels'; // default
+        }
+
         function setFocus(el) {
           if (currentFocus) {
             currentFocus.classList.remove('tv-focus');
@@ -64,9 +99,10 @@
           if (currentFocus) {
             currentFocus.classList.add('tv-focus');
             currentFocus.focus();
-            currentFocus.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+            // NO scrollIntoView — React FlatList manages its own scroll
           }
         }
+
         window.addEventListener('load', function() {
           var style = document.createElement('style');
           style.innerHTML = '.tv-focus { outline: 4px solid #00f0ff !important; box-shadow: 0 0 15px #00f0ff !important; border-radius: 8px; z-index: 9999; position: relative; }';
@@ -74,12 +110,15 @@
           setTimeout(function() {
             var els = getFocusableElements();
             if (els.length > 0) setFocus(els[0]);
+            updateDebug('init: ' + els.length + ' focusable els');
           }, 1500);
         });
+
         window.addEventListener('keydown', function(e) {
           var keyCode = e.keyCode;
           if (keyCode === 8 || keyCode === 27 || keyCode === 461 || keyCode === 10009) return;
           if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
+            var dir = {37:'L',38:'U',39:'R',40:'D'}[keyCode] || '?';
             if (currentFocus) {
               focusHistoryText = currentFocus.textContent || "";
               var r = currentFocus.getBoundingClientRect();
@@ -89,7 +128,9 @@
             e.stopPropagation(); e.preventDefault();
             var els = getFocusableElements();
             if (els.length === 0) return;
-            if (!currentFocus || !document.body.contains(currentFocus) || els.indexOf(currentFocus) === -1) { 
+
+            // If current focus is lost or not in the list, recover it
+            if (!currentFocus || !document.body.contains(currentFocus) || els.indexOf(currentFocus) === -1) {
               var bestNode = els[0];
               if (focusHistoryText) {
                 var matches = els.filter(function(el) { return (el.textContent || "") === focusHistoryText; });
@@ -103,24 +144,43 @@
                   });
                 }
               }
-              setFocus(bestNode); 
-              return; 
+              setFocus(bestNode);
+              updateDebug('recover -> ' + dir);
+              return;
             }
+
             var rect1 = currentFocus.getBoundingClientRect(), cx1 = rect1.left + rect1.width / 2, cy1 = rect1.top + rect1.height / 2;
             var bestNode = null, bestDist = Infinity;
+
+            // Zone-aware: if in channels grid, prefer elements in same vertical band
+            var currentRegion = getElementRegion(currentFocus);
+
             els.forEach(function(el) {
               if (el === currentFocus) return;
               var rect2 = el.getBoundingClientRect(), cx2 = rect2.left + rect2.width / 2, cy2 = rect2.top + rect2.height / 2;
               var dx = cx2 - cx1, dy = cy2 - cy1;
-              if ((keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) ||
-                  (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) ||
-                  (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) ||
-                  (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx))) {
-                var dist = Math.sqrt(dx*dx + dy*dy);
-                if (dist < bestDist) { bestDist = dist; bestNode = el; }
-              }
+
+              // Direction filter
+              var dirMatch = false;
+              if (keyCode === 39 && dx > 0 && Math.abs(dx) > Math.abs(dy)) dirMatch = true;
+              if (keyCode === 37 && dx < 0 && Math.abs(dx) > Math.abs(dy)) dirMatch = true;
+              if (keyCode === 40 && dy > 0 && Math.abs(dy) > Math.abs(dx)) dirMatch = true;
+              if (keyCode === 38 && dy < 0 && Math.abs(dy) > Math.abs(dx)) dirMatch = true;
+              if (!dirMatch) return;
+
+              var dist = Math.sqrt(dx*dx + dy*dy);
+              if (dist < bestDist) { bestDist = dist; bestNode = el; }
             });
-            if (bestNode) setFocus(bestNode);
+
+            if (bestNode) {
+              var targetRegion = getElementRegion(bestNode);
+              var oldText = (currentFocus.textContent || '').substring(0, 20).trim();
+              var newText = (bestNode.textContent || '').substring(0, 20).trim();
+              updateDebug(dir + ' | ' + oldText + ' -> ' + newText);
+              setFocus(bestNode);
+            } else {
+              updateDebug(dir + ' | no target');
+            }
           }
         }, true);
       })();
@@ -173,6 +233,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-    <script src="/_expo/static/js/web/index-4f2d9e14ea6cd3783e90e6af1eff313e.js" defer></script>
+    <script src="/_expo/static/js/web/index-892c466f8f49dd356a0b40c06f1e3da6.js" defer></script>
 </body>
 </html>

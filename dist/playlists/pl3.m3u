@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 15.07.26 21:48 User: yuri1245 IP: 31.31.20.133 channels 73 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 15.07.26 21:48 User: yuri1245 IP: 13.89.124.22 channels 73 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Познавательные",24 техно
 http://158.101.222.193:88/georgia_play.php?id=24techno
