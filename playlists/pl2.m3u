@@ -1,5 +1,5 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web3 04.06.26 23:48 User: yuri1245 IP: 172.185.167.35 channels 357 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web3 04.06.26 23:48 User: yuri1245 IP: 134.33.71.240 channels 357 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Эфирные" tvg-logo="https://i.postimg.cc/8c382rxX/82a354c357cde76a13e246bd2c031834.jpg" logo="http://ex.iptvin.ru/pic/2/HD-1024x555-tr.png" channelId="125" tvg-name="Первый канал" tvg-id="pervy",Первый канал HD
 https://edge1.1internet.tv/dash-live2/streams/1tv/1tvdash.mpd
@@ -31,11 +31,11 @@ http://tvc-hls.cdnvideo.ru/tvc-res/smil:vd9221_2.smil/playlist.m3u8
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/ctc-logo-01.jpg" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 https://zabava-htlive.cdn.ngenix.net/hls/CH_STS/variant.m3u8
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544297" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696198",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?946750984144" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="944500656096",Домашний
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/variant.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://only4.tv/ch/1009.png" logo="http://ex.iptvin.ru/pic/2/Pyatnica-220x132-tr.png" channelId="26" tvg-id="piatnica",Пятница!
 http://31.131.141.195:8000/play/2060/index.m3u8
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://kusa.k-itv.ru/wp-content/uploads/2016/08/zvezda_telekanal2.jpeg?948693544297" logo="http://ex.iptvin.ru/pic/2/zvezda.png" channelId="17" tvg-id="zvezda",Звезда
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://kusa.k-itv.ru/wp-content/uploads/2016/08/zvezda_telekanal2.jpeg?946750984144" logo="http://ex.iptvin.ru/pic/2/zvezda.png" channelId="17" tvg-id="zvezda",Звезда
 http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/d584e282d48b38a149ee31ccbd4de7ec.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_89F_16_70_1680000_0_0_0.png" channelId="3630" tvg-id="tnt",ТНТ HD
 http://tv.ttk.mx:9128
@@ -123,7 +123,7 @@ http://cef23ac9.rossteleccom.net/iptv/HR5L3HVVC7ZQSVB2DUVSQUH7/158/index.m3u8
 http://cef23ac9.rossteleccom.net/iptv/HR5L3HVVC7ZQSVB2DUVSQUH7/6009/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/X7wh4pYR/4fc4717d538520f411186bc84b6e3a8f.png" logo="https://i.postimg.cc/PqqFWyQH/326d9fa421fab693b457d6c239335946.png" channelId="325" tvg-id="zagorodnaya-zhizn",Загородная Жизнь
 http://185.57.68.33/40/mpegts
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/76e275d8639546602625b7ccf727375f.png?948693544297" logo="http://ex.iptvin.ru/pic/2/Zvezda-Plyus-285x171-tr.png" channelId="-1" tvg-id="zvezda-plus",Звезда Плюс
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/76e275d8639546602625b7ccf727375f.png?946750984144" logo="http://ex.iptvin.ru/pic/2/Zvezda-Plyus-285x171-tr.png" channelId="-1" tvg-id="zvezda-plus",Звезда Плюс
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/6265.png" logo="http://epg.openboxfan.com/picon/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5%D1%82%D0%B2.png" channelId="247" tvg-id="zdorovoe-tv",Здоровое ТВ
 http://cef23ac9.rossteleccom.net/iptv/HR5L3HVVC7ZQSVB2DUVSQUH7/2022/index.m3u8
@@ -193,9 +193,9 @@ http://live-3.otcnet.ru/wfcrus/index.m3u8
 http://cef23ac9.rossteleccom.net/iptv/HR5L3HVVC7ZQSVB2DUVSQUH7/2005/index.m3u8
 #EXTINF:-1 group-title="Развлекательные" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.online/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий HD
 http://46.32.176.50/dikiy/index.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/119.jpg?948693544297" tvg-id="domashny-pl2" channelId="945795696198",Домашний +2
+#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/119.jpg?946750984144" tvg-id="domashny-pl2" channelId="944500656096",Домашний +2
 https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R04_OTT_DOMASHNY_EKT/variant.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/751.jpg?948693544297" tvg-id="domashny-pl4" channelId="945795696198",Домашний +4
+#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/751.jpg?946750984144" tvg-id="domashny-pl4" channelId="944500656096",Домашний +4
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8
 #EXTINF:-1 group-title="Развлекательные" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",Живи
 http://31.148.48.15/Zhivi/index.m3u8
@@ -363,9 +363,9 @@ http://ukr2.ukrainske.tv/493/video.m3u8
 http://91.221.252.12:82/tv65
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/5c6dd95a2d1d1ca70b3de0f71f756653.png" logo="http://ex.iptvin.ru/pic/2/b584b45deaa1ebe4b9a383bc28b40bb1.png" channelId="605" tvg-id="vip-premiere",Viju+ Premiere HD
 http://37.46.49.14:18010/play/a02i/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="948693544297",Дом Кино Премиум HD
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="946750984144",Дом Кино Премиум HD
 http://31.148.48.15/Dom_Kino_Premium_HD/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544297",Дом Кино
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="946750984144",Дом Кино
 https://streaming.thestream.cyou/live/44.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/293.jpg" logo="http://televizor.org/img/logopit/Eurokino.png" channelId="79" tvg-id="evrokino",Еврокино HD
 http://31.148.48.15/Evrokino/index.m3u8
@@ -587,7 +587,7 @@ http://bst.bratsk.ru/hls/bst2/index.m3u8
 http://bsttv.bonus-tv.ru/cdn/bst/playlist_sdhigh.m3u8
 #EXTINF:-1 group-title="Без группы",Брянская губерния HD
 https://online.guberniya.tv/hls/gub_3500K/Guberniya_HD_3500K.m3u8
-#EXTINF:-1 group-title="Без группы" channelId="945795696198",Домашний +7
+#EXTINF:-1 group-title="Без группы" channelId="944500656096",Домашний +7
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/variant.m3u8
 #EXTINF:-1 group-title="Без группы",История
 http://31.148.48.15/Istoriya/index.m3u8
