@@ -1,6 +1,6 @@
 {
   "name": "streamlume-tv",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "StreamLume TV Client",
   "main": "index.ts",
   "scripts": {
@@ -43,6 +43,7 @@
     "react-native-vector-icons": "^10.3.0",
     "react-native-video": "^6.19.2",
     "react-native-web": "^0.21.0",
+    "react-native-webview": "^14.0.1",
     "regenerator-runtime": "^0.14.1",
     "resize-observer-polyfill": "^1.5.1",
     "whatwg-fetch": "^3.6.20",

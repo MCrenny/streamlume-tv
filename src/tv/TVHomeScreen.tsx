@@ -11,6 +11,10 @@ const FileSystem = Platform.OS !== 'web' ? require('expo-file-system/legacy') : 
 const Sharing = Platform.OS !== 'web' ? require('expo-sharing') : null;
 
 const PLAYLISTS = [
+  { id: 'iptv-org-ru', name: 'iptv-org (Россия)', url: 'https://iptv-org.github.io/iptv/countries/ru.m3u' },
+  { id: 'iptv-org-rus', name: 'iptv-org (Рус.язык)', url: 'https://iptv-org.github.io/iptv/languages/rus.m3u' },
+  { id: 'iptvru-stable', name: 'IPTVru (стабильный)', url: 'https://smolnp.github.io/IPTVru/IPTVstable.m3u8' },
+  { id: 'zabava', name: 'Zabava (Ростелеком)', url: 'https://raw.githubusercontent.com/CrocoUser/zabava-project/main/zabava-full.m3u' },
   { id: 'pl1', name: 'Playlist 1', url: '/playlists/pl1.m3u' },
   { id: 'pl2', name: 'Playlist 2', url: '/playlists/pl2.m3u' },
   { id: 'pl3', name: 'Playlist 3', url: '/playlists/pl3.m3u' },
@@ -26,13 +30,11 @@ import { useKeepAwake } from 'expo-keep-awake';
 
 export const TVHomeScreen = ({ navigation }: any) => {
   useKeepAwake(); // Prevent screensaver
-  const { channels, setChannels, favorites, toggleFavorite, moveFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, activationKey, viewMode, setViewMode, isAuthorized } = useStore();
+  const { channels, setChannels, favorites, toggleFavorite, moveFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, viewMode, setViewMode } = useStore();
   const [loading, setLoading] = useState(false);
   // On web (MSX), useIsFocused can misbehave — treat web as always focused
   const isFocusedNative = useIsFocused();
   const isScreenFocused = Platform.OS === 'web' ? true : isFocusedNative;
-  
-  const isPro = isAuthorized;
 
   // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
@@ -56,7 +58,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
   const [focusedPlaylistIdx, setFocusedPlaylistIdx] = useState(0);
   const [focusedCategoryIdx, setFocusedCategoryIdx] = useState(0);
   const [focusedChannelIdx, setFocusedChannelIdx] = useState(0);
-  const [focusedRegion, setFocusedRegion] = useState<'playlists' | 'categories' | 'channels' | 'viewMode' | 'exportBtn' | 'editBtn' | 'clockBtn' | 'supportBtn'>('channels');
+  const [focusedRegion, setFocusedRegion] = useState<'playlists' | 'categories' | 'channels' | 'viewMode' | 'exportBtn' | 'editBtn' | 'clockBtn' | 'supportBtn' | 'portalBtn'>('channels');
 
   // Часы
   const [showClock, setShowClock] = useState(true);
@@ -333,7 +335,7 @@ export const TVHomeScreen = ({ navigation }: any) => {
 
         {/* Кнопка поддержки */}
         <Pressable
-          onPress={() => Alert.alert('Поддержите проект', 'Спасибо, что пользуетесь StreamLume TV!\nВы можете поддержать развитие бесплатного приложения через нашего Telegram-бота: @StreameLumeBot')}
+          onPress={() => Alert.alert('Поддержите проект', 'Спасибо, что пользуетесь StreamLume TV!\nВы можете поддержать развитие бесплатного приложения.')}
           onFocus={() => { setIsClockFocused(false); setFocusedRegion('supportBtn'); }}
           focusable={!isAddModalVisible && !isActionModalVisible && !isChannelModalVisible}
           accessible={true}
@@ -355,6 +357,34 @@ export const TVHomeScreen = ({ navigation }: any) => {
               focusedRegion === 'supportBtn' && styles.viewModeTextFocused
             ]}>
               Поддержите проект
+            </Text>
+          </View>
+        </Pressable>
+
+        {/* Кнопка видео-портала */}
+        <Pressable
+          onPress={() => navigation.navigate('Portal')}
+          onFocus={() => { setIsClockFocused(false); setFocusedRegion('portalBtn'); }}
+          focusable={!isAddModalVisible && !isActionModalVisible && !isChannelModalVisible}
+          accessible={true}
+          style={[
+            styles.exportBtn,
+            focusedRegion === 'portalBtn' && styles.exportBtnFocused,
+            { backgroundColor: 'rgba(10, 132, 255, 0.12)' }
+          ]}
+        >
+          <View style={styles.viewModeBtnContent}>
+            <Ionicons
+              name="videocam-outline"
+              size={20}
+              color={focusedRegion === 'portalBtn' ? "#000000" : "#0A84FF"}
+            />
+            <Text style={[
+              styles.viewModeText,
+              { color: '#0A84FF' },
+              focusedRegion === 'portalBtn' && styles.viewModeTextFocused
+            ]}>
+              Видео-портал
             </Text>
           </View>
         </Pressable>

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, TouchableHighlight, Pressable, Alert, Animated, Dimensions, useWindowDimensions, ActivityIndicator, Linking, Modal, ScrollView, Platform, FlatList, NativeModules, DeviceEventEmitter, AppState, AppStateStatus } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, TouchableHighlight, Pressable, Alert, Animated, Dimensions, useWindowDimensions, ActivityIndicator, Modal, ScrollView, Platform, FlatList, NativeModules, DeviceEventEmitter, AppState, AppStateStatus } from 'react-native';
 import { Video, ResizeMode } from 'expo-av';
 import { useRoute, useNavigation, useIsFocused } from '@react-navigation/native';
 import * as ScreenOrientation from 'expo-screen-orientation';
@@ -364,27 +364,6 @@ export const PlayerScreen = () => {
       setStableStart(null);
       setIsBuffering(true);
       resetTimer();
-    }
-  };
-
-  const playExternally = async () => {
-    const streamUrl = currentVariant?.url;
-    if (!streamUrl) return;
-
-    // Ставим внутреннее видео на паузу перед запуском внешнего плеера
-    if (videoRef.current) {
-      try {
-        await videoRef.current.pauseAsync();
-        setIsPlaying(false);
-      } catch (e) {
-        console.warn("Failed to pause video", e);
-      }
-    }
-
-    if (typeof window !== 'undefined' && window.MSX && window.MSX.video) {
-      window.MSX.video.play(streamUrl);
-    } else {
-      window.open(streamUrl, '_blank');
     }
   };
 
@@ -829,23 +808,6 @@ export const PlayerScreen = () => {
                       />
                     </Pressable>
                   )}
-
-                  <Pressable 
-                    style={[
-                      styles.iconBtn, 
-                      isExpandFocused && styles.iconBtnFocused
-                    ]} 
-                    onPress={playExternally}
-                    onFocus={() => {
-                      setIsExpandFocused(true);
-                      resetTimer();
-                    }}
-                    onBlur={() => setIsExpandFocused(false)}
-                    focusable={true}
-                    accessible={true}
-                  >
-                    <Ionicons name="open-outline" size={24} color={isExpandFocused ? "#000000" : "#ffffff"} />
-                  </Pressable>
                 </View>
               </LinearGradient>
 

@@ -10,6 +10,10 @@ import { fetchAndCachePlaylist } from '../utils/playlistCache';
 // и публикуются Netlify. Это убирает зависимость от внешних CORS-прокси и
 // расход памяти на устройстве (плейлисты берутся из кеша браузера).
 const PLAYLISTS = [
+  { id: 'iptv-org-ru', name: 'iptv-org (Россия)', url: 'https://iptv-org.github.io/iptv/countries/ru.m3u' },
+  { id: 'iptv-org-rus', name: 'iptv-org (Рус.язык)', url: 'https://iptv-org.github.io/iptv/languages/rus.m3u' },
+  { id: 'iptvru-stable', name: 'IPTVru (стабильный)', url: 'https://smolnp.github.io/IPTVru/IPTVstable.m3u8' },
+  { id: 'zabava', name: 'Zabava (Ростелеком)', url: 'https://raw.githubusercontent.com/CrocoUser/zabava-project/main/zabava-full.m3u' },
   { id: 'pl1', name: 'Playlist 1', url: 'playlists/pl1.m3u' },
   { id: 'pl2', name: 'Playlist 2', url: 'playlists/pl2.m3u' },
   { id: 'pl3', name: 'Playlist 3', url: 'playlists/pl3.m3u' },
@@ -78,7 +82,7 @@ const AddSourceButton = ({ isLandscape, onPress }: any) => {
 };
 
 export const HomeScreen = ({ navigation }: any) => {
-  const { channels, setChannels, favorites, toggleFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback, activationKey, isAuthorized, isFreeMode, trialStartDate } = useStore();
+  const { channels, setChannels, favorites, toggleFavorite, customPlaylists, addCustomPlaylist, removeCustomPlaylist, setActivePlayback } = useStore();
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -92,11 +96,6 @@ export const HomeScreen = ({ navigation }: any) => {
 
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
-
-  // Determine access level
-  const isTrialActive = trialStartDate != null && (Date.now() - trialStartDate <= 3 * 24 * 60 * 60 * 1000);
-  const isPro = isAuthorized || isTrialActive; // PRO = paid key OR active trial
-  // isFreeMode = after trial expired, user chose "continue free" → restricted
 
   // Приложение бесплатное — все плейлисты доступны всем
   const allPlaylists = useMemo(() => {
@@ -161,9 +160,19 @@ export const HomeScreen = ({ navigation }: any) => {
         <View style={isLandscape ? styles.headerRowLandscape : styles.brandRow}>
           <View style={styles.brandRowInner}>
             <Text style={styles.brandTitle}>StreamLume</Text>
-            <View style={styles.premiumBadge}>
-              <Text style={styles.premiumText}>PREMIUM</Text>
-            </View>
+            <Pressable
+              onPress={() => navigation.navigate('Portal')}
+              style={(state: any) => [
+                styles.portalBadge,
+                state.focused && styles.portalBadgeFocused,
+              ]}
+            >
+              {(state: any) => (
+                <Text style={[styles.portalBadgeText, state.focused && styles.portalBadgeTextFocused]}>
+                  🎬 Видео
+                </Text>
+              )}
+            </Pressable>
           </View>
           
           {isLandscape && (
@@ -223,14 +232,6 @@ export const HomeScreen = ({ navigation }: any) => {
           <AddSourceButton
             isLandscape={isLandscape}
             onPress={() => {
-              if (!isPro) {
-                Alert.alert(
-                  '💎 КУПИТЬ PRO версию',
-                  'Добавление своих плейлистов доступно только в PRO-версии StreamLume.\n\nПолучите ключ в Telegram-боте @StreameLumeBot.',
-                  [{ text: 'Понятно', style: 'cancel' }]
-                );
-                return;
-              }
               setModalVisible(true);
             }}
           />
@@ -265,14 +266,6 @@ export const HomeScreen = ({ navigation }: any) => {
               isFavorite={favorites.some(f => f.id === item.variants[0].id)}
               variantsCount={item.variants.length}
               onToggleFavorite={() => {
-                if (!isPro) {
-                  Alert.alert(
-                    '🔒 Функция PRO',
-                    'Избранное доступно только в PRO-версии.\n\nПолучите ключ доступа через Telegram-бот @StreameLumeBot.',
-                    [{ text: 'Понятно', style: 'cancel' }]
-                  );
-                  return;
-                }
                 toggleFavorite(item.variants[0]);
               }}
               onPress={() => {
@@ -444,6 +437,10 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
   },
+  portalBadge: { backgroundColor: 'rgba(10, 132, 255, 0.15)', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, borderWidth: 1, borderColor: 'rgba(10, 132, 255, 0.4)', marginLeft: 10 },
+  portalBadgeText: { color: '#0A84FF', fontSize: 12, fontWeight: '600' },
+  portalBadgeFocused: { backgroundColor: '#0A84FF' },
+  portalBadgeTextFocused: { color: '#fff' },
   premiumBadge: {
     backgroundColor: '#FFD700',
     paddingHorizontal: 8,

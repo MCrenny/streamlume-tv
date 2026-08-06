@@ -8,6 +8,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { FavoritesScreen } from './src/screens/FavoritesScreen';
 import { PlayerScreen } from './src/screens/PlayerScreen';
+import PortalScreen from './src/screens/PortalScreen';
 import { useStore } from './src/store/useStore';
 import { Audio } from 'expo-av';
 import { isTVDevice } from './src/utils/TVLayoutManager';
@@ -28,7 +29,7 @@ Audio.setAudioModeAsync({
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-const MainTabs = ({ isPro }: { isPro: boolean }) => {
+const MainTabs = () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -46,18 +47,17 @@ const MainTabs = ({ isPro }: { isPro: boolean }) => {
         component={HomeScreen} 
         options={{ tabBarIcon: () => null, tabBarLabelStyle: { fontSize: 14, paddingBottom: 5 } }}
       />
-      {isPro && (
-        <Tab.Screen 
-          name="Избранное" 
-          component={FavoritesScreen} 
-          options={{ tabBarIcon: () => null, tabBarLabelStyle: { fontSize: 14, paddingBottom: 5 } }}
-        />
-      )}
+      <Tab.Screen 
+        name="Избранное" 
+        component={FavoritesScreen} 
+        options={{ tabBarIcon: () => null, tabBarLabelStyle: { fontSize: 14, paddingBottom: 5 } }}
+      />
     </Tab.Navigator>
   );
 };
 
 import { View, ActivityIndicator } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { ErrorBoundary } from './src/components/ErrorBoundary';
 
@@ -69,7 +69,7 @@ const MainScreen = ({ navigation }: any) => {
       </ErrorBoundary>
     );
   }
-  return <MainTabs isPro={true} />;
+  return <MainTabs />;
 };
 
 export default function App() {
@@ -124,9 +124,9 @@ export default function App() {
     prefixes: [appUrl],
     config: {
       screens: {
-        Auth: 'auth',
         Main: 'main',
         Player: 'player',
+        Portal: 'portal',
       },
     },
   };
@@ -143,6 +143,12 @@ export default function App() {
               />
 
               <Stack.Screen name="Player" component={PlayerScreen} />
+
+              <Stack.Screen
+                name="Portal"
+                component={PortalScreen}
+                options={{ presentation: 'modal' }}
+              />
             </>
         </Stack.Navigator>
       </NavigationContainer>
