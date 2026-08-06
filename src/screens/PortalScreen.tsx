@@ -121,7 +121,8 @@ export default function PortalScreen({ navigation }: any) {
     return (
       <View style={styles.centerWrap}>
         <ActivityIndicator size="large" color="#0A84FF" />
-        <Text style={styles.loadingText}>Загрузка портала...</Text>
+        <Text style={styles.loadingText}>Загрузка фильмов...</Text>
+        <Text style={styles.loadingHint}>Источник может отвечать несколько секунд</Text>
       </View>
     );
   }
@@ -130,8 +131,8 @@ export default function PortalScreen({ navigation }: any) {
     return (
       <View style={styles.centerWrap}>
         <Ionicons name="cloud-offline-outline" size={64} color="#FF453A" />
-        <Text style={styles.errorText}>Не удалось загрузить портал</Text>
-        <Text style={styles.errorHint}>Проверьте подключение к интернету</Text>
+        <Text style={styles.errorText}>Не удалось загрузить фильмы</Text>
+        <Text style={styles.errorHint}>Источник сейчас недоступен. Попробуйте позже.</Text>
         <Pressable
           onPress={() => navigation.goBack()}
           style={styles.retryBtn}
@@ -281,6 +282,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   loadingText: { color: '#8E8E93', marginTop: 12, fontSize: 14 },
+  loadingHint: { color: '#48484A', marginTop: 6, fontSize: 12, textAlign: 'center' },
   errorText: { color: '#fff', fontSize: 18, fontWeight: '600', marginTop: 16 },
   errorHint: { color: '#8E8E93', fontSize: 14, marginTop: 8, textAlign: 'center' },
   retryBtn: {
