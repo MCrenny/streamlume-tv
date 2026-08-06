@@ -20,12 +20,7 @@
       /* These styles make the root element full-height */
       #root {
         display: flex;
-        
-        /* Force 2x scaling for TVs */
-        transform: scale(2);
-        transform-origin: top left;
-        width: 50% !important;
-        height: 50% !important;
+        height: 100%;
       }
       /* Force HTML5 video to stretch on older TVs */
       video {
@@ -36,8 +31,41 @@
         object-fit: contain !important;
         -webkit-object-fit: contain !important;
       }
+
+      /* 2x масштаб нужен только реальным Smart TV (Tizen/webOS/SMART-TV/HbbTV),
+         где физический viewport 1920px, а react-native-web рендерит в 960px.
+         На обычном браузере/ПК он всё ломает (контент уезжает за экран),
+         поэтому применяется через класс .tv-scaling, который добавляет JS-проверка UA. */
+      #root.tv-scaling {
+        transform: scale(2);
+        transform-origin: top left;
+        width: 50% !important;
+        height: 50% !important;
+      }
     </style>
-    
+
+    <script>
+      // Определяем реальный Smart TV по User-Agent и включаем TV-масштаб только для него.
+      // Обычный десктоп/мобильный браузер получает нормальный 1:1 layout.
+      (function () {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isTV = /tizen|webos|smart-tv|smarttv|hbbtv|netcast|viera|googletv|android tv|aftt|brazos/.test(ua);
+          if (isTV && document.getElementById) {
+            var apply = function () {
+              var root = document.getElementById('root');
+              if (root) root.classList.add('tv-scaling');
+              else document.addEventListener('DOMContentLoaded', function () {
+                var r = document.getElementById('root');
+                if (r) r.classList.add('tv-scaling');
+              });
+            };
+            apply();
+          }
+        } catch (e) { /* масштаб не критичен — молча пропускаем */ }
+      })();
+    </script>
+
     <!-- MSX TVX Plugin -->
     <script type="text/javascript" src="https://msx.benzac.de/js/tvx-plugin.min.js"></script>
     
