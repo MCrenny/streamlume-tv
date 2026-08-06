@@ -69,6 +69,32 @@ app.get('/proxy', async (req, res) => {
   }
 });
 
+// === Прокси для видео-портала kinogo.is ===
+// Локальный аналог netlify/functions/proxy.js, чтобы тестировать портал
+// через `node server.js`. Allowlist ограничен kinogo.is, ответ — text/html.
+app.get('/.netlify/functions/proxy', async (req, res) => {
+  const targetUrl = req.query.url;
+  if (!targetUrl || !String(targetUrl).startsWith('https://kinogo.is')) {
+    return res.status(400).json({ error: 'Invalid URL' });
+  }
+  try {
+    const response = await fetch(String(targetUrl), {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+      },
+    });
+    const html = await response.text();
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    return res.status(response.status).send(html);
+  } catch (e) {
+    console.error('[Kinogo Proxy] Error:', e.message);
+    return res.status(500).json({ error: e.message });
+  }
+});
+
 // === Статика (собранное веб-приложение) ===
 const distPath = path.join(__dirname, 'dist');
 app.use(express.static(distPath, {

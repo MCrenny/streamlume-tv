@@ -9,6 +9,7 @@ import { HomeScreen } from './src/screens/HomeScreen';
 import { FavoritesScreen } from './src/screens/FavoritesScreen';
 import { PlayerScreen } from './src/screens/PlayerScreen';
 import PortalScreen from './src/screens/PortalScreen';
+import PortalPlayerScreen from './src/screens/PortalPlayerScreen';
 import { useStore } from './src/store/useStore';
 import { Audio } from 'expo-av';
 import { isTVDevice } from './src/utils/TVLayoutManager';
@@ -127,6 +128,7 @@ export default function App() {
         Main: 'main',
         Player: 'player',
         Portal: 'portal',
+        PortalPlayer: 'portalplayer',
       },
     },
   };
@@ -147,6 +149,12 @@ export default function App() {
               <Stack.Screen
                 name="Portal"
                 component={PortalScreen}
+                options={{ presentation: 'modal' }}
+              />
+
+              <Stack.Screen
+                name="PortalPlayer"
+                component={PortalPlayerScreen}
                 options={{ presentation: 'modal' }}
               />
             </>

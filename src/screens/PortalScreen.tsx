@@ -1,106 +1,286 @@
-import React, { useState, useCallback } from 'react';
-import { View, Text, Pressable, ActivityIndicator, StyleSheet, Platform } from 'react-native';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import { View, Text, Pressable, ActivityIndicator, StyleSheet, TextInput, FlatList, Image, useWindowDimensions, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
-const PORTAL_URL = 'https://kinogo.is';
-
-function WebIframe({ url, onLoad, onError }: { url: string; onLoad: () => void; onError: () => void }) {
-  return (
-    <iframe
-      src={url}
-      style={{ width: '100%', height: '100%', border: 'none' }}
-      onLoad={onLoad}
-      onError={onError}
-      allow="autoplay; fullscreen"
-      title="Видео-портал"
-    />
-  );
-}
+import { fetchKinogoMovies, fetchMoviePage, Movie } from '../utils/kinogoParser';
 
 export default function PortalScreen({ navigation }: any) {
+  const [movies, setMovies] = useState<Movie[]>([]);
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [focusedIdx, setFocusedIdx] = useState(0);
+  const [searchFocused, setSearchFocused] = useState(false);
+  // Какой фильм сейчас резолвит свой URL плеера (для локального спиннера на карточке)
+  const [resolvingId, setResolvingId] = useState<string | null>(null);
+
+  const { width, height } = useWindowDimensions();
+  const isLandscape = width > height;
+  const numColumns = isLandscape ? 5 : 3;
+
+  // Загрузка первой страницы
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(false);
+    fetchKinogoMovies(1)
+      .then((list) => {
+        if (!cancelled) {
+          setMovies(list);
+          setPage(1);
+        }
+      })
+      .catch((e) => {
+        console.error('[Portal] fetchKinogoMovies failed:', e);
+        if (!cancelled) setError(true);
+      })
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, []);
+
+  // Сбрасываем скролл-фокус при смене раскладки
+  useEffect(() => { setFocusedIdx(0); }, [numColumns]);
 
   const handleClose = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
+  // Закрытие по пульту: Escape / Backspace + коды LG Back(461) и Tizen Return(10009)
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const kc = (e as any).keyCode;
+      if (e.key === 'Escape' || e.key === 'Backspace' || kc === 461 || kc === 10009) {
+        e.preventDefault();
+        handleClose();
+      }
+    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handler);
+      return () => window.removeEventListener('keydown', handler);
+    }
+  }, [handleClose]);
+
+  // Чистим body-стили, оставшиеся от прошлой iframe-реализации
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = '';
+      document.body.style.margin = '';
+      document.body.style.padding = '';
+    }
+  }, []);
+
+  const filteredMovies = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return movies;
+    return movies.filter((m) => m.title.toLowerCase().includes(q));
+  }, [movies, searchQuery]);
+
+  // Открытие фильма: сначала резолвим URL плеера через страницу фильма
+  const openMovie = useCallback(async (movie: Movie) => {
+    if (resolvingId) return;
+    setResolvingId(movie.id);
+    try {
+      const { playerUrl, title } = await fetchMoviePage(movie.url);
+      if (playerUrl) {
+        navigation.navigate('PortalPlayer', { url: playerUrl, title: title || movie.title });
+      } else {
+        // eslint-disable-next-line no-alert
+        if (typeof window !== 'undefined') {
+          window.alert('Не удалось найти видео-плеер для этого фильма.');
+        }
+      }
+    } catch (e) {
+      console.error('[Portal] fetchMoviePage failed:', e);
+      if (typeof window !== 'undefined') {
+        window.alert('Ошибка при загрузке фильма. Попробуйте позже.');
+      }
+    } finally {
+      setResolvingId(null);
+    }
+  }, [navigation, resolvingId]);
+
+  const loadMore = useCallback(async () => {
+    if (loadingMore) return;
+    const nextPage = page + 1;
+    setLoadingMore(true);
+    try {
+      const list = await fetchKinogoMovies(nextPage);
+      if (list.length > 0) {
+        setMovies((prev) => [...prev, ...list]);
+        setPage(nextPage);
+      }
+    } catch (e) {
+      console.error('[Portal] loadMore failed:', e);
+    } finally {
+      setLoadingMore(false);
+    }
+  }, [page, loadingMore]);
+
+  if (loading) {
+    return (
+      <View style={styles.centerWrap}>
+        <ActivityIndicator size="large" color="#0A84FF" />
+        <Text style={styles.loadingText}>Загрузка портала...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={styles.centerWrap}>
+        <Ionicons name="cloud-offline-outline" size={64} color="#FF453A" />
+        <Text style={styles.errorText}>Не удалось загрузить портал</Text>
+        <Text style={styles.errorHint}>Проверьте подключение к интернету</Text>
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={styles.retryBtn}
+          focusable
+          accessible
+        >
+          <Text style={styles.retryText}>Назад</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
-      {loading && (
-        <View style={styles.loadingOverlay}>
-          <ActivityIndicator size="large" color="#0A84FF" />
-          <Text style={styles.loadingText}>Загрузка портала...</Text>
-        </View>
-      )}
-
-      {error ? (
-        <View style={styles.errorContainer}>
-          <Ionicons name="cloud-offline-outline" size={64} color="#FF453A" />
-          <Text style={styles.errorText}>Не удалось загрузить портал</Text>
-          <Text style={styles.errorHint}>Проверьте подключение к интернету</Text>
-          <Pressable style={styles.retryBtn} onPress={() => { setError(false); setLoading(true); }}>
-            <Text style={styles.retryText}>Повторить</Text>
-          </Pressable>
-        </View>
-      ) : (
-        <View style={styles.webviewContainer}>
-          {Platform.OS === 'web' ? (
-            <WebIframe
-              url={PORTAL_URL}
-              onLoad={() => setLoading(false)}
-              onError={() => { setLoading(false); setError(true); }}
-            />
-          ) : (
-            <WebView
-              source={{ uri: PORTAL_URL }}
-              style={styles.webview}
-              onLoadStart={() => { setLoading(true); setError(false); }}
-              onLoadEnd={() => setLoading(false)}
-              onError={() => { setLoading(false); setError(true); }}
-              allowsInlineMediaPlayback
-              mediaPlaybackRequiresUserAction={false}
-            />
+      {/* Шапка */}
+      <View style={styles.header}>
+        <Pressable
+          onPress={handleClose}
+          onFocus={() => setSearchFocused(false)}
+          focusable
+          accessible
+          style={(state: any) => [styles.backBtn, state.focused && styles.backBtnFocused]}
+        >
+          {(state: any) => (
+            <Ionicons name="arrow-back" size={22} color={state.focused ? '#000' : '#0A84FF'} />
           )}
-        </View>
-      )}
+        </Pressable>
 
-      <Pressable
-        onPress={handleClose}
-        style={styles.closeBtn}
-      >
-        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
-      </Pressable>
+        <Text style={styles.title}>🎬 Видео-портал</Text>
+
+        <TextInput
+          style={[styles.searchInput, searchFocused && styles.searchInputFocused]}
+          placeholder="Поиск фильма..."
+          placeholderTextColor="#8E8E93"
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+          onFocus={() => setSearchFocused(true)}
+          onBlur={() => setSearchFocused(false)}
+        />
+      </View>
+
+      {/* Сетка фильмов */}
+      <FlatList
+        key={`grid-${numColumns}`}
+        data={filteredMovies}
+        keyExtractor={(item) => item.id}
+        numColumns={numColumns}
+        contentContainerStyle={styles.list}
+        initialNumToRender={12}
+        maxToRenderPerBatch={12}
+        windowSize={5}
+        removeClippedSubviews={false}
+        ListEmptyComponent={
+          <View style={styles.emptyWrap}>
+            <Text style={styles.emptyText}>
+              {searchQuery ? 'Ничего не найдено' : 'Фильмы не найдены'}
+            </Text>
+          </View>
+        }
+        ListFooterComponent={
+          !searchQuery ? (
+            <View style={styles.footerWrap}>
+              <Pressable
+                onPress={loadMore}
+                onFocus={() => setSearchFocused(false)}
+                focusable
+                accessible
+                style={(state: any) => [styles.moreBtn, state.focused && styles.moreBtnFocused]}
+              >
+                {(state: any) => (
+                  <Text style={[styles.moreBtnText, state.focused && styles.moreBtnTextFocused]}>
+                    {loadingMore ? 'Загрузка...' : 'Ещё фильмы'}
+                  </Text>
+                )}
+              </Pressable>
+            </View>
+          ) : null
+        }
+        renderItem={({ item, index }) => {
+          const isFocused = focusedIdx === index;
+          const isResolving = resolvingId === item.id;
+          return (
+            <Pressable
+              onPress={() => openMovie(item)}
+              onFocus={() => setFocusedIdx(index)}
+              focusable={!isResolving}
+              accessible={true}
+              hasTVPreferredFocus={index === 0}
+              style={[
+                styles.card,
+                isFocused && styles.cardFocused,
+              ]}
+            >
+              {/* Постер */}
+              <View style={styles.posterWrap}>
+                {item.poster ? (
+                  <Image
+                    source={{ uri: item.poster }}
+                    style={styles.poster}
+                    resizeMode="cover"
+                  />
+                ) : (
+                  <View style={[styles.poster, styles.posterFallback]}>
+                    <Ionicons name="film-outline" size={40} color="#3a3a3c" />
+                  </View>
+                )}
+                {isResolving && (
+                  <View style={styles.resolvingOverlay}>
+                    <ActivityIndicator size="small" color="#0A84FF" />
+                  </View>
+                )}
+                {item.rating ? (
+                  <View style={styles.ratingBadge}>
+                    <Text style={styles.ratingText}>★ {item.rating}</Text>
+                  </View>
+                ) : null}
+              </View>
+              {/* Название + год */}
+              <View style={styles.cardInfo}>
+                <Text style={[styles.movieTitle, isFocused && styles.movieTitleFocused]} numberOfLines={2}>
+                  {item.title}
+                </Text>
+                {item.year ? (
+                  <Text style={[styles.movieYear, isFocused && styles.movieYearFocused]} numberOfLines={1}>
+                    {item.year}{item.genre ? ` · ${item.genre}` : ''}
+                  </Text>
+                ) : null}
+              </View>
+            </Pressable>
+          );
+        }}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#000' },
-  closeBtn: {
-    position: 'absolute',
-    top: 12,
-    right: 12,
-    zIndex: 100,
-    padding: 4,
-  },
-  webviewContainer: { flex: 1 },
-  webview: { flex: 1 },
-  loadingOverlay: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: 'center',
-    alignItems: 'center',
+  container: {
+    flex: 1,
     backgroundColor: '#000',
-    zIndex: 10,
   },
-  loadingText: { color: '#8E8E93', marginTop: 12, fontSize: 14 },
-  errorContainer: {
+  centerWrap: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#000',
     paddingHorizontal: 32,
   },
+  loadingText: { color: '#8E8E93', marginTop: 12, fontSize: 14 },
   errorText: { color: '#fff', fontSize: 18, fontWeight: '600', marginTop: 16 },
   errorHint: { color: '#8E8E93', fontSize: 14, marginTop: 8, textAlign: 'center' },
   retryBtn: {
@@ -111,4 +291,161 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   retryText: { color: '#fff', fontSize: 16, fontWeight: '600' },
+
+  header: {
+    paddingHorizontal: 16,
+    paddingTop: 12,
+    paddingBottom: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#1c1c1e',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 8,
+    backgroundColor: 'rgba(10,132,255,0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  backBtnFocused: {
+    backgroundColor: '#ffffff',
+    borderColor: '#ffffff',
+  },
+  title: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginRight: 16,
+  },
+  searchInput: {
+    flex: 1,
+    backgroundColor: '#2c2c2e',
+    color: '#fff',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    fontSize: 14,
+    borderWidth: 1.5,
+    borderColor: 'transparent',
+  },
+  searchInputFocused: {
+    borderColor: '#0A84FF',
+    backgroundColor: 'rgba(10,132,255,0.08)',
+  },
+
+  list: {
+    padding: 8,
+  },
+  card: {
+    flex: 1,
+    margin: 6,
+    borderRadius: 10,
+    backgroundColor: '#1c1c1e',
+    overflow: 'hidden',
+    borderWidth: 1.5,
+    borderColor: 'rgba(255,255,255,0.05)',
+  },
+  cardFocused: {
+    backgroundColor: '#ffffff',
+    borderColor: '#ffffff',
+    transform: [{ scale: 1.05 }],
+    shadowColor: '#ffffff',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 10,
+  },
+  posterWrap: {
+    width: '100%',
+    aspectRatio: 0.66,
+    backgroundColor: '#050505',
+  },
+  poster: {
+    width: '100%',
+    height: '100%',
+  },
+  posterFallback: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  resolvingOverlay: {
+    position: 'absolute',
+    top: 0, left: 0, right: 0, bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  ratingBadge: {
+    position: 'absolute',
+    top: 6,
+    left: 6,
+    backgroundColor: 'rgba(0,0,0,0.75)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 6,
+  },
+  ratingText: {
+    color: '#FFD700',
+    fontSize: 11,
+    fontWeight: 'bold',
+  },
+  cardInfo: {
+    padding: 8,
+  },
+  movieTitle: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 'bold',
+    lineHeight: 15,
+  },
+  movieTitleFocused: {
+    color: '#000',
+  },
+  movieYear: {
+    color: '#8E8E93',
+    fontSize: 10,
+    marginTop: 3,
+  },
+  movieYearFocused: {
+    color: '#333',
+  },
+
+  emptyWrap: {
+    padding: 60,
+    alignItems: 'center',
+  },
+  emptyText: {
+    color: '#8E8E93',
+    fontSize: 16,
+  },
+  footerWrap: {
+    paddingVertical: 24,
+    alignItems: 'center',
+  },
+  moreBtn: {
+    paddingHorizontal: 32,
+    paddingVertical: 12,
+    borderRadius: 10,
+    backgroundColor: 'rgba(10,132,255,0.15)',
+    borderWidth: 1.5,
+    borderColor: '#0A84FF',
+  },
+  moreBtnFocused: {
+    backgroundColor: '#ffffff',
+    borderColor: '#ffffff',
+    transform: [{ scale: 1.05 }],
+  },
+  moreBtnText: {
+    color: '#0A84FF',
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+  moreBtnTextFocused: {
+    color: '#000',
+  },
 });
