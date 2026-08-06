@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { View, Text, Pressable, ActivityIndicator, StyleSheet, TextInput, FlatList, Image, useWindowDimensions, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { fetchKinogoMovies, fetchMoviePage, Movie } from '../utils/kinogoParser';
+import { fetchKinogoMovies, fetchMoviePage, readStaleMovies, Movie } from '../utils/kinogoParser';
 
 export default function PortalScreen({ navigation }: any) {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -33,7 +33,15 @@ export default function PortalScreen({ navigation }: any) {
       })
       .catch((e) => {
         console.error('[Portal] fetchKinogoMovies failed:', e);
-        if (!cancelled) setError(true);
+        if (cancelled) return;
+        // Stale-fallback: если все прокси временно недоступны, показываем
+        // последний успешно загруженный каталог из кеша (лучше старый, чем пусто)
+        const stale = readStaleMovies(1);
+        if (stale && stale.length > 0) {
+          setMovies(stale);
+        } else {
+          setError(true);
+        }
       })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
