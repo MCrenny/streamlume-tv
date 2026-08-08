@@ -1,36 +1,54 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { View, Text, Pressable, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+// createPortal — рендерит iframe плеера напрямую в document.body, ВНЕ #root.
+// #root.tv-scaling имеет transform: scale(2) на ТВ → iframe внутри него получался
+// 2× больше экрана (видео и кнопки Play уезжали за видимую область).
+import { createPortal } from 'react-dom';
 
 interface Props {
   route: any;
   navigation: any;
 }
 
-function WebIframe({ url }: { url: string }) {
+function WebIframe({ url, onClose }: { url: string; onClose: () => void }) {
   // ВАЖНО: никаких onLoad/onError — в WebKit Tizen 4.0 React вешает их через
   // addEventListener и при срабатывании читает свойства кросс-доменного iframe
   // → SecurityError: Blocked a frame... from accessing a cross-origin frame.
   // ortified — чужой домен, поэтому любые обращения к iframe падают.
   // iframe просто рендерится; спиннер убирается таймером (см. ниже).
-  return (
-    <iframe
-      src={url}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        border: 'none',
-        margin: 0,
-        padding: 0,
-      }}
-      allow="autoplay; fullscreen; encrypted-media"
-      sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
-      title="Плеер"
-    />
+  //
+  // Рендерим через ПОРТАЛ в document.body, ВНЕ #root: #root.tv-scaling несёт
+  // transform: scale(2) на ТВ → iframe внутри него был 2× больше экрана.
+  // Кнопка закрытия тоже в портале — иначе она тоже получит scale(2).
+  const content = (
+    <>
+      <iframe
+        src={url}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          border: 'none',
+          margin: 0,
+          padding: 0,
+          zIndex: 9990,
+        }}
+        allow="autoplay; fullscreen; encrypted-media"
+        sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
+        title="Плеер"
+      />
+      <Pressable onPress={onClose} style={styles.closeBtn}>
+        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
+      </Pressable>
+    </>
   );
+  if (Platform.OS === 'web' && typeof document !== 'undefined') {
+    return createPortal(content, document.body);
+  }
+  return content;
 }
 
 export default function PortalPlayerScreen({ route, navigation }: Props) {
@@ -92,11 +110,7 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
         </View>
       )}
 
-      <WebIframe url={url} />
-
-      <Pressable onPress={handleClose} style={styles.closeBtn}>
-        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
-      </Pressable>
+      <WebIframe url={url} onClose={handleClose} />
     </View>
   );
 }
