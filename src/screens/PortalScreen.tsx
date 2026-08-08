@@ -9,6 +9,9 @@ export default function PortalScreen({ navigation }: any) {
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState(false);
+  // Диагностический отчёт: показывает на экране ТВ причину сбоя без DevTools.
+  // Нужен потому что ТВ на Tizen 2-3 (старый WebKit) — консоль там не посмотреть.
+  const [diag, setDiag] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
   const [focusedIdx, setFocusedIdx] = useState(0);
   const [searchFocused, setSearchFocused] = useState(false);
@@ -24,6 +27,16 @@ export default function PortalScreen({ navigation }: any) {
     let cancelled = false;
     setLoading(true);
     setError(false);
+    setDiag('');
+
+    // Диагностика: проверяем поддержку JS-API прямо на устройстве, чтобы
+    // понять — падает ли из-за старого WebKit (Tizen 2-3), или из-за сети.
+    const checks: string[] = [];
+    checks.push('UA: ' + (typeof navigator !== 'undefined' ? navigator.userAgent.slice(0, 60) : 'no navigator'));
+    checks.push('Promise.allSettled: ' + (typeof (Promise as any).allSettled === 'function' ? 'OK' : 'ОТСУТСТВУЕТ'));
+    checks.push('fetch: ' + (typeof fetch === 'function' ? 'OK' : 'ОТСУТСТВУЕТ'));
+    checks.push('AbortController: ' + (typeof AbortController !== 'undefined' ? 'OK' : 'ОТСУТСТВУЕТ'));
+
     fetchKinogoMovies(1)
       .then((list) => {
         if (!cancelled) {
@@ -34,6 +47,8 @@ export default function PortalScreen({ navigation }: any) {
       .catch((e) => {
         console.error('[Portal] fetchKinogoMovies failed:', e);
         if (cancelled) return;
+        checks.push('РЕЗУЛЬТАТ: ' + (e?.message || String(e)).slice(0, 300));
+        setDiag(checks.join('\n'));
         // Stale-fallback: если все прокси временно недоступны, показываем
         // последний успешно загруженный каталог из кеша (лучше старый, чем пусто)
         const stale = readStaleMovies(1);
@@ -141,6 +156,13 @@ export default function PortalScreen({ navigation }: any) {
         <Ionicons name="cloud-offline-outline" size={64} color="#FF453A" />
         <Text style={styles.errorText}>Не удалось загрузить фильмы</Text>
         <Text style={styles.errorHint}>Источник сейчас недоступен. Попробуйте позже.</Text>
+        {diag ? (
+          <View style={styles.diagBox}>
+            {diag.split('\n').map((line, i) => (
+              <Text key={i} style={styles.diagText}>{line}</Text>
+            ))}
+          </View>
+        ) : null}
         <Pressable
           onPress={() => navigation.goBack()}
           style={styles.retryBtn}
@@ -290,6 +312,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   loadingText: { color: '#8E8E93', marginTop: 12, fontSize: 14 },
+  // Диагностический блок: технический отчёт прямо на экране ТВ (monospace,
+  // мелкий — чтобы влезло много строк; контрастный фон для читаемости).
+  diagBox: {
+    marginTop: 20,
+    marginBottom: 12,
+    backgroundColor: '#1c1c1e',
+    borderWidth: 1,
+    borderColor: '#3a3a3c',
+    borderRadius: 8,
+    padding: 12,
+    minWidth: 600,
+    maxWidth: '90%',
+  },
+  diagText: {
+    color: '#30D158',
+    fontFamily: Platform.OS === 'web' ? 'monospace' : undefined,
+    fontSize: 13,
+    lineHeight: 18,
+  },
   loadingHint: { color: '#48484A', marginTop: 6, fontSize: 12, textAlign: 'center' },
   errorText: { color: '#fff', fontSize: 18, fontWeight: '600', marginTop: 16 },
   errorHint: { color: '#8E8E93', fontSize: 14, marginTop: 8, textAlign: 'center' },
