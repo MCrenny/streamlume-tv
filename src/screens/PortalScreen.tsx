@@ -415,7 +415,7 @@ const styles = StyleSheet.create({
   },
   posterWrap: {
     width: '100%',
-    aspectRatio: 0.66,
+    aspectRatio: 0.75,
     backgroundColor: '#050505',
   },
   poster: {
@@ -435,34 +435,35 @@ const styles = StyleSheet.create({
   },
   ratingBadge: {
     position: 'absolute',
-    top: 8,
-    left: 8,
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
+    bottom: 6,
+    left: 6,
+    backgroundColor: 'rgba(0,0,0,0.85)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
   },
   ratingText: {
     color: '#FFD700',
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: 'bold',
   },
   cardInfo: {
-    padding: 10,
+    padding: 8,
+    paddingTop: 6,
   },
   movieTitle: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: 'bold',
-    lineHeight: 20,
+    lineHeight: 17,
   },
   movieTitleFocused: {
     color: '#000',
   },
   movieYear: {
     color: '#8E8E93',
-    fontSize: 13,
-    marginTop: 4,
+    fontSize: 11,
+    marginTop: 2,
   },
   movieYearFocused: {
     color: '#333',

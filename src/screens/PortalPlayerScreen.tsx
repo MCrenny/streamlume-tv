@@ -1,9 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { View, Text, Pressable, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-// createPortal — рендерит iframe плеера напрямую в document.body, ВНЕ #root.
-// #root.tv-scaling имеет transform: scale(2) на ТВ → iframe внутри него получался
-// 2× больше экрана (видео и кнопки Play уезжали за видимую область).
 import { createPortal } from 'react-dom';
 
 interface Props {
@@ -11,51 +8,40 @@ interface Props {
   navigation: any;
 }
 
-function WebIframe({ url, onClose }: { url: string; onClose: () => void }) {
-  // ВАЖНО: никаких onLoad/onError — в WebKit Tizen 4.0 React вешает их через
-  // addEventListener и при срабатывании читает свойства кросс-доменного iframe
-  // → SecurityError: Blocked a frame... from accessing a cross-origin frame.
-  // ortified — чужой домен, поэтому любые обращения к iframe падают.
-  // iframe просто рендерится; спиннер убирается таймером (см. ниже).
+function PlayerIframe({ url }: { url: string }) {
+  // iframe рендерится через createPortal в document.body, ВНЕ #root:
+  // #root.tv-scaling имеет transform: scale(2) на ТВ → iframe внутри него
+  // получался 2× больше экрана.
   //
-  // Рендерим через ПОРТАЛ в document.body, ВНЕ #root: #root.tv-scaling несёт
-  // transform: scale(2) на ТВ → iframe внутри него был 2× больше экрана.
-  // Кнопка закрытия тоже в портале — иначе она тоже получит scale(2).
-  const content = (
-    <>
-      <iframe
-        src={url}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          border: 'none',
-          margin: 0,
-          padding: 0,
-          zIndex: 9990,
-        }}
-        allow="autoplay; fullscreen; encrypted-media"
-        sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
-        title="Плеер"
-      />
-      <Pressable onPress={onClose} style={styles.closeBtn}>
-        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
-      </Pressable>
-    </>
+  // Кнопка закрытия — внутри View (в #root), не через портал, чтобы
+  // не конфликтовать с D-pad фокусом ТВ.
+  const iframe = (
+    <iframe
+      src={url}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        border: 'none',
+        margin: 0,
+        padding: 0,
+        zIndex: 9990,
+      }}
+      allow="autoplay; fullscreen; encrypted-media"
+      sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
+      title="Плеер"
+    />
   );
   if (Platform.OS === 'web' && typeof document !== 'undefined') {
-    return createPortal(content, document.body);
+    return createPortal(iframe, document.body);
   }
-  return content;
+  return iframe;
 }
 
 export default function PortalPlayerScreen({ route, navigation }: Props) {
   const rawUrl: string = (route.params || {}).url || '';
-  // Парсер kinogo возвращает protocol-relative URL вида "//api.ortified.ws/...".
-  // На HTTP-контексте (старые ТВ, локальный IP) такой URL резолвится в http://... и ломается.
-  // Гарантируем абсолютный https-адрес.
   const url = rawUrl.startsWith('//') ? 'https:' + rawUrl : rawUrl;
   const title: string = (route.params || {}).title;
   const [loading, setLoading] = useState(true);
@@ -64,15 +50,15 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
     navigation.goBack();
   }, [navigation]);
 
-  // Спиннер убираем по таймеру, а не по onLoad: onLoad на кросс-доменном iframe
-  // в Tizen 4.0 вызывает SecurityError. 5с достаточно для старта плеера ortified.
+  // Спиннер убираем по таймеру (onLoad на кросс-доменном iframe
+  // в Tizen 4.0 вызывает SecurityError)
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(t);
   }, []);
 
+  // Навигация по пульту: Escape/Backspace + коды LG Back(461) и Tizen Return(10009)
   useEffect(() => {
-    // Escape/Backspace + коды LG Back(461) и Tizen Return(10009) для надёжности на ТВ-пульте
     const handler = (e: KeyboardEvent) => {
       const kc = (e as any).keyCode;
       if (e.key === 'Escape' || e.key === 'Backspace' || kc === 461 || kc === 10009) {
@@ -110,7 +96,18 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
         </View>
       )}
 
-      <WebIframe url={url} onClose={handleClose} />
+      <PlayerIframe url={url} />
+
+      {/* Кнопка закрытия — внутри View (в #root), НЕ фокусируется D-pad пультом.
+          Позиционирование absolute + zIndex > iframe. */}
+      <Pressable
+        onPress={handleClose}
+        focusable={false}
+        accessible={false}
+        style={styles.closeBtn}
+      >
+        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
+      </Pressable>
     </View>
   );
 }
@@ -118,14 +115,14 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#000' },
   closeBtn: {
-    position: 'fixed',
+    position: 'absolute',
     top: 12,
     right: 12,
     zIndex: 9999,
     padding: 4,
   },
   loadingOverlay: {
-    position: 'fixed',
+    position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
