@@ -19,39 +19,70 @@ export interface Movie {
  * Каждый прокси нестабилен (лимиты/перебои/блокировки), и набор рабочих меняется
  * со временем. Поэтому:
  *   - держим ШИРОКИЙ ПУЛ прокси;
- *   - запускаем их ПАРАЛЛЕЛЬНО и берём первый валидный ответ (Promise.any);
+ *   - запускаем их ПАРАЛЛЕЛЬНО и берём первый валидный ответ (allSettled + ручной
+ *     выбор первого успешного — НЕ Promise.any, т.к. его нет на старом WebKit ТВ);
  *   - ответ проверяем на реальный контент (наличие карточек / <title>), чтобы
  *     отсечь Cloudflare-блок-страницы.
  *
- * Порядок в массиве = приоритет: рабочие на момент измерения идут первыми.
+ * Порядок в массиве = приоритет: рабочие на момент измерения (08.2026) идут
+ * первыми. cors.io и proxy.cors.sh — единственные, кто обходит Cloudflare.
  */
-const PROXIES: Array<(u: string) => string> = [
-  // proxy.cors.sh — быстрый и стабильный, обходит Cloudflare
-  (u) => 'https://proxy.cors.sh/' + u,
-  // allorigins /get — оборачивает HTML в { contents: "..." } (раскручиваем ниже)
-  (u) => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u),
-  // allorigins /raw — отдаёт HTML как есть
-  (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
-  // codetabs
-  (u) => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(u),
-  // corsproxy.io
-  (u) => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
-  // Локальный/Netlify серверный прокси — последним (в проде Cloudflare его
-  // блокирует, но локально через node server.js он работает для разработки)
-  (u) => '/.netlify/functions/proxy?url=' + encodeURIComponent(u),
+interface ProxyEntry {
+  name: string;
+  build: (u: string) => string;
+  // Как превратить raw-ответ прокси в чистый HTML.
+  unwrap: (raw: string) => string;
+}
+
+const PROXIES: ProxyEntry[] = [
+  {
+    name: 'proxy.cors.sh',
+    build: (u) => 'https://proxy.cors.sh/' + u,
+    unwrap: (raw) => raw,
+  },
+  {
+    name: 'cors.io',
+    // cors.io оборачивает HTML в JSON: { contents: "<html>..." } (как allorigins)
+    build: (u) => 'https://cors.io/?url=' + encodeURIComponent(u),
+    unwrap: (raw) => unwrapJsonField(raw, 'contents'),
+  },
+  {
+    name: 'allorigins/get',
+    build: (u) => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u),
+    unwrap: (raw) => unwrapJsonField(raw, 'contents'),
+  },
+  {
+    name: 'allorigins/raw',
+    build: (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+    unwrap: (raw) => raw,
+  },
+  {
+    name: 'codetabs',
+    build: (u) => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(u),
+    unwrap: (raw) => raw,
+  },
+  {
+    name: 'corsproxy.io',
+    build: (u) => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
+    unwrap: (raw) => raw,
+  },
+  {
+    // Локальный/Netlify серверный прокси — последним (в проде Cloudflare его
+    // блокирует, но локально через node server.js он работает для разработки)
+    name: 'netlify-proxy',
+    build: (u) => '/.netlify/functions/proxy?url=' + encodeURIComponent(u),
+    unwrap: (raw) => raw,
+  },
 ];
 
-function unwrap(proxyIndex: number, raw: string): string {
-  if (PROXIES[proxyIndex]('').includes('allorigins.win/get')) {
-    // allorigins /get → { contents: "..." }
-    try {
-      const parsed = JSON.parse(raw);
-      return parsed.contents || '';
-    } catch {
-      return raw;
-    }
+/** Достаёт HTML из JSON-обёртки прокси { <field>: "<html>..." }. */
+function unwrapJsonField(raw: string, field: string): string {
+  try {
+    const parsed = JSON.parse(raw);
+    return parsed[field] || '';
+  } catch {
+    return raw;
   }
-  return raw;
 }
 
 const looksLikeMoviesPage = (html: string) => html.includes('class="card d-flex"');
@@ -62,27 +93,38 @@ async function fetchKinogoHtml(
   isValid: (html: string) => boolean,
 ): Promise<string> {
   // Запускаем ВСЕ прокси параллельно и берём первый валидный ответ.
-  const attempts = PROXIES.map(async (buildUrl, i) => {
+  // Используем allSettled (ES2020) вместо Promise.any (ES2021): Promise.any
+  // отсутствует на старом WebKit Smart-TV → весь парсер падал с TypeError.
+  const attempts = PROXIES.map(async (proxy) => {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 15000);
     try {
-      const resp = await fetch(buildUrl(targetUrl), { signal: ctrl.signal });
+      const resp = await fetch(proxy.build(targetUrl), { signal: ctrl.signal });
       clearTimeout(timer);
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const html = unwrap(i, await resp.text());
+      const html = proxy.unwrap(await resp.text());
       if (!isValid(html)) throw new Error('некорректный ответ (возможно Cloudflare-блок)');
       return html;
     } catch (e) {
       clearTimeout(timer);
-      throw e;
+      throw e instanceof Error ? e : new Error(String(e));
     }
   });
-  try {
-    // Promise.any вернёт первый УСПЕШНЫЙ результат, игнорируя отвергнутые
-    return await (Promise as any).any(attempts);
-  } catch {
-    throw new Error('Все CORS-прокси недоступны');
+
+  const results = await Promise.allSettled(attempts);
+
+  // Первый успешный результат — отдаём его.
+  for (const r of results) {
+    if (r.status === 'fulfilled') return r.value;
   }
+
+  // Все упали — собираем понятную ошибку с именами прокси и причинами.
+  const failed = PROXIES.map((p, i) => {
+    const r = results[i];
+    const reason = r.status === 'rejected' ? (r.reason?.message || String(r.reason)) : '?';
+    return `${p.name}: ${reason}`;
+  });
+  throw new Error('Все CORS-прокси недоступны. ' + failed.join('; '));
 }
 
 // === Кеш в localStorage (web) ===
