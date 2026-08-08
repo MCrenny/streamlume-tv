@@ -20,7 +20,9 @@ export default function PortalScreen({ navigation }: any) {
 
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
-  const numColumns = isLandscape ? 5 : 3;
+  // На ТВ (landscape) 5 колонок делали карточки слишком мелкими — текст
+  // наезжал на бейдж рейтинга. 4 колонки дают карточки крупнее и читабельнее.
+  const numColumns = isLandscape ? 4 : 3;
 
   // Загрузка первой страницы
   useEffect(() => {
@@ -433,34 +435,34 @@ const styles = StyleSheet.create({
   },
   ratingBadge: {
     position: 'absolute',
-    top: 6,
-    left: 6,
-    backgroundColor: 'rgba(0,0,0,0.75)',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
+    top: 8,
+    left: 8,
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     borderRadius: 6,
   },
   ratingText: {
     color: '#FFD700',
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   cardInfo: {
-    padding: 8,
+    padding: 10,
   },
   movieTitle: {
     color: '#fff',
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: 'bold',
-    lineHeight: 15,
+    lineHeight: 20,
   },
   movieTitleFocused: {
     color: '#000',
   },
   movieYear: {
     color: '#8E8E93',
-    fontSize: 10,
-    marginTop: 3,
+    fontSize: 13,
+    marginTop: 4,
   },
   movieYearFocused: {
     color: '#333',

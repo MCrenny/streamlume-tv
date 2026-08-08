@@ -7,7 +7,12 @@ interface Props {
   navigation: any;
 }
 
-function WebIframe({ url, onLoad, onError }: { url: string; onLoad: () => void; onError: () => void }) {
+function WebIframe({ url }: { url: string }) {
+  // ВАЖНО: никаких onLoad/onError — в WebKit Tizen 4.0 React вешает их через
+  // addEventListener и при срабатывании читает свойства кросс-доменного iframe
+  // → SecurityError: Blocked a frame... from accessing a cross-origin frame.
+  // ortified — чужой домен, поэтому любые обращения к iframe падают.
+  // iframe просто рендерится; спиннер убирается таймером (см. ниже).
   return (
     <iframe
       src={url}
@@ -21,8 +26,6 @@ function WebIframe({ url, onLoad, onError }: { url: string; onLoad: () => void; 
         margin: 0,
         padding: 0,
       }}
-      onLoad={onLoad}
-      onError={onError}
       allow="autoplay; fullscreen; encrypted-media"
       sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
       title="Плеер"
@@ -38,11 +41,17 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
   const url = rawUrl.startsWith('//') ? 'https:' + rawUrl : rawUrl;
   const title: string = (route.params || {}).title;
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
   const handleClose = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
+
+  // Спиннер убираем по таймеру, а не по onLoad: onLoad на кросс-доменном iframe
+  // в Tizen 4.0 вызывает SecurityError. 5с достаточно для старта плеера ortified.
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 5000);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     // Escape/Backspace + коды LG Back(461) и Tizen Return(10009) для надёжности на ТВ-пульте
@@ -83,21 +92,7 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
         </View>
       )}
 
-      {error ? (
-        <View style={styles.errorContainer}>
-          <Ionicons name="cloud-offline-outline" size={64} color="#FF453A" />
-          <Text style={styles.errorText}>Не удалось загрузить плеер</Text>
-          <Pressable style={styles.retryBtn} onPress={() => { setError(false); setLoading(true); }}>
-            <Text style={styles.retryText}>Повторить</Text>
-          </Pressable>
-        </View>
-      ) : (
-        <WebIframe
-          url={url}
-          onLoad={() => setLoading(false)}
-          onError={() => { setLoading(false); setError(true); }}
-        />
-      )}
+      <WebIframe url={url} />
 
       <Pressable onPress={handleClose} style={styles.closeBtn}>
         <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
