@@ -95,11 +95,37 @@ async function fetchKinogoHtml(
   // Запускаем ВСЕ прокси параллельно и берём первый валидный ответ.
   // Используем allSettled (ES2020) вместо Promise.any (ES2021): Promise.any
   // отсутствует на старом WebKit Smart-TV → весь парсер падал с TypeError.
+  // AbortController тоже отсутствует на Tizen 4.0 (WebKit 537.36) — поэтому
+  // таймаут делаем через ручной таймер + Promise.race, БЕЗ AbortController.
+  const hasAbort = typeof AbortController !== 'undefined';
+
   const attempts = PROXIES.map(async (proxy) => {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 15000);
+    let timedOut = false;
+    const timer = setTimeout(() => { timedOut = true; }, 15000);
     try {
-      const resp = await fetch(proxy.build(targetUrl), { signal: ctrl.signal });
+      const fetchUrl = proxy.build(targetUrl);
+      // Если есть AbortController — используем его (корректно прерывает fetch).
+      // Если нет (Tizen 4.0) — гоняем fetch с таймаутом через Promise.race.
+      let resp: Response;
+      if (hasAbort) {
+        const ctrl = new AbortController();
+        // Переназначаем timer, чтобы он абортил именно этот контроллер
+        clearTimeout(timer);
+        const t2 = setTimeout(() => ctrl.abort(), 15000);
+        try {
+          resp = await fetch(fetchUrl, { signal: ctrl.signal });
+          clearTimeout(t2);
+        } catch (e) {
+          clearTimeout(t2);
+          throw e;
+        }
+      } else {
+        const timeoutPromise = new Promise<never>((_, reject) => {
+          setTimeout(() => reject(new Error('timeout (нет AbortController)')), 15000);
+        });
+        resp = await Promise.race([fetch(fetchUrl), timeoutPromise]);
+      }
+      if (timedOut) throw new Error('timeout');
       clearTimeout(timer);
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const html = proxy.unwrap(await resp.text());
