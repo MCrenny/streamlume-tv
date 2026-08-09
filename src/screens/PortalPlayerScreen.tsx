@@ -29,9 +29,31 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
   const handleClose = useCallback(() => {
     if (moveTimer.current) clearTimeout(moveTimer.current);
     heldKey.current = null;
+    // Гасим режим портала, иначе index.html продолжит перехватывать стрелки/Back
+    // и навигация сломается после возврата на каталог.
+    if (typeof window !== 'undefined') {
+      (window as any).portalMode = false;
+      (window as any).closePortal = null;
+    }
     cleanupIframe();
     navigation.goBack();
   }, [navigation]);
+
+  // Регистрируем closePortal, чтобы обработчик «Назад» пульта в index.html
+  // (portalMode) мог корректно закрыть плеер. Фокус намеренно оставляем в нашем
+  // документе — НЕ делаем iframe.focus(), иначе Back пульта уходит в чужой iframe.
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).portalMode = true;
+      (window as any).closePortal = handleClose;
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        (window as any).portalMode = false;
+        (window as any).closePortal = null;
+      }
+    };
+  }, [handleClose]);
 
   const cleanupIframe = useCallback(() => {
     try {
@@ -90,15 +112,11 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
     iframeRef.current = iframe;
     wrapperRef.current = wrapper;
 
-    const focusAttempts = [500, 1500, 3000];
-    const timers = focusAttempts.map((delay) =>
-      setTimeout(() => {
-        try { iframe.focus(); } catch (_) { /* ignore */ }
-      }, delay),
-    );
+    // Намеренно НЕ вызываем iframe.focus(): при фокусе на чужом cross-origin
+    // iframe кнопка «Назад» на пульте уходит в него и не доходит до нашего
+    // обработчика (portalMode в index.html). Фокус остаётся в нашем документе.
 
     return () => {
-      timers.forEach(clearTimeout);
       if (cursorTimer.current) clearTimeout(cursorTimer.current);
       if (moveTimer.current) clearTimeout(moveTimer.current);
       cleanupIframe();
