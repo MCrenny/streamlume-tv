@@ -66,6 +66,32 @@
       })();
     </script>
 
+    <script>
+      // Перехват клавиш ДО TVX плагина: в режиме портала (iframe kinogo.is)
+      // пропускаем стрелки, чтобы они шли в iframe, а не перехватывались навигацией.
+      // Назад/Escape — закрыть портал через React navigation.
+      (function() {
+        var NAV_KEYS = [37, 38, 39, 40]; // стрелки
+        var BACK_KEYS = [8, 27, 461, 10009]; // Backspace, Escape, Return(461), Exit(10009)
+        window.addEventListener('keydown', function(e) {
+          if (!window.portalMode) return;
+          var k = e.keyCode;
+          if (BACK_KEYS.indexOf(k) !== -1) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            // Закрываем портал через React Navigation
+            if (typeof window.closePortal === 'function') window.closePortal();
+            return;
+          }
+          if (NAV_KEYS.indexOf(k) !== -1) {
+            // Пропускаем стрелки в iframe — не перехватываем
+            e.stopImmediatePropagation();
+            return;
+          }
+        }, true);
+      })();
+    </script>
+
     <!-- MSX TVX Plugin -->
     <script type="text/javascript" src="https://msx.benzac.de/js/tvx-plugin.min.js"></script>
     
@@ -128,6 +154,7 @@
         window.addEventListener('keydown', function(e) {
           var keyCode = e.keyCode;
           if (keyCode === 8 || keyCode === 27 || keyCode === 461 || keyCode === 10009) return;
+          if (window.portalMode) return;
           if ([37, 38, 39, 40].indexOf(keyCode) !== -1) {
             if (currentFocus) {
               focusHistoryText = currentFocus.textContent || "";
@@ -197,6 +224,9 @@
       
       // Global error handler for TV debugging
       window.onerror = function(msg, url, line, col, error) {
+        // Игнорируем SecurityError от кросс-доменных iframe (kinogo.is)
+        if (error && error.name === 'SecurityError') return false;
+        if (typeof msg === 'string' && msg.indexOf('SecurityError') !== -1) return false;
         var errDiv = document.createElement('div');
         errDiv.style.position = 'fixed';
         errDiv.style.top = '10%';
@@ -236,6 +266,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-    <script src="/_expo/static/js/web/index-b357cf7685b6642d522ac3c85ef4dfab.js" defer></script>
+    <script src="/_expo/static/js/web/index-c4e339c4a50ac9fb0531a70d3f9c6a72.js" defer></script>
 </body>
 </html>

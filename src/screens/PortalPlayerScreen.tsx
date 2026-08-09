@@ -1,76 +1,186 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { View, Text, Pressable, ActivityIndicator, StyleSheet, Platform } from 'react-native';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { View, Text, Pressable, ActivityIndicator, StyleSheet, Platform, useWindowDimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { createPortal } from 'react-dom';
 
 interface Props {
   route: any;
   navigation: any;
 }
 
-function PlayerIframe({ url }: { url: string }) {
-  // iframe рендерится через createPortal в document.body, ВНЕ #root:
-  // #root.tv-scaling имеет transform: scale(2) на ТВ → iframe внутри него
-  // получался 2× больше экрана.
-  //
-  // Кнопка закрытия — внутри View (в #root), не через портал, чтобы
-  // не конфликтовать с D-pad фокусом ТВ.
-  const iframe = (
-    <iframe
-      src={url}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        border: 'none',
-        margin: 0,
-        padding: 0,
-        zIndex: 9990,
-      }}
-      allow="autoplay; fullscreen; encrypted-media"
-      sandbox="allow-scripts allow-forms allow-popups allow-presentation allow-same-origin"
-      title="Плеер"
-    />
-  );
-  if (Platform.OS === 'web' && typeof document !== 'undefined') {
-    return createPortal(iframe, document.body);
-  }
-  return iframe;
-}
+const CURSOR_SPEED = 30;
+const CURSOR_SIZE = 24;
 
 export default function PortalPlayerScreen({ route, navigation }: Props) {
   const rawUrl: string = (route.params || {}).url || '';
   const url = rawUrl.startsWith('//') ? 'https:' + rawUrl : rawUrl;
   const title: string = (route.params || {}).title;
   const [loading, setLoading] = useState(true);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const { width, height } = useWindowDimensions();
+
+  // Виртуальный курсор: позиция на экране
+  const [cursor, setCursor] = useState({ x: width / 2, y: height / 2 });
+  const [cursorVisible, setCursorVisible] = useState(false);
+  const cursorTimer = useRef<NodeJS.Timeout | null>(null);
+  const moveTimer = useRef<NodeJS.Timeout | null>(null);
+  const heldKey = useRef<string | null>(null);
 
   const handleClose = useCallback(() => {
+    if (moveTimer.current) clearTimeout(moveTimer.current);
+    heldKey.current = null;
+    cleanupIframe();
     navigation.goBack();
   }, [navigation]);
 
-  // Спиннер убираем по таймеру (onLoad на кросс-доменном iframe
-  // в Tizen 4.0 вызывает SecurityError)
+  const cleanupIframe = useCallback(() => {
+    try {
+      if (wrapperRef.current && wrapperRef.current.parentNode) {
+        wrapperRef.current.parentNode.removeChild(wrapperRef.current);
+      }
+    } catch (_) { /* ignore */ }
+    iframeRef.current = null;
+    wrapperRef.current = null;
+  }, []);
+
+  // Показать курсор при любом нажатии клавиши, скрыть через 3 сек
+  const flashCursor = useCallback(() => {
+    setCursorVisible(true);
+    if (cursorTimer.current) clearTimeout(cursorTimer.current);
+    cursorTimer.current = setTimeout(() => setCursorVisible(false), 3000);
+  }, []);
+
+  // Клик в позиции курсора — dispatch MouseEvent на элемент в этой точке
+  const clickAtCursor = useCallback((cursorX: number, cursorY: number) => {
+    if (typeof document === 'undefined') return;
+    const el = document.elementFromPoint(cursorX, cursorY);
+    if (!el) return;
+    const events = ['mousedown', 'mouseup', 'click'];
+    for (const type of events) {
+      el.dispatchEvent(new MouseEvent(type, {
+        clientX: cursorX,
+        clientY: cursorY,
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      }));
+    }
+  }, []);
+
+  // Создаём iframe через чистый DOM
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 5000);
+    if (Platform.OS !== 'web' || typeof document === 'undefined' || !url) return;
+
+    cleanupIframe();
+
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9990;overflow:hidden;background:#000;';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;margin:0;padding:0;';
+    iframe.allow = 'autoplay; fullscreen; encrypted-media';
+    iframe.sandbox = 'allow-scripts allow-forms allow-popups allow-presentation allow-same-origin';
+    iframe.title = 'Плеер';
+    iframe.tabIndex = 0;
+
+    wrapper.appendChild(iframe);
+    document.body.appendChild(wrapper);
+
+    iframeRef.current = iframe;
+    wrapperRef.current = wrapper;
+
+    const focusAttempts = [500, 1500, 3000];
+    const timers = focusAttempts.map((delay) =>
+      setTimeout(() => {
+        try { iframe.focus(); } catch (_) { /* ignore */ }
+      }, delay),
+    );
+
+    return () => {
+      timers.forEach(clearTimeout);
+      if (cursorTimer.current) clearTimeout(cursorTimer.current);
+      if (moveTimer.current) clearTimeout(moveTimer.current);
+      cleanupIframe();
+    };
+  }, [url, cleanupIframe]);
+
+  // Спиннер убираем по таймеру
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(t);
   }, []);
 
-  // Навигация по пульту: Escape/Backspace + коды LG Back(461) и Tizen Return(10009)
+  // Навигация по пульту
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const kc = (e as any).keyCode;
+
+      // Назад
       if (e.key === 'Escape' || e.key === 'Backspace' || kc === 461 || kc === 10009) {
         e.preventDefault();
+        e.stopPropagation();
+        if (moveTimer.current) clearTimeout(moveTimer.current);
+        heldKey.current = null;
         handleClose();
+        return;
+      }
+
+      // Стрелки — двигаем виртуальный курсор
+      const isArrow = e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight';
+      if (isArrow) {
+        e.preventDefault();
+        e.stopPropagation();
+        flashCursor();
+
+        // Движение при удержании клавиши — запускаем повтор
+        if (heldKey.current !== e.key) {
+          heldKey.current = e.key;
+          if (moveTimer.current) clearTimeout(moveTimer.current);
+
+          const move = () => {
+            setCursor((prev) => {
+              let nx = prev.x;
+              let ny = prev.y;
+              if (e.key === 'ArrowUp') ny = Math.max(CURSOR_SPEED, prev.y - CURSOR_SPEED);
+              if (e.key === 'ArrowDown') ny = Math.min(height - CURSOR_SPEED, prev.y + CURSOR_SPEED);
+              if (e.key === 'ArrowLeft') nx = Math.max(CURSOR_SPEED, prev.x - CURSOR_SPEED);
+              if (e.key === 'ArrowRight') nx = Math.min(width - CURSOR_SPEED, prev.x + CURSOR_SPEED);
+              return { x: nx, y: ny };
+            });
+            moveTimer.current = setTimeout(move, 80);
+          };
+          moveTimer.current = setTimeout(move, 300);
+        }
+        return;
+      }
+
+      // Enter / OK — клик в позиции курсора
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        e.stopPropagation();
+        flashCursor();
+        clickAtCursor(cursor.x, cursor.y);
+        return;
       }
     };
+
+    const keyUpHandler = (e: KeyboardEvent) => {
+      if (e.key === heldKey.current) {
+        heldKey.current = null;
+        if (moveTimer.current) clearTimeout(moveTimer.current);
+      }
+    };
+
     if (typeof window !== 'undefined') {
       window.addEventListener('keydown', handler, true);
-      return () => window.removeEventListener('keydown', handler, true);
+      window.addEventListener('keyup', keyUpHandler, true);
+      return () => {
+        window.removeEventListener('keydown', handler, true);
+        window.removeEventListener('keyup', keyUpHandler, true);
+      };
     }
-  }, [handleClose]);
+  }, [handleClose, cursor, width, height, flashCursor, clickAtCursor]);
 
   if (!url) {
     return (
@@ -96,30 +206,53 @@ export default function PortalPlayerScreen({ route, navigation }: Props) {
         </View>
       )}
 
-      <PlayerIframe url={url} />
+      {/* Виртуальный курсор — рендерится поверх iframe */}
+      {cursorVisible && (
+        <View
+          style={[
+            styles.cursor,
+            {
+              left: cursor.x - CURSOR_SIZE / 2,
+              top: cursor.y - CURSOR_SIZE / 2,
+            },
+          ]}
+          pointerEvents="none"
+        >
+          <Ionicons name="cursor" size={CURSOR_SIZE} color="#0A84FF" />
+        </View>
+      )}
 
-      {/* Кнопка закрытия — внутри View (в #root), НЕ фокусируется D-pad пультом.
-          Позиционирование absolute + zIndex > iframe. */}
-      <Pressable
-        onPress={handleClose}
-        focusable={false}
-        accessible={false}
-        style={styles.closeBtn}
-      >
-        <Ionicons name="close-circle" size={36} color="rgba(255,255,255,0.85)" />
-      </Pressable>
+      {/* Подсказка */}
+      {cursorVisible && (
+        <View style={styles.cursorHint} pointerEvents="none">
+          <Text style={styles.cursorHintText}>Стрелки — движение · OK — клик · Назад — выйти</Text>
+        </View>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#000' },
-  closeBtn: {
+  cursor: {
     position: 'absolute',
-    top: 12,
-    right: 12,
-    zIndex: 9999,
-    padding: 4,
+    zIndex: 99999,
+  },
+  cursorHint: {
+    position: 'absolute',
+    bottom: 20,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+    zIndex: 99999,
+  },
+  cursorHintText: {
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 12,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 8,
   },
   loadingOverlay: {
     position: 'absolute',
