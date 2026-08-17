@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 05.08.26 11:48 User: yuri1245 IP: 52.242.217.84 channels 73 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 15.08.26 01:48 User: yuri1245 IP: 64.236.134.40 channels 82 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Познавательные",24 техно
 http://158.101.222.193:88/georgia_play.php?id=24techno
@@ -115,6 +115,24 @@ https://stream8.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1222/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
 https://stream8.cinerama.uz/1427/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Uplink",Big planet
+https://fs.uplink.kz/big_planet/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://only4.tv/ch/19116.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-220x132-tr.png" channelId="164" tvg-id="nat-geo-wild",Nat Geo Wild
+https://fs.uplink.kz/nat_geo_wild/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
+https://fs.uplink.kz/nat_geo/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
+https://fs.uplink.kz/viju_explore/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
+https://fs.uplink.kz/viju_history/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+https://fs.uplink.kz/viju_nature/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Моя планета
+https://fs.uplink.kz/moya_planeta/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/9044af12a4a9dbc01e92a76ffc00c365.png" logo="https://i.postimg.cc/WbLYFqDT/e5f45a4fdbc8482ca5946a1c4d987d8c.png" channelId="3295" tvg-id="poexali",Поехали!
+https://fs.uplink.kz/poehali/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/f29c66c9aeabb21b8c209337d4ebd17a.png" logo="http://ex.iptvin.ru/pic/2/77523699d7ed019c7c93c7331cb22df3.png" channelId="162" tvg-id="texno-24",Техно 24
+https://fs.uplink.kz/tehno_24/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/164155fe853558d706f3d8c8cd5285eb.png" logo="https://i.postimg.cc/j5n4LLGW/ac3acd00c5f663fbd732519193e07ffc.png" channelId="672" tvg-id="docubox-hd",DocuBox
 https://s70378.cdn.ngenix.net/docubox/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://yt3.ggpht.com/ytc/AAUvwnj2gd-PyJniMs0cTSz93Mst2dgCtZE0yrnfGGWT=s200-c-k-c0x00ffffff-no-rj?.png" logo="http://tv.tivix.co/uploads/posts/2019-02/1549003983_galaxy.png" channelId="391" tvg-id="galaxy-tv",Galaxy TV

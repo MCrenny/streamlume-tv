@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 09.08.26 10:49 User: yuri1245 IP: 52.242.217.84 channels 308 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 14.08.26 18:49 User: yuri1245 IP: 64.236.134.40 channels 309 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/1-1-Ukraina-220x220.png" logo="http://ex.iptvin.ru/pic/2/1plus1-Ukraina-220x132-tr.png" channelId="-1" tvg-id="1plus1-ukraina",1+1 Україна
 http://ott.watch/stream/DTCEUBKDH5/219.m3u8
@@ -10,7 +10,7 @@ http://ott.watch/stream/DTCEUBKDH5/250.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://ott.watch/stream/DTCEUBKDH5/173.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/024614b06bdfdc2444ef5229fab8773c.png" logo="http://ex.iptvin.ru/pic/2/22654940aeed4b5e8654e5c870d2915a.png" channelId="14" tvg-id="2na2",2х2
-http://ott.watch/stream/DTCEUBKDH5/187.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/187.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/086444273bf44e7e1a80a099db9013dd.png" logo="http://ex.iptvin.ru/pic/2/3deef20815ed63a7bb6a2436b22478b3.png" channelId="4057" tvg-id="36-6-tv",36.6
 http://ott.watch/stream/DTCEUBKDH5/331.m3u8
 #EXTINF:-1 group-title="-08-08",6 Соток
@@ -34,7 +34,7 @@ http://ott.watch/stream/DTCEUBKDH5/288.m3u8
 #EXTINF:-1 group-title="-08-08",FilmUADrama
 http://ott.watch/stream/DTCEUBKDH5/273.m3u8
 #EXTINF:-1 group-title="-08-08",Kанал
-http://ott.watch/stream/DTCEUBKDH5/157.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/157.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08",Niki junior
 http://ott.watch/stream/DTCEUBKDH5/262.m3u8
 #EXTINF:-1 group-title="-08-08",Niki kids
@@ -44,7 +44,7 @@ http://ott.watch/stream/DTCEUBKDH5/448.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/SRqqsySx/2bdc4d1c3f6f5ceea006bed7137fff4f.png" logo="https://i.postimg.cc/L8s9L6zq/8317e45a7fc0a5b302d6b6ccc3316f20.png" channelId="-1" tvg-name="OstWest 24" tvg-id="ostwest24",OstWest24
 http://ott.watch/stream/DTCEUBKDH5/455.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/Quiz-TV.jpg" logo="https://i115.fastpic.org/big/2021/0914/49/7aaf1ab48fffe02ec668f41fe5d96549.png" channelId="-1" tvg-id="quiz-tv",Quiz TV
-http://ott.watch/stream/DTCEUBKDH5/397.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/397.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08",Setanta Sports UA
 http://ott.watch/stream/DTCEUBKDH5/313.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/0cab448f41edca35edd5f05253861207.png" logo="http://ex.iptvin.ru/pic/2/Setanta-Sports-plus-220x132-tr.png" channelId="3045" tvg-name="Setanta Sports+ Ukraine" tvg-id="setanta-plus-ua",Setanta Sports+
@@ -58,7 +58,7 @@ http://ott.watch/stream/DTCEUBKDH5/256.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/0781d6416caad1c72db1f82841bba729.png" logo="http://ex.iptvin.ru/pic/2/f3c94d89ff44f30787fb03a1c8aa1ae6.png" channelId="4439" tvg-id="travel-xp-hd",Travel XP
 http://ott.watch/stream/DTCEUBKDH5/451.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/g0P3d2rT/9bd1a1ffff2d8832fc67abb53c5bc531.png" logo="https://i.postimg.cc/ydjmLC1r/2d3e77cb3be90d1d1ecf20ce89f6d1e0.png" channelId="921" tvg-id="zoom-ua",Zoom
-http://ott.watch/stream/DTCEUBKDH5/327.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/327.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/c6d0d5604b4f1eed31eef2d466626877.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%98%D0%BD%D1%82%D0%B5%D1%80.png" channelId="421" tvg-id="inter-ua",Інтер
 http://ott.watch/stream/DTCEUBKDH5/174.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/8CjN7t4n/c22361156b63f562ba099b450e2c048e.png" logo="http://ex.iptvin.ru/pic/2/Inter-220x132-tr.png" channelId="318" tvg-id="inter-plus-ua",Інтер+
@@ -142,11 +142,11 @@ http://ott.watch/stream/DTCEUBKDH5/436.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/d6ebb39bd89728ad658993de8f4f735c.png" logo="http://ex.iptvin.ru/pic/2/Susp-lne-Kultura-220x132-tr.png" channelId="573" tvg-id="kultura-ua",Суспільне Культура
 http://ott.watch/stream/DTCEUBKDH5/435.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/3JTgJK8P/9f7e39aeef3527937e3bee7eb3f74664.png" logo="https://i.postimg.cc/zfcCJKvj/c7b3c287424c1ee381fe9ac7a0b31115.png" channelId="439" tvg-id="ua-pershy",Суспільне Перший
-http://ott.watch/stream/DTCEUBKDH5/437.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/437.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/mggq8Pps/073ed229a35753907149db4002a3ddaf.png" logo="https://i.postimg.cc/R0ngDKcj/6565294881b6037921e4b7713d5c3a4f.png" channelId="-1" tvg-id="suspilne-sport-ua",Суспільне Спорт
 http://ott.watch/stream/DTCEUBKDH5/444.m3u8
 #EXTINF:-1 group-title="-08-08",Сімейні мелодрами+
-http://ott.watch/stream/DTCEUBKDH5/137.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/137.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08",ТБ
 http://ott.watch/stream/DTCEUBKDH5/156.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="https://i.postimg.cc/8ckHGPXS/b6e02e4659e9b86e7c987b908b8d132e.png" logo="https://i.postimg.cc/15tHYXN0/4a6ba89a1e5049b7a7cb74aeb11f48c2.png" channelId="434" tvg-id="tet-ua",ТЕТ
@@ -154,7 +154,7 @@ http://ott.watch/stream/DTCEUBKDH5/338.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/7506712675aedd4640bc908b70ddc6e8.png" logo="http://ex.iptvin.ru/pic/2/5e8ade8c597fb7a4538a2d1a96dde8ae.png" channelId="2485" tvg-id="terra",Терра
 http://ott.watch/stream/DTCEUBKDH5/402.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
-http://ott.watch/stream/DTCEUBKDH5/357.m3u8?bw943553322320
+http://ott.watch/stream/DTCEUBKDH5/357.m3u8?bw944356970656
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://img.prosto.tv/storage/channel/logo/Unian.png" channelId="482" tvg-id="unian-tv",Уніан
 http://ott.watch/stream/DTCEUBKDH5/341.m3u8
 #EXTINF:-1 group-title="-08-08" tvg-logo="http://only4.tv/ch/6182.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A4%D0%B0%D1%83%D0%BD%D0%B0.png" channelId="4814" tvg-id="fauna",Фауна
@@ -495,7 +495,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw943553322320
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw944356970656
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -518,6 +518,8 @@ http://89.33.29.118/1plus1/index.m3u8
 http://streamvideol1.luxnet.ua/news24/news24.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="https://television-live.com/uploads/posts/cr4wrwerwefwefx.png" logo="https://i115.fastpic.org/big/2021/0914/b0/76bce59e100304b1821a55cb665f64b0.png" channelId="7" tvg-id="5kanal-ua",5 канал
 http://line.tvdsz.cc:80/play/live.php?mac=00:1B:79:F8:22:9D&stream=384898&extension=ts
+#EXTINF:-1 tvg-rec="7" timeshift="7" group-title="Украина" tvg-logo="http://img.prosto.tv/storage/channel/logo/15.png" channelId="431" tvg-id="enter-film",Enter-фільм
+http://ott.watch/stream/DTCEUBKDH5/322.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x132-white-tr.png" channelId="-1" tvg-id="armia-tv-ua",Армія ТБ
 https://api-tv.ipnet.ua/api/v1/manifest/2118742632.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/5161e427bf660dedf2657be712b136fa.png" logo="http://ex.iptvin.ru/pic/2/b1df622c6b48d3ddc511d03df9b20e3b.png" channelId="1833" tvg-id="espreso-tv",Еспресо HD
