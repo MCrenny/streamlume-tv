@@ -1,296 +1,6 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 22.08.26 15:55 User: yuri1245 IP: 172.182.245.134 channels 2247 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 24.08.26 22:52 User: yuri1245 IP: 4.155.237.4 channels 2213 
 http://ex.iptvin.ru/iptvin.ru.mp4
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/1-1-Ukraina-220x220.png" logo="http://ex.iptvin.ru/pic/2/1plus1-Ukraina-220x132-tr.png" channelId="-1" tvg-id="1plus1-ukraina",1+1 Україна
-http://ott.watch/stream/DTCEUBKDH5/219.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://television-live.com/uploads/posts/c5234543xf34d3.png" logo="https://i.postimg.cc/pLjwhrnz/c40abbcd8c50d48e1ef36b6228bf687d.png" channelId="424" tvg-id="1plus1",1+1
-http://ott.watch/stream/DTCEUBKDH5/172.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",11 канал Дніпро
-http://ott.watch/stream/DTCEUBKDH5/250.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
-http://ott.watch/stream/DTCEUBKDH5/173.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/024614b06bdfdc2444ef5229fab8773c.png" logo="http://ex.iptvin.ru/pic/2/22654940aeed4b5e8654e5c870d2915a.png" channelId="14" tvg-id="2na2",2х2
-http://ott.watch/stream/DTCEUBKDH5/187.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/086444273bf44e7e1a80a099db9013dd.png" logo="http://ex.iptvin.ru/pic/2/3deef20815ed63a7bb6a2436b22478b3.png" channelId="4057" tvg-id="36-6-tv",36.6
-http://ott.watch/stream/DTCEUBKDH5/331.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",4ever Cinema
-http://ott.watch/stream/DTCEUBKDH5/258.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",4ever Drama
-http://ott.watch/stream/DTCEUBKDH5/260.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",4ever Theater
-http://ott.watch/stream/DTCEUBKDH5/259.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",6 Соток
-http://ott.watch/stream/DTCEUBKDH5/405.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/5c5677cdf6e60496e420ac0486422e82.png" logo="http://ex.iptvin.ru/pic/2/633a3699454e7e4e6a3f46600d6bc7a1.png" channelId="495" tvg-id="atr-ua",ATR
-http://ott.watch/stream/DTCEUBKDH5/244.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
-http://ott.watch/stream/DTCEUBKDH5/117.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x132-tr.png" channelId="1932" tvg-id="amedia-hit",Amedia Hit
-http://ott.watch/stream/DTCEUBKDH5/162.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium
-http://ott.watch/stream/DTCEUBKDH5/151.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",BCU
-http://ott.watch/stream/DTCEUBKDH5/488.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/437-250.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%BB%D1%82%20HD%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F.png" channelId="3884" tvg-id="bolt" tvg-country="UA",Bolt
-http://ott.watch/stream/DTCEUBKDH5/73.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://only4.tv/ch/6855.png" logo="https://epgx.site/p/cineman-action.png" channelId="-1" tvg-id="cineman-musw" tvg-shift="1" shift="2",CineMan Action
-http://ott.watch/stream/DTCEUBKDH5/351.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan Comedy
-http://ott.watch/stream/DTCEUBKDH5/356.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan Marvel
-http://ott.watch/stream/DTCEUBKDH5/354.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan Thriller
-http://ott.watch/stream/DTCEUBKDH5/352.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan Top
-http://ott.watch/stream/DTCEUBKDH5/350.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/6843.png" logo="https://epgx.site/p/cineman-svaty.png" channelId="-1" tvg-id="cineman-svaty" tvg-shift="1" shift="2",CineMan Сваты
-http://ott.watch/stream/DTCEUBKDH5/359.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan Ужасы
-http://ott.watch/stream/DTCEUBKDH5/355.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",CineMan
-http://ott.watch/stream/DTCEUBKDH5/349.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman MiniSeries
-http://ott.watch/stream/DTCEUBKDH5/122.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman Premium
-http://ott.watch/stream/DTCEUBKDH5/470.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman VHS
-http://ott.watch/stream/DTCEUBKDH5/474.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman Катастрофы
-http://ott.watch/stream/DTCEUBKDH5/471.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman Лесник
-http://ott.watch/stream/DTCEUBKDH5/115.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman Мелодрама
-http://ott.watch/stream/DTCEUBKDH5/472.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Cineman Скорая помощь
-http://ott.watch/stream/DTCEUBKDH5/475.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/ZKxgZ8v3/5c15644f99d43478c18fef794ce9b74d.png" logo="https://i.postimg.cc/NFhVGbx8/21976c6dcbacd90336fac5d3c837cf85.png" channelId="-1" tvg-id="continent-e",Continent E
-http://ott.watch/stream/DTCEUBKDH5/449.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/QdMBjLB2/312a6a0219a5150311fd69dce13c0e5c.png" logo="https://i.postimg.cc/LsLmpvTd/6e610629496a3bdbb2728afb8af9c54e.png" channelId="-1" tvg-id="dynamo-kyiv-tv",Dynamo Kyiv TV
-http://ott.watch/stream/DTCEUBKDH5/396.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/3c31f0c6fcd7ef77d3dead6dbe413dc0.jpg" logo="http://overlay.iptvin.ru/epg/PIC/Eco%20TV.png" channelId="452" tvg-id="eko-tv",ECO TV
-http://ott.watch/stream/DTCEUBKDH5/222.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo/15.png" channelId="431" tvg-id="enter-film",Enter-фільм
-http://ott.watch/stream/DTCEUBKDH5/322.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Explorers
-http://ott.watch/stream/DTCEUBKDH5/450.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fan
-http://ott.watch/stream/DTCEUBKDH5/420.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fashion ONE
-http://ott.watch/stream/DTCEUBKDH5/119.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fashion
-http://ott.watch/stream/DTCEUBKDH5/288.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",FilmUADrama
-http://ott.watch/stream/DTCEUBKDH5/273.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0207.png" logo="http://teledays.net/images/fox-life.png" channelId="178" tvg-id="foxlife",Fox Life
-http://ott.watch/stream/DTCEUBKDH5/129.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo" channelId="177" tvg-id="fox",Fox
-http://ott.watch/stream/DTCEUBKDH5/182.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Adventure
-http://ott.watch/stream/DTCEUBKDH5/432.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Cinema
-http://ott.watch/stream/DTCEUBKDH5/423.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Comedy
-http://ott.watch/stream/DTCEUBKDH5/426.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Family
-http://ott.watch/stream/DTCEUBKDH5/427.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Fantastic
-http://ott.watch/stream/DTCEUBKDH5/429.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Horror
-http://ott.watch/stream/DTCEUBKDH5/431.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Premiere
-http://ott.watch/stream/DTCEUBKDH5/424.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Rating
-http://ott.watch/stream/DTCEUBKDH5/422.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Romantic
-http://ott.watch/stream/DTCEUBKDH5/433.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Series
-http://ott.watch/stream/DTCEUBKDH5/430.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh Thriller
-http://ott.watch/stream/DTCEUBKDH5/434.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Fresh VHS
-http://ott.watch/stream/DTCEUBKDH5/428.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00200.jpg" logo="http://ex.iptvin.ru/pic/2/Hollywood-512x436-tr.png" channelId="3919" tvg-id="hollywood",Hollywood
-http://ott.watch/stream/DTCEUBKDH5/268.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/CL64xG92/4792af6f761adf7bc47de816cea312ea.png" logo="https://i.postimg.cc/qBwL9Vw4/0deecf3e89f08caf7a2f3b913ac818a1.png" channelId="-1" tvg-id="kino-1",Kino 1
-http://ott.watch/stream/DTCEUBKDH5/395.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Kino 2
-http://ott.watch/stream/DTCEUBKDH5/465.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/05cacfc51ea837891051652f4e659196.png" logo="http://ex.iptvin.ru/pic/2/8fc75861897bdd259412d3c0c42fb457.png" channelId="5212" tvg-id="kinoliving",Kinoliving
-http://ott.watch/stream/DTCEUBKDH5/445.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/RZPsH3q3/7f641a9896ed469ea98741f60c0981ef.png" logo="https://i.postimg.cc/8khZbXjg/ba8c69c1cdca6e845ad9b4c6e777f444.png" channelId="-1" tvg-id="kinosweet",Kinosweet
-http://ott.watch/stream/DTCEUBKDH5/447.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Kinowood
-http://ott.watch/stream/DTCEUBKDH5/446.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Kанал
-http://ott.watch/stream/DTCEUBKDH5/157.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Niki junior
-http://ott.watch/stream/DTCEUBKDH5/262.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Niki kids
-http://ott.watch/stream/DTCEUBKDH5/271.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/4015debf524e01400b2bfe4f53a1066d.png" logo="http://ex.iptvin.ru/pic/2/12d2d185c854bc7f4fed5db203b850a3.png" channelId="-1" tvg-id="one-planet",One Planet
-http://ott.watch/stream/DTCEUBKDH5/448.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/SRqqsySx/2bdc4d1c3f6f5ceea006bed7137fff4f.png" logo="https://i.postimg.cc/L8s9L6zq/8317e45a7fc0a5b302d6b6ccc3316f20.png" channelId="-1" tvg-name="OstWest 24" tvg-id="ostwest24",OstWest24
-http://ott.watch/stream/DTCEUBKDH5/455.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Quiz-TV.jpg" logo="https://i115.fastpic.org/big/2021/0914/49/7aaf1ab48fffe02ec668f41fe5d96549.png" channelId="-1" tvg-id="quiz-tv",Quiz TV
-http://ott.watch/stream/DTCEUBKDH5/397.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Setanta Sports UA
-http://ott.watch/stream/DTCEUBKDH5/313.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/0cab448f41edca35edd5f05253861207.png" logo="http://ex.iptvin.ru/pic/2/Setanta-Sports-plus-220x132-tr.png" channelId="3045" tvg-name="Setanta Sports+ Ukraine" tvg-id="setanta-plus-ua",Setanta Sports+
-http://ott.watch/stream/DTCEUBKDH5/390.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/3cbd4113ed54b17f121f7805a6b07e55.png" logo="http://ex.iptvin.ru/pic/2/6269c90c0ac8aafd18f76266c2d379a1.png" channelId="-1" tvg-id="sport1-baltic",Sport 1 Baltic
-http://ott.watch/stream/DTCEUBKDH5/461.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Start Air
-http://ott.watch/stream/DTCEUBKDH5/128.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",TV 2
-http://ott.watch/stream/DTCEUBKDH5/368.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Trace Sports
-http://ott.watch/stream/DTCEUBKDH5/256.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/0781d6416caad1c72db1f82841bba729.png" logo="http://ex.iptvin.ru/pic/2/f3c94d89ff44f30787fb03a1c8aa1ae6.png" channelId="4439" tvg-id="travel-xp-hd",Travel XP
-http://ott.watch/stream/DTCEUBKDH5/451.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Viju TV 1000 Action
-http://ott.watch/stream/DTCEUBKDH5/100.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Viju TV 1000
-http://ott.watch/stream/DTCEUBKDH5/110.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/a82ced18ceaa247241f263f1bd2597dc.png" logo="http://ex.iptvin.ru/pic/2/fc4c0d4c84d48fb853b5dc3b6c5db4c3.png" channelId="607" tvg-id="vip-comedy",Viju+ Comedy
-http://ott.watch/stream/DTCEUBKDH5/201.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/4c55f3991b2e67acfd9b660c062d6e2b.png" logo="http://ex.iptvin.ru/pic/2/f3fc3fa9c3e55a7b4e5d09c3cbb9a526.png" channelId="606" tvg-name="ViP Megahit" tvg-id="vip-megahit",Viju+ Megahit
-http://ott.watch/stream/DTCEUBKDH5/200.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/0e5f26c0b175f980ffbc940f8c897ce6.png" logo="http://ex.iptvin.ru/pic/2/ae04e726476834e50e9844a1cc92e3c2.png" channelId="605" tvg-id="vip-premiere",Viju+ Premiere
-http://ott.watch/stream/DTCEUBKDH5/202.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/143f8d707ce3ab4aedc6ae7cd78b313c.png" logo="http://ex.iptvin.ru/pic/2/a1e8f552cff3a6b9c63cf0a8c7549ca9.png" channelId="3894" tvg-id="vip-serial",Viju+ Serial
-http://ott.watch/stream/DTCEUBKDH5/311.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/g0P3d2rT/9bd1a1ffff2d8832fc67abb53c5bc531.png" logo="https://i.postimg.cc/ydjmLC1r/2d3e77cb3be90d1d1ecf20ce89f6d1e0.png" channelId="921" tvg-id="zoom-ua",Zoom
-http://ott.watch/stream/DTCEUBKDH5/327.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/e5ac9c34ff5a9c9193ec8de6f085e6f6.png" logo="http://ex.iptvin.ru/pic/2/black-220x132-white-tr.png" channelId="5173" tvg-id="sony-turbo",black
-http://ott.watch/stream/DTCEUBKDH5/263.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/96c7b6f3577372d16e90da4afff81fb3.png" logo="http://overlay.iptvin.ru/epg/PIC/Red.png" channelId="5172" tvg-id="sony-tv",red
-http://ott.watch/stream/DTCEUBKDH5/69.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/4c420d979f66be686a9cad7f246cc325.png" logo="http://overlay.iptvin.ru/epg/PIC/Sci-Fi.png" channelId="5171" tvg-id="sony-scifi",sci-fi
-http://ott.watch/stream/DTCEUBKDH5/180.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/c6d0d5604b4f1eed31eef2d466626877.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%98%D0%BD%D1%82%D0%B5%D1%80.png" channelId="421" tvg-id="inter-ua",Інтер
-http://ott.watch/stream/DTCEUBKDH5/174.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/8CjN7t4n/c22361156b63f562ba099b450e2c048e.png" logo="http://ex.iptvin.ru/pic/2/Inter-220x132-tr.png" channelId="318" tvg-id="inter-plus-ua",Інтер+
-http://ott.watch/stream/DTCEUBKDH5/345.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x132-white-tr.png" channelId="-1" tvg-id="armia-tv-ua",Армія TV
-http://ott.watch/stream/DTCEUBKDH5/468.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/9aa90c1cefd58d6f504a9568351597a7.png" logo="http://ex.iptvin.ru/pic/2/38f170ac6704cc8a277d5f00abe8734a.png" channelId="1515" tvg-id="bigudi",Бiгудi
-http://ott.watch/stream/DTCEUBKDH5/340.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/GmS42MGH/ba4fccc4130f38e8c6aa3dc5a4478de4.png" logo="https://i.postimg.cc/63hw73gY/9d214938aa706605bf8570c95b70c50c.png" channelId="4764" tvg-id="blokbaster",Блокбастер
-http://ott.watch/stream/DTCEUBKDH5/364.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Вікторина
-http://ott.watch/stream/DTCEUBKDH5/146.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
-http://ott.watch/stream/DTCEUBKDH5/412.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Дім
-http://ott.watch/stream/DTCEUBKDH5/383.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",ЖВЛ+
-http://ott.watch/stream/DTCEUBKDH5/139.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Загублений світ+
-http://ott.watch/stream/DTCEUBKDH5/223.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Закон
-http://ott.watch/stream/DTCEUBKDH5/406.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Знаєм 24
-http://ott.watch/stream/DTCEUBKDH5/145.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",ЗооСвіт
-http://ott.watch/stream/DTCEUBKDH5/460.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://www.alfaplus.com.ua/wp-content/uploads/2018/10/K1_62014.jpg" logo="http://epg.openboxfan.com/picon/к1.png" channelId="427" tvg-id="k1-ua",К1
-http://ott.watch/stream/DTCEUBKDH5/270.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/276ca22b34d6e147098cbcd271678700.png" logo="http://ex.iptvin.ru/pic/2/8b582fb6a45ccd3adddf4b3dec88ee10.png" channelId="428" tvg-id="k2-ua",К2
-http://ott.watch/stream/DTCEUBKDH5/324.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Капучино ТВ
-http://ott.watch/stream/DTCEUBKDH5/243.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/fab0397111da48957d582fdde4fcab9f.png" logo="http://ex.iptvin.ru/pic/2/59e429c9976bc40368f02b7be6ed266b.png" channelId="3156" tvg-id="kvartal-tv",Квартал ТВ
-http://ott.watch/stream/DTCEUBKDH5/321.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",КиноТВ
-http://ott.watch/stream/DTCEUBKDH5/221.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/c9c6feb88adb52d305f886c6af1cf201.png" logo="https://antifriz.tv/storage/images/pack_logos/a4589792317696060765519a4d2256b8.png" channelId="599" tvg-id="kinopokaz" shift="-3",Кинопоказ
-http://ott.watch/stream/DTCEUBKDH5/64.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0120.png" logo="https://i115.fastpic.org/big/2021/0914/24/b66e13ed90428b0a54259bf62532ad24.png" channelId="230" tvg-id="komedijnoe",Комедийное
-http://ott.watch/stream/DTCEUBKDH5/74.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",МТМ
-http://ott.watch/stream/DTCEUBKDH5/254.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Масон
-http://ott.watch/stream/DTCEUBKDH5/346.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Машина Часу
-http://ott.watch/stream/DTCEUBKDH5/140.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/KY3p2qzQ/45e099c90763e4ef9656c0b711cb85fb.png" logo="https://i.postimg.cc/4NX09QLN/a1690946dd36ca796b75781de67fbf46.png" channelId="430" tvg-id="mega-ua",Мега
-http://ott.watch/stream/DTCEUBKDH5/325.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Ми - Україна
-http://ott.watch/stream/DTCEUBKDH5/442.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0157.png" logo="https://upload.wikimedia.org/wikipedia/commons/5/56/Logotipe_ntn_tv.png" channelId="426" tvg-id="ntn-ua",НТН
-http://ott.watch/stream/DTCEUBKDH5/326.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Наталі ТВ
-http://ott.watch/stream/DTCEUBKDH5/203.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
-http://ott.watch/stream/DTCEUBKDH5/403.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Nashe-lyubimoe-kino-220x220.png" logo="http://ex.iptvin.ru/pic/2/Nashe-lyubimoe-kino-220x132-tr.png" channelId="0" tvg-id="nashe-lubimoe-kino-ua",Наше любимое кино
-http://ott.watch/stream/DTCEUBKDH5/456.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Невигадані Історії
-http://ott.watch/stream/DTCEUBKDH5/159.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/5538.png" logo="https://static.sweet.tv/images/icons/channels/100.png" channelId="455" tvg-id="otse",ОЦЕ
-http://ott.watch/stream/DTCEUBKDH5/329.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Опер за викликом+
-http://ott.watch/stream/DTCEUBKDH5/50.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/9a2401e3b95fe877151174cac120d5e8.jpg" logo="https://i115.fastpic.org/big/2021/0914/2a/32eb8568fe787d1bcbc620e5b14b732a.png" channelId="1633" tvg-id="ostrosiuzhetnoe",Остросюжетное
-http://ott.watch/stream/DTCEUBKDH5/214.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Панянка-селянка+
-http://ott.watch/stream/DTCEUBKDH5/134.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00096.png" channelId="442" tvg-id="1auto",Перший Автомобільний
-http://ott.watch/stream/DTCEUBKDH5/404.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Pershij-Zah-dnij-220x220.png" logo="http://ex.iptvin.ru/pic/2/Pershij-Zah-dnij-220x132-tr.png" channelId="2482" tvg-id="pershy-zaxidny",Перший Західний
-http://ott.watch/stream/DTCEUBKDH5/246.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Перший Міський (Кривий Ріг)
-http://ott.watch/stream/DTCEUBKDH5/255.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/pXqnWP5X/6b6870a2143984d1430216e9b9b6ed9a.png" logo="https://i.postimg.cc/nccCwNS8/30385108076e1a4f79a616aadffeaddb.png" channelId="456" tvg-id="plusplus",ПлюсПлюс
-http://ott.watch/stream/DTCEUBKDH5/339.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0121.png" logo="https://antifriz.tv/storage/images/channel_logos/kino-premium-hd.png" channelId="1637" tvg-id="premialnoe",Премиальное
-http://ott.watch/stream/DTCEUBKDH5/421.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Про Київ
-http://ott.watch/stream/DTCEUBKDH5/160.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Прованс ТВ
-http://ott.watch/stream/DTCEUBKDH5/199.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/QMtMf7fp/7d16f96a100992e3d4556640944b5069.png" logo="https://i.postimg.cc/BQTtb481/a9b92e1d54c5ef59bc40736361aac07c.png" channelId="433" tvg-id="pixel",Піксель
-http://ott.watch/stream/DTCEUBKDH5/323.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Раі
-http://ott.watch/stream/DTCEUBKDH5/249.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/cb376b4f911d13e33b13ed9c8eafb904.png" logo="http://ex.iptvin.ru/pic/2/2d3e6dcad3a9e3c6d7fb4864b4c2fac8.png" channelId="4831" tvg-id="rybalka",Рибалка
-http://ott.watch/stream/DTCEUBKDH5/286.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Світ навиворіт+
-http://ott.watch/stream/DTCEUBKDH5/49.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Світ+
-http://ott.watch/stream/DTCEUBKDH5/358.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Суспільне Київ
-http://ott.watch/stream/DTCEUBKDH5/439.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Суспільне Крим
-http://ott.watch/stream/DTCEUBKDH5/436.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/d6ebb39bd89728ad658993de8f4f735c.png" logo="http://ex.iptvin.ru/pic/2/Susp-lne-Kultura-220x132-tr.png" channelId="573" tvg-id="kultura-ua",Суспільне Культура
-http://ott.watch/stream/DTCEUBKDH5/435.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/3JTgJK8P/9f7e39aeef3527937e3bee7eb3f74664.png" logo="https://i.postimg.cc/zfcCJKvj/c7b3c287424c1ee381fe9ac7a0b31115.png" channelId="439" tvg-id="ua-pershy",Суспільне Перший
-http://ott.watch/stream/DTCEUBKDH5/437.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/mggq8Pps/073ed229a35753907149db4002a3ddaf.png" logo="https://i.postimg.cc/R0ngDKcj/6565294881b6037921e4b7713d5c3a4f.png" channelId="-1" tvg-id="suspilne-sport-ua",Суспільне Спорт
-http://ott.watch/stream/DTCEUBKDH5/444.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Сімейні мелодрами+
-http://ott.watch/stream/DTCEUBKDH5/137.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",ТБ
-http://ott.watch/stream/DTCEUBKDH5/156.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/8ckHGPXS/b6e02e4659e9b86e7c987b908b8d132e.png" logo="https://i.postimg.cc/15tHYXN0/4a6ba89a1e5049b7a7cb74aeb11f48c2.png" channelId="434" tvg-id="tet-ua",ТЕТ
-http://ott.watch/stream/DTCEUBKDH5/338.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7",Твій Серіал
-http://ott.watch/stream/DTCEUBKDH5/466.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/7506712675aedd4640bc908b70ddc6e8.png" logo="http://ex.iptvin.ru/pic/2/5e8ade8c597fb7a4538a2d1a96dde8ae.png" channelId="2485" tvg-id="terra",Терра
-http://ott.watch/stream/DTCEUBKDH5/402.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
-http://ott.watch/stream/DTCEUBKDH5/357.m3u8?bw9411590686232
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://img.prosto.tv/storage/channel/logo/Unian.png" channelId="482" tvg-id="unian-tv",Уніан
-http://ott.watch/stream/DTCEUBKDH5/341.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/6182.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A4%D0%B0%D1%83%D0%BD%D0%B0.png" channelId="4814" tvg-id="fauna",Фауна
-http://ott.watch/stream/DTCEUBKDH5/401.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/52dvJ2RF/fd9eed370e128931bfc9cc7a5c0efb0d.png" logo="https://i.postimg.cc/VNwjqk9c/d93bf5403bb86b4b939efbd46b610d42.png" channelId="-1" tvg-id="front-ua",Фронт
-http://ott.watch/stream/DTCEUBKDH5/489.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="https://tricolor-centr.ru/images/novosti/hit.jpg" logo="https://antifriz.tv/storage/images/pack_logos/39614c6364ef51682293f4250c5d26f0.png" channelId="4768" tvg-id="khit",Хит
-http://ott.watch/stream/DTCEUBKDH5/363.m3u8
-#EXTINF:-1 group-title="-08-08" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/0119.png" logo="http://ex.iptvin.ru/pic/2/SHokiruyushchee-HD-205x150-tr.png" channelId="229" tvg-id="shokiruyushchee",Шокирующее
-http://ott.watch/stream/DTCEUBKDH5/75.m3u8
 #EXTINF:-1 group-title="-09-08" tvg-logo="../Channel/Logo/Amedia Hit.png" tvg-id="650a0ae5672bd20d04bd2247b8cff705_amedia1" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913",Amedia 1
 http://46.162.201.15:8000/play/a08r/index.m3u8
 #EXTINF:-1 group-title="-09-08" tvg-logo="../Channel/Logo/Amedia Hit.png" tvg-id="650a0ae5672bd20d04bd2247b8cff705_amedia2" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914",Amedia 2
@@ -381,6 +91,8 @@ http://stream.mcquack.net/331/index.m3u8
 http://stream.mcquack.net/291/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",5Sport (Израиль)
 http://stream.mcquack.net/41/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",6 Соток
+http://stream.mcquack.net/405/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",7 канал (Казахстан)
 http://stream.mcquack.net/27/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",ATV (Армения)
@@ -403,8 +115,6 @@ http://stream.mcquack.net/123/index.m3u8
 http://stream.mcquack.net/175/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",BBC News UK
 http://stream.mcquack.net/85/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",BCU
-http://stream.mcquack.net/488/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",BTV (Литва)
 http://stream.mcquack.net/35/index.m3u8
 #EXTINF:-1 group-title="-1" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://image.winudf.com/v2/image1/Y29tLmJhYmVzdHYudHZiYWJlc19zY3JlZW5fM18xNTQyNzQ5ODE5XzAyOQ/screen-3.jpg?fakeurl=1&type=.jpg" logo="https://img11.lostpic.net/2018/08/07/2acc188a067e8126eec752a55d3ba4f9.png" channelId="3886" tvg-id="babes-tv",Babes TV
@@ -431,6 +141,22 @@ http://stream.mcquack.net/295/index.m3u8
 http://stream.mcquack.net/454/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Channel 24 (Израиль)
 http://stream.mcquack.net/42/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Cine Max
+http://stream.mcquack.net/476/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",CineMax 2
+http://stream.mcquack.net/475/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",CineMax 3
+http://stream.mcquack.net/474/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",CineMax 4
+http://stream.mcquack.net/472/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",CineMax 5
+http://stream.mcquack.net/471/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",CineMax
+http://stream.mcquack.net/484/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Cinema-b.jpg" logo="https://antifriz.tv/storage/images/pack_logos/199f12272161f01943e3972bdbb88db4.png" channelId="181" tvg-id="cinema-ru",Cinema HD
+http://stream.mcquack.net/62/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1627.jpg" channelId="-1" tvg-id="atv-cineman" tvg-shift="1" shift="4",Cineman
+http://stream.mcquack.net/122/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/ZKxgZ8v3/5c15644f99d43478c18fef794ce9b74d.png" logo="https://i.postimg.cc/NFhVGbx8/21976c6dcbacd90336fac5d3c837cf85.png" channelId="-1" tvg-id="continent-e",Continent E
 http://stream.mcquack.net/449/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci
@@ -473,6 +199,32 @@ http://stream.mcquack.net/129/index.m3u8
 http://stream.mcquack.net/182/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",FreeДОМ
 http://stream.mcquack.net/63/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Adventure
+http://stream.mcquack.net/432/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Cinema
+http://stream.mcquack.net/423/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Comedy
+http://stream.mcquack.net/426/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Family
+http://stream.mcquack.net/427/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Fantastic
+http://stream.mcquack.net/429/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Horror
+http://stream.mcquack.net/431/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Kids
+http://stream.mcquack.net/425/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Premiere
+http://stream.mcquack.net/424/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Rating
+http://stream.mcquack.net/422/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Romantic
+http://stream.mcquack.net/433/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Series
+http://stream.mcquack.net/430/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Tharilles
+http://stream.mcquack.net/434/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Fresh Vhs
+http://stream.mcquack.net/428/index.m3u8
 #EXTINF:-1 group-title="-1" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/t4zbT76J/3bbc7eb999b1de9829359ba69a4c9f3d.png" logo="http://ex.iptvin.ru/pic/2/Gagsnetwork-220x132-tr.png" channelId="-1" tvg-name="Gagsnetwork" tvg-id="gags-network",Gags Network
 http://stream.mcquack.net/458/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-220x220.png" logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-160x110-tr.png" channelId="183" tvg-id="gulli-girl",Gulli Girl
@@ -627,6 +379,8 @@ http://stream.mcquack.net/311/index.m3u8
 http://stream.mcquack.net/333/index.m3u8
 #EXTINF:-1 group-title="-1" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x132-tr.png" channelId="4400" tvg-id="vivid-red",Vivid Red
 http://stream.mcquack.net/284/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",WILD
+http://stream.mcquack.net/149/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",Yam Tichoni (Израиль)
 http://stream.mcquack.net/46/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/g0P3d2rT/9bd1a1ffff2d8832fc67abb53c5bc531.png" logo="https://i.postimg.cc/ydjmLC1r/2d3e77cb3be90d1d1ecf20ce89f6d1e0.png" channelId="921" tvg-id="zoom-ua",Zoom (Израиль)
@@ -637,6 +391,8 @@ http://stream.mcquack.net/327/index.m3u8
 http://stream.mcquack.net/263/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",i24 (Израиль)
 http://stream.mcquack.net/45/index.m3u8
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",kino kanal
+http://stream.mcquack.net/470/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/96c7b6f3577372d16e90da4afff81fb3.png" logo="http://overlay.iptvin.ru/epg/PIC/Red.png" channelId="5172" tvg-id="sony-tv",red
 http://stream.mcquack.net/69/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/4c420d979f66be686a9cad7f246cc325.png" logo="http://overlay.iptvin.ru/epg/PIC/Sci-Fi.png" channelId="5171" tvg-id="sony-scifi",sci-fi
@@ -675,11 +431,11 @@ http://stream.mcquack.net/274/index.m3u8
 http://stream.mcquack.net/275/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://stream.mcquack.net/80/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693014674",Дом Кино Премиум
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="94231982860",Дом Кино Премиум
 http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693014674",Дом Кино
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="94231982860",Дом Кино
 http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 http://stream.mcquack.net/227/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 http://stream.mcquack.net/412/index.m3u8
@@ -919,7 +675,7 @@ https://flussonic.mkpnet.ru/tv-132f51b35b47b897/video.m3u8
 https://stream8.cinerama.uz/1034/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/ctc-logo-01.jpg" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 https://flussonic.mkpnet.ru/tv-9cb92ea0862cd7b0/video.m3u8
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 https://flussonic.mkpnet.ru/tv-b515ccce67923f8a/video.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="https://i.postimg.cc/7YGX6SRb/16638cc3be4acfe210849f8a64251ce1.png" logo="http://ex.iptvin.ru/pic/2/Pyatnica-220x132-tr.png" channelId="26" tvg-id="piatnica",Пятница
 https://flussonic.mkpnet.ru/tv-7d5e5db805057e8f/video.m3u8
@@ -1405,14 +1161,6 @@ http://5.188.221.43:8080/play/2x2
 http://185.46.16.239:8000/Ani
 #EXTINF:-1 group-title="Детские",Axterix
 http://filmtvgroup.hopto.org/AxteriX/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Cartoons 90
-http://ott.watch/stream/DTCEUBKDH5/484.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Cartoons Big
-http://ott.watch/stream/DTCEUBKDH5/348.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Cartoons Short
-http://ott.watch/stream/DTCEUBKDH5/347.m3u8?bw9411590686232
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Cineman Симпсоны
-http://ott.watch/stream/DTCEUBKDH5/476.m3u8
 #EXTINF:-1 group-title="Детские",Clarity4K Anime
 http://hls127.freeott.top:8080/Clarity4K_Anime/video.m3u8
 #EXTINF:-1 group-title="Детские",Clarity4K Мультимир
@@ -1429,30 +1177,14 @@ https://stream8.cinerama.uz/1271/tracks-v1a1/mono.m3u8
 http://filmtvgroup.hopto.org/ledsbag_schenaychiy_patruL/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
 #EXTINF:-1 group-title="Детские",Film TV Group Мультказки
 http://filmtvgroup.hopto.org/FILM_TV_GROUP_multkazkI/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Fresh Kids
-http://ott.watch/stream/DTCEUBKDH5/425.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-220x220.png" logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-160x110-tr.png" channelId="183" tvg-id="gulli-girl",Gulli Girl
 https://flussonic.mkpnet.ru/tv-d66fcf59f2f4c966/video.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-220x220.png" logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-160x110-tr.png" channelId="183" tvg-id="gulli-girl",Gulli Girl
 https://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-220x220.png" logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-160x110-tr.png" channelId="183" tvg-id="gulli-girl",Gulli Girl
-http://ott.watch/stream/DTCEUBKDH5/305.m3u8
 #EXTINF:-1 group-title="Детские",HGTN
 https://v2.catcast.tv/content/34251/index.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/708.png" logo="http://overlay.iptvin.ru/epg/PIC/JimJam.png" channelId="191" tvg-id="jimjam",JimJam
-http://ott.watch/stream/DTCEUBKDH5/150.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/2Sxqcrrf/55e9b21a45dd51c71ff0b64014400eb0.png" logo="https://i.postimg.cc/v864RWbh/2c4f34f00d139473678ea6b974c73516.png" channelId="322" tvg-id="nick-jr",Nick Jr
-http://ott.watch/stream/DTCEUBKDH5/220.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Vb-Hi-U4b2-400x400.jpg" logo="http://overlay.iptvin.ru/epg/PIC/Nickelodeon.png" channelId="41" tvg-id="nickelodeon-ru",Nickelodeon
-http://ott.watch/stream/DTCEUBKDH5/443.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Niki junior
-http://ott.watch/stream/DTCEUBKDH5/262.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7",Niki kids
-http://ott.watch/stream/DTCEUBKDH5/271.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/Ti-Ji-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_727_12_70_1680000_0_0_0.png" channelId="182" tvg-id="tiji",TiJi
 https://flussonic.mkpnet.ru/tv-3848dd8604a262e0/video.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Ti-Ji-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_727_12_70_1680000_0_0_0.png" channelId="182" tvg-id="tiji",TiJi
-http://ott.watch/stream/DTCEUBKDH5/111.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/Ti-Ji-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_727_12_70_1680000_0_0_0.png" channelId="182" tvg-id="tiji",Tiji
 https://stream8.cinerama.uz/1441/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/bober-1.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%B1%D1%91%D1%80.png" channelId="646" tvg-id="bobior",Бобер
@@ -1461,14 +1193,10 @@ http://hls127.freeott.top:8080/Bober/video.m3u8
 https://stream8.cinerama.uz/1270/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="https://i.postimg.cc/wMGpkD57/1e4dda1ffa41ed4990fd41745f87e240.png" logo="https://i.postimg.cc/PqsdcbgD/d0739de70f61cb1fefb72441594da519.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки HD
 http://185.46.16.239:8000/V_gostyakh_u_skazki
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
-http://ott.watch/stream/DTCEUBKDH5/93.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/2bd4c8af1670253241e51f8df33cb8a0.png" logo="http://ex.iptvin.ru/pic/2/d5b1c880e0c2fdc576be6604a67a0233.png" channelId="39" tvg-id="detsky-mir",Детский мир
 http://158.101.222.193:88/georgia_play.php?id=detskymir
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/1f571c10d0b089e69f4552847134143f.png" logo="http://ex.iptvin.ru/pic/2/86c7dd5f15c0e2efeac8771cf556a52a.png" channelId="-1" tvg-id="detkinoint-tviksel" shift="3",Детское кино International
 https://v2.catcast.tv/content/38720/index.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/a99fd561da669a2b9573b459675befc7.png" logo="http://ex.iptvin.ru/pic/2/Kapitan-Fantastika-220x132-tr.png" channelId="2674" tvg-id="ginger-hd",Капитан Фантастика
-http://ott.watch/stream/DTCEUBKDH5/144.m3u8
 #EXTINF:-1 group-title="Детские",Кнопка ТВ
 http://api.alpaca.t62a.com/hls/9116/stream0.m3u8
 #EXTINF:-1 group-title="Детские",Король Лев 32004Хакуна МататаАвстраліяСША
@@ -1491,8 +1219,6 @@ https://flussonic.mkpnet.ru/tv-89530153f25733fe/video.m3u8
 https://stream8.cinerama.uz/1440/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Детские",Нікчемний Я 4 2024 професійний дубльований
 https://calypso.tortuga.tw/content/stream/films/despicable.me.4.2024.bdremux.1080p.ledoyen.dub_102367/hls/1080/index.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/QMtMf7fp/7d16f96a100992e3d4556640944b5069.png" logo="https://i.postimg.cc/BQTtb481/a9b92e1d54c5ef59bc40736361aac07c.png" channelId="433" tvg-id="pixel",Піксель
-http://ott.watch/stream/DTCEUBKDH5/323.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/5b2cfe86de6ca8068c39f225c642989c.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A0%D1%8B%D0%B6%D0%B8%D0%B9.png" channelId="2798" tvg-id="ryzhy",Рыжий
 https://stream8.cinerama.uz/1407/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/c112f07f0092fcb68f8b7ff312b96bd5.jpg" logo="http://ex.iptvin.ru/pic/2/Kids-220x132-tr.png" channelId="1728" tvg-id="sts-kids-hd",СТС Kids
@@ -1505,8 +1231,6 @@ http://185.46.16.239:8000/Disney_Channel
 http://5.188.221.43:8080/play/disney
 #EXTINF:-1 group-title="Детские" tvg-logo="http://ex.iptvin.ru/pic/2/Solnce-220x220.png" logo="http://ex.iptvin.ru/pic/2/Solnce-220x132-tr.png" channelId="958" tvg-id="solnce",Солнце
 https://flussonic.mkpnet.ru/tv-ac43800065b9b1b7/video.m3u8
-#EXTINF:-1 group-title="Детские" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Solnce-220x220.png" logo="http://ex.iptvin.ru/pic/2/Solnce-220x132-tr.png" channelId="958" tvg-id="solnce",Солнце
-http://ott.watch/stream/DTCEUBKDH5/118.m3u8
 #EXTINF:-1 group-title="Детские" tvg-logo="https://profile.ru/wp-content/uploads/2019/07/unnamed.jpg" logo="http://ex.iptvin.ru/pic/2/Logo-arch.png" channelId="-1",СоюзМультфильм
 http://194.26.229.213/souzmultfilm/index.m3u8
 #EXTINF:-1 group-title="Детские",Супергерои
@@ -1592,7 +1316,7 @@ http://wms.shared.streamshow.it/visualradio/mp4:visualradio/chunklist.m3u8
 #EXTINF:-1 tvg-id="RELAX.cz" tvg-country="CZ" tvg-language="Czech" tvg-logo="https://raw.githubusercontent.com/MarhyCZ/picons/master/640/relax.png" group-title="Музыкальные" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A0%D0%B0%D0%B4%D1%8B%D1%91%20%D0%A0%D1%8D%D0%BB%D0%B0%D0%BA%D1%81.png" channelId="-1",Relax
 https://dash2.antik.sk/live/test_relax/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Reload Radio Music Power HD
-http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw9411590686232
+http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw94309310480
 #EXTINF:-1 group-title="Музыкальные",Retro_Music_Television
 https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Rouge TV 720p
@@ -1923,7 +1647,7 @@ http://tinyurl.com/%74%76z%61%74%61k65?id=viasathist
 http://tinyurl.com/%74%76z%61%74%61k65?id=autoplus
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/2bd4c8af1670253241e51f8df33cb8a0.png" logo="http://ex.iptvin.ru/pic/2/d5b1c880e0c2fdc576be6604a67a0233.png" channelId="39" tvg-id="detsky-mir",Детский Мир
 http://tinyurl.com/%74%76z%61%74%61k65?id=detskymir
-#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="945795343116",Домашний International
+#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="94154655240",Домашний International
 http://tinyurl.com/%74%76z%61%74%61k65?id=domashni
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://tinyurl.com/%74%76z%61%74%61k65?id=eurokino
@@ -2069,7 +1793,7 @@ http://176.118.197.125/JimJam/index.m3u8
 http://176.118.197.101/KHL/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://ex.iptvin.ru/pic/2/bober-1.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%B1%D1%91%D1%80.png" channelId="646" tvg-id="bobior",Бобёр
 http://176.118.197.125/Bober/index.m3u8
-#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693014674",Дом Кино
+#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="94231982860",Дом Кино
 http://176.118.197.101/Dom_kino/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://176.118.197.125/Draiv/index.m3u8
@@ -2185,7 +1909,7 @@ http://45.145.32.13:20440/match_football3/index.m3u8?token=test
 http://45.145.32.13:20440/avto24/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 http://45.145.32.13:20440/sony_turbo/index.m3u8?token=test
-#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 http://45.145.32.13:20440/domashnij/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://45.145.32.13:20440/eurokino/index.m3u8?token=test
@@ -2339,7 +2063,7 @@ https://stream8.cinerama.uz/1429/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1423/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693014674",Дом Кино
+#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="94231982860",Дом Кино
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
 https://stream8.cinerama.uz/1426/tracks-v1a1/mono.m3u8
@@ -2555,6 +2279,248 @@ http://185.121.1.163:8083/OhotaRybalka/index.m3u8
 http://185.121.1.163:8083/TV1000RusskoeKino/index.m3u8
 #EXTINF:-1 group-title="Tест-17-08" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-name="TV1000" tvg-id="tv1000",TV 1000
 http://185.121.1.163:8083/TV1000/index.m3u8
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/16eb4e441289280b4377884fff613a03.png" logo="http://ex.iptvin.ru/pic/2/red-HD-220x132-tr.png" channelId="5172" tvg-id="sony-tv",.red HD
+http://cloud02.03cdn.wf:8080/ch833/index.m3u8?token=a0e01ca42f61b818187127fdc543642cac7279637
+#EXTINF:-1 group-title="Tест-24-08",4ever Cinema HD
+http://cloud03.03cdn.wf:8080/ch894/index.m3u8?token=a0e01ca42f61b818187127fdc543642cad4269fec
+#EXTINF:-1 group-title="Tест-24-08",4ever Drama HD
+http://cloud01.03cdn.wf:8080/ch124/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd5611a824
+#EXTINF:-1 group-title="Tест-24-08",4ever Theater HD
+http://cloud01.03cdn.wf:8080/ch125/index.m3u8?token=a0e01ca42f61b818187127fdc543642c0b7ffa824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/A2-HD-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-HD-new-white-220x132-tr.png" channelId="914" tvg-id="amedia2",A2 HD
+http://cloud03.03cdn.wf:8080/ch555/index.m3u8?token=a0e01ca42f61b818187127fdc543642c099409fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-HD-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-HD-new-whte-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium HD
+http://cloud01.03cdn.wf:8080/ch405/index.m3u8?token=a0e01ca42f61b818187127fdc543642ced9c1a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/2b792c2ed5518804c22fed12ed584692.jpg" logo="http://epg.openboxfan.com/picon/bcuactionhd.png" channelId="-1" tvg-id="bcu-action" shift="3",BCU Action HD
+http://cloud01.03cdn.wf:8080/ch530/index.m3u8?token=a0e01ca42f61b818187127fdc543642c73fa5a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Biography HDR
+http://cloud01.03cdn.wf:8080/ch524/index.m3u8?token=a0e01ca42f61b818187127fdc543642c17632a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/919f6072b7dd06bcaf2394c54d37f088.jpg" logo="http://epg.openboxfan.com/picon/bcucatastrophehd.png" channelId="-1" tvg-id="bcu-catastrophe" shift="3",BCU Catastrophe HD
+http://cloud01.03cdn.wf:8080/ch531/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce22fba824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/BCU-Charm-HD-220x220.png" logo="https://epg.openboxfan.com/picon/bcucharmhd.png" channelId="-1" tvg-id="bcu-charm",BCU Charm HD
+http://cloud01.03cdn.wf:8080/ch985/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdbfada824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/179d30db67811263d7507c6630ad6296.jpg" logo="http://epg.openboxfan.com/picon/bcucinemahd.png" channelId="-1" tvg-id="bcu-cinema" shift="3" tvg-country="1",BCU Cinema HD
+http://cloud01.03cdn.wf:8080/ch532/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca9285a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/db2f0d6f072c93712da06cfc29d7d445.jpg" logo="http://epg.openboxfan.com/picon/bcucinemaplushd.png" channelId="-1" tvg-id="bcu-cinemaplus" shift="3",BCU Cinema+ HD
+http://cloud01.03cdn.wf:8080/ch544/index.m3u8?token=a0e01ca42f61b818187127fdc543642c03c66a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Comedy HD hevc
+http://cloud01.03cdn.wf:8080/ch533/index.m3u8?token=a0e01ca42f61b818187127fdc543642c370eea824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/c694a4d34b380968a5473da5c73cf6d8.jpg" logo="http://epg.openboxfan.com/picon/bcucomedyhd.png" channelId="-1" tvg-id="bcu-comedy" shift="3",BCU Comedy HD
+http://cloud01.03cdn.wf:8080/ch593/index.m3u8?token=a0e01ca42f61b818187127fdc543642c38a17a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Cosmo HD hevc
+http://cloud01.03cdn.wf:8080/ch521/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5540ea824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/7a9fa402b1ea6eff7c0f8757e3694098.jpg" logo="https://bcumedia.pro/storage/images/channels/7b5c12c8d.png" channelId="-1" tvg-id="bcu-criminal" shift="3",BCU Criminal HD
+http://cloud01.03cdn.wf:8080/ch550/index.m3u8?token=a0e01ca42f61b818187127fdc543642c93a44a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/6e5a8ed9ace4de129515212abff5a533.jpg" logo="http://epg.openboxfan.com/picon/bcufantastichd.png" channelId="-1" tvg-id="bcu-fantastic" shift="3",BCU Fantastic HD
+http://cloud01.03cdn.wf:8080/ch534/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5a6b7a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/fe8a8586b3d547797fcf95a8db3bd964.jpg" logo="http://epg.openboxfan.com/picon/bcufilmystichd.png" channelId="-1" tvg-id="bcu-filmystic" shift="3",BCU FilMystic HD
+http://cloud01.03cdn.wf:8080/ch535/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca0d67a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/456750026a8aeafce9278eb61e3c93b3.jpg" logo="http://epg.openboxfan.com/picon/bcuhistoryhd.png" channelId="-1" tvg-id="bcu-history" shift="3" tvg-country="1",BCU History HD
+http://cloud01.03cdn.wf:8080/ch545/index.m3u8?token=a0e01ca42f61b818187127fdc543642cbe6dba824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/f4920c77a4cfe0f61db080fde81cc16d.jpg" logo="http://epg.openboxfan.com/picon/bcukinoratinghd.png" channelId="-1" tvg-id="bcu-kinorating" shift="3" tvg-country="1",BCU Kinorating HD
+http://cloud01.03cdn.wf:8080/ch536/index.m3u8?token=a0e01ca42f61b818187127fdc543642cda62ca824
+#EXTINF:-1 group-title="Tест-24-08",BCU Marvel HD hevc
+http://cloud01.03cdn.wf:8080/ch529/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4598da824
+#EXTINF:-1 group-title="Tест-24-08",BCU Media 2 HDR
+http://cloud01.03cdn.wf:8080/ch522/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7b7dfa824
+#EXTINF:-1 group-title="Tест-24-08",BCU Media 3 HDR
+http://cloud01.03cdn.wf:8080/ch523/index.m3u8?token=a0e01ca42f61b818187127fdc543642c510e5a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Media HD
+http://cloud01.03cdn.wf:8080/ch541/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd4ba8a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Premiere 1 HDR
+http://cloud01.03cdn.wf:8080/ch566/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5b5c1a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Premiere 2 HDR
+http://cloud01.03cdn.wf:8080/ch567/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4fe01a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Premiere 3 HDR
+http://cloud01.03cdn.wf:8080/ch568/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd1d34a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/282231e4df7f1332be5d9e8294197de2.jpg" logo="http://epg.openboxfan.com/picon/bcupremierehd.png" channelId="-1" tvg-id="bcu-premiere" shift="3",BCU Premiere HD
+http://cloud01.03cdn.wf:8080/ch537/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7f8e6a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/9500c3bceee76d081884b3a253d98ee2.jpg" logo="http://epg.openboxfan.com/picon/bcuruserialhd.png" channelId="-1" shift="3",BCU RUSerial HD
+http://cloud01.03cdn.wf:8080/ch527/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb50f1a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Reality HD hevc
+http://cloud01.03cdn.wf:8080/ch594/index.m3u8?token=a0e01ca42f61b818187127fdc543642cae829a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/90ab1c7ba20febd12e9c44fb58f1ce0b.jpg" logo="http://epg.openboxfan.com/picon/bcuromantichd.png" channelId="-1" tvg-id="bcu-romantic" shift="3" tvg-country="1",BCU Romantic HD
+http://cloud01.03cdn.wf:8080/ch543/index.m3u8?token=a0e01ca42f61b818187127fdc543642c2c1f2a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Russia 90s HD
+http://cloud01.03cdn.wf:8080/ch518/index.m3u8?token=a0e01ca42f61b818187127fdc543642c76a1aa824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/f8e149b917568063a1e4315be5e8c4fb.jpg" logo="http://epg.openboxfan.com/picon/bcurussianhd.png" channelId="-1" tvg-id="bcu-russian" shift="3",BCU Russian HD
+http://cloud01.03cdn.wf:8080/ch538/index.m3u8?token=a0e01ca42f61b818187127fdc543642c61a41a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/9b1dcf5891c325c7ffd4e41f782bdaf3.jpg" logo="http://epg.openboxfan.com/picon/bcustarshd.png" channelId="-1" tvg-id="bcu-stars" shift="3",BCU Stars HD
+http://cloud01.03cdn.wf:8080/ch528/index.m3u8?token=a0e01ca42f61b818187127fdc543642c119c5a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Survival HD hevc
+http://cloud01.03cdn.wf:8080/ch563/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5c4c4a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/BCU-Tru-Motion-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/BCU-Tru-Motion-HD-220x132-tr.png" channelId="-1" tvg-id="bcu-trumotion",BCU TruMotion HD
+http://cloud01.03cdn.wf:8080/ch598/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca3ce5a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/c56d50fbede5ab938c67f4dfd99cf428.jpg" logo="http://epg.openboxfan.com/picon/bcuvhshd.png" channelId="-1" tvg-id="bcu-vhs" shift="3",BCU VHS HD
+http://cloud01.03cdn.wf:8080/ch542/index.m3u8?token=a0e01ca42f61b818187127fdc543642cbb0dea824
+#EXTINF:-1 group-title="Tест-24-08",BCU Кинозал 1 HD
+http://cloud01.03cdn.wf:8080/ch595/index.m3u8?token=a0e01ca42f61b818187127fdc543642c39ea0a824
+#EXTINF:-1 group-title="Tест-24-08",BCU Кинозал 2 HD
+http://cloud01.03cdn.wf:8080/ch596/index.m3u8?token=a0e01ca42f61b818187127fdc543642c3b1eda824
+#EXTINF:-1 group-title="Tест-24-08",BCU Кинозал 3 HD
+http://cloud01.03cdn.wf:8080/ch597/index.m3u8?token=a0e01ca42f61b818187127fdc543642cfc4b0a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/29b7544aa704d0a69c0df2d205e33ac5.jpg" logo="http://epg.openboxfan.com/picon/bcu%D1%81%D1%81%D1%81%D1%80hd.png" channelId="-1" tvg-id="845" shift="3" tvg-country="1",BCU СССР HD
+http://cloud01.03cdn.wf:8080/ch539/index.m3u8?token=a0e01ca42f61b818187127fdc543642c52600a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/9ccc6de6ea6ad2661413bc51087d1d74.jpg" logo="http://bcumedia.pro/images/homepage/ch_8.png" channelId="-1" tvg-id="bcu-svaty" shift="3",BCU Сваты HD
+http://cloud01.03cdn.wf:8080/ch540/index.m3u8?token=a0e01ca42f61b818187127fdc543642c91e70a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Comedy-Central-220x220.png" logo="http://ex.iptvin.ru/pic/2/Comedy-Central-220x132-tr.png" channelId="1190" tvg-id="paramount-comedy",Comedy Central
+http://cloud01.03cdn.wf:8080/ch032/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd69ada824
+#EXTINF:-1 group-title="Tест-24-08",DUO Comedy Series HD
+http://cloud01.03cdn.wf:8080/ch1542/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce7540a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Home Series HD
+http://cloud01.03cdn.wf:8080/ch1539/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd6e20a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Premium 1 HD
+http://cloud01.03cdn.wf:8080/ch1500/index.m3u8?token=a0e01ca42f61b818187127fdc543642c1414da824
+#EXTINF:-1 group-title="Tест-24-08",DUO Premium 2 HD
+http://cloud01.03cdn.wf:8080/ch1502/index.m3u8?token=a0e01ca42f61b818187127fdc543642c48741a824
+#EXTINF:-1 group-title="Tест-24-08",DUO RuCrime HD
+http://cloud01.03cdn.wf:8080/ch1508/index.m3u8?token=a0e01ca42f61b818187127fdc543642c76a34a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Serial Hits HD
+http://cloud01.03cdn.wf:8080/ch1538/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce6ee8a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Война семей HD
+http://cloud01.03cdn.wf:8080/ch1532/index.m3u8?token=a0e01ca42f61b818187127fdc543642c1d918a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Жуки HD
+http://cloud01.03cdn.wf:8080/ch796/index.m3u8?token=a0e01ca42f61b818187127fdc543642c92caea824
+#EXTINF:-1 group-title="Tест-24-08",DUO Игра престолов HD
+http://cloud01.03cdn.wf:8080/ch1534/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd9d0da824
+#EXTINF:-1 group-title="Tест-24-08",DUO Комеди сериалы HD
+http://cloud01.03cdn.wf:8080/ch1541/index.m3u8?token=a0e01ca42f61b818187127fdc543642cad207a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Комедии СССР HD
+http://cloud01.03cdn.wf:8080/ch793/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd6f61a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Милиционер с Рублёвки
+http://cloud01.03cdn.wf:8080/ch794/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4a2c3a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Отпуск HD
+http://cloud01.03cdn.wf:8080/ch797/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf79d9a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Полицейский с Рублёвки
+http://cloud01.03cdn.wf:8080/ch795/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9521fa824
+#EXTINF:-1 group-title="Tест-24-08",DUO Праздники HD
+http://cloud01.03cdn.wf:8080/ch829/index.m3u8?token=a0e01ca42f61b818187127fdc543642c45400a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Реальные пацаны HD
+http://cloud01.03cdn.wf:8080/ch1535/index.m3u8?token=a0e01ca42f61b818187127fdc543642c71cb7a824
+#EXTINF:-1 group-title="Tест-24-08",DUO СашаТаня HD
+http://cloud01.03cdn.wf:8080/ch1509/index.m3u8?token=a0e01ca42f61b818187127fdc543642c51c0aa824
+#EXTINF:-1 group-title="Tест-24-08",DUO Сваты сериал HD
+http://cloud01.03cdn.wf:8080/ch1543/index.m3u8?token=a0e01ca42f61b818187127fdc543642c07189a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Телохранители HD
+http://cloud01.03cdn.wf:8080/ch173/index.m3u8?token=a0e01ca42f61b818187127fdc543642c65d72a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Трёшка HD
+http://cloud01.03cdn.wf:8080/ch1533/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7ee79a824
+#EXTINF:-1 group-title="Tест-24-08",DUO Универ HD
+http://cloud01.03cdn.wf:8080/ch1531/index.m3u8?token=a0e01ca42f61b818187127fdc543642c96f9aa824
+#EXTINF:-1 group-title="Tест-24-08",DUO Физрук HD
+http://cloud01.03cdn.wf:8080/ch1536/index.m3u8?token=a0e01ca42f61b818187127fdc543642c43336a824
+#EXTINF:-1 group-title="Tест-24-08",DUO ЧОП HD
+http://cloud01.03cdn.wf:8080/ch1530/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb9eefa824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/ee68b76f79f47a7b8d43d7be4a07d3be.jpg" logo="https://antifriz.tv/storage/images/channel_logos/fox-life-hd.png" channelId="205" tvg-id="foxlife",Fox Life HD
+http://cloud01.03cdn.wf:8080/ch175/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd4dc8a824
+#EXTINF:-1 group-title="Tест-24-08",HD Hollywood
+http://cloud03.03cdn.wf:8080/ch027/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5d7d89fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Plan-B-HD-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/_Transp_2.png" channelId="-1" tvg-id="plan-b",Plan B HD
+http://cloud01.03cdn.wf:8080/ch886/index.m3u8?token=a0e01ca42f61b818187127fdc543642cae605a824
+#EXTINF:-1 group-title="Tест-24-08",Sci-Fi
+http://cloud03.03cdn.wf:8080/ch160/index.m3u8?token=a0e01ca42f61b818187127fdc543642c986899fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/MGmVG064/092282226e7180fa520678eac647a853.png" logo="https://i.postimg.cc/TP6nGN6g/6152a0863a53ddce927cf0e86d044ff9.png" channelId="214" tvg-name="TV1000 Action" tvg-id="tv1000-action",TV 1000 Action HD
+http://cloud01.03cdn.wf:8080/ch033/index.m3u8?token=a0e01ca42f61b818187127fdc543642ccc6cba824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/xCgv6vBH/d323d1c8940cce27e8faa24a9cfcd5b0.png" logo="https://i.postimg.cc/tg3txQ5B/057512077cf298614beddfdf244bf734.png" channelId="66" tvg-name="TV1000 HD" tvg-id="tv1000",TV 1000 HD
+http://cloud01.03cdn.wf:8080/ch053/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9de70a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/wTRNNYxD/ceb9f6c2523e41bb0d9f1dc0177e3807.png" logo="https://i.postimg.cc/VvpbhDgS/ebc533f51b660b3c8d2bf47d2322a1b7.png" channelId="65" tvg-name="TV1000 Русское кино" tvg-id="tv1000-russkoe-kino",TV 1000 Русское кино HD
+http://cloud01.03cdn.wf:8080/ch022/index.m3u8?token=a0e01ca42f61b818187127fdc543642c213a6a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/326.jpg" logo="http://infoua.biz/image/tv/stream/vipc.png" channelId="607" tvg-id="vip-comedy",VIP Comedy HD
+http://cloud01.03cdn.wf:8080/ch021/index.m3u8?token=a0e01ca42f61b818187127fdc543642c446dba824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/328.jpg" logo="https://noblink.media/pics/3bbcba1962a8e6b1a15974ce65cf28fe.png" channelId="606" tvg-id="vip-megahit",VIP Megahit HD
+http://cloud01.03cdn.wf:8080/ch019/index.m3u8?token=a0e01ca42f61b818187127fdc543642c477f5a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/327.jpg" logo="http://infoua.biz/image/tv/stream/vipp.png" channelId="605" tvg-id="vip-premiere",VIP Premiere HD
+http://cloud01.03cdn.wf:8080/ch020/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5d4bba824
+#EXTINF:-1 group-title="Tест-24-08",viju TV1000 Новелла HD
+http://cloud01.03cdn.wf:8080/ch009/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb2280a824
+#EXTINF:-1 group-title="Tест-24-08",Бестселлер
+http://cloud01.03cdn.wf:8080/ch090/index.m3u8?token=a0e01ca42f61b818187127fdc543642c743f4a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/MGCX0vsw/32ab82bb736529ba8d537d320284db87.png" logo="https://i.postimg.cc/sxDz5zRy/34bd7791d9ebfc4706c02e275ea9d942.png" channelId="4764" tvg-id="blokbaster",Блокбастер HD
+http://cloud01.03cdn.wf:8080/ch335/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4e139a824
+#EXTINF:-1 group-title="Tест-24-08",Боевики HD
+http://cloud01.03cdn.wf:8080/ch397/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca4663a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/06f09c696c0f513a5ac97dc9013d1e61.png" logo="https://i115.fastpic.org/big/2021/0914/cf/175c8cc11309bebd5de946f8e777a0cf.png" channelId="-1" tvg-id="denpobedy" shift="3",День Победы HD
+http://cloud01.03cdn.wf:8080/ch448/index.m3u8?token=a0e01ca42f61b818187127fdc543642c81b6ba824
+#EXTINF:-1 group-title="Tест-24-08",Детектив
+http://cloud01.03cdn.wf:8080/ch097/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9e723a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="94231982860",Дом Кино Премиум HD
+http://cloud01.03cdn.wf:8080/ch001/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce8018a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0107.png" logo="https://antifriz.tv/storage/images/pack_logos/94f6f9dc05e680af446947572ab3c4d0.png" channelId="1636" tvg-name="Наш Кинороман" tvg-id="dushevnoe" shift="3",Душевное HD
+http://cloud01.03cdn.wf:8080/ch025/index.m3u8?token=a0e01ca42f61b818187127fdc543642c8940ca824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
+http://cloud01.03cdn.wf:8080/ch059/index.m3u8?token=a0e01ca42f61b818187127fdc543642c06600a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/indiyskoe-kino.png" channelId="168" tvg-id="indiyskoe-kino",Индийское кино
+http://cloud03.03cdn.wf:8080/ch078/index.m3u8?token=a0e01ca42f61b818187127fdc543642c1e1439fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6207.png" logo="https://i121.fastpic.org/big/2023/0206/9a/1a9f88ce790e20876131ffe0d61fc59a.png" channelId="4766" tvg-id="kamedi",Камеди HD
+http://cloud01.03cdn.wf:8080/ch452/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdbcada824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/5c93da55c6af43ffa5b21aba7de9e569.png" logo="http://ex.iptvin.ru/pic/2/Kino-TV-HD-256x256-tr.png" channelId="342" tvg-id="kino-tv",Кино ТВ HD
+http://cloud01.03cdn.wf:8080/ch026/index.m3u8?token=a0e01ca42f61b818187127fdc543642cac16ba824
+#EXTINF:-1 group-title="Tест-24-08",КиноКульт HD
+http://cloud01.03cdn.wf:8080/ch100/index.m3u8?token=a0e01ca42f61b818187127fdc543642c40b87a824
+#EXTINF:-1 group-title="Tест-24-08",Киноджем 1 HD
+http://cloud01.03cdn.wf:8080/ch578/index.m3u8?token=a0e01ca42f61b818187127fdc543642c19f49a824
+#EXTINF:-1 group-title="Tест-24-08",Киноджем 2 HD
+http://cloud02.03cdn.wf:8080/ch579/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc0c149637
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinokomediya.png" channelId="194" tvg-id="kinokomedia",Кинокомедия HD
+http://cloud01.03cdn.wf:8080/ch011/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca8926a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/2ee2595bb04c6ab017b459d7c230ad441.png" channelId="270" tvg-id="kinomiks",Киномикс HD
+http://cloud01.03cdn.wf:8080/ch384/index.m3u8?token=a0e01ca42f61b818187127fdc543642c2501ca824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6208.png" logo="https://antifriz.tv/storage/images/pack_logos/a4589792317696060765519a4d2256b8.png" channelId="599" tvg-id="kinopokaz-hd",Кинопоказ HD
+http://cloud01.03cdn.wf:8080/ch333/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce02d9a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinopremera-hd.png" channelId="410" tvg-id="kinopremiera-hd",Кинопремьера HD
+http://cloud01.03cdn.wf:8080/ch407/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9e71ca824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinosvidanie.png" channelId="413" tvg-id="kinosvidanie",Киносвидание HD
+http://cloud01.03cdn.wf:8080/ch012/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce945da824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinosemya.png" channelId="568" tvg-id="kinosemiya",Киносемья HD
+http://cloud02.03cdn.wf:8080/ch430/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd31bb9637
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinoseriya.png" channelId="195" tvg-id="kinoseria",Киносерия HD
+http://cloud01.03cdn.wf:8080/ch072/index.m3u8?token=a0e01ca42f61b818187127fdc543642c98288a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/5570.png" logo="https://i115.fastpic.org/big/2021/0914/52/a7d4ef67085f8a7d8a49ee73cf7fd752.png" channelId="1859" tvg-id="kinouzhas",Киноужас HD
+http://cloud01.03cdn.wf:8080/ch387/index.m3u8?token=a0e01ca42f61b818187127fdc543642c46b4da824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/kinohit.png" channelId="409" tvg-id="kinoxit",Кинохит HD
+http://cloud01.03cdn.wf:8080/ch010/index.m3u8?token=a0e01ca42f61b818187127fdc543642c82bc1a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0120.png" logo="https://i115.fastpic.org/big/2021/0914/24/b66e13ed90428b0a54259bf62532ad24.png" channelId="230" tvg-id="komedijnoe-hd",Комедийное HD
+http://cloud01.03cdn.wf:8080/ch016/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc0e10a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/1115.png" logo="https://antifriz.tv/storage/images/channel_logos/russkaja-comedija.png" channelId="71" tvg-id="russkaya-komedia",Комедия
+http://cloud01.03cdn.wf:8080/ch060/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc1e05a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Kriminalnoe-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Kriminalnoe-HD-220x132-tr.png" channelId="5209" tvg-id="kriminalnoe-hd",Криминальное HD
+http://cloud01.03cdn.wf:8080/ch855/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7a4f8a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/VLRVBZ5H/1608390e382724fc8cbb1b44f64ab3db.png" logo="https://i.postimg.cc/QCgnz0mC/bb13ad519d339d546489b45a4f048633.png" channelId="469" tvg-id="nashe-lubimoe",Любимое HD
+http://cloud01.03cdn.wf:8080/ch406/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf4825a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/XJPdSz4L/3fb005e09c5ebc77bcb799b52d402960.png" logo="https://i.postimg.cc/fkndkS30/b6d4dde925e3705a26de5af36cabddc3.png" channelId="314" tvg-id="lubimoe-kino",Любимое кино
+http://cloud01.03cdn.wf:8080/ch077/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4af71a824
+#EXTINF:-1 group-title="Tест-24-08",Мосфильм HD
+http://cloud01.03cdn.wf:8080/ch561/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4f5a2a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/mujskoe-kino-hd.png" channelId="169" tvg-id="muzhskoe-kino",Мужское кино HD
+http://cloud01.03cdn.wf:8080/ch029/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb503da824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6209.png" logo="https://i.postimg.cc/26985yPh/8dae3f5f756ffabdae4a2e9c9d7e3eb6.png" channelId="4767" tvg-id="nash-kinopokaz-hd",Наш Кинопоказ HD
+http://cloud01.03cdn.wf:8080/ch336/index.m3u8?token=a0e01ca42f61b818187127fdc543642c41b62a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6267.png" logo="https://antifriz.tv/storage/images/pack_logos/19f72adb59334a8bca124d8a91c669ad.png" channelId="4769" tvg-id="nashe-muzhskoe-hd",Наше Мужское HD
+http://cloud03.03cdn.wf:8080/ch337/index.m3u8?token=a0e01ca42f61b818187127fdc543642cebdaf9fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/395.jpg" logo="http://overlay.iptvin.ru/epg/PIC/NASHEKRUTOE.png" channelId="1635" tvg-id="nashehd",Наше крутое HD
+http://cloud01.03cdn.wf:8080/ch024/index.m3u8?token=a0e01ca42f61b818187127fdc543642c3b8ada824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/nashe-novoe-kino.png" channelId="315" tvg-id="nashe-novoe-kino",Наше новое кино
+http://cloud01.03cdn.wf:8080/ch054/index.m3u8?token=a0e01ca42f61b818187127fdc543642c83f58a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/0a7313b3457b83f9f8cb43dfcabd3a14.jpg" logo="https://i115.fastpic.org/big/2021/0914/2a/32eb8568fe787d1bcbc620e5b14b732a.png" channelId="1633" tvg-id="ostrosiuzhetnoe-hd",Остросюжетное HD
+http://cloud01.03cdn.wf:8080/ch177/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5492ba824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6230.png" logo="https://i.postimg.cc/wjt6W9Rj/dd0ef51448037f03998a59edd6feeb56.png" channelId="3922" tvg-id="pobeda",Победа HD
+http://cloud02.03cdn.wf:8080/ch469/index.m3u8?token=a0e01ca42f61b818187127fdc543642c578af9637
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0121.png" logo="https://antifriz.tv/storage/images/channel_logos/kino-premium-hd.png" channelId="1637" tvg-id="premialnoe-hd",Премиальное HD
+http://cloud01.03cdn.wf:8080/ch023/index.m3u8?token=a0e01ca42f61b818187127fdc543642c72fd0a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/74e9f4dc0df6f03c8404e7dd71f3ef85.png" logo="http://ex.iptvin.ru/pic/2/Pro-lyubov-220x132-tr.png" channelId="4765" tvg-id="pro-lyubov",Про Любовь HD
+http://cloud01.03cdn.wf:8080/ch451/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce7570a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/rodnoe-kino.png" channelId="316" tvg-id="rodnoe-kino",Родное кино
+http://cloud01.03cdn.wf:8080/ch056/index.m3u8?token=a0e01ca42f61b818187127fdc543642c04141a824
+#EXTINF:-1 group-title="Tест-24-08",Роман
+http://cloud03.03cdn.wf:8080/ch088/index.m3u8?token=a0e01ca42f61b818187127fdc543642cef5089fec
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/5537.png" logo="http://ex.iptvin.ru/pic/2/Romantichnoe-HD-205x150-tr.png" channelId="4165" tvg-id="romantichnoe-hd",Романтичное HD
+http://cloud01.03cdn.wf:8080/ch340/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdce25a824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/hit.jpg" logo="https://antifriz.tv/storage/images/pack_logos/39614c6364ef51682293f4250c5d26f0.png" channelId="4768" tvg-id="khit-hd",Хит HD
+http://cloud01.03cdn.wf:8080/ch334/index.m3u8?token=a0e01ca42f61b818187127fdc543642c6fb7ea824
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/CHizhik-220x220.png" logo="https://epg.openboxfan.com/picon/чижик.png" channelId="5208" tvg-id="chizhik",Чижик HD
+http://cloud02.03cdn.wf:8080/ch858/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5e26a9637
+#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0119.png" logo="http://ex.iptvin.ru/pic/2/SHokiruyushchee-HD-205x150-tr.png" channelId="229" tvg-id="shokiruyushchee-hd",Шокирующее HD
+http://cloud01.03cdn.wf:8080/ch139/index.m3u8?token=a0e01ca42f61b818187127fdc543642c861f8a824
 #EXTINF:-1 group-title="USA" tvg-logo="https://i.imgur.com/0j5Aget.png",30A The Beach Show
 https://30a-tv.com/beachy.m3u8
 #EXTINF:-1 group-title="USA" tvg-logo="https://i.imgur.com/hSYez3V.png",Atlanta Channel (720p)
@@ -2649,11 +2615,11 @@ https://fs.uplink.kz/avto24/mono.m3u8?token=onlinetv
 https://fs.uplink.kz/bober/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 https://fs.uplink.kz/v_gostyah_u_skazki/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" channelId="948693014674",Дом кино премиум
+#EXTINF:-1 group-title="Uplink" channelId="94231982860",Дом кино премиум
 https://fs.uplink.kz/dom_kino_premium/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="948693014674",Дом кино
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="94231982860",Дом кино
 https://fs.uplink.kz/dom_kino/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 https://fs.uplink.kz/domashniy/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 https://fs.uplink.kz/dorama/mono.m3u8?token=onlinetv
@@ -3011,7 +2977,7 @@ http://185.46.16.239:8000/Eurosport_1
 http://185.46.16.239:8000/V_gostyakh_u_skazki
 #EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://185.46.16.239:8000/Doktor
-#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 http://185.46.16.239:8000/Domashniy
 #EXTINF:-1 group-title="Инет" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://185.46.16.239:8000/Drayv
@@ -3110,7 +3076,7 @@ https://w1.mediastreaming.it/orlertv/livestream/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Prima TV Sicilia
 http://flash2.streaming.xdevel.com/primatv/primatv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",RDS Social TV
-https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw9411590686232
+https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw94309310480
 #EXTINF:-1 group-title="Италия",RTP Sicilia
 https://flash2.xdevel.com/rtptv/rtptv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Radio 51
@@ -3457,13 +3423,13 @@ http://kinowalk.hopto.org/vhs90e_live
 http://kinowalk.hopto.org/mychennal12345_live
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://images.live.vkvideo.ru/user/31457995/avatar?change_time=1772638699&croped=1&mh=140&mw=140",Дикарка
 http://kinowalk.hopto.org/dikarka_live
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="948693014674",Дом Кино Премиум HD
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="94231982860",Дом Кино Премиум HD
 http://46.162.201.15:8000/play/a091/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="948693014674",Дом Кино
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="94231982860",Дом Кино
 http://46.162.201.15:8000/play/a03p/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" channelId="945795343116",Домашний 720x576
+#EXTINF:-1 group-title="Кино и сериалы" channelId="94154655240",Домашний 720x576
 http://31.131.141.195:8000/play/a001/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693014674" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795343116",Домашний
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?94231982860" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="94154655240",Домашний
 http://5.188.221.43:8080/play/domashniy
 #EXTINF:-1 group-title="Кино и сериалы",Евро кино
 http://31.148.48.15/Evrokino/tracks-v1a1/mono.m3u8?token=iptvin.ru
@@ -3925,9 +3891,9 @@ https://s70378.cdn.ngenix.net/glazami_turista/1/index.m3u8
 https://s70378.cdn.ngenix.net/detskij_mir/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
 https://s70378.cdn.ngenix.net/dikiy/1/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693014674",Дом Кино Премиум
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="94231982860",Дом Кино Премиум
 https://s70378.cdn.ngenix.net/dom_kino_premium_hd/3/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693014674",Дом Кино
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="94231982860",Дом Кино
 https://s70378.cdn.ngenix.net/dom_kino/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 https://s70378.cdn.ngenix.net/evrokino/1/index.m3u8
@@ -4076,7 +4042,7 @@ http://portal.ott.pink/C5UK_1plus1SD/index.m3u8?token=927E03BF1A83DF5DE6628CAF78
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 http://streamvideol1.luxnet.ua/news24/smil:news24.stream.smil/chunklist.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411590686232
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw94309310480
 #EXTINF:-1 group-title="Украина",Espreso TV
 https://dash3.antik.sk/live/test_espresso/playlist.m3u8
 #EXTINF:-1 group-title="Украина",FILM TV Кінозал
@@ -4173,16 +4139,12 @@ https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8
 https://v148173.cdn-d1.com/a98567b9b4cfb4e139bf750a4e37a40eec84f198/video.drive-movie.com/contents/videos/6000/6748/6748.mp4
 #EXTINF:-1 group-title="Эротика (18+)",Anal
 http://cdn.adultiptv.net/anal.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://image.winudf.com/v2/image1/Y29tLmJhYmVzdHYudHZiYWJlc19zY3JlZW5fM18xNTQyNzQ5ODE5XzAyOQ/screen-3.jpg?fakeurl=1&type=.jpg" logo="https://img11.lostpic.net/2018/08/07/2acc188a067e8126eec752a55d3ba4f9.png" channelId="3886" tvg-id="babes-tv",Babes TV
-http://ott.watch/stream/DTCEUBKDH5/55.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="https://image.winudf.com/v2/image1/Y29tLmJhYmVzdHYudHZiYWJlc19zY3JlZW5fM18xNTQyNzQ5ODE5XzAyOQ/screen-3.jpg?fakeurl=1&type=.jpg" logo="https://img11.lostpic.net/2018/08/07/2acc188a067e8126eec752a55d3ba4f9.png" channelId="3886" tvg-id="babes-tv",Babes TV
 http://212.102.38.45/live/test_basbes_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="https://image.winudf.com/v2/image1/Y29tLmJhYmVzdHYudHZiYWJlc19zY3JlZW5fM18xNTQyNzQ5ODE5XzAyOQ/screen-3.jpg?fakeurl=1&type=.jpg" logo="https://img11.lostpic.net/2018/08/07/2acc188a067e8126eec752a55d3ba4f9.png" channelId="3886" tvg-id="babes-tv",Babes TV
 http://88.212.7.11/live/test_basbes_hd_hevc/playlist.m3u8
 #EXTINF:-1 parent-code="1234"tvg-rec="7" timeshift="7" group-title="Эротика (18+)" tvg-logo="https://image.winudf.com/v2/image1/Y29tLmJhYmVzdHYudHZiYWJlc19zY3JlZW5fM18xNTQyNzQ5ODE5XzAyOQ/screen-3.jpg?fakeurl=1&type=.jpg" logo="https://img11.lostpic.net/2018/08/07/2acc188a067e8126eec752a55d3ba4f9.png" channelId="3886" tvg-id="babes-tv",Babes TV
 http://stream.mcquack.net/55/index.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://www.crdru.net/b/templates/ottch/barely-legal.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="4519" tvg-id="barely-legal",Barely Legal TV
-http://ott.watch/stream/DTCEUBKDH5/289.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://www.crdru.net/b/templates/ottch/barely-legal.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="4519" tvg-id="barely-legal",Barely Legal TV
 http://stream.mcquack.net/289/index.m3u8
 #EXTINF:-1 parent-code="1234"tvg-rec="7" timeshift="7" group-title="Эротика (18+)" tvg-logo="https://www.crdru.net/b/templates/ottch/barely-legal.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="4519" tvg-id="barely-legal",Barely Legal TV
@@ -4200,8 +4162,6 @@ http://cdn.adultiptv.net/blonde.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Blowjob
 http://cdn.adultiptv.net/blowjob.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/W4pWDNXW/7d307ce4e7002eb4da372f4f86b45d38.png" logo="https://i.postimg.cc/g2m45cFz/7ccf4c6e63386a291bca0a81996a6df4.png" channelId="274" tvg-id="blue-hustler",Blue Hustler
-http://ott.watch/stream/DTCEUBKDH5/280.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/W4pWDNXW/7d307ce4e7002eb4da372f4f86b45d38.png" logo="https://i.postimg.cc/g2m45cFz/7ccf4c6e63386a291bca0a81996a6df4.png" channelId="274" tvg-id="blue-hustler",Blue Hustler
 http://stream.mcquack.net/280/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="https://i.postimg.cc/W4pWDNXW/7d307ce4e7002eb4da372f4f86b45d38.png" logo="https://i.postimg.cc/g2m45cFz/7ccf4c6e63386a291bca0a81996a6df4.png" channelId="274" tvg-id="blue-hustler",Blue Hustler
 http://185.23.80.23:8080/BlueHustler/index.m3u8
@@ -4209,8 +4169,6 @@ http://185.23.80.23:8080/BlueHustler/index.m3u8
 http://stream.mcquack.net/280/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Brazzers TV Europa
 http://193.239.186.231/BRAZZERS/index.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/HWN2p0qh/c8f2a32001b4d4a03389c72de90cd4b9.png" logo="https://i.postimg.cc/wB95WwN7/c2c1aedc18f6b6b343599f921832d0ee.png" channelId="518" tvg-id="brazzers-tv-europe",Brazzers TV Europe
-http://ott.watch/stream/DTCEUBKDH5/53.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="https://i.postimg.cc/HWN2p0qh/c8f2a32001b4d4a03389c72de90cd4b9.png" logo="https://i.postimg.cc/wB95WwN7/c2c1aedc18f6b6b343599f921832d0ee.png" channelId="518" tvg-id="brazzers-tv-europe",Brazzers TV Europe
 http://88.212.7.11/live/test_brazzers_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="https://i.postimg.cc/28vXMX1w/0a25b77db99912e8940dbe1cb01c2441.png" logo="https://i.postimg.cc/63mdpwmv/f05ac66f18266019ce2142684a86777b.png" channelId="-1",Brazzers TV
@@ -4221,10 +4179,6 @@ http://193.239.187.102/BRAZZERS/index.m3u8
 http://212.102.38.45/live/test_brazzers_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Brunette
 http://cdn.adultiptv.net/brunette.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Cineman ExExEx
-http://ott.watch/stream/DTCEUBKDH5/56.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Cineman ExExExTWO
-http://ott.watch/stream/DTCEUBKDH5/59.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Compilation
 http://cdn.adultiptv.net/compilation.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Cuckold
@@ -4237,8 +4191,6 @@ http://88.212.7.11/live/test_desire_hd_hevc/playlist.m3u8
 http://88.212.7.11/live/test_dorcel_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="http://only4.tv/ch/5555.png" logo="https://i115.fastpic.org/big/2021/0914/ff/90143cab3417a510c970047df4435dff.png" channelId="2153" tvg-id="dorcel",Dorcel TV
 http://212.102.38.45/live/test_dorcel_hd_hevc/playlist.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/6269.png" logo="http://img12.lostpic.net/2018/06/07/182835ad9d2088fd8c460f24ed7740a8.png" channelId="3710" tvg-id="erox",Erox
-http://ott.watch/stream/DTCEUBKDH5/58.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/6269.png" logo="http://img12.lostpic.net/2018/06/07/182835ad9d2088fd8c460f24ed7740a8.png" channelId="3710" tvg-id="erox",Erox
 http://stream.mcquack.net/58/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="http://only4.tv/ch/6269.png" logo="http://img12.lostpic.net/2018/06/07/182835ad9d2088fd8c460f24ed7740a8.png" channelId="3710" tvg-id="erox",Erox
@@ -4256,27 +4208,19 @@ http://212.102.38.45/live/test_extasy_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Extasy TV
 http://88.212.7.11/live/test_extasy_hd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/03c423cb79ed9bb410ba0ea138d45890.png" logo="http://ex.iptvin.ru/pic/2/9d35136f4d2a49587920e990817fc203.png" channelId="5048" tvg-id="exxxotica",Exxxotica
-http://ott.watch/stream/DTCEUBKDH5/57.m3u8?bw9411590686232
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/03c423cb79ed9bb410ba0ea138d45890.png" logo="http://ex.iptvin.ru/pic/2/9d35136f4d2a49587920e990817fc203.png" channelId="5048" tvg-id="exxxotica",Exxxotica
 http://stream.mcquack.net/57/index.m3u8
 #EXTINF:-1 parent-code="1234"tvg-rec="7" timeshift="7" group-title="Эротика (18+)" tvg-logo="http://ex.iptvin.ru/pic/2/03c423cb79ed9bb410ba0ea138d45890.png" logo="http://ex.iptvin.ru/pic/2/9d35136f4d2a49587920e990817fc203.png" channelId="5048" tvg-id="exxxotica",Exxxotica
 http://stream.mcquack.net/57/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Fetish
 http://cdn.adultiptv.net/fetish.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Frenchlover
-http://ott.watch/stream/DTCEUBKDH5/54.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Frenchlover
 http://stream.mcquack.net/54/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Frenchlover
 http://stream.mcquack.net/54/index.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/t4zbT76J/3bbc7eb999b1de9829359ba69a4c9f3d.png" logo="http://ex.iptvin.ru/pic/2/Gagsnetwork-220x132-tr.png" channelId="-1" tvg-name="Gagsnetwork" tvg-id="gags-network",Gags Network
-http://ott.watch/stream/DTCEUBKDH5/458.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Gangbang
 http://cdn.adultiptv.net/gangbang.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Hardcore
 http://cdn.adultiptv.net/hardcore.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Hustler Europe
-http://ott.watch/stream/DTCEUBKDH5/52.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Interracial
 http://cdn.adultiptv.net/interracial.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Latina
@@ -4293,10 +4237,6 @@ http://cdn.adultiptv.net/milf.m3u8
 http://cdn.adultiptv.net/pov.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Passion_XXX
 http://89.33.29.115:8080/Passion_XXX/index.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://epg.one/img/2777.png" logo="https://i115.fastpic.org/big/2021/0914/e6/3f1d5d4df4c8d57d4758b91e7f3467e6.png" channelId="4692" tvg-id="penthouse-gold",Penthouse Gold
-http://ott.watch/stream/DTCEUBKDH5/66.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/2120.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="517" tvg-id="playboy-tv",Playboy TV
-http://ott.watch/stream/DTCEUBKDH5/290.m3u8
 #EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/2120.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="517" tvg-id="playboy-tv",Playboy TV
 http://stream.mcquack.net/290/index.m3u8
 #EXTINF:-1 parent-code="1234"tvg-rec="7" timeshift="7" group-title="Эротика (18+)" tvg-logo="http://only4.tv/ch/2120.png" logo="https://otv.one/uploads/tv_image/fetish-hd.png" channelId="517" tvg-id="playboy-tv",Playboy TV
@@ -4305,18 +4245,12 @@ http://stream.mcquack.net/290/index.m3u8
 http://200.194.238.229:8383/live/pornclassic/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Pornstar
 http://cdn.adultiptv.net/pornstar.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="https://i.postimg.cc/qB8pXQpP/801d886595800cb69cd5a7a545db8fff.png" logo="https://i.postimg.cc/y8NBKH0K/cd28a06a4ae906ac60a262cca337584d.png" channelId="2846" tvg-id="private-tv",Private TV
-http://ott.watch/stream/DTCEUBKDH5/282.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",RK TV
 http://212.102.38.45/live/test_realitykings_sd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Reality Kings TV
 http://88.212.7.11/live/test_realitykings_sd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Red Lips 18+
 http://tinyurl.com/%74%76%7A%61%74%61%6B37/Red_Lips/manifest.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7",Red Lips
-http://ott.watch/stream/DTCEUBKDH5/61.m3u8
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://only4.tv/ch/5508.png" logo="http://j-p-g.net/if/2017/11/20/0848889001511217567.png" channelId="4369" tvg-id="redlight-hd",Redlight
-http://ott.watch/stream/DTCEUBKDH5/51.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Rough
 http://cdn.adultiptv.net/rough.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Russian r
@@ -4335,8 +4269,6 @@ http://cdn.adultiptv.net/teen.m3u8
 http://cdn.adultiptv.net/threesome.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Veronica Leal ЖМЖ (30min)
 https://v88188.cdn-d1.com/a98567b9b4cfb4e139bf41c7c22d28c28498a1a0/video.drive-movie.com/contents/videos/2000/2795/2795.mp4
-#EXTINF:-1 group-title="Эротика (18+)" parent-code="1234"tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x132-tr.png" channelId="4400" tvg-id="vivid-red",Vivid Red
-http://ott.watch/stream/DTCEUBKDH5/284.m3u8
 #EXTINF:-1 parent-code="1234"tvg-rec="7" timeshift="7" group-title="Эротика (18+)" tvg-logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Vivid-Red-HD-220x132-tr.png" channelId="4400" tvg-id="vivid-red",Vivid Red
 http://stream.mcquack.net/284/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",XY MAX
