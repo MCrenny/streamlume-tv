@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 24.08.26 16:48 User: yuri1245 IP: 4.155.237.4 channels 137 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 25.08.26 20:48 User: yuri1245 IP: 48.214.53.86 channels 90 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Познавательные",24 техно
 http://158.101.222.193:88/georgia_play.php?id=24techno
@@ -131,100 +131,6 @@ http://185.121.1.163:8083/Avto24/index.m3u8
 http://185.121.1.163:8083/Navo/index.m3u8
 #EXTINF:-1 group-title="Tест-17-08",Ohota Rybalka
 http://185.121.1.163:8083/OhotaRybalka/index.m3u8
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
-http://cloud03.03cdn.wf:8080/ch050/index.m3u8?token=a0e01ca42f61b818187127fdc543642c2875c9fec
-#EXTINF:-1 group-title="Tест-24-08",DUO Мир наизнанку HD
-http://cloud01.03cdn.wf:8080/ch1537/index.m3u8?token=a0e01ca42f61b818187127fdc543642c07486a824
-#EXTINF:-1 group-title="Tест-24-08",DUO Орел и Решка HD
-http://cloud01.03cdn.wf:8080/ch1540/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce26f3a824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci Learning
-http://cloud02.03cdn.wf:8080/ch171/index.m3u8?token=a0e01ca42f61b818187127fdc543642cae8599637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Discovery-Channel-HD-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/Discovery%20Channel%20HD.png" channelId="341" tvg-id="discovery-channel",Discovery Channel HD
-http://cloud03.03cdn.wf:8080/ch179/index.m3u8?token=a0e01ca42f61b818187127fdc543642c339909fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/science-png-hd-400.png" logo="https://i.postimg.cc/Hn5xPHhM/8732af5ca6fa96ce55bdb813a223e901.png" channelId="1508" tvg-id="discovery-science",Discovery Science HD
-http://cloud03.03cdn.wf:8080/ch015/index.m3u8?token=a0e01ca42f61b818187127fdc543642c68a0f9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/1d4adc8ae7ef3d1e2282076a2ae97531.png" logo="https://i.postimg.cc/HnG45Tg6/d2267edede8d3c2a087dc9d2b8499db4.png" channelId="672" tvg-id="docubox-hd",DocuBox HD
-http://cloud02.03cdn.wf:8080/ch350/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce2de39637
-#EXTINF:-1 group-title="Tест-24-08",Fashion & LifeStyle HD
-http://cloud02.03cdn.wf:8080/ch889/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc6a849637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/abdf15815cf16f05c8f633fa55f6ae38.png" logo="https://i.postimg.cc/YqR5QZXq/a47c08957cdfb23acf1b5e5ef2994c16.png" channelId="1720" tvg-id="food-network",Food Network HD
-http://cloud03.03cdn.wf:8080/ch486/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb42809fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1536.jpg" logo="https://i.postimg.cc/d0gPLC52/3b70701ae8d4c4471d08bf9e07165be7.png" channelId="391" tvg-id="galaxy-tv",Galaxy HD
-http://cloud03.03cdn.wf:8080/ch468/index.m3u8?token=a0e01ca42f61b818187127fdc543642c0a6bb9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0205.png" logo="https://i.postimg.cc/Vk4NhKDK/83315b3988ce2e44f1c4344be2dca8e0.png" channelId="1202" tvg-id="h2",H2 HD
-http://cloud02.03cdn.wf:8080/ch176/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc5f339637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1537.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_2F47_C_70_1680000_0_0_0.png" channelId="234" tvg-id="hd-life",HD Life
-http://cloud02.03cdn.wf:8080/ch089/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7cc7e9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6299.png" logo="http://overlay.iptvin.ru/epg/PIC/HGTV%20HD.png" channelId="1418" tvg-id="hgtv",HGTV HD
-http://cloud02.03cdn.wf:8080/ch316/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf137d9637
-#EXTINF:-1 group-title="Tест-24-08",History HD eu
-http://cloud02.03cdn.wf:8080/ch169/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca74769637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ID_HD_logo_2017.jpg/115px-ID_HD_logo_2017.jpg" logo="http://cbilling.pw/img/streams/id-xtra-hd.png" channelId="3770" tvg-id="id-xtra-ru",Investigation Discovery HD
-http://cloud01.03cdn.wf:8080/ch454/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdeffaa824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6305.png" logo="http://ex.iptvin.ru/pic/2/Love-Nature-220x132-tr.png" channelId="2035" tvg-id="love-nature-4k",Love Nature HD
-http://cloud02.03cdn.wf:8080/ch856/index.m3u8?token=a0e01ca42f61b818187127fdc543642c1518c9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/8bd88b74164119032d9bfe321f94cabd.jpg" logo="https://img11.lostpic.net/2018/07/23/3570976b86b152197aa289d28b3adfe1.png" channelId="1656" tvg-id="luxury",Luxury
-http://cloud01.03cdn.wf:8080/ch434/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc81b5a824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/20101.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-HD-220x132-tr.png" channelId="206" tvg-id="nat-geo-wild",Nat Geo Wild HD
-http://cloud03.03cdn.wf:8080/ch052/index.m3u8?token=a0e01ca42f61b818187127fdc543642c055e59fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0203.png" logo="http://ex.iptvin.ru/pic/2/National-Geographic-HD-220x132-tr.png" channelId="207" tvg-id="national-geographic",National Geographic HD
-http://cloud02.03cdn.wf:8080/ch071/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7c7e79637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/072019/rtghd_black.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20HD.png" channelId="1494" tvg-id="rtg-hd",RTG HD
-http://cloud03.03cdn.wf:8080/ch427/index.m3u8?token=a0e01ca42f61b818187127fdc543642c991a79fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/815.png" logo="https://i115.fastpic.org/big/2021/0914/e0/eb123f5e40146453c62e29ba7ee6bde0.png" channelId="1040" tvg-id="tlc",TLC HD
-http://cloud02.03cdn.wf:8080/ch357/index.m3u8?token=a0e01ca42f61b818187127fdc543642c352949637
-#EXTINF:-1 group-title="Tест-24-08",The Explorers HD
-http://cloud02.03cdn.wf:8080/ch018/index.m3u8?token=a0e01ca42f61b818187127fdc543642cc89839637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/26006.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Travel_Channel_HD_Logo.png/1200px-Travel_Channel_HD_Logo.png" channelId="235" tvg-id="travel-channel",Travel Channel HD
-http://cloud02.03cdn.wf:8080/ch402/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdfd8c9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-HD-220x132-tr.png" channelId="596" tvg-id="travel-adventure",Travel+Adventure HD
-http://cloud02.03cdn.wf:8080/ch178/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9a57c9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://kis.lt/wp-content/uploads/2020/12/468175cdcaf66214849404e0afb5812c.jpg" logo="https://i.postimg.cc/sDd1GQM4/a2e17bdcfb4b541576a46d1dce1f43f6.png" channelId="4118" tvg-id="viasat-explore",Viasat Explore HD
-http://cloud03.03cdn.wf:8080/ch048/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7b9449fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/K8G9bfVT/467e3a0cd40b0ae3505a3366a98d2c47.png" logo="https://i.postimg.cc/rFLnnMNQ/d07e0cb38a1600b08b69f93f5e6ff746.png" channelId="166" tvg-name="Viasat History" tvg-id="viasat-history",Viasat History HD
-http://cloud03.03cdn.wf:8080/ch147/index.m3u8?token=a0e01ca42f61b818187127fdc543642c06fe49fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://kis.lt/wp-content/uploads/2020/12/e3a5231a398effae0ae93d6e5368293b.jpg" logo="https://i.postimg.cc/KcgRYr8Y/e65738da0a55fbb3910d0bc8e81d9a81.png" channelId="757" tvg-id="viasat-nature",Viasat Nature HD
-http://cloud02.03cdn.wf:8080/ch049/index.m3u8?token=a0e01ca42f61b818187127fdc543642cba8059637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/y8QzCt9r/1b47f2e8d0ec969d3bd3d618dce48c66.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Nature_History%20HD.png" channelId="588" tvg-id="viasat-nature-history-hd",Viasat Nature/History HD
-http://cloud03.03cdn.wf:8080/ch137/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca4b739fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/5357f613f1e9f4a1cc4b0d635f91cd37.png" logo="http://ex.iptvin.ru/pic/2/Arsenal-HD-220x132-tr.png" channelId="1039" tvg-id="arsenaltv" shift="3",Арсенал HD
-http://cloud01.03cdn.wf:8080/ch146/index.m3u8?token=a0e01ca42f61b818187127fdc543642caf748a824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/5599.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%92%20%D0%BC%D0%B8%D1%80%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D1%85%20HD.png" channelId="3974" tvg-id="v-mire-zhivotnyx-hd",В мире животных HD
-http://cloud03.03cdn.wf:8080/ch401/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4ae999fec
-#EXTINF:-1 group-title="Tест-24-08",Глазами Туриста HD
-http://cloud02.03cdn.wf:8080/ch353/index.m3u8?token=a0e01ca42f61b818187127fdc543642c07cca9637
-#EXTINF:-1 group-title="Tест-24-08",Диалоги о Рыбалке
-http://cloud02.03cdn.wf:8080/ch142/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf823b9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1118.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%B8%D0%BA%D0%B0%D1%8F%20%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20HD.png" channelId="3881" tvg-id="dikaya-oxota-hd",Дикая Охота HD
-http://cloud03.03cdn.wf:8080/ch315/index.m3u8?token=a0e01ca42f61b818187127fdc543642c6688f9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1119.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%B8%D0%BA%D0%B0%D1%8F%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0%20HD.png" channelId="3882" tvg-id="dikaya-rybalka-hd",Дикая Рыбалка HD
-http://cloud02.03cdn.wf:8080/ch314/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7c25e9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
-http://cloud02.03cdn.wf:8080/ch051/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4ed609637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/0a21faa72320f5575674b336636499a1.png" logo="http://ex.iptvin.ru/pic/2/9ed07c9026d0b5b70b7f9d2d55d07be5.png" channelId="1815" tvg-id="zhivaya-priroda",Живая Природа HD
-http://cloud02.03cdn.wf:8080/ch091/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf92e89637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/Hx7cY5DQ/1a957b88284b29b0c08fef0157d9ad66.png" logo="https://i.postimg.cc/T3RDVpg6/4fccc8223f4d1173b9f4376d3c8dfef8.png" channelId="887" tvg-id="istoria",История
-http://cloud03.03cdn.wf:8080/ch170/index.m3u8?token=a0e01ca42f61b818187127fdc543642ced8479fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOaCuIN5WTkQ2BQsUqZCjDtuDDs2u6AgKXA&usqp=CAU?.png",Конный Мир
-http://cloud02.03cdn.wf:8080/ch193/index.m3u8?token=a0e01ca42f61b818187127fdc543642c4874f9637
-#EXTINF:-1 group-title="Tест-24-08",Космический HD
-http://cloud02.03cdn.wf:8080/ch008/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdbf1e9637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/tvico-n167.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9D%D0%B0%D1%83%D0%BA%D0%B0%202.0%20HD.png" channelId="173" tvg-id="nauka-20",Наука 2.0 HD
-http://cloud02.03cdn.wf:8080/ch047/index.m3u8?token=a0e01ca42f61b818187127fdc543642cbb3f69637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/db5ff41244b8dbe5f8f597580b29f1b3.jpg" logo="http://ex.iptvin.ru/pic/2/orujie.png" channelId="223" tvg-id="oruzhie",Оружие
-http://cloud03.03cdn.wf:8080/ch145/index.m3u8?token=a0e01ca42f61b818187127fdc543642c8471d9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/ohota-i-ribalka-icon.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20%D0%B8%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.png" channelId="221" tvg-id="oxota-i-rybalka",Охота и рыбалка
-http://cloud03.03cdn.wf:8080/ch143/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce8a8e9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/22cca564450dbfc57a7e47e797e57ab1.png" logo="http://ex.iptvin.ru/pic/2/1f206a2ea46909c23ac33baf846138a5.png" channelId="335" tvg-id="oxotnik-i-rybolov-hd",Охотник и рыболов HD
-http://cloud03.03cdn.wf:8080/ch017/index.m3u8?token=a0e01ca42f61b818187127fdc543642cceb1b9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0168.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Планета HD
-http://cloud02.03cdn.wf:8080/ch400/index.m3u8?token=a0e01ca42f61b818187127fdc543642c96df79637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/530.jpg" channelId="3295" tvg-id="poexali",Поехали HD
-http://cloud02.03cdn.wf:8080/ch831/index.m3u8?token=a0e01ca42f61b818187127fdc543642c32d219637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/7910461f1308810e12c1daafd799b2dc.png" logo="http://ex.iptvin.ru/pic/2/Priklyucheniya-HD-220x132-tr.png" channelId="3925" tvg-id="prikluchenia-hd",Приключения HD
-http://cloud03.03cdn.wf:8080/ch070/index.m3u8?token=a0e01ca42f61b818187127fdc543642c3ed319fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
-http://cloud02.03cdn.wf:8080/ch144/index.m3u8?token=a0e01ca42f61b818187127fdc543642c8f37f9637
 #EXTINF:-1 group-title="Uplink",Big planet
 https://fs.uplink.kz/big_planet/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="http://only4.tv/ch/19116.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-220x132-tr.png" channelId="164" tvg-id="nat-geo-wild",Nat Geo Wild

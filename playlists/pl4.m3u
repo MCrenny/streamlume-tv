@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 24.08.26 21:49 User: yuri1245 IP: 4.155.237.4 channels 343 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 25.08.26 20:49 User: yuri1245 IP: 48.214.53.86 channels 388 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -183,172 +183,6 @@ https://stitch-ua6.fastad.pro/stream.m3u8?c=1777&dt=2&is_kids=false&o=aHR0cHM6Ly
 https://tv.mediacp.eu:8081/happyradio/index.m3u8
 #EXTINF:-1 group-title="Музыкальные",Megogo live HD
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
-#EXTINF:-1 group-title="Bear TV",Bear TV Kids Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_mult_kids_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Movie UA HD
-https://uhd.bear-tv.net/bear_tv_movie_ua/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Велике Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_velyke_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Великий Екран UA HD
-https://uhd.bear-tv.net/bear_tv_velykyy_ekran/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Вечірнє Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_vechirnye_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Вибір Глядача UA HD
-https://uhd.bear-tv.net/bear_tv_vybir_glyadacha/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Дитячий Світ UA HD
-https://uhd.bear-tv.net/bear_tv_mult_dytyachyy_svit/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Добірка Фільмів UA HD
-https://uhd.bear-tv.net/bear_tv_dobirka_filmiv/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Домашній Кінозал UA HD
-https://uhd.bear-tv.net/bear_tv_domashniy_kinozal/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Золота Колекція UA HD
-https://uhd.bear-tv.net/bear_tv_zolota_kolektsiya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Кіно Без Перерви UA HD
-https://uhd.bear-tv.net/bear_tv_kinobezperervy/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноАтмосфера UA HD
-https://uhd.bear-tv.net/bear_tv_kinoatmosfera/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноВечір UA HD
-https://uhd.bear-tv.net/bear_tv_kinovechir/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноКлуб UA HD
-https://uhd.bear-tv.net/bear_tv_kinoklub/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноКолекція UA HD
-https://uhd.bear-tv.net/bear_tv_kinokolektsiya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноЛінія UA HD
-https://uhd.bear-tv.net/bear_tv_kinoliniya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноМарафон UA HD
-https://uhd.bear-tv.net/bear_tv_kinomarafon/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноМікс UA HD
-https://uhd.bear-tv.net/bear_tv_kinomiks/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноНастрій UA HD
-https://uhd.bear-tv.net/bear_tv_kinonastriy/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноПланета UA HD
-https://uhd.bear-tv.net/bear_tv_kinoplaneta/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноПлюс UA HD
-https://uhd.bear-tv.net/bear_tv_kinoplyus/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноПотік UA HD
-https://uhd.bear-tv.net/bear_tv_kinopotik/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноСвіт UA HD
-https://uhd.bear-tv.net/bear_tv_kinosvit/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноТайм UA HD
-https://uhd.bear-tv.net/bear_tv_kinotaym/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV КіноХвиля UA HD
-https://uhd.bear-tv.net/bear_tv_kinohvylya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Кінозал UA HD
-https://uhd.bear-tv.net/bear_tv_kinozal/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Легенди Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_legendy_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Малий Екран UA HD
-https://uhd.bear-tv.net/bear_tv_mult_malyy_ekran/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV МегаФільм UA HD
-https://uhd.bear-tv.net/bear_tv_megafilm/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Мульт 24 UA HD
-https://uhd.bear-tv.net/bear_tv_mult_24/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Мульт Анімація UA HD
-https://uhd.bear-tv.net/bear_tv_mult_animatsiya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Мульт Мікс UA HD
-https://uhd.bear-tv.net/bear_tv_mult_miks/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Мульт Хіт UA HD
-https://uhd.bear-tv.net/bear_tv_mult_hit/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV МультСвіт UA HD
-https://uhd.bear-tv.net/bear_tv_mult_svit/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Нічний Сеанс UA HD
-https://uhd.bear-tv.net/bear_tv_nichnyy_seans/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Прем'єра UA HD
-https://uhd.bear-tv.net/bear_tv_prem_yera/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Світ Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_svit_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Сеанс 24 UA HD
-https://uhd.bear-tv.net/bear_tv_seans_24/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Сімейний Вечір UA HD
-https://uhd.bear-tv.net/bear_tv_simeynyy_vechir/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Сімейні Мульти UA HD
-https://uhd.bear-tv.net/bear_tv_mult_simeyni/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Топ Кіно UA HD
-https://uhd.bear-tv.net/bear_tv_top_kino/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Український Сеанс UA HD
-https://uhd.bear-tv.net/bear_tv_ukrayinskyy_seans/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Улюблені Фільми UA HD
-https://uhd.bear-tv.net/bear_tv_ulyubleni_filmy/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Фільм за Фільмом UA HD
-https://uhd.bear-tv.net/bear_tv_film_za_filmom/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV ФільмМанія UA HD
-https://uhd.bear-tv.net/bear_tv_filmmaniya/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Фільми 24 UA HD
-https://uhd.bear-tv.net/bear_tv_filmy_24/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Фільмовий День UA HD
-https://uhd.bear-tv.net/bear_tv_filmovyy_den/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Фільмовий Мікс UA HD
-https://uhd.bear-tv.net/bear_tv_filmovyy_miks/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Bear TV",Bear TV Хіт Фільм UA HD
-https://uhd.bear-tv.net/bear_tv_hit_film/index.m3u8?token=2__wqx2YvuBv00
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/5582.png" logo="https://vidmind-blizzard-images.s3.amazonaws.com/df480d1d-a6b3-49be-8815-fe92d6702408.png" channelId="424" tvg-id="1plus1",1+1 HD
-http://cloud02.03cdn.wf:8080/ch180/index.m3u8?token=a0e01ca42f61b818187127fdc543642cfe1b19637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/0195.png" logo="https://i.postimg.cc/7LMj9R9L/ee2d9ce505c0e6eccb8c5708ef4295d0.png" channelId="956" tvg-id="1plus1-int",1+1 International
-http://cloud03.03cdn.wf:8080/ch413/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb5a389fec
-#EXTINF:-1 group-title="Tест-24-08",1+1 UA
-http://cloud03.03cdn.wf:8080/ch838/index.m3u8?token=a0e01ca42f61b818187127fdc543642c32f7a9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6226.png" logo="https://i.postimg.cc/kXvMVj37/908774a0b4afdc5c9f2fd2f05345c585.png" channelId="435" tvg-id="2plus2",2+2 HD
-http://cloud03.03cdn.wf:8080/ch194/index.m3u8?token=a0e01ca42f61b818187127fdc543642c67eab9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://ex.iptvin.ru/pic/2/24-kanal-HD-220x132-tr.png" channelId="446" tvg-id="24news-ua",24 канал HD
-http://cloud03.03cdn.wf:8080/ch346/index.m3u8?token=a0e01ca42f61b818187127fdc543642c61f199fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://television-live.com/uploads/posts/cr4wrwerwefwefx.png" logo="http://tivix.co/uploads/posts/2014-02/1392750393_20140218meqda4vzpi73arnx_izimi_large.png" channelId="7" tvg-id="5kanal-ua",5 канал Украина
-http://cloud03.03cdn.wf:8080/ch389/index.m3u8?token=a0e01ca42f61b818187127fdc543642cce4769fec
-#EXTINF:-1 group-title="Tест-24-08",8 канал UA
-http://cloud02.03cdn.wf:8080/ch330/index.m3u8?token=a0e01ca42f61b818187127fdc543642c178c79637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/122fcdad30eeca20571d8c7c3ed91cbf.png" logo="http://ex.iptvin.ru/pic/2/ed39f2e3f8ec07b334429bfc005c1817.png" channelId="495" tvg-id="atr-ua",ATR HD
-http://cloud02.03cdn.wf:8080/ch557/index.m3u8?token=a0e01ca42f61b818187127fdc543642c5af089637
-#EXTINF:-1 group-title="Tест-24-08",Enter Film HD
-http://cloud01.03cdn.wf:8080/ch087/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce90bfa824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/Free-DOM-TV-Ukraine-220x220.jpg" logo="http://ex.iptvin.ru/pic/2/Free-DOM-220x132-tr.png" channelId="-1" tvg-id="ua-tv",Freedom UA
-http://cloud03.03cdn.wf:8080/ch897/index.m3u8?token=a0e01ca42f61b818187127fdc543642cda50c9fec
-#EXTINF:-1 group-title="Tест-24-08",K1 HD
-http://cloud03.03cdn.wf:8080/ch351/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7d6c09fec
-#EXTINF:-1 group-title="Tест-24-08",Kанал HD
-http://cloud02.03cdn.wf:8080/ch182/index.m3u8?token=a0e01ca42f61b818187127fdc543642c357399637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/d3RHBZwT/41298209acdfb5c5315ec70fbf6c92e6.png" logo="https://static.sweet.tv/images/icons/channels/502.png" channelId="4518" tvg-id="star-cinema" tvg-country="RU",Star Cinema HD
-http://cloud01.03cdn.wf:8080/ch318/index.m3u8?token=a0e01ca42f61b818187127fdc543642c1e0c1a824
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6213.png" logo="http://ex.iptvin.ru/pic/2/Star-Family-HD-220x132-tr.png" channelId="4825" tvg-name="Star Family" tvg-id="star-family" tvg-country="RU",Star Family HD
-http://cloud01.03cdn.wf:8080/ch319/index.m3u8?token=a0e01ca42f61b818187127fdc543642c0a762a824
-#EXTINF:-1 group-title="Tест-24-08",UAПерший HD
-http://cloud02.03cdn.wf:8080/ch343/index.m3u8?token=a0e01ca42f61b818187127fdc543642c231919637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/J7dJ0qGJ/ac04a788930c4f477634422436933625.png" logo="https://i.postimg.cc/90fGSgzX/b1524015b488bacbf304aaf786dc0398.png" channelId="921" tvg-name="Zoom" tvg-id="zoom-ua",Zoom HD
-http://cloud03.03cdn.wf:8080/ch331/index.m3u8?token=a0e01ca42f61b818187127fdc543642ca82dd9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/9aa90c1cefd58d6f504a9568351597a7.png" logo="http://ex.iptvin.ru/pic/2/38f170ac6704cc8a277d5f00abe8734a.png" channelId="1515" tvg-id="bigudi",Бiгудi
-http://cloud03.03cdn.wf:8080/ch149/index.m3u8?token=a0e01ca42f61b818187127fdc543642cb205d9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/5161e427bf660dedf2657be712b136fa.png" logo="http://ex.iptvin.ru/pic/2/b1df622c6b48d3ddc511d03df9b20e3b.png" channelId="1833" tvg-id="espreso-tv",Еспресо HD
-http://cloud02.03cdn.wf:8080/ch322/index.m3u8?token=a0e01ca42f61b818187127fdc543642c6e9369637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/6146188993b39fe166816c89fd0f46ef.png" logo="http://ex.iptvin.ru/pic/2/Inter-HD-1000x128-tr.png" channelId="421" tvg-id="inter-ua",Интер HD
-http://cloud03.03cdn.wf:8080/ch432/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9af8d9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/6670.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_1EF6_2E_55_310000_0_0_0.png" channelId="318" tvg-id="inter-plus-ua",Интер+ HD
-http://cloud02.03cdn.wf:8080/ch412/index.m3u8?token=a0e01ca42f61b818187127fdc543642cdee999637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/15e171838b0995f8f30fcbf7ab1e84c5.png" logo="http://ex.iptvin.ru/pic/2/b44b0ae54dbfa8cb025789dd2641dc30.png" channelId="428" tvg-id="k2-ua",К2 HD
-http://cloud02.03cdn.wf:8080/ch345/index.m3u8?token=a0e01ca42f61b818187127fdc543642c9b2c09637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/fab0397111da48957d582fdde4fcab9f.png" logo="http://ex.iptvin.ru/pic/2/59e429c9976bc40368f02b7be6ed266b.png" channelId="3156" tvg-id="kvartal-tv",Квартал ТВ
-http://cloud02.03cdn.wf:8080/ch189/index.m3u8?token=a0e01ca42f61b818187127fdc543642c80d269637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/pTD09mKF/25d5bb3d693e280120466ca58a0edfe2.png" logo="https://i.postimg.cc/xTg4yNhG/8fffa05cffe31b04248544830aef6ccf.png" channelId="430" tvg-id="mega-ua",Мега HD
-http://cloud03.03cdn.wf:8080/ch181/index.m3u8?token=a0e01ca42f61b818187127fdc543642cedd299fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/kXdLbqqb/9ff01f9040ab65247d01a509d5edb9b0.png" logo="https://i.postimg.cc/T1XG1bty/6209942082db8d13dafe8c2b34321590.png" channelId="426" tvg-id="ntn-ua",НТН HD
-http://cloud03.03cdn.wf:8080/ch391/index.m3u8?token=a0e01ca42f61b818187127fdc543642c2b2509fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://only4.tv/ch/5600.png" logo="https://i115.fastpic.org/big/2021/0914/69/361435c352243ffbc8cfca00af41b669.png" channelId="455" tvg-id="otse",Оце HD
-http://cloud02.03cdn.wf:8080/ch148/index.m3u8?token=a0e01ca42f61b818187127fdc543642c26ef89637
-#EXTINF:-1 group-title="Tест-24-08",Первый авто HD
-http://cloud03.03cdn.wf:8080/ch348/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd5a789fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/FRkH445z/e3d8eed156dd33a2d81531ec5c5b7dee.png" logo="https://i.postimg.cc/QdjCWw5Y/0861e4bdea49e96da2570235336c0258.png" channelId="433" tvg-id="pixel",Пиксель HD
-http://cloud03.03cdn.wf:8080/ch344/index.m3u8?token=a0e01ca42f61b818187127fdc543642c7bb4f9fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/6qByKP9v/642c760523cc3fbf76d939a8e6ca73c7.png" logo="https://i.postimg.cc/T3B111dG/f2dadc60da6ec2b7b40dee91cc4defea.png" channelId="456" tvg-id="plusplus",ПлюсПлюс HD
-http://cloud02.03cdn.wf:8080/ch396/index.m3u8?token=a0e01ca42f61b818187127fdc543642cd76239637
-#EXTINF:-1 group-title="Tест-24-08",Прямой UA HD
-http://cloud03.03cdn.wf:8080/ch395/index.m3u8?token=a0e01ca42f61b818187127fdc543642cf6ccb9fec
-#EXTINF:-1 group-title="Tест-24-08",Суспільне Киiв HD
-http://cloud02.03cdn.wf:8080/ch913/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce5b6d9637
-#EXTINF:-1 group-title="Tест-24-08",ТБ HD
-http://cloud02.03cdn.wf:8080/ch422/index.m3u8?token=a0e01ca42f61b818187127fdc543642c012259637
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="https://i.postimg.cc/h4MsrThP/04cdd825629f13623cb5ea89d6771a00.png" logo="https://i.postimg.cc/bvQH22KP/2bb7fffee6f2ebb38dec41788edde9da.png" channelId="434" tvg-id="tet-ua",ТЕТ HD
-http://cloud03.03cdn.wf:8080/ch183/index.m3u8?token=a0e01ca42f61b818187127fdc543642ce74039fec
-#EXTINF:-1 group-title="Tест-24-08" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
-http://cloud02.03cdn.wf:8080/ch338/index.m3u8?token=a0e01ca42f61b818187127fdc543642c062679637
-#EXTINF:-1 group-title="Tест-24-08",Унiан ТВ
-http://cloud03.03cdn.wf:8080/ch483/index.m3u8?token=a0e01ca42f61b818187127fdc543642c715939fec
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
 http://hls127.freeott.top:8080/Amedia_1/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
@@ -359,20 +193,274 @@ http://158.101.222.193:88/georgia_play.php?id=amediahit
 http://158.101.222.193:88/georgia_play.php?id=amediapremium
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1523.jpg" channelId="-1",Fantastika
+http://pl.online24.pm/play/50011/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1602.jpg" logo="http://overlay.iptvin.ru/epg/PIC/FilmUADrama.png" channelId="3031" tvg-id="filmua-drama",Film UA Drama
 http://88.99.215.227/FilmUADrama/index.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Gubka bob
+http://pl.online24.pm/play/50008/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00200.jpg" logo="http://ex.iptvin.ru/pic/2/Hollywood-512x436-tr.png" channelId="3919" tvg-id="hollywood",Hollywood
 https://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",House_ukr
+http://pl.online24.pm/play/50007/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Jk_Fubar
+http://pl.online24.pm/play/50034/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Liberty Кино UKR HD
+http://pl.online24.pm/play/7068/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Love
+http://pl.online24.pm/play/50009/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Sweet Kino HD
+http://pl.online24.pm/play/1886/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",The_Last_of_Us
+http://pl.online24.pm/play/50006/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/c253421f971beb6a69910bf66bc1bafb.png" logo="http://ex.iptvin.ru/pic/2/b073ab5957ed4aee4c9ac8ed3e083b36.png" channelId="607" tvg-id="vip-comedy-cee",Viasat Kino Comedy
 http://ukr.ukrainske.tv/493/keytvainua/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Wedneay
+http://pl.online24.pm/play/50005/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/e5ac9c34ff5a9c9193ec8de6f085e6f6.png" logo="http://ex.iptvin.ru/pic/2/black-220x132-white-tr.png" channelId="5173" tvg-id="sony-turbo",black
 http://158.101.222.193:88/georgia_play.php?id=black
+#EXTINF:-1 group-title="Кино и сериалы",jk_90
+http://pl.online24.pm/play/50019/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_90210
+http://pl.online24.pm/play/50062/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Alf
+http://pl.online24.pm/play/50001/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_American_Dad
+http://pl.online24.pm/play/50045/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Ben_Holly
+http://pl.online24.pm/play/50044/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Besson
+http://pl.online24.pm/play/50111/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Big_Bang
+http://pl.online24.pm/play/50053/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Black_Mirror
+http://pl.online24.pm/play/50080/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Buffy
+http://pl.online24.pm/play/50078/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Butler
+http://pl.online24.pm/play/50118/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Call_Saul
+http://pl.online24.pm/play/50088/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Cartoon
+http://pl.online24.pm/play/50094/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Castle
+http://pl.online24.pm/play/50032/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Chip_Dale
+http://pl.online24.pm/play/50099/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema
+http://pl.online24.pm/play/50054/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema2
+http://pl.online24.pm/play/50055/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema3
+http://pl.online24.pm/play/50056/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Colombo
+http://pl.online24.pm/play/50043/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Criminal
+http://pl.online24.pm/play/50061/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Crowe
+http://pl.online24.pm/play/50115/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Dexter
+http://pl.online24.pm/play/50031/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Emeli
+http://pl.online24.pm/play/50124/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Flintstones
+http://pl.online24.pm/play/50095/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_GoT
+http://pl.online24.pm/play/50020/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Gostri_Kartuz
+http://pl.online24.pm/play/50024/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Gravity_Falls
+http://pl.online24.pm/play/50046/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Grifins
+http://pl.online24.pm/play/50047/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Hemsworth
+http://pl.online24.pm/play/50117/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Heroes
+http://pl.online24.pm/play/50090/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_House_Dragon
+http://pl.online24.pm/play/50022/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Kameron
+http://pl.online24.pm/play/50110/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_King
+http://pl.online24.pm/play/50114/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Kopola
+http://pl.online24.pm/play/50107/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Kunis
+http://pl.online24.pm/play/50119/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Lie_To_Me
+http://pl.online24.pm/play/50038/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Lilo
+http://pl.online24.pm/play/50096/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Magic
+http://pl.online24.pm/play/50060/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Mel
+http://pl.online24.pm/play/50037/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Melrose_Place
+http://pl.online24.pm/play/50079/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Money_Heist
+http://pl.online24.pm/play/50072/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Morning_Show
+http://pl.online24.pm/play/50103/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Muhtesem
+http://pl.online24.pm/play/50039/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_NCIS
+http://pl.online24.pm/play/50086/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Neeson
+http://pl.online24.pm/play/50120/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Nolan
+http://pl.online24.pm/play/50112/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Only_Murders
+http://pl.online24.pm/play/50083/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_PAW_Patrol
+http://pl.online24.pm/play/50051/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Pepa_pig
+http://pl.online24.pm/play/50049/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Poirot
+http://pl.online24.pm/play/50029/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Reeves
+http://pl.online24.pm/play/50116/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Rik_i_Marti
+http://pl.online24.pm/play/50063/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Ritchie
+http://pl.online24.pm/play/50104/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Robocar_Poli
+http://pl.online24.pm/play/50050/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Scorpion
+http://pl.online24.pm/play/50122/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Scorsese
+http://pl.online24.pm/play/50105/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Scrubs
+http://pl.online24.pm/play/50075/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Sherlock
+http://pl.online24.pm/play/50023/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Skott
+http://pl.online24.pm/play/50108/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Sliders
+http://pl.online24.pm/play/50069/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_South_Park
+http://pl.online24.pm/play/50048/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Spilberg
+http://pl.online24.pm/play/50106/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Stargate
+http://pl.online24.pm/play/50081/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Succession
+http://pl.online24.pm/play/50070/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Tarantino
+http://pl.online24.pm/play/50109/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_TomJery
+http://pl.online24.pm/play/50101/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Twin_Peaks
+http://pl.online24.pm/play/50028/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Van_Dame
+http://pl.online24.pm/play/50040/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Vedmak
+http://pl.online24.pm/play/50025/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Winx
+http://pl.online24.pm/play/50102/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_Your_mother
+http://pl.online24.pm/play/50052/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_aladin
+http://pl.online24.pm/play/50098/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_arnold
+http://pl.online24.pm/play/50100/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_balance
+http://pl.online24.pm/play/50091/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_berega
+http://pl.online24.pm/play/50036/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_biograf
+http://pl.online24.pm/play/50085/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_black_cloak
+http://pl.online24.pm/play/50013/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_boys
+http://pl.online24.pm/play/50030/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_brookllyn
+http://pl.online24.pm/play/50033/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_csi_NY
+http://pl.online24.pm/play/50016/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_csi_m
+http://pl.online24.pm/play/50018/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_csi_vegas
+http://pl.online24.pm/play/50017/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_dark
+http://pl.online24.pm/play/50089/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_desperate_ukr
+http://pl.online24.pm/play/50042/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_detektiv
+http://pl.online24.pm/play/50084/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_doku_Ukraine
+http://pl.online24.pm/play/50058/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_dram
+http://pl.online24.pm/play/50065/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_ducks
+http://pl.online24.pm/play/50015/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_duva
+http://pl.online24.pm/play/50123/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_element
+http://pl.online24.pm/play/50077/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_fineas
+http://pl.online24.pm/play/50066/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_formula
+http://pl.online24.pm/play/50082/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_futurama
+http://pl.online24.pm/play/50014/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_gorets
+http://pl.online24.pm/play/50057/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_grimm
+http://pl.online24.pm/play/50010/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_house_of_cards
+http://pl.online24.pm/play/50076/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_kids
+http://pl.online24.pm/play/50012/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_korona
+http://pl.online24.pm/play/50071/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_kosty
+http://pl.online24.pm/play/50035/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_ledi_Bag
+http://pl.online24.pm/play/50027/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_lost
+http://pl.online24.pm/play/50073/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_mentalist
+http://pl.online24.pm/play/50064/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_office
+http://pl.online24.pm/play/50074/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_ograblenie
+http://pl.online24.pm/play/50067/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_panda
+http://pl.online24.pm/play/50026/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_pingvins
+http://pl.online24.pm/play/50093/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_relax
+http://pl.online24.pm/play/50113/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_rizdvo
+http://pl.online24.pm/play/50125/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_rusaloshka
+http://pl.online24.pm/play/50097/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_serial
+http://pl.online24.pm/play/50059/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_speed
+http://pl.online24.pm/play/50087/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_strah
+http://pl.online24.pm/play/50068/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_timon
+http://pl.online24.pm/play/50092/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",jk_x_files
+http://pl.online24.pm/play/50021/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/4c420d979f66be686a9cad7f246cc325.png" logo="http://overlay.iptvin.ru/epg/PIC/Sci-Fi.png" channelId="5171" tvg-id="sony-scifi",sci-fi
 http://158.101.222.193:88/georgia_play.php?id=scifi
+#EXTINF:-1 group-title="Кино и сериалы",На трьох
+http://pl.online24.pm/play/1963/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Novos-lki-TB-220x220.png" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1",Новосілки ТБ
 http://filmtvgroup.hopto.org/novosilkiTB/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
+#EXTINF:-1 group-title="Кино и сериалы",Одного разу під Полтавою
+http://pl.online24.pm/play/1964/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Різдво
+http://pl.online24.pm/play/50125/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Хіт Бойовик
+http://pl.online24.pm/play/1951/75BA4FC1CA5013E/video.m3u8
+#EXTINF:-1 group-title="Кино и сериалы",Хіт Комедія
+http://pl.online24.pm/play/1952/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Наш Нет" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 #EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.33/index.m3u8
@@ -561,7 +649,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw94309310480
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw943277378904
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -600,6 +688,8 @@ http://iptv.prosto.tv:7000/ch344/video.m3u8
 http://svarozhichi.cdn-04.cosmonova.net.ua/mobile-app/main/svarozhichi/master.m3u8
 #EXTINF:-1 tvg-logo="http://ottpink.network/picons/suspilne-pershy_165x165.png" group-title="Украина" logo="https://i.postimg.cc/zfcCJKvj/c7b3c287424c1ee381fe9ac7a0b31115.png" channelId="439" tvg-id="ua-pershy",Суспільне Перший (T2) (UA)
 http://portal.ott.pink/C5UK_SyspilnePershiyT2/index.m3u8?token=B0B73593320445A22451378DF37B3E76
+#EXTINF:-1 group-title="Эротика (18+)",jk_sexsity
+http://pl.online24.pm/play/50041/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Без группы",1 Перший міський Кривий Ріг
 https://cdn1.live-tv.cloud/1tvkr/1tvkr-abr-lq/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",1+1 UA
