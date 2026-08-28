@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 25.08.26 20:49 User: yuri1245 IP: 48.214.53.86 channels 388 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 27.08.26 20:50 User: yuri1245 IP: 172.184.219.84 channels 375 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -125,10 +125,6 @@ http://stream.mcquack.net/157/index.m3u8
 http://portal.ott.pink/C3UK_UATVRU/index.m3u8?token=927E03BF1A83DF5DE6628CAF78BA2C13
 #EXTINF:-1 tvg-logo="http://ottpink.network/picons/my-ukraine_165x165.png" group-title="Информационные" logo="https://i.postimg.cc/W4Pnr2SL/9d71f5adbe5232cc6833f23929148d15.png" channelId="-1" tvg-id="my-ukraina",Ми-Україна HD
 http://portal.ott.pink/C4UK_MuUkraineHD/index.m3u8?token=B0B73593320445A22451378DF37B3E76
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
-http://158.101.222.193:88/georgia_play.php?id=viasathist
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
-http://158.101.222.193:88/georgia_play.php?id=viasatnat
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x132-tr.png" channelId="-1" tvg-id="mason-tv",Масон ТВ
 http://195.189.60.253/mason_tv_hd/video.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
@@ -139,26 +135,19 @@ https://vcdn.produck.company/out/ngrp:divisport_all/playlist.m3u8
 http://178.134.1.158:8081/eurosport/index.m3u8
 #EXTINF:-1 group-title="Спорт",Real Madrid
 https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/master.m3u8
+#EXTINF:-1 group-title="Спорт",Setanta Ukraine HD
+http://dtv.vol.net.ua/Setanta_Sports/index.m3u8
 #EXTINF:-1 group-title="Спорт" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00296.jpg" channelId="-1",X-Stream
 http://iptv.prosto.tv:7000/ch313/video.m3u8?secret=cledwwov
-#EXTINF:-1 group-title="Спорт",setanta1
-http://188.138.29.131:80/setanta1/index.m3u8
-#EXTINF:-1 group-title="Спорт",setanta2
-http://188.138.29.131:80/setanta2/index.m3u8
-#EXTINF:-1 group-title="Спорт",setantaplus ua
-http://188.138.29.131:80/setantaplus/index.m3u8
-#EXTINF:-1 group-title="Спорт",setantaua
-http://188.138.29.131:80/setantaua/index.m3u8
 #EXTINF:-1 group-title="Спорт" tvg-logo="http://ex.iptvin.ru/pic/2/c7da08d2cb6c076ff6f54066be98902a.jpg" logo="http://img.catcast.tv/uploads/18102020/logos/39326-5f8c782464593.png" channelId="-1" shift="3",Спорт
 http://5.188.159.128:8070/megogo_sport/index.m3u8
 #EXTINF:-1 group-title="Спорт",Суспільне Київ
+#EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.41/index.m3u8
 #EXTINF:-1 group-title="Детские",Da Vinci Explore the World HD
 https://stitch-ua6.fastad.pro/stream.m3u8?c=2086&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMxMi5zd2VldC50di9zdHJlYW0vdGR3ZDJmZXpjODZjNjg2OHFzem5zdjk5OXhraXh2aXZwanlicTY1dzRtam13M21rMmI5eTU2em5zcTNyZXczaWl5ZjR3bWtxeWppdG1zeTJlZTk4OTM5endia3Z6ZG5hYXVjdzRrZXFkeHNhYW5mZm1udnY1N2o4Z2plM2JyZnBlZTRiOTdtM2tweW5lcWM4eXF5aGY5MzV6cDN4dmt2YmE0ZHdybXA4c3VuY3hqNXE3bXljcW54ZHF2aTdzeWF3Mm4zbWc3NnQ%3D&p=1&session=9431904034085699136&u=4658946636260375128&variant=2
 #EXTINF:-1 group-title="Детские" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci
 https://stitch-ua4.fastad.pro/stream.m3u8?c=2097&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMxMi5zd2VldC50di9zdHJlYW0vNHA3OXVhNWpjYWR6OXpuNmk2YzRpZHQ4ZDlqcnkyYTg4NHdleDM2djJ6YmJ2cDdzNWY0eHRieGQ1OHA5cHk4azdxczUzeXBpY3o3NmFkZXY4YWVudXlydzV6ZXc0dGFkaTVhcTNpajNlZjR6a2JoeGNqZmh1dmtueThuM21lYnQ4bjkycWhpaTQyZnppYjVkNzVuYm1hM2UzcjVjM21hOXd5NzVrd2Q0ZThmcTJwcGhxaHRlcGp5ZHZtenR0bTM2bnpkZ3B2NG5icz09PT09PQ%3D%3D&p=1&session=3823248058668568446&u=4658946636260375128&variant=2
-#EXTINF:-1 group-title="Детские" tvg-logo="https://s3.vcdn.biz/static/f/1706159901/image.jpg" logo="https://upload.wikimedia.org/wikipedia/uk/2/28/Niki-Junior-logo.png" channelId="4826" tvg-id="niki-junior",Niki Junior
-http://158.101.222.193:88/georgia_play.php?id=nikijunior
 #EXTINF:-1 group-title="Детские",Кролецип та хом'як темряви (2022)
 https://ashdi.vip/video16/1/serials/chickenhare_and_the_hamster_of_darkness_2022_bdremux_1080p_101442/hls/A6aXi3WOjuRakhH+D4w=/index.m3u8
 #EXTINF:-1 group-title="Детские",ПОНІ
@@ -187,10 +176,6 @@ https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 http://hls127.freeott.top:8080/Amedia_1/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
 http://hls127.freeott.top:8080/Amedia_2_HD/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x132-tr.png" channelId="1932" tvg-id="amedia-hit",Amedia Hit
-http://158.101.222.193:88/georgia_play.php?id=amediahit
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium
-http://158.101.222.193:88/georgia_play.php?id=amediapremium
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1523.jpg" channelId="-1",Fantastika
@@ -219,8 +204,6 @@ http://pl.online24.pm/play/50006/75BA4FC1CA5013E/video.m3u8
 http://ukr.ukrainske.tv/493/keytvainua/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",Wedneay
 http://pl.online24.pm/play/50005/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/e5ac9c34ff5a9c9193ec8de6f085e6f6.png" logo="http://ex.iptvin.ru/pic/2/black-220x132-white-tr.png" channelId="5173" tvg-id="sony-turbo",black
-http://158.101.222.193:88/georgia_play.php?id=black
 #EXTINF:-1 group-title="Кино и сериалы",jk_90
 http://pl.online24.pm/play/50019/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",jk_90210
@@ -447,8 +430,6 @@ http://pl.online24.pm/play/50068/75BA4FC1CA5013E/video.m3u8
 http://pl.online24.pm/play/50092/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",jk_x_files
 http://pl.online24.pm/play/50021/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/4c420d979f66be686a9cad7f246cc325.png" logo="http://overlay.iptvin.ru/epg/PIC/Sci-Fi.png" channelId="5171" tvg-id="sony-scifi",sci-fi
-http://158.101.222.193:88/georgia_play.php?id=scifi
 #EXTINF:-1 group-title="Кино и сериалы",На трьох
 http://pl.online24.pm/play/1963/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Novos-lki-TB-220x220.png" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1",Новосілки ТБ
@@ -649,7 +630,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw943277378904
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591183696
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -676,6 +657,10 @@ http://line.tvdsz.cc:80/play/live.php?mac=00:1B:79:F8:22:9D&stream=384898&extens
 https://api-tv.ipnet.ua/api/v1/manifest/2118742632.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/5161e427bf660dedf2657be712b136fa.png" logo="http://ex.iptvin.ru/pic/2/b1df622c6b48d3ddc511d03df9b20e3b.png" channelId="1833" tvg-id="espreso-tv",Еспресо HD
 https://api-tv.ipnet.ua/api/v1/manifest/2118742594.m3u8
+#EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/fab0397111da48957d582fdde4fcab9f.png" logo="http://ex.iptvin.ru/pic/2/59e429c9976bc40368f02b7be6ed266b.png" channelId="3156" tvg-id="kvartal-tv",Квартал ТВ
+http://dtv.vol.net.ua/Kvartal_TV/index.m3u8
+#EXTINF:-1 group-title="Украина" tvg-logo="https://i.postimg.cc/pTD09mKF/25d5bb3d693e280120466ca58a0edfe2.png" logo="https://i.postimg.cc/xTg4yNhG/8fffa05cffe31b04248544830aef6ccf.png" channelId="430" tvg-id="mega-ua",Мега HD
+http://dtv.vol.net.ua/MEGA-HD/index.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="https://i.postimg.cc/kXdLbqqb/9ff01f9040ab65247d01a509d5edb9b0.png" logo="https://i.postimg.cc/T1XG1bty/6209942082db8d13dafe8c2b34321590.png" channelId="426" tvg-id="ntn-ua",НТН HD
 http://89.33.29.115:8080/NTN/index.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="https://www.crdru.net/b/templates/ottch/priamyj.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D0%B9.png" channelId="425" tvg-id="priamyj",Прямий
@@ -720,8 +705,6 @@ http://cdn10.live-tv.od.ua:8081/itvrv/abr-lq/playlist.m3u8
 http://89.33.29.115:8080/Inter/index.m3u8
 #EXTINF:-1 group-title="Без группы",PTV Полтавское TV
 https://cdn10.live-tv.cloud/hrpl/hrpl-abr/playlist.m3u8
-#EXTINF:-1 group-title="Без группы",Red
-http://158.101.222.193:88/georgia_play.php?id=red
 #EXTINF:-1 group-title="Без группы",TET HD
 http://89.33.29.115:8080/TET/index.m3u8
 #EXTINF:-1 group-title="Без группы",TV Rivne 1
@@ -730,12 +713,6 @@ https://cdn1.live-tv.cloud/rivne1/rivne1-abr/playlist.m3u8
 http://89.33.29.115:8080/STB/index.m3u8
 #EXTINF:-1 group-title="Без группы",Tv1000 Action HD
 https://stream8.cinerama.uz/1225/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Без группы",Viasat explore
-http://158.101.222.193:88/georgia_play.php?id=viasatexp
-#EXTINF:-1 group-title="Без группы",amedia1
-http://158.101.222.193:88/georgia_play.php?id=amedia
-#EXTINF:-1 group-title="Без группы",amedia2
-http://158.101.222.193:88/georgia_play.php?id=amedia2
 #EXTINF:-1 group-title="Без группы",ІНТЕР
 http://line.tvdsz.cc:80/play/live.php?mac=00:1B:79:F8:22:9D&stream=384895&extension=ts
 #EXTINF:-1 group-title="Без группы",Ізмаіл ТВ
@@ -758,8 +735,6 @@ https://stitch-ua3.fastad.pro/stream.m3u8?c=903&dt=2&is_kids=false&o=aHR0cHM6Ly9
 https://stitch-ua5.fastad.pro/stream.m3u8?c=3554&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMxMi5zd2VldC50di9zdHJlYW0va3ZrZ2thZTkzd252dmdwN2M2dzl1czlzZm0zeng5YndrODd6cm53eWRidHVrNDlrZWZzamU1ZHppZXcyOHpqaWt5MmJqNzY2c2ZuOHNoc2M1ZTJqbWRqcHI2aTlndXJ1anBlOXp0NjlrdXg0cjhnajlrOHVhbjZtZjlyZmR4NXl4ZG5rc2h4bXN3aXpjdmNieDdqdHY3ZzM3Z3hwd3ZpYmpraW1mbWRlcWZyNWt0ejZyaDJlcDhtYW12c3FydXl4bnNneWV4aGUyYTlhPT09PQ%3D%3D&p=1&session=9294307927715568972&u=4658946636260375128&variant=2
 #EXTINF:-1 group-title="Без группы",КІНО
 https://stitch-ua9.fastad.pro/stream.m3u8?c=553&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMyMC5zd2VldC50di9zdHJlYW0vc3VnYnEzc3puemF6eGp1aGJubTUybmo1YjhqeTh2d2JndHp2Ym5hbnd5cmpmN2ViOHVpZnF1bWI3MmQ4NmlueTZrajVmZHRwODJwdWluOGJjdTJiaGM5dnh4eXJ0M241aDQ3dm5lNXo4ZXRkcXg5YjNqMnNtanZjbmtlZWNnNzVuZGRidTJqMnZ0a3pza2VncmJzZmljZHpudmg5Z3o5ZGg3cDRzaDhtZTVuaDdzdmFwc3g5cm5haWhrcnJwMnFrczN4YzY9PT0%3D&p=1&session=6948644055998814462&u=4658946636260375128&variant=0
-#EXTINF:-1 group-title="Без группы",Квартал
-http://158.101.222.193:88/georgia_play.php?id=kvartal95
 #EXTINF:-1 group-title="Без группы",Комедія
 https://stitch-ua3.fastad.pro/stream.m3u8?c=2713&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMxNy5zd2VldC50di9zdHJlYW0vcmd6d2hobXNjdHFwajc0bXM3dTJyOXlqZXB0dGM1bXBxY3B3cnBwNmduZmRzZmpmd25pZHZnOWphc25yN3BkdnNlejhrcmVrMzl0d3NkZ3c3Ynk4cTM5dGU5Z251M3RlaDVpOW1nbXF5cGF3eWdwcXhpc2o4Y2Jzbm5ocXRhejcybW05OWRiYzVpa2JkNDV5ZndwczZrZGtqenZhMnV3cng0YXF0enpiNHVoYTc1aHJkYXl3NHVpYW50ZXRrYmc1eHkzZW4ydmp5dz09PT09PQ%3D%3D&p=1&session=10726036884231564351&u=4658946636260375128&variant=2
 #EXTINF:-1 group-title="Без группы",МІЛЕДІ

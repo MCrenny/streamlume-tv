@@ -1,5 +1,5 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web1 27.08.26 11:48 User: yuri1245 IP: 48.214.53.86 channels 370 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web1 27.08.26 11:48 User: yuri1245 IP: 172.184.219.84 channels 370 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Эфир Ru" tvg-logo="https://i.postimg.cc/PxqLDYkp/77155b5c5f4b402270087106968fc25f.png" logo="https://i.postimg.cc/d3bDgfZr/126f7ce579c74bee6788041e2005a67b.png" channelId="277" tvg-id="match-premier",Матч! Премьер
 https://flussonic.mkpnet.ru/tv-ee3651e1e7ce5cbf/video.m3u8
@@ -29,7 +29,7 @@ http://95.47.155.244:8001/play/a010
 http://95.47.155.244:8001/play/a011
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/79.png" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 http://95.47.155.244:8001/play/a013
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/304.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941638689452",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/304.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
 http://95.47.155.244:8001/play/a014
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/698.png" logo="https://i.postimg.cc/vHMh7XGK/0445f903c7bc8f136486a8cefd534321.png" channelId="8" tvg-id="tv3-ru",ТВ-3
 https://bl.rutube.ru/livestream/7bf12d9c050f9a7ef3728db5730432ae/index.m3u8?s=EZMBZKJ77ps2VJm1WcNuEA&e=2071401226&scheme=https
@@ -405,9 +405,9 @@ http://37.192.119.31:81/udp/239.1.21.52:1234
 http://83.217.12.157:81/udp/239.1.1.208:1234
 #EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/0e5f26c0b175f980ffbc940f8c897ce6.png" logo="http://ex.iptvin.ru/pic/2/ae04e726476834e50e9844a1cc92e3c2.png" channelId="605" tvg-id="vip-premiere",viju+ Premiere
 http://37.192.119.31:81/udp/239.1.21.38:1234
-#EXTINF:-1 group-title="Udp" channelId="942458034178",Дом Кино +2
+#EXTINF:-1 group-title="Udp" channelId="948693387772",Дом Кино +2
 http://83.217.12.157:81/udp/239.1.1.91:1234
-#EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="942458034178",Дом кино Премиум HD
+#EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="948693387772",Дом кино Премиум HD
 http://83.217.12.157:81/udp/239.1.1.90:1234
 #EXTINF:-1 group-title="Udp" tvg-logo="https://i.postimg.cc/rszKnPMC/a5c487f71b5ae29220f9a6dc2faeb741.png" logo="https://i.postimg.cc/y6rJgsyf/49dd91d5aec30501928147d42d794821.png" channelId="190" tvg-id="illuzion-plus",Иллюзион+
 http://37.192.119.31:81/udp/239.1.21.19:1234
