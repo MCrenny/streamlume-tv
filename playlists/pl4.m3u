@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 27.08.26 20:50 User: yuri1245 IP: 172.184.219.84 channels 375 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 01.09.26 20:49 User: yuri1245 IP: 172.185.167.114 channels 247 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -178,270 +178,16 @@ http://hls127.freeott.top:8080/Amedia_1/video.m3u8
 http://hls127.freeott.top:8080/Amedia_2_HD/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1523.jpg" channelId="-1",Fantastika
-http://pl.online24.pm/play/50011/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1602.jpg" logo="http://overlay.iptvin.ru/epg/PIC/FilmUADrama.png" channelId="3031" tvg-id="filmua-drama",Film UA Drama
 http://88.99.215.227/FilmUADrama/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Gubka bob
-http://pl.online24.pm/play/50008/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00200.jpg" logo="http://ex.iptvin.ru/pic/2/Hollywood-512x436-tr.png" channelId="3919" tvg-id="hollywood",Hollywood
 https://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",House_ukr
-http://pl.online24.pm/play/50007/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Jk_Fubar
-http://pl.online24.pm/play/50034/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Liberty Кино UKR HD
-http://pl.online24.pm/play/7068/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Love
-http://pl.online24.pm/play/50009/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Sweet Kino HD
-http://pl.online24.pm/play/1886/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",The_Last_of_Us
-http://pl.online24.pm/play/50006/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/c253421f971beb6a69910bf66bc1bafb.png" logo="http://ex.iptvin.ru/pic/2/b073ab5957ed4aee4c9ac8ed3e083b36.png" channelId="607" tvg-id="vip-comedy-cee",Viasat Kino Comedy
 http://ukr.ukrainske.tv/493/keytvainua/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Wedneay
-http://pl.online24.pm/play/50005/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_90
-http://pl.online24.pm/play/50019/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_90210
-http://pl.online24.pm/play/50062/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Alf
-http://pl.online24.pm/play/50001/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_American_Dad
-http://pl.online24.pm/play/50045/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Ben_Holly
-http://pl.online24.pm/play/50044/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Besson
-http://pl.online24.pm/play/50111/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Big_Bang
-http://pl.online24.pm/play/50053/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Black_Mirror
-http://pl.online24.pm/play/50080/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Buffy
-http://pl.online24.pm/play/50078/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Butler
-http://pl.online24.pm/play/50118/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Call_Saul
-http://pl.online24.pm/play/50088/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Cartoon
-http://pl.online24.pm/play/50094/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Castle
-http://pl.online24.pm/play/50032/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Chip_Dale
-http://pl.online24.pm/play/50099/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema
-http://pl.online24.pm/play/50054/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema2
-http://pl.online24.pm/play/50055/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Cinema3
-http://pl.online24.pm/play/50056/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Colombo
-http://pl.online24.pm/play/50043/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Criminal
-http://pl.online24.pm/play/50061/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Crowe
-http://pl.online24.pm/play/50115/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Dexter
-http://pl.online24.pm/play/50031/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Emeli
-http://pl.online24.pm/play/50124/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Flintstones
-http://pl.online24.pm/play/50095/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_GoT
-http://pl.online24.pm/play/50020/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Gostri_Kartuz
-http://pl.online24.pm/play/50024/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Gravity_Falls
-http://pl.online24.pm/play/50046/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Grifins
-http://pl.online24.pm/play/50047/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Hemsworth
-http://pl.online24.pm/play/50117/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Heroes
-http://pl.online24.pm/play/50090/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_House_Dragon
-http://pl.online24.pm/play/50022/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Kameron
-http://pl.online24.pm/play/50110/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_King
-http://pl.online24.pm/play/50114/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Kopola
-http://pl.online24.pm/play/50107/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Kunis
-http://pl.online24.pm/play/50119/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Lie_To_Me
-http://pl.online24.pm/play/50038/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Lilo
-http://pl.online24.pm/play/50096/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Magic
-http://pl.online24.pm/play/50060/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Mel
-http://pl.online24.pm/play/50037/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Melrose_Place
-http://pl.online24.pm/play/50079/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Money_Heist
-http://pl.online24.pm/play/50072/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Morning_Show
-http://pl.online24.pm/play/50103/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Muhtesem
-http://pl.online24.pm/play/50039/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_NCIS
-http://pl.online24.pm/play/50086/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Neeson
-http://pl.online24.pm/play/50120/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Nolan
-http://pl.online24.pm/play/50112/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Only_Murders
-http://pl.online24.pm/play/50083/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_PAW_Patrol
-http://pl.online24.pm/play/50051/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Pepa_pig
-http://pl.online24.pm/play/50049/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Poirot
-http://pl.online24.pm/play/50029/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Reeves
-http://pl.online24.pm/play/50116/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Rik_i_Marti
-http://pl.online24.pm/play/50063/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Ritchie
-http://pl.online24.pm/play/50104/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Robocar_Poli
-http://pl.online24.pm/play/50050/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Scorpion
-http://pl.online24.pm/play/50122/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Scorsese
-http://pl.online24.pm/play/50105/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Scrubs
-http://pl.online24.pm/play/50075/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Sherlock
-http://pl.online24.pm/play/50023/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Skott
-http://pl.online24.pm/play/50108/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Sliders
-http://pl.online24.pm/play/50069/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_South_Park
-http://pl.online24.pm/play/50048/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Spilberg
-http://pl.online24.pm/play/50106/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Stargate
-http://pl.online24.pm/play/50081/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Succession
-http://pl.online24.pm/play/50070/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Tarantino
-http://pl.online24.pm/play/50109/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_TomJery
-http://pl.online24.pm/play/50101/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Twin_Peaks
-http://pl.online24.pm/play/50028/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Van_Dame
-http://pl.online24.pm/play/50040/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Vedmak
-http://pl.online24.pm/play/50025/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Winx
-http://pl.online24.pm/play/50102/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_Your_mother
-http://pl.online24.pm/play/50052/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_aladin
-http://pl.online24.pm/play/50098/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_arnold
-http://pl.online24.pm/play/50100/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_balance
-http://pl.online24.pm/play/50091/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_berega
-http://pl.online24.pm/play/50036/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_biograf
-http://pl.online24.pm/play/50085/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_black_cloak
-http://pl.online24.pm/play/50013/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_boys
-http://pl.online24.pm/play/50030/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_brookllyn
-http://pl.online24.pm/play/50033/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_csi_NY
-http://pl.online24.pm/play/50016/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_csi_m
-http://pl.online24.pm/play/50018/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_csi_vegas
-http://pl.online24.pm/play/50017/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_dark
-http://pl.online24.pm/play/50089/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_desperate_ukr
-http://pl.online24.pm/play/50042/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_detektiv
-http://pl.online24.pm/play/50084/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_doku_Ukraine
-http://pl.online24.pm/play/50058/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_dram
-http://pl.online24.pm/play/50065/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_ducks
-http://pl.online24.pm/play/50015/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_duva
-http://pl.online24.pm/play/50123/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_element
-http://pl.online24.pm/play/50077/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_fineas
-http://pl.online24.pm/play/50066/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_formula
-http://pl.online24.pm/play/50082/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_futurama
-http://pl.online24.pm/play/50014/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_gorets
-http://pl.online24.pm/play/50057/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_grimm
-http://pl.online24.pm/play/50010/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_house_of_cards
-http://pl.online24.pm/play/50076/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_kids
-http://pl.online24.pm/play/50012/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_korona
-http://pl.online24.pm/play/50071/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_kosty
-http://pl.online24.pm/play/50035/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_ledi_Bag
-http://pl.online24.pm/play/50027/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_lost
-http://pl.online24.pm/play/50073/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_mentalist
-http://pl.online24.pm/play/50064/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_office
-http://pl.online24.pm/play/50074/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_ograblenie
-http://pl.online24.pm/play/50067/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_panda
-http://pl.online24.pm/play/50026/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_pingvins
-http://pl.online24.pm/play/50093/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_relax
-http://pl.online24.pm/play/50113/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_rizdvo
-http://pl.online24.pm/play/50125/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_rusaloshka
-http://pl.online24.pm/play/50097/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_serial
-http://pl.online24.pm/play/50059/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_speed
-http://pl.online24.pm/play/50087/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_strah
-http://pl.online24.pm/play/50068/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_timon
-http://pl.online24.pm/play/50092/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",jk_x_files
-http://pl.online24.pm/play/50021/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",На трьох
-http://pl.online24.pm/play/1963/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Novos-lki-TB-220x220.png" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1",Новосілки ТБ
 http://filmtvgroup.hopto.org/novosilkiTB/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
-#EXTINF:-1 group-title="Кино и сериалы",Одного разу під Полтавою
-http://pl.online24.pm/play/1964/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Різдво
-http://pl.online24.pm/play/50125/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Хіт Бойовик
-http://pl.online24.pm/play/1951/75BA4FC1CA5013E/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Хіт Комедія
-http://pl.online24.pm/play/1952/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Наш Нет" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 #EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.33/index.m3u8
@@ -630,7 +376,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591183696
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591392712
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -673,8 +419,6 @@ http://iptv.prosto.tv:7000/ch344/video.m3u8
 http://svarozhichi.cdn-04.cosmonova.net.ua/mobile-app/main/svarozhichi/master.m3u8
 #EXTINF:-1 tvg-logo="http://ottpink.network/picons/suspilne-pershy_165x165.png" group-title="Украина" logo="https://i.postimg.cc/zfcCJKvj/c7b3c287424c1ee381fe9ac7a0b31115.png" channelId="439" tvg-id="ua-pershy",Суспільне Перший (T2) (UA)
 http://portal.ott.pink/C5UK_SyspilnePershiyT2/index.m3u8?token=B0B73593320445A22451378DF37B3E76
-#EXTINF:-1 group-title="Эротика (18+)",jk_sexsity
-http://pl.online24.pm/play/50041/75BA4FC1CA5013E/video.m3u8
 #EXTINF:-1 group-title="Без группы",1 Перший міський Кривий Ріг
 https://cdn1.live-tv.cloud/1tvkr/1tvkr-abr-lq/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",1+1 UA

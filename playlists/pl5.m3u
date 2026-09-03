@@ -1,5 +1,5 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 27.08.26 21:53 User: yuri1245 IP: 172.184.219.84 channels 1978 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 31.08.26 15:53 User: yuri1245 IP: 172.185.167.114 channels 2112 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-09-08" tvg-logo="../Channel/Logo/Amedia Hit.png" tvg-id="650a0ae5672bd20d04bd2247b8cff705_amedia1" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913",Amedia 1
 http://46.162.201.15:8000/play/a08r/index.m3u8
@@ -431,11 +431,11 @@ http://stream.mcquack.net/274/index.m3u8
 http://stream.mcquack.net/275/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://stream.mcquack.net/80/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693387772",Дом Кино Премиум
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693544534",Дом Кино Премиум
 http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
 http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 http://stream.mcquack.net/227/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 http://stream.mcquack.net/412/index.m3u8
@@ -675,7 +675,7 @@ https://flussonic.mkpnet.ru/tv-132f51b35b47b897/video.m3u8
 https://stream8.cinerama.uz/1034/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/ctc-logo-01.jpg" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 https://flussonic.mkpnet.ru/tv-9cb92ea0862cd7b0/video.m3u8
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 https://flussonic.mkpnet.ru/tv-b515ccce67923f8a/video.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="https://i.postimg.cc/7YGX6SRb/16638cc3be4acfe210849f8a64251ce1.png" logo="http://ex.iptvin.ru/pic/2/Pyatnica-220x132-tr.png" channelId="26" tvg-id="piatnica",Пятница
 https://flussonic.mkpnet.ru/tv-7d5e5db805057e8f/video.m3u8
@@ -1132,7 +1132,7 @@ http://wms.shared.streamshow.it/visualradio/mp4:visualradio/chunklist.m3u8
 #EXTINF:-1 tvg-id="RELAX.cz" tvg-country="CZ" tvg-language="Czech" tvg-logo="https://raw.githubusercontent.com/MarhyCZ/picons/master/640/relax.png" group-title="Музыкальные" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A0%D0%B0%D0%B4%D1%8B%D1%91%20%D0%A0%D1%8D%D0%BB%D0%B0%D0%BA%D1%81.png" channelId="-1",Relax
 https://dash2.antik.sk/live/test_relax/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Reload Radio Music Power HD
-http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw9411591183696
+http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw9411591392712
 #EXTINF:-1 group-title="Музыкальные",Retro_Music_Television
 https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Rouge TV 720p
@@ -1265,7 +1265,7 @@ http://tinyurl.com/%74%76z%61%74%61k65?id=viasathist
 http://tinyurl.com/%74%76z%61%74%61k65?id=autoplus
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/2bd4c8af1670253241e51f8df33cb8a0.png" logo="http://ex.iptvin.ru/pic/2/d5b1c880e0c2fdc576be6604a67a0233.png" channelId="39" tvg-id="detsky-mir",Детский Мир
 http://tinyurl.com/%74%76z%61%74%61k65?id=detskymir
-#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="945795591848",Домашний International
+#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="945795696356",Домашний International
 http://tinyurl.com/%74%76z%61%74%61k65?id=domashni
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://tinyurl.com/%74%76z%61%74%61k65?id=eurokino
@@ -1443,9 +1443,9 @@ http://5.9.11.197:57419/chu-106/mpegts
 http://5.9.11.197:57419/chu-107/mpegts
 #EXTINF:-1 group-title="Hetzner Online Ag",Бестселлер
 http://5.9.11.197:57419/chu-135/mpegts
-#EXTINF:-1 group-title="Hetzner Online Ag" channelId="948693387772",Дом кино премиум
+#EXTINF:-1 group-title="Hetzner Online Ag" channelId="948693544534",Дом кино премиум
 http://5.9.11.197:57419/chu-112/mpegts
-#EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="948693387772",Дом кино
+#EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="948693544534",Дом кино
 http://5.9.11.197:57419/chu-111/mpegts
 #EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://5.9.11.197:57419/chu-113/mpegts
@@ -1525,9 +1525,9 @@ http://46.8.46.14/rubestseller/index.m3u8
 http://46.8.46.14/detmir/index.m3u8
 #EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://46.8.46.14/doktor/index.m3u8
-#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
 http://46.8.46.14/domkino/index.m3u8
-#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 http://46.8.46.14/dom/index.m3u8
 #EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://46.8.46.14/Drive/index.m3u8
@@ -1623,7 +1623,7 @@ http://176.118.197.125/JimJam/index.m3u8
 http://176.118.197.101/KHL/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://ex.iptvin.ru/pic/2/bober-1.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%B1%D1%91%D1%80.png" channelId="646" tvg-id="bobior",Бобёр
 http://176.118.197.125/Bober/index.m3u8
-#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
 http://176.118.197.101/Dom_kino/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://176.118.197.125/Draiv/index.m3u8
@@ -1665,6 +1665,274 @@ http://176.118.197.101/RodnoeKino/index.m3u8
 http://176.118.197.101/CTC/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://ex.iptvin.ru/pic/2/che-s.jpg" logo="http://ex.iptvin.ru/pic/2/CHe-220x132-tr.png" channelId="22" tvg-id="che",Че
 http://176.118.197.101/Che/index.m3u8
+#EXTINF:-1 group-title="LLC G&G-Telecom" tvg-logo="http://only4.tv/ch/6186.png" logo="https://tv-server.trinity-tv.net/icons/channels/424.png" channelId="2485" tvg-id="terra",Terra
+http://195.64.140.147:10150/150
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/e5ac9c34ff5a9c9193ec8de6f085e6f6.png" logo="http://ex.iptvin.ru/pic/2/black-220x132-white-tr.png" channelId="5173" tvg-id="sony-turbo",.Black
+http://195.64.140.147:10087/87
+#EXTINF:-1 group-title="Llc G&G-Telecom",.RED
+http://195.64.140.147:10085/85
+#EXTINF:-1 group-title="Llc G&G-Telecom",.Sci-Fi
+http://195.64.140.147:10086/86
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/024614b06bdfdc2444ef5229fab8773c.png" logo="http://ex.iptvin.ru/pic/2/22654940aeed4b5e8654e5c870d2915a.png" channelId="14" tvg-id="2na2",2x2
+http://195.64.140.147:10023/23
+#EXTINF:-1 group-title="Llc G&G-Telecom",ANI
+http://195.64.140.147:10133/133
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
+http://195.64.140.147:10059/59
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
+http://195.64.140.147:10060/60
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-new-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium
+http://195.64.140.147:10062/62
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/2202.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-HD-220x132-tr.png" channelId="240" tvg-id="animal-planet",Animal Planet HD
+http://195.64.140.147:10032/32
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/Dftnp9Fv/33c24182bbe719b73e962775b4e83ccc.png" logo="http://overlay.iptvin.ru/epg/PIC/Bollywood%20HD.png" channelId="2802" tvg-id="bollywood-hd",Bollywood HD
+http://195.64.140.147:10083/83
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci
+http://195.64.140.147:10154/154
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://www.sostav.ru/app/public/images/news/2014/03/12/FIRE_DC_HD_BLACK_RGB.jpg" logo="https://trinity-tv.net/storage/channels/dark_theme_336.png" channelId="341" tvg-id="discovery-channel",Discovery
+http://195.64.140.147:10151/151
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/ibn-A2mq-B-400x400.jpg" logo="https://i.postimg.cc/441jVjd2/ed680bb89b375e6466a3cfc49d862997.png" channelId="217" tvg-id="euronews",Euronews
+http://195.64.140.147:10183/183
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Eurosport-1-HD.png" logo="https://i.postimg.cc/y6w3hpb9/f03204750140d099910ffcc15b89de26.png" channelId="225" tvg-id="eurosport1-ru",Eurosport 1 HD
+http://195.64.140.147:10114/114
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Eurosport-2-HD-200x200.png" logo="https://i.postimg.cc/GmRBV8rm/20451635d55ed95e124915d606068cb4.png" channelId="933" tvg-id="eurosport2-ru",Eurosport 2 HD
+http://195.64.140.147:10115/115
+#EXTINF:-1 group-title="Llc G&G-Telecom",Extreme Sort Channel
+http://195.64.140.147:10112/112
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/kgXdZqVb/b096849286769a18887753f9c09e3868.png" logo="http://overlay.iptvin.ru/epg/PIC/FAN HD.png" channelId="3926" tvg-id="fanhd",FAN
+http://195.64.140.147:10066/66
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://89.tv-internet.pro/wp-content/uploads/2019/12/160-%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B-%D0%93%D0%B0%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-HD.png" channelId="391" tvg-id="galaxy-tv",Galaxy
+http://195.64.140.147:10169/169
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-220x220.png" logo="http://ex.iptvin.ru/pic/2/Gulli-Girl-160x110-tr.png" channelId="183" tvg-id="gulli-girl",Gulli Girl
+http://195.64.140.147:10122/122
+#EXTINF:-1 group-title="Llc G&G-Telecom",HollyWood HD
+http://195.64.140.147:10079/79
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/807.png" logo="https://i.postimg.cc/6QyGfstr/324dbe8b2a23bbbb32d04e0cfa641494.png" channelId="59" tvg-id="id-xtra-ru",Investigation Discovery
+http://195.64.140.147:10152/152
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/MKjgcHCx/bc9319b1e9ae32015139e19356135358.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9A%D0%B8%D0%BD%D0%BE%D0%B4%D0%B6%D0%B5%D0%BC%201%20HD.png" channelId="2481" tvg-id="kinojam1",Kinojam 1
+http://195.64.140.147:10064/64
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/6305.png" logo="http://ex.iptvin.ru/pic/2/Love-Nature-220x132-tr.png" channelId="2035" tvg-id="love-nature-4k",Love Nature
+http://195.64.140.147:10214/214
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/ZY8t5CpN/8698f8174bf9151672bf27e9d1cd1f35.png" logo="https://i.postimg.cc/m2TxzBy5/f7b9111271a7ddf921e8a7104525471f.png" channelId="3877" tvg-id="m1global",MMA-TV
+http://195.64.140.147:10110/110
+#EXTINF:-1 group-title="Llc G&G-Telecom",National Geographic Wild HD
+http://195.64.140.147:10149/149
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
+http://195.64.140.147:10153/153
+#EXTINF:-1 group-title="Llc G&G-Telecom",Nick JR
+http://195.64.140.147:10125/125
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/98ae584c82788a5d6de546dd1413f7e7.jpg" logo="http://overlay.iptvin.ru/epg/PIC/Nickelodeon%20HD.png" channelId="334" tvg-id="nickelodeon-hd",Nickelodeon HD
+http://195.64.140.147:10121/121
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/29b4f5a39af47616cbcf4e3bfd8588a7.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_4AAE_13_70_1680000_0_0_0.png" channelId="1699" tvg-id="paramount-comedy",Paramount Comedy
+http://195.64.140.147:10065/65
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Plan-B-220x220.png" logo="http://ex.iptvin.ru/pic/2/planb.png" channelId="-1" tvg-id="plan-b",Plan B
+http://195.64.140.147:10082/82
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/072019/rtghd_black.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20HD.png" channelId="1494" tvg-id="rtg-hd",RTG HD
+http://195.64.140.147:10159/159
+#EXTINF:-1 group-title="Llc G&G-Telecom",Sport 5
+http://195.64.140.147:10098/98
+#EXTINF:-1 group-title="Llc G&G-Telecom",Start Air
+http://195.64.140.147:10063/63
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/TLC-189x189.jpg" logo="http://overlay.iptvin.ru/epg/PIC/TLC.png" channelId="67" tvg-id="tlc",TLC
+http://195.64.140.147:10137/137
+#EXTINF:-1 group-title="Llc G&G-Telecom",TRT Sport
+http://195.64.140.147:10106/106
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Ti-Ji-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_727_12_70_1680000_0_0_0.png" channelId="182" tvg-id="tiji",Tiji
+http://195.64.140.147:10128/128
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1813.png" logo="https://i0.wp.com/mindyonthemove.com/wp-content/uploads/2020/05/Travel_Channel_-_Logo.svg_.png" channelId="54" tvg-id="travel-channel",Travel Channel
+http://195.64.140.147:10158/158
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
+http://195.64.140.147:10144/144
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
+http://195.64.140.147:10145/145
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+http://195.64.140.147:10146/146
+#EXTINF:-1 group-title="Llc G&G-Telecom",Viasat Sort
+http://195.64.140.147:10113/113
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/9389d0963e40befe01ee9fca7b0cce9b.png" logo="http://ex.iptvin.ru/pic/2/b86f61452caa8a5c7518b7a0cd5ecc76.png" channelId="588" tvg-id="viasat-nature-history-hd",Viju+ Planet
+http://195.64.140.147:10147/147
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/QMjVLP0Z/b3b7c1d07f17c6e34b9ce68093d1af28.png" logo="https://i.postimg.cc/3JDk22dV/04ea6e6a43690b0d9b9d2317cfe4b163.png" channelId="3576",Ziggo Golf
+http://195.64.140.147:10116/116
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
+http://195.64.140.147:10118/118
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто плюс
+http://195.64.140.147:10029/29
+#EXTINF:-1 group-title="Llc G&G-Telecom",Бестселлер
+http://195.64.140.147:10075/75
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/bober-1.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%B1%D1%91%D1%80.png" channelId="646" tvg-id="bobior",Бобёр
+http://195.64.140.147:10163/163
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://www.ekran39.ru/upload/medialibrary/e04/e04bbce77eb81fb3a90d4c04b5c1238d.png" logo="https://i115.fastpic.org/big/2021/0914/a3/00894f036c349ebee25843607064dca3.png" channelId="3918" tvg-id="bolshaya-azia",Большая Азия
+http://195.64.140.147:10175/175
+#EXTINF:-1 group-title="Llc G&G-Telecom",В Гостях у Сказки
+http://195.64.140.147:10136/136
+#EXTINF:-1 group-title="Llc G&G-Telecom",Детектив
+http://195.64.140.147:10077/77
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/2bd4c8af1670253241e51f8df33cb8a0.png" logo="http://ex.iptvin.ru/pic/2/d5b1c880e0c2fdc576be6604a67a0233.png" channelId="39" tvg-id="detsky-mir",Детский Мир
+http://195.64.140.147:10119/119
+#EXTINF:-1 group-title="Llc G&G-Telecom",Диалоги о Рыбалке
+http://195.64.140.147:10117/117
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
+http://195.64.140.147:10139/139
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
+http://195.64.140.147:10177/177
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693544534",Дом Кино Премиум
+http://195.64.140.147:10081/81
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
+http://195.64.140.147:10057/57
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
+http://195.64.140.147:10030/30
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
+http://195.64.140.147:10018/18
+#EXTINF:-1 group-title="Llc G&G-Telecom",ЕвроКино
+http://195.64.140.147:10088/88
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",Живи
+http://195.64.140.147:10178/178
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/X7wh4pYR/4fc4717d538520f411186bc84b6e3a8f.png" logo="https://i.postimg.cc/PqqFWyQH/326d9fa421fab693b457d6c239335946.png" channelId="325" tvg-id="zagorodnaya-zhizn",Загородная Жизнь
+http://195.64.140.147:10180/180
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/6265.png" logo="http://epg.openboxfan.com/picon/%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5%D1%82%D0%B2.png" channelId="247" tvg-id="zdorovoe-tv",Здоровое ТВ
+http://195.64.140.147:10171/171
+#EXTINF:-1 group-title="Llc G&G-Telecom",Золотая коллекция
+http://195.64.140.147:10078/78
+#EXTINF:-1 group-title="Llc G&G-Telecom",Зоопарк
+http://195.64.140.147:10170/170
+#EXTINF:-1 group-title="Llc G&G-Telecom",Иллюзион
+http://195.64.140.147:10093/93
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/rszKnPMC/a5c487f71b5ae29220f9a6dc2faeb741.png" logo="https://i.postimg.cc/y6rJgsyf/49dd91d5aec30501928147d42d794821.png" channelId="190" tvg-id="illuzion-plus",Иллюзион+
+http://195.64.140.147:10090/90
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/276.jpg" logo="http://teledays.net/images/indijskoe-kino.png" channelId="168" tvg-id="indiyskoe-kino",Индийское Кино
+http://195.64.140.147:10049/49
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/KVN-TV-b.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7C_1_70_1680000_0_0_0.png" channelId="3047" tvg-id="kvn-tv",КВН ТВ
+http://195.64.140.147:10138/138
+#EXTINF:-1 group-title="Llc G&G-Telecom",КХЛ ТВ HD
+http://195.64.140.147:10109/109
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1318.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_526_D_70_1680000_0_0_0.png" channelId="80" tvg-id="kxl",КХЛ ТВ
+http://195.64.140.147:10108/108
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/822.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_336_8_70_168AFFC_0_0_0.png" channelId="20" tvg-id="karusel",Карусель
+http://195.64.140.147:10008/998
+#EXTINF:-1 group-title="Llc G&G-Telecom",Кинеко
+http://195.64.140.147:10080/80
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/471249276af30203c4ab6c3508dc48bc.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9A%D0%B8%D0%BD%D0%BE%20%D0%A2%D0%92.png" channelId="342" tvg-id="kino-tv",Кино ТВ
+http://195.64.140.147:10050/50
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinokomediya.png" channelId="194" tvg-id="kinokomedia",Кинокомедия
+http://195.64.140.147:10047/47
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/qBnntGZR/75cba7c36cdbfdb0fc4e546d9abf249f.png" channelId="270" tvg-id="kinomiks",Киномикс
+http://195.64.140.147:10044/44
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinopremera-hd.png" channelId="410" tvg-id="kinopremiera-hd",Кинопремьера HD
+http://195.64.140.147:10084/84
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://tv.kubtel.ru/tv_icon/kinosat.jpg" channelId="4643" tvg-id="kinosat",Киносат
+http://195.64.140.147:10058/58
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinosvidanie.png" channelId="413" tvg-id="kinosvidanie",Киносвидание
+http://195.64.140.147:10045/45
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinosemya.png" channelId="568" tvg-id="kinosemiya",Киносемья
+http://195.64.140.147:10042/42
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinoseriya.png" channelId="195" tvg-id="kinoseria",Киносерия
+http://195.64.140.147:10048/48
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/preview-logo-kinouzhas.png" logo="https://i115.fastpic.org/big/2021/0914/52/a7d4ef67085f8a7d8a49ee73cf7fd752.png" channelId="1859" tvg-id="kinouzhas",Киноужас
+http://195.64.140.147:10043/43
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/kinohit.png" channelId="409" tvg-id="kinoxit",Кинохит
+http://195.64.140.147:10046/46
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/d8519bbfa86d95d0e7e4140c7925db16.jpg" logo="http://ex.iptvin.ru/pic/2/Klassika-Kino-190x114-tr.png" channelId="-1" tvg-id="klassika-kino",Классика Кино
+http://195.64.140.147:10061/61
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1115.png" logo="https://antifriz.tv/storage/images/channel_logos/russkaja-comedija.png" channelId="71" tvg-id="russkaya-komedia",Комедия
+http://195.64.140.147:10092/92
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/854521rM/a1318212b765e610eeb0406af2822699.png" logo="https://i.postimg.cc/BnFvq5Kq/e2bd00f1b74aad7f41941afd1d065754.png" channelId="75" tvg-id="kuxnia-tv",Кухня ТВ
+http://195.64.140.147:10037/37
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/XJPdSz4L/3fb005e09c5ebc77bcb799b52d402960.png" logo="https://i.postimg.cc/fkndkS30/b6d4dde925e3705a26de5af36cabddc3.png" channelId="314" tvg-id="lubimoe-kino",Любимое Кино
+http://195.64.140.147:10091/91
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Lyova-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/Lyova-HD-220x132-tr.png" channelId="5191" tvg-id="liova",Лёва HD
+http://195.64.140.147:10123/123
+#EXTINF:-1 group-title="Llc G&G-Telecom",МАМА
+http://195.64.140.147:10127/127
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/tvico-n562.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_89C_16_70_1680000_0_0_0.png" channelId="4" tvg-id="match-tv",Матч! HD
+http://195.64.140.147:10105/105
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1301.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_515_D_70_1680000_0_0_0.png" channelId="157" tvg-id="match-arena",Матч! Арена
+http://195.64.140.147:10096/96
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/0c3262b5533961ef860c3952e709f0ad.png" logo="http://ex.iptvin.ru/pic/2/61e8630fd2649b2032cce8670868258e.png" channelId="81" tvg-id="match-boets",Матч! Боец
+http://195.64.140.147:10097/97
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/cf249e65252b5b396c7abe91006ccd99.png" logo="http://ex.iptvin.ru/pic/2/718e7c96fd3d57b161daf4b3a5c238ae.png" channelId="447" tvg-id="match-planeta",Матч! Планета
+http://195.64.140.147:10104/104
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/sX0M4xVn/19da9ebdf96ba76d19ae778a4a672d56.png" logo="https://i.postimg.cc/kXS2W7Lc/37158dbd5d899e08ae91272747fcf852.png" channelId="277" tvg-id="match-premier",Матч! Премьер HD
+http://195.64.140.147:10103/99103
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/dd3b8ff3ff848c83006900eaa8f88297.png" logo="http://ex.iptvin.ru/pic/2/Match-Strana-160x96-tr.png" channelId="84" tvg-id="match-nash-sport",Матч! Страна
+http://195.64.140.147:10099/99
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/tvico-n52.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_3EA_A_70_1680000_0_0_0.png" channelId="4" tvg-id="match-tv",Матч! ТВ
+http://195.64.140.147:10003/993
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/14105.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_3719_E_70_1680000_0_0_0.png" channelId="553" tvg-id="match-football1",Матч! Футбол 1 HD
+http://195.64.140.147:10100/100
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1401.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_579_E_70_1680000_0_0_0.png" channelId="554" tvg-id="match-football2",Матч! Футбол 2 HD
+http://195.64.140.147:10101/101
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1402.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_19_57A_E_70_1680000_0_0_0.png" channelId="2831" tvg-id="match-football3",Матч! Футбол 3 HD
+http://195.64.140.147:10102/102
+#EXTINF:-1 group-title="Llc G&G-Telecom",Мир Баскетболла
+http://195.64.140.147:10111/111
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/9d8f609c2c25654723ed63403310b6b8.png" logo="http://ex.iptvin.ru/pic/2/5e2021c4e358903e655b189b18ee3847.png" channelId="312" tvg-id="mir-seriala",Мир Сериала
+http://195.64.140.147:10089/89
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="53" tvg-id="moya-planeta",Моя Планета
+http://195.64.140.147:10161/161
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1173.jpg" logo="https://antifriz.tv/storage/images/channel_logos/muzhskoe-kino.png" channelId="169" tvg-id="muzhskoe-kino",Мужское Кино
+http://195.64.140.147:10051/51
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/mult-small.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D1%83%D0%BB%D1%8C%D1%82.png" channelId="1722" tvg-id="mult",Мульт
+http://195.64.140.147:10132/132
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/4cb56b365d341b49616bd671747ed6ff.png" logo="http://ex.iptvin.ru/pic/2/c8bc685a60a9e4df35a584848cc6e773.png" channelId="186" tvg-id="multimania",Мультиландия
+http://195.64.140.147:10135/135
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://www.oreol.tv/img/multmus.jpg" logo="http://televizor.org/img/logopit/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0.png" channelId="3704" tvg-id="multimuzyka",Мультимузыка
+http://195.64.140.147:10134/134
+#EXTINF:-1 group-title="Llc G&G-Telecom",Настоящее Страшное ТВ
+http://195.64.140.147:10054/54
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+http://195.64.140.147:10176/176
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://bscom.ru/images/cms/thumbs/2adbdeb372d9f126618d0e0be09013f344f616e7/nasha_tema_300_auto_jpg_5_80.jpg" logo="http://ex.iptvin.ru/pic/2/Nasha-Tema-201x200-tr.png" channelId="4025" tvg-id="nasha-tema",Наша Тема
+http://195.64.140.147:10172/172
+#EXTINF:-1 group-title="Llc G&G-Telecom",Наше Детство
+http://195.64.140.147:10126/126
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://getsiptv.ru/img/ch_icons/nashe_novoe_kino.png" channelId="315" tvg-id="nashe-novoe-kino",Наше Новое Кино
+http://195.64.140.147:10053/53
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/117.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_75_1_70_1680000_0_0_0.png" channelId="160" tvg-id="nostalgia",Ностальгия
+http://195.64.140.147:10167/167
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/3xh7Y2dz/643663e6724dd77ceec2172e1a9ae53a.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_328_8_70_168AFFC_0_0_0.png" channelId="3294" tvg-id="o_",О!
+http://195.64.140.147:10124/124
+#EXTINF:-1 group-title="Llc G&G-Telecom",Открытый Мир
+http://195.64.140.147:10188/188
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/ohota-i-ribalka-icon.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20%D0%B8%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.png" channelId="221" tvg-id="oxota-i-rybalka",Охота и рыбалка
+http://195.64.140.147:10039/39
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/67efdf96655dfd50a1a29ab027ce9bbd.png" logo="http://ex.iptvin.ru/pic/2/6b2a7fd7cd4d65ab96784fee692c2ea1.png" channelId="300" tvg-id="oxotnik-i-rybolov-hd",Охотник и рыболов
+http://195.64.140.147:10162/162
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/9044af12a4a9dbc01e92a76ffc00c365.png" logo="https://i.postimg.cc/WbLYFqDT/e5f45a4fdbc8482ca5946a1c4d987d8c.png" channelId="3295" tvg-id="poexali",Поехали!
+http://195.64.140.147:10168/168
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://www.cableman.ru/sites/default/files/prodvizhenie.png" logo="http://ex.iptvin.ru/pic/2/logo4.png" channelId="3138" tvg-id="prodvizhenie",Продвижение
+http://195.64.140.147:10142/142
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/7YGX6SRb/16638cc3be4acfe210849f8a64251ce1.png" logo="http://ex.iptvin.ru/pic/2/Pyatnica-220x132-tr.png" channelId="26" tvg-id="piatnica",Пятница
+http://195.64.140.147:10015/9915
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://tvbesedka.com/Upload/2020/10/24/14/17/15/555609ce-5a12-48ee-b63e-fbb511559b4b.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9F%D1%91%D1%81%20%D0%B8%20%D0%9A%D0%BE.png" channelId="3873" tvg-id="pes-i-ko",Пёс и Ко
+http://195.64.140.147:10143/143
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/297.jpg" logo="https://antifriz.tv/storage/images/channel_logos/rodnoje_kino.png" channelId="316" tvg-id="rodnoe-kino",Родное Кино
+http://195.64.140.147:10052/52
+#EXTINF:-1 group-title="Llc G&G-Telecom",Роман
+http://195.64.140.147:10076/9976
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/c112f07f0092fcb68f8b7ff312b96bd5.jpg" logo="http://ex.iptvin.ru/pic/2/Kids-220x132-tr.png" channelId="1728" tvg-id="sts-kids-hd",СТС Kids
+http://195.64.140.147:10129/129
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/wM333mmq/a0c23df588be812ab898fbf1e1813d41.png" logo="https://i.postimg.cc/q7fKYjC8/f58b0704a520aadcc7f197802c32c9de.png" channelId="1571" tvg-id="sts-love",СТС Love
+http://195.64.140.147:10140/140
+#EXTINF:-1 group-title="Llc G&G-Telecom",Синема HD
+http://195.64.140.147:10055/55
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Solnce-220x220.png" logo="http://ex.iptvin.ru/pic/2/Solnce-220x132-tr.png" channelId="958" tvg-id="solnce",Солнце
+http://195.64.140.147:10027/27
+#EXTINF:-1 group-title="Llc G&G-Telecom",Супергерои
+http://195.64.140.147:10130/130
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/CKdmB1wL/4527286dada5083b83bb0d03fabfa5ae.png" logo="https://i.postimg.cc/vHMh7XGK/0445f903c7bc8f136486a8cefd534321.png" channelId="8" tvg-id="tv3-ru",ТВ3
+http://195.64.140.147:10014/9914
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/19110.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A2%D0%BE%D1%87%D0%BA%D0%B0%20%D0%BE%D1%82%D1%80%D1%8B%D0%B2%D0%B0%20HD.png" channelId="3705" tvg-id="tochka-otryva",Точка Отрыва
+http://195.64.140.147:10031/31
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/Unikum.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A3%D0%BD%D0%B8%D0%BA%D1%83%D0%BC%20HD.png" channelId="192" tvg-id="detsky",Уникум
+http://195.64.140.147:10131/131
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
+http://195.64.140.147:10028/28
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://i.postimg.cc/j2SkGsJn/c646578298e9349525513ff85cc08ab7.png" logo="https://i.postimg.cc/BQtVpn0d/b79b8c3bf962462989e320ffe2373617.png" channelId="919" tvg-id="football-ru",Футбол
+http://195.64.140.147:10107/107
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/1109.png" channelId="22" tvg-id="che",Че!
+http://195.64.140.147:10022/22
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/027-u.jpg" logo="http://ex.iptvin.ru/pic/2/YU-220x132-tr.png" channelId="23" tvg-id="yu",Ю
+http://195.64.140.147:10021/9921
 #EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
 http://45.145.32.13:20440/kineko/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x132-tr.png" channelId="1932" tvg-id="amedia-hit",Amedia Hit
@@ -1739,7 +2007,7 @@ http://45.145.32.13:20440/match_football3/index.m3u8?token=test
 http://45.145.32.13:20440/avto24/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 http://45.145.32.13:20440/sony_turbo/index.m3u8?token=test
-#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 http://45.145.32.13:20440/domashnij/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://45.145.32.13:20440/eurokino/index.m3u8?token=test
@@ -1893,7 +2161,7 @@ https://stream8.cinerama.uz/1429/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1423/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
 https://stream8.cinerama.uz/1426/tracks-v1a1/mono.m3u8
@@ -2201,11 +2469,11 @@ https://fs.uplink.kz/avto24/mono.m3u8?token=onlinetv
 https://fs.uplink.kz/bober/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 https://fs.uplink.kz/v_gostyah_u_skazki/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" channelId="948693387772",Дом кино премиум
+#EXTINF:-1 group-title="Uplink" channelId="948693544534",Дом кино премиум
 https://fs.uplink.kz/dom_kino_premium/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="948693387772",Дом кино
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="948693544534",Дом кино
 https://fs.uplink.kz/dom_kino/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 https://fs.uplink.kz/domashniy/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 https://fs.uplink.kz/dorama/mono.m3u8?token=onlinetv
@@ -2533,7 +2801,7 @@ http://185.46.16.239:8000/Eurosport_1
 http://185.46.16.239:8000/V_gostyakh_u_skazki
 #EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://185.46.16.239:8000/Doktor
-#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 http://185.46.16.239:8000/Domashniy
 #EXTINF:-1 group-title="Инет" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://185.46.16.239:8000/Drayv
@@ -2632,7 +2900,7 @@ https://w1.mediastreaming.it/orlertv/livestream/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Prima TV Sicilia
 http://flash2.streaming.xdevel.com/primatv/primatv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",RDS Social TV
-https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw9411591183696
+https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw9411591392712
 #EXTINF:-1 group-title="Италия",RTP Sicilia
 https://flash2.xdevel.com/rtptv/rtptv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Radio 51
@@ -2949,13 +3217,13 @@ http://kinowalk.hopto.org/vhs90e_live
 http://kinowalk.hopto.org/mychennal12345_live
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://images.live.vkvideo.ru/user/31457995/avatar?change_time=1772638699&croped=1&mh=140&mw=140",Дикарка
 http://kinowalk.hopto.org/dikarka_live
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="948693387772",Дом Кино Премиум HD
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="948693544534",Дом Кино Премиум HD
 http://46.162.201.15:8000/play/a091/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="948693544534",Дом Кино
 http://46.162.201.15:8000/play/a03p/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" channelId="945795591848",Домашний 720x576
+#EXTINF:-1 group-title="Кино и сериалы" channelId="945795696356",Домашний 720x576
 http://31.131.141.195:8000/play/a001/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693387772" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795591848",Домашний
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?948693544534" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="945795696356",Домашний
 http://5.188.221.43:8080/play/domashniy
 #EXTINF:-1 group-title="Кино и сериалы",Евро кино
 http://31.148.48.15/Evrokino/tracks-v1a1/mono.m3u8?token=iptvin.ru
@@ -3397,9 +3665,9 @@ https://s70378.cdn.ngenix.net/glazami_turista/1/index.m3u8
 https://s70378.cdn.ngenix.net/detskij_mir/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
 https://s70378.cdn.ngenix.net/dikiy/1/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693387772",Дом Кино Премиум
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="948693544534",Дом Кино Премиум
 https://s70378.cdn.ngenix.net/dom_kino_premium_hd/3/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693387772",Дом Кино
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="948693544534",Дом Кино
 https://s70378.cdn.ngenix.net/dom_kino/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 https://s70378.cdn.ngenix.net/evrokino/1/index.m3u8
@@ -3552,7 +3820,7 @@ http://89.33.29.115:8080/2plus2/index.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 http://streamvideol1.luxnet.ua/news24/smil:news24.stream.smil/chunklist.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591183696
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591392712
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
 #EXTINF:-1 group-title="Украина",Espreso TV
