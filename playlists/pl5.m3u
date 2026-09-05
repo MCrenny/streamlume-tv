@@ -1,5 +1,5 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 31.08.26 15:53 User: yuri1245 IP: 74.249.78.161 channels 2112 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web10 04.09.26 15:54 User: yuri1245 IP: 40.65.61.144 channels 2383 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-09-08" tvg-logo="../Channel/Logo/Amedia Hit.png" tvg-id="650a0ae5672bd20d04bd2247b8cff705_amedia1" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913",Amedia 1
 http://46.162.201.15:8000/play/a08r/index.m3u8
@@ -431,11 +431,11 @@ http://stream.mcquack.net/274/index.m3u8
 http://stream.mcquack.net/275/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://stream.mcquack.net/80/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="943773557731",Дом Кино Премиум
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="942026092720",Дом Кино Премиум
 http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 http://stream.mcquack.net/236/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://stream.mcquack.net/227/index.m3u8
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 http://stream.mcquack.net/412/index.m3u8
@@ -675,7 +675,7 @@ https://flussonic.mkpnet.ru/tv-132f51b35b47b897/video.m3u8
 https://stream8.cinerama.uz/1034/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/ctc-logo-01.jpg" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 https://flussonic.mkpnet.ru/tv-9cb92ea0862cd7b0/video.m3u8
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 https://flussonic.mkpnet.ru/tv-b515ccce67923f8a/video.m3u8
 #EXTINF:-1 group-title="Эфирные" tvg-logo="https://i.postimg.cc/7YGX6SRb/16638cc3be4acfe210849f8a64251ce1.png" logo="http://ex.iptvin.ru/pic/2/Pyatnica-220x132-tr.png" channelId="26" tvg-id="piatnica",Пятница
 https://flussonic.mkpnet.ru/tv-7d5e5db805057e8f/video.m3u8
@@ -1132,7 +1132,7 @@ http://wms.shared.streamshow.it/visualradio/mp4:visualradio/chunklist.m3u8
 #EXTINF:-1 tvg-id="RELAX.cz" tvg-country="CZ" tvg-language="Czech" tvg-logo="https://raw.githubusercontent.com/MarhyCZ/picons/master/640/relax.png" group-title="Музыкальные" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A0%D0%B0%D0%B4%D1%8B%D1%91%20%D0%A0%D1%8D%D0%BB%D0%B0%D0%BA%D1%81.png" channelId="-1",Relax
 https://dash2.antik.sk/live/test_relax/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Reload Radio Music Power HD
-http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw945031410308
+http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8?bw942701456960
 #EXTINF:-1 group-title="Музыкальные",Retro_Music_Television
 https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
 #EXTINF:-1 group-title="Музыкальные",Rouge TV 720p
@@ -1220,111 +1220,111 @@ http://online.nasheradio.ua/NasheRadio_Live
 #EXTINF:-1 group-title="Музыкальные",Наше Радіо
 http://online.nasheradio.ua/NasheRadio
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/e5ac9c34ff5a9c9193ec8de6f085e6f6.png" logo="http://ex.iptvin.ru/pic/2/black-220x132-white-tr.png" channelId="5173" tvg-id="sony-turbo",.Black
-http://tinyurl.com/%74%76z%61%74%61k65?id=black
+http://tinyurl.com/iptvin.ru65?id=black
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
-http://tinyurl.com/%74%76z%61%74%61k65?id=amedia
+http://tinyurl.com/iptvin.ru65?id=amedia
 #EXTINF:-1 tvg-id="A1.ru" tvg-name="а1" tvg-logo="https://i.imgur.com/2pAHdAi.png" group-title="Cloud_Flare" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913",Amedia 1
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Amedia_1/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Amedia_1/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
-http://tinyurl.com/%74%76z%61%74%61k65?id=amedia2
+http://tinyurl.com/iptvin.ru65?id=amedia2
 #EXTINF:-1 tvg-id="A2.ru" tvg-name="а2" tvg-logo="https://i.imgur.com/NqHla2V.png" group-title="Cloud_Flare" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914",Amedia 2
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Amedia_2_HD/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Amedia_2_HD/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-new-220x132-tr.png" channelId="1932" tvg-id="amedia-hit",Amedia Hit
-http://tinyurl.com/%74%76z%61%74%61k65?id=amediahit
+http://tinyurl.com/iptvin.ru65?id=amediahit
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-HD-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-HD-new-whte-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium HD
-http://tinyurl.com/%74%76z%61%74%61k65?id=amediapremium
+http://tinyurl.com/iptvin.ru65?id=amediapremium
 #EXTINF:-1 tvg-id="Bolt.ru" tvg-name="bolt" tvg-logo="https://i.imgur.com/YdIHXOR.png" group-title="Cloud_Flare",BOLT
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Bolt/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Bolt/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps action" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Action
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Action/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Action/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps comedy" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Comedy
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Comedy/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Comedy/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps drama" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Drama
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Drama/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Drama/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps fiction" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Fiction
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Fiction/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Fiction/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps fresh" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Fresh
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Fresh/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Fresh/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 tvg-name="cps investigation" tvg-logo="https://i.ibb.co/GvWH2Yf/image.png" group-title="Cloud_Flare",CPS Investigation
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/CPS_Investigation/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/CPS_Investigation/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci
-http://tinyurl.com/%74%76z%61%74%61k65?id=davinci
+http://tinyurl.com/iptvin.ru65?id=davinci
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Mezzo-s.jpg" logo="http://ex.iptvin.ru/pic/2/Mezzo-205x150-tr.png" channelId="43" tvg-id="mezzo",Mezzo
-http://tinyurl.com/%74%76z%61%74%61k65?id=mezzo
+http://tinyurl.com/iptvin.ru65?id=mezzo
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://pl.ottg.app/icon/2829.png" logo="https://antifriz.tv/storage/images/pack_logos/7472ab672fcbb9f7468e8d2eeb4d8d0c.png" channelId="209" tvg-id="shot-tv",Shot TV
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/SHOT_TV/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/SHOT_TV/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare",TV1000 кино
-http://tinyurl.com/%74%76z%61%74%61k65?id=tv1000rukino
+http://tinyurl.com/iptvin.ru65?id=tv1000rukino
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/fdfe456ddc50f2af40b28f5fc2b8575f.png" logo="http://ex.iptvin.ru/pic/2/6dbb4eecf3245074cd1f7293a48ae3d0.png" channelId="165" tvg-name="Viasat Explore" tvg-id="viasat-explore",Viju Explore
-http://tinyurl.com/%74%76z%61%74%61k65?id=viasatexp
+http://tinyurl.com/iptvin.ru65?id=viasatexp
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/dbd1d29394f2ac5608020d700dcb5dc3.png" logo="http://ex.iptvin.ru/pic/2/54e509932c2845dc9bba83776caa9d90.png" channelId="172" tvg-name="Viasat Nature" tvg-id="viasat-nature",Viju Nature
-http://tinyurl.com/%74%76z%61%74%61k65?id=viasatnat
+http://tinyurl.com/iptvin.ru65?id=viasatnat
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/3de08f65bf01c568ee4b14410706be4e.png" logo="http://ex.iptvin.ru/pic/2/9738080a61e0624df990a537278cd4d3.png" channelId="166" tvg-name="Viasat History" tvg-id="viasat-history",viju History
-http://tinyurl.com/%74%76z%61%74%61k65?id=viasathist
+http://tinyurl.com/iptvin.ru65?id=viasathist
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто Плюс
-http://tinyurl.com/%74%76z%61%74%61k65?id=autoplus
+http://tinyurl.com/iptvin.ru65?id=autoplus
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/2bd4c8af1670253241e51f8df33cb8a0.png" logo="http://ex.iptvin.ru/pic/2/d5b1c880e0c2fdc576be6604a67a0233.png" channelId="39" tvg-id="detsky-mir",Детский Мир
-http://tinyurl.com/%74%76z%61%74%61k65?id=detskymir
-#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="942515705154",Домашний International
-http://tinyurl.com/%74%76z%61%74%61k65?id=domashni
+http://tinyurl.com/iptvin.ru65?id=detskymir
+#EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" channelId="-1" tvg-id="domashny-int" channelId="941350728480",Домашний International
+http://tinyurl.com/iptvin.ru65?id=domashni
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
-http://tinyurl.com/%74%76z%61%74%61k65?id=eurokino
+http://tinyurl.com/iptvin.ru65?id=eurokino
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",Живи!
-http://tinyurl.com/%74%76z%61%74%61k65?id=jivi
+http://tinyurl.com/iptvin.ru65?id=jivi
 #EXTINF:-1 tvg-id="mosfilm" tvg-logo="http://team.ga/images/chIcons/336.png" group-title="Cloud_Flare",Золотая коллекция
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Mosfilm/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Mosfilm/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare",Иллюзион
-http://tinyurl.com/%74%76z%61%74%61k65?id=rusilluzion
+http://tinyurl.com/iptvin.ru65?id=rusilluzion
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="https://i.postimg.cc/rszKnPMC/a5c487f71b5ae29220f9a6dc2faeb741.png" logo="https://i.postimg.cc/y6rJgsyf/49dd91d5aec30501928147d42d794821.png" channelId="190" tvg-id="illuzion-plus",Иллюзион+
-http://tinyurl.com/%74%76z%61%74%61k65?id=illuzionplus
+http://tinyurl.com/iptvin.ru65?id=illuzionplus
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Indiya-220x220.png" logo="http://ex.iptvin.ru/pic/2/Indiya-220x132-tr.png" channelId="253" tvg-id="zee-tv",Индия
-http://tinyurl.com/%74%76z%61%74%61k65?id=zeetv
+http://tinyurl.com/iptvin.ru65?id=zeetv
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/KVN-TV-b.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7C_1_70_1680000_0_0_0.png" channelId="3047" tvg-id="kvn-tv",КВН ТВ
-http://tinyurl.com/%74%76z%61%74%61k65?id=kvntv
+http://tinyurl.com/iptvin.ru65?id=kvntv
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/kinokomediya.png" channelId="194" tvg-id="kinokomedia",Кинокомедия
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinokomediya
+http://tinyurl.com/iptvin.ru65?id=kinokomediya
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="https://i.postimg.cc/qBnntGZR/75cba7c36cdbfdb0fc4e546d9abf249f.png" channelId="270" tvg-id="kinomiks",Киномикс
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinomiks
+http://tinyurl.com/iptvin.ru65?id=kinomiks
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/c9c6feb88adb52d305f886c6af1cf201.png" logo="https://antifriz.tv/storage/images/pack_logos/a4589792317696060765519a4d2256b8.png" channelId="599" tvg-id="kinopokaz" shift="-3",Кинопоказ
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Kinopokaz_HD/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Kinopokaz_HD/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/kinosemya.png" channelId="568" tvg-id="kinosemiya",Киносемья
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinosemya
+http://tinyurl.com/iptvin.ru65?id=kinosemya
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/kinoseriya.png" channelId="195" tvg-id="kinoseria",Киносерия
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Kinoseriya_HD/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Kinoseriya_HD/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/kinoseriya.png" channelId="195" tvg-id="kinoseria",Киносерия
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinoseria
+http://tinyurl.com/iptvin.ru65?id=kinoseria
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/preview-logo-kinouzhas.png" logo="https://i115.fastpic.org/big/2021/0914/52/a7d4ef67085f8a7d8a49ee73cf7fd752.png" channelId="1859" tvg-id="kinouzhas",Киноужас
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinoujas
+http://tinyurl.com/iptvin.ru65?id=kinoujas
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/kinohit.png" channelId="409" tvg-id="kinoxit",Кинохит
-http://tinyurl.com/%74%76z%61%74%61k65?id=kinohit
+http://tinyurl.com/iptvin.ru65?id=kinohit
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/109.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_6D_1_70_1680000_0_0_0.png" channelId="174" tvg-id="kto-est-kto",Кто есть кто
-http://tinyurl.com/%74%76z%61%74%61k65?id=ktoestkto
+http://tinyurl.com/iptvin.ru65?id=ktoestkto
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/mujskoe-kino.png" channelId="169" tvg-id="muzhskoe-kino",Мужское кино
-http://tinyurl.com/%74%76z%61%74%61k65?id=interesnoetv
+http://tinyurl.com/iptvin.ru65?id=interesnoetv
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Muzhskoj-280x280.png" logo="https://i.postimg.cc/QM4HFf7F/6af0402151028746a625767550547828.png" channelId="323" tvg-id="muzhskoy",Мужской
-http://tinyurl.com/%74%76z%61%74%61k65?id=muzhskoy
+http://tinyurl.com/iptvin.ru65?id=muzhskoy
 #EXTINF:-1 group-title="Cloud_Flare",Музон 1
-http://tinyurl.com/%74%76z%61%74%61k65?id=m1
+http://tinyurl.com/iptvin.ru65?id=m1
 #EXTINF:-1 group-title="Cloud_Flare",Музон 2
-http://tinyurl.com/%74%76z%61%74%61k65?id=m2
+http://tinyurl.com/iptvin.ru65?id=m2
 #EXTINF:-1 tvg-id="NST.ru" tvg-name="нст" tvg-logo="https://i.imgur.com/uv2yxa5.png" group-title="Cloud_Flare" logo="https://antifriz.tv/storage/images/channel_logos/hct.png" channelId="272",НСТ
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/HCTV/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/HCTV/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/nashe-novoe-kino.png" channelId="315" tvg-id="nashe-novoe-kino",Наше новое кино HD
-http://tinyurl.com/%74%76z%61%74%61k65?id=nashanovoekino
+http://tinyurl.com/iptvin.ru65?id=nashanovoekino
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Perets-220x220.png" logo="https://i.postimg.cc/YjK74W8G/6efb826c851c5538f60b3542a6e737b2.png" channelId="2909" tvg-id="perec-int",Перец
-http://tinyurl.com/%74%76z%61%74%61k65?id=perec
+http://tinyurl.com/iptvin.ru65?id=perec
 #EXTINF:-1 tvg-id="ProLyubov.ru" tvg-name="про любовь" tvg-logo="https://i.imgur.com/QpIGAT0.png" group-title="Cloud_Flare" logo="https://i115.fastpic.org/big/2021/0914/a1/7522db826cd64d1d023162a649623ea1.png" channelId="4765",Про любовь
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/ProLubovHD/video.m3u8?token=iptvin.ru-key
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/ProLubovHD/video.m3u8?token=iptvin.ru-key
 #EXTINF:-1 group-title="Cloud_Flare",Пятница! International
-http://tinyurl.com/%74%76z%61%74%61k65?id=friday
+http://tinyurl.com/iptvin.ru65?id=friday
 #EXTINF:-1 group-title="Cloud_Flare",СТС International
-http://tinyurl.com/%74%76z%61%74%61k65?id=ctctv
+http://tinyurl.com/iptvin.ru65?id=ctctv
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/f29c66c9aeabb21b8c209337d4ebd17a.png" logo="http://ex.iptvin.ru/pic/2/77523699d7ed019c7c93c7331cb22df3.png" channelId="162" tvg-id="texno-24",Техно 24
-http://tinyurl.com/%74%76z%61%74%61k65?id=24techno
+http://tinyurl.com/iptvin.ru65?id=24techno
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://ex.iptvin.ru/pic/2/Unikum.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A3%D0%BD%D0%B8%D0%BA%D1%83%D0%BC%20HD.png" channelId="192" tvg-id="detsky",Уникум
-http://tinyurl.com/%74%76z%61%74%61k65?id=unikum
+http://tinyurl.com/iptvin.ru65?id=unikum
 #EXTINF:-1 group-title="Cloud_Flare" tvg-logo="http://only4.tv/ch/5535.png" logo="http://fenixplus.tv/bitrix/templates/main/images/logo_for_web.png" channelId="197" tvg-id="feniks-plus-kino",Феникс+Кино
-http://tinyurl.com/%74%76z%61%74%61k65?id=fenikspluskino
+http://tinyurl.com/iptvin.ru65?id=fenikspluskino
 #EXTINF:-1 group-title="Cloudflare_Inc" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
 http://hls127.freeott.top:8080/Amedia_1/video.m3u8
 #EXTINF:-1 group-title="Cloudflare_Inc" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
@@ -1443,9 +1443,9 @@ http://5.9.11.197:57419/chu-106/mpegts
 http://5.9.11.197:57419/chu-107/mpegts
 #EXTINF:-1 group-title="Hetzner Online Ag",Бестселлер
 http://5.9.11.197:57419/chu-135/mpegts
-#EXTINF:-1 group-title="Hetzner Online Ag" channelId="943773557731",Дом кино премиум
+#EXTINF:-1 group-title="Hetzner Online Ag" channelId="942026092720",Дом кино премиум
 http://5.9.11.197:57419/chu-112/mpegts
-#EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="943773557731",Дом кино
+#EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="942026092720",Дом кино
 http://5.9.11.197:57419/chu-111/mpegts
 #EXTINF:-1 group-title="Hetzner Online Ag" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://5.9.11.197:57419/chu-113/mpegts
@@ -1525,9 +1525,9 @@ http://46.8.46.14/rubestseller/index.m3u8
 http://46.8.46.14/detmir/index.m3u8
 #EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://46.8.46.14/doktor/index.m3u8
-#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 http://46.8.46.14/domkino/index.m3u8
-#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://46.8.46.14/dom/index.m3u8
 #EXTINF:-1 group-title="Individual Entrepreneur" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://46.8.46.14/Drive/index.m3u8
@@ -1623,7 +1623,7 @@ http://176.118.197.125/JimJam/index.m3u8
 http://176.118.197.101/KHL/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://ex.iptvin.ru/pic/2/bober-1.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%B1%D1%91%D1%80.png" channelId="646" tvg-id="bobior",Бобёр
 http://176.118.197.125/Bober/index.m3u8
-#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Internet42 Llc" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 http://176.118.197.101/Dom_kino/index.m3u8
 #EXTINF:-1 group-title="Internet42 Llc" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://176.118.197.125/Draiv/index.m3u8
@@ -1775,13 +1775,13 @@ http://195.64.140.147:10117/117
 http://195.64.140.147:10139/139
 #EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://195.64.140.147:10177/177
-#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="943773557731",Дом Кино Премиум
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="942026092720",Дом Кино Премиум
 http://195.64.140.147:10081/81
-#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 http://195.64.140.147:10057/57
 #EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
 http://195.64.140.147:10030/30
-#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Llc G&G-Telecom" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://195.64.140.147:10018/18
 #EXTINF:-1 group-title="Llc G&G-Telecom",ЕвроКино
 http://195.64.140.147:10088/88
@@ -2007,7 +2007,7 @@ http://45.145.32.13:20440/match_football3/index.m3u8?token=test
 http://45.145.32.13:20440/avto24/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 http://45.145.32.13:20440/sony_turbo/index.m3u8?token=test
-#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Nnt" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://45.145.32.13:20440/domashnij/index.m3u8?token=test
 #EXTINF:-1 group-title="Nnt" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 http://45.145.32.13:20440/eurokino/index.m3u8?token=test
@@ -2161,7 +2161,7 @@ https://stream8.cinerama.uz/1429/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1423/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Turon Media" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Turon Media" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
 https://stream8.cinerama.uz/1426/tracks-v1a1/mono.m3u8
@@ -2469,11 +2469,11 @@ https://fs.uplink.kz/avto24/mono.m3u8?token=onlinetv
 https://fs.uplink.kz/bober/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="https://i.postimg.cc/d31Fd5yb/c5a75a5daf44ab43369ab54f367331cb.png" logo="https://i.postimg.cc/mgFb8p5R/7d9f5fe856fddfad0fbc33d49dcff549.png" channelId="3556" tvg-id="v-gostiax-u-skazki",В гостях у сказки
 https://fs.uplink.kz/v_gostyah_u_skazki/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" channelId="943773557731",Дом кино премиум
+#EXTINF:-1 group-title="Uplink" channelId="942026092720",Дом кино премиум
 https://fs.uplink.kz/dom_kino_premium/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="943773557731",Дом кино
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/domkino.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%20%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-id="domkino" channelId="942026092720",Дом кино
 https://fs.uplink.kz/dom_kino/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 https://fs.uplink.kz/domashniy/mono.m3u8?token=onlinetv
 #EXTINF:-1 group-title="Uplink" tvg-logo="http://ex.iptvin.ru/pic/2/77bf434d945f6f2708c28aab33f62245.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.png" channelId="147" tvg-id="dorama",Дорама
 https://fs.uplink.kz/dorama/mono.m3u8?token=onlinetv
@@ -2615,7 +2615,7 @@ https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-
 https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/xezer-tv.m3u8
 #EXTINF:-1 group-title="Азербайджан",Xzr TV HD
 http://176.65.146.189:8701/play/a09n
-#EXTINF:-1 group-title="Армения" tvg-logo="https://i.ibb.co/Y7Rxs9J/SGN-03-22-2022-1647976102720.png",Channel N/A 777
+#EXTINF:-1 group-title="Армения" tvg-logo="https://i.ibb.co/Y7Rxs9J/SGN-03-22-2022-1647976102720.png",Channel N/A 791
 http://5.188.172.179/Shant/index.m3u8
 #EXTINF:-1 tvg-logo="https://mytv.do.am/logo/deltatravel.png" group-title="Армения",Delta Travel
 http://185.177.104.228:8597/Delta-Travel_HD (+0)/index.m3u8
@@ -2801,7 +2801,7 @@ http://185.46.16.239:8000/Eurosport_1
 http://185.46.16.239:8000/V_gostyakh_u_skazki
 #EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://185.46.16.239:8000/Doktor
-#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Инет" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://185.46.16.239:8000/Domashniy
 #EXTINF:-1 group-title="Инет" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
 http://185.46.16.239:8000/Drayv
@@ -2900,7 +2900,7 @@ https://w1.mediastreaming.it/orlertv/livestream/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Prima TV Sicilia
 http://flash2.streaming.xdevel.com/primatv/primatv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",RDS Social TV
-https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw945031410308
+https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index_7.m3u8?bw942701456960
 #EXTINF:-1 group-title="Италия",RTP Sicilia
 https://flash2.xdevel.com/rtptv/rtptv/playlist.m3u8
 #EXTINF:-1 group-title="Италия",Radio 51
@@ -2979,7 +2979,7 @@ http://hls127.freeott.top:8080/Bolt/video.m3u8
 http://kinowalk.hopto.org/bossfilm_live
 #EXTINF:-1 group-title="Кино и сериалы",CCCP
 http://dtv.vol.net.ua/CCCP/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://images.live.vkvideo.ru/user/19254112/avatar?change_time=1736877622&croped=1&mh=140&mw=140",Channel N/A 175
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://images.live.vkvideo.ru/user/19254112/avatar?change_time=1736877622&croped=1&mh=140&mw=140",Channel N/A 189
 http://kinowalk.hopto.org/kasseta_live
 #EXTINF:-1 group-title="Кино и сериалы",Che TV
 http://194.152.35.17/che/index.m3u8
@@ -3122,11 +3122,11 @@ https://streaming.thestream.cyou/live/38-req_offset_28000000-req_window_0-1k_v5.
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/Gh6kghgM/faab58acf2063edffe76dcb90355bbe5.png" logo="https://i.postimg.cc/1RC06KG1/16728fb6b6625947ede1692cb9b70ecc.png" channelId="214" tvg-id="tv1000-action",TV1000 Action
 https://flussonic.mkpnet.ru/tv-0991ea2ac6292de8/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/Gh6kghgM/faab58acf2063edffe76dcb90355bbe5.png" logo="https://i.postimg.cc/1RC06KG1/16728fb6b6625947ede1692cb9b70ecc.png" channelId="214" tvg-id="tv1000-action",TV1000 Action
-https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/TV1000_Action_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=UyzOpTYp-O6bQOX3CAMeVA&e=1787945023&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
+https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/TV1000_Action_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=8IWjpWsImVJ_tvoRpJSmmg&e=1789049097&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://flussonic.mkpnet.ru/tv-aab84159a39fbe84/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
-https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/TV1000_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=fM1ieHknjyOUXIaDJAG1UQ&e=1787944999&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
+https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/TV1000_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=6usVID1YB83ilt9sKEyrxg&e=1789049111&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://kinowalk.hopto.org/web/image/125/128x128?unique=2026-07-25%2013:44:42.009275&access_token=34d5bab6-6672-4e67-8ba3-eac6b4a5b0b0",TimeToMovie
@@ -3217,13 +3217,13 @@ http://kinowalk.hopto.org/vhs90e_live
 http://kinowalk.hopto.org/mychennal12345_live
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://images.live.vkvideo.ru/user/31457995/avatar?change_time=1772638699&croped=1&mh=140&mw=140",Дикарка
 http://kinowalk.hopto.org/dikarka_live
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="943773557731",Дом Кино Премиум HD
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino-premium" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" channelId="942026092720",Дом Кино Премиум HD
 http://46.162.201.15:8000/play/a091/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Кино и сериалы" tvg-id="650a0ae5672bd20d04bd2247b8cff705_domkino" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" channelId="942026092720",Дом Кино
 http://46.162.201.15:8000/play/a03p/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" channelId="942515705154",Домашний 720x576
+#EXTINF:-1 group-title="Кино и сериалы" channelId="941350728480",Домашний 720x576
 http://31.131.141.195:8000/play/a001/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?943773557731" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="942515705154",Домашний
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/014-domashniy-1.jpg?942026092720" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="941350728480",Домашний
 http://5.188.221.43:8080/play/domashniy
 #EXTINF:-1 group-title="Кино и сериалы",Евро кино
 http://31.148.48.15/Evrokino/tracks-v1a1/mono.m3u8?token=iptvin.ru
@@ -3665,9 +3665,9 @@ https://s70378.cdn.ngenix.net/glazami_turista/1/index.m3u8
 https://s70378.cdn.ngenix.net/detskij_mir/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
 https://s70378.cdn.ngenix.net/dikiy/1/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="943773557731",Дом Кино Премиум
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://ex.iptvin.ru/pic/2/21cc336366e3d103a1990d9f8e5d3cfd.png" logo="http://ex.iptvin.ru/pic/2/119834ba72e6420055ed54a81e66415c.png" tvg-id="domkino-premium" channelId="942026092720",Дом Кино Премиум
 https://s70378.cdn.ngenix.net/dom_kino_premium_hd/3/index.m3u8
-#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="943773557731",Дом Кино
+#EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/298.jpg" tvg-id="domkino" channelId="942026092720",Дом Кино
 https://s70378.cdn.ngenix.net/dom_kino/1/index.m3u8
 #EXTINF:-1 group-title="Современные Сетевые Технологии" tvg-logo="http://only4.tv/ch/0275.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 https://s70378.cdn.ngenix.net/evrokino/1/index.m3u8
@@ -3820,7 +3820,7 @@ http://89.33.29.115:8080/2plus2/index.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 http://streamvideol1.luxnet.ua/news24/smil:news24.stream.smil/chunklist.m3u8
 #EXTINF:-1 group-title="Украина" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw945031410308
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw942701456960
 #EXTINF:-1 group-title="Украина" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
 #EXTINF:-1 group-title="Украина",Espreso TV
@@ -4048,7 +4048,7 @@ http://212.102.38.45/live/test_realitykings_sd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Reality Kings TV
 http://88.212.7.11/live/test_realitykings_sd_hevc/playlist.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Red Lips 18+
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Red_Lips/manifest.m3u8
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Red_Lips/manifest.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Rough
 http://cdn.adultiptv.net/rough.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Russian r
@@ -4168,7 +4168,7 @@ https://ovhv47.twincdn.com/videos/43/43392/43392_720p.mp4?key_
 #EXTINF:-1 group-title="Эротика (18+)" tvg-logo="http://ex.iptvin.ru/pic/2/73ad3a7f01c472e4fc68ab7cdacaba72.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9A%D0%B8%D0%BD%D0%BE%2018+.png" channelId="-1" tvg-id="kino18plus-tviksel" shift="3",Кино 18+
 https://autopilot.catcast.tv/content/40381/index.m3u8
 #EXTINF:-1 group-title="Эротика (18+)",Русская ночь 18+
-http://tinyurl.com/%74%76%7A%61%74%61%6B37/Russkaya_Noch/manifest.m3u8
+http://tinyurl.com/%69%70%74%76%69%6E.%72%7537/Russkaya_Noch/manifest.m3u8
 #EXTINF:-1 group-title="Без группы",Alpha Cinema
 http://live.15plusmg.ru/memfs/b389173a-df4e-4171-8904-e249893e71eb.m3u8
 #EXTINF:-1 group-title="Без группы",Alpha Moretime
@@ -4185,20 +4185,562 @@ http://5.188.158.65:4040/IPTVPLAYUZHASTIK.tv/video.m3u8?token=lqRGka5-YwwqF0
 http://5.188.158.65:4040/IPTVPLAYFANTASTIKA.tv/video.m3u8?token=lqRGka5-YwwqF0
 #EXTINF:-1 group-title="Без группы",Kино TV
 http://vod.tuva.ru/kinotv/index.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Anime",Play-X Anime
+http://playxapp.play-x.app:2095/0067/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Black Cinema",Play-X Black Cinema
+http://playxapp.play-x.app:2095/0300/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema 90-х",Play-X Cinema 90-х
+http://playxapp.play-x.app:2095/3022/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Asia",Play-X Cinema Asia
+http://playxapp.play-x.app:2095/0503/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Horror Kids",Play-X Cinema Horror Kids
+http://playxapp.play-x.app:2095/3012/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Sport",Play-X Cinema Sport
+http://playxapp.play-x.app:2095/0926/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Teens",Play-X Cinema Teens
+http://playxapp.play-x.app:2095/3016/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Woman",Play-X Cinema Woman
+http://playxapp.play-x.app:2095/3013/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Cinema Аnimals",Play-X Cinema Аnimals
+http://playxapp.play-x.app:2095/3014/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Game movie",Play-X Game movie
+http://playxapp.play-x.app:2095/3064/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X HBO",Play-X HBO
+http://playxapp.play-x.app:2095/0921/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Marvel",Play-X Marvel
+http://playxapp.play-x.app:2095/0049/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X RUComedy",Play-X RUComedy
+http://playxapp.play-x.app:2095/0915/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Агент 007",Play-X Агент 007
+http://playxapp.play-x.app:2095/0094/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Адам Сэндлер",Play-X Адам Сэндлер
+http://playxapp.play-x.app:2095/3019/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Аладдин",Play-X Аладдин
+http://playxapp.play-x.app:2095/0801/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Александр Абдулов",Play-X Александр Абдулов
+http://playxapp.play-x.app:2095/0817/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Александр Головин",Play-X Александр Головин
+http://playxapp.play-x.app:2095/59504/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Александр Збруев",Play-X Александр Збруев
+http://playxapp.play-x.app:2095/47681/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Александр Михайлов",Play-X Александр Михайлов
+http://playxapp.play-x.app:2095/2024010/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Александр Панкратов-Чёрный",Play-X Александр Панкратов-Чёрный
+http://playxapp.play-x.app:2095/0924/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Алексей Балабанов",Play-X Алексей Балабанов
+http://playxapp.play-x.app:2095/0169/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Алексей Булдаков",Play-X Алексей Булдаков
+http://playxapp.play-x.app:2095/04548/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Алексей Серебряков",Play-X Алексей Серебряков
+http://playxapp.play-x.app:2095/0925/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ален Делон",Play-X Ален Делон
+http://playxapp.play-x.app:2095/0339/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Аль Пачино",Play-X Аль Пачино
+http://playxapp.play-x.app:2095/0303/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Альфред Хичкок",Play-X Альфред Хичкок
+http://playxapp.play-x.app:2095/3032/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Американский дракон Джейк Лонг",Play-X Американский дракон Джейк Лонг
+http://playxapp.play-x.app:2095/3048/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Анатолий Папанов",Play-X Анатолий Папанов
+http://playxapp.play-x.app:2095/27566/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ангелы и демоны",Play-X Ангелы и демоны
+http://playxapp.play-x.app:2095/3009/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Андрей Мерзликин",Play-X Андрей Мерзликин
+http://playxapp.play-x.app:2095/0634/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Андрей Миронов",Play-X Андрей Миронов
+http://playxapp.play-x.app:2095/0911/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Андрей Панин",Play-X Андрей Панин
+http://playxapp.play-x.app:2095/0352/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Андрей Федорцов",Play-X Андрей Федорцов
+http://playxapp.play-x.app:2095/0423/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Андриано Челентано",Play-X Андриано Челентано
+http://playxapp.play-x.app:2095/0340/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Антонио Бандерас",Play-X Антонио Бандерас
+http://playxapp.play-x.app:2095/0376/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Армен Джигарханян",Play-X Армен Джигарханян
+http://playxapp.play-x.app:2095/0816/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Арменфильм",Play-X Арменфильм
+http://playxapp.play-x.app:2095/3029/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Арнольнд Шварцнегер",Play-X Арнольнд Шварцнегер
+http://playxapp.play-x.app:2095/0064/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Барбоскины",Play-X Барбоскины
+http://playxapp.play-x.app:2095/30454/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Беларусьфильм",Play-X Беларусьфильм
+http://playxapp.play-x.app:2095/0464/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Боло Йен",Play-X Боло Йен
+http://playxapp.play-x.app:2095/60559/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Борис Новиков",Play-X Борис Новиков
+http://playxapp.play-x.app:2095/2024001/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Борислав Брондуков",Play-X Борислав Брондуков
+http://playxapp.play-x.app:2095/0635/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Бред Пит",Play-X Бред Пит
+http://playxapp.play-x.app:2095/0919/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Брюс Уиллис",Play-X Брюс Уиллис
+http://playxapp.play-x.app:2095/0117/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Буба",Play-X Буба
+http://playxapp.play-x.app:2095/3006/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Валентин Гафт",Play-X Валентин Гафт
+http://playxapp.play-x.app:2095/0406/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вампир",Play-X Вампир
+http://playxapp.play-x.app:2095/0053/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вестерн",Play-X Вестерн
+http://playxapp.play-x.app:2095/0192/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Виктор Сухоруков",Play-X Виктор Сухоруков
+http://playxapp.play-x.app:2095/0426/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вин Дизель",Play-X Вин Дизель
+http://playxapp.play-x.app:2095/0081/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вирусы и эпидемии",Play-X Вирусы и эпидемии
+http://playxapp.play-x.app:2095/3025/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Владимир Вдовиченков",Play-X Владимир Вдовиченков
+http://playxapp.play-x.app:2095/0632/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Владимир Епифанцев",Play-X Владимир Епифанцев
+http://playxapp.play-x.app:2095/0644/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Владимир Ильин",Play-X Владимир Ильин
+http://playxapp.play-x.app:2095/0381/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Всеволод Санаев",Play-X Всеволод Санаев
+http://playxapp.play-x.app:2095/2024002/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вспыш и чудо-машинки",Play-X Вспыш и чудо-машинки
+http://playxapp.play-x.app:2095/3005/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вуди Аллен",Play-X Вуди Аллен
+http://playxapp.play-x.app:2095/0380/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вуншпунш",Play-X Вуншпунш
+http://playxapp.play-x.app:2095/0914/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Вячеслав Тихонов",Play-X Вячеслав Тихонов
+http://playxapp.play-x.app:2095/59036/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Галина Польских",Play-X Галина Польских
+http://playxapp.play-x.app:2095/2024003/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Георгий Юматов",Play-X Георгий Юматов
+http://playxapp.play-x.app:2095/53442/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гоблин",Play-X Гоблин
+http://playxapp.play-x.app:2095/0639/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Годзилла",Play-X Годзилла
+http://playxapp.play-x.app:2095/3010/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гойко Митич",Play-X Гойко Митич
+http://playxapp.play-x.app:2095/0341/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Город Свиней",Play-X Город Свиней
+http://playxapp.play-x.app:2095/0966/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гоша Куценко",Play-X Гоша Куценко
+http://playxapp.play-x.app:2095/0633/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гравити Фолс",Play-X Гравити Фолс
+http://playxapp.play-x.app:2095/0068/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Грифины",Play-X Грифины
+http://playxapp.play-x.app:2095/0304/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Губка Боб",Play-X Губка Боб
+http://playxapp.play-x.app:2095/0382/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гуфи и его команда",Play-X Гуфи и его команда
+http://playxapp.play-x.app:2095/0089/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Гэри Дэниелс",Play-X Гэри Дэниелс
+http://playxapp.play-x.app:2095/3050/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Да здравствует король Джулиан",Play-X Да здравствует король Джулиан
+http://playxapp.play-x.app:2095/38371/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Данила Козловский",Play-X Данила Козловский
+http://playxapp.play-x.app:2095/0342/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Деми Мур",Play-X Деми Мур
+http://playxapp.play-x.app:2095/0305/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джейсон Стэйтем",Play-X Джейсон Стэйтем
+http://playxapp.play-x.app:2095/0103/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джеки Чан",Play-X Джеки Чан
+http://playxapp.play-x.app:2095/0073/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джет Ли",Play-X Джет Ли
+http://playxapp.play-x.app:2095/0918/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джим Керри",Play-X Джим Керри
+http://playxapp.play-x.app:2095/0110/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джон Вуд",Play-X Джон Вуд
+http://playxapp.play-x.app:2095/59711/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джон Траволта",Play-X Джон Траволта
+http://playxapp.play-x.app:2095/3033/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джонни Депп",Play-X Джонни Депп
+http://playxapp.play-x.app:2095/0307/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джордж Клуни",Play-X Джордж Клуни
+http://playxapp.play-x.app:2095/0308/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Джулия Робертс",Play-X Джулия Робертс
+http://playxapp.play-x.app:2095/0309/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дмитрий Харатьян",Play-X Дмитрий Харатьян
+http://playxapp.play-x.app:2095/0410/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Доктор хаус",Play-X Доктор хаус
+http://playxapp.play-x.app:2095/0648/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дольф Лундгрен",Play-X Дольф Лундгрен
+http://playxapp.play-x.app:2095/0920/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дон Дракон Уилсон",Play-X Дон Дракон Уилсон
+http://playxapp.play-x.app:2095/3017/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Драмы",Play-X Драмы
+http://playxapp.play-x.app:2095/0310/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дрейк и Джош",Play-X Дрейк и Джош
+http://playxapp.play-x.app:2095/0973/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Друзья",Play-X Друзья
+http://playxapp.play-x.app:2095/0372/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дрю Бэрримор",Play-X Дрю Бэрримор
+http://playxapp.play-x.app:2095/0343/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дубляж",Play-X Дубляж
+http://playxapp.play-x.app:2095/0190/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Дэвид Суше",Play-X Дэвид Суше
+http://playxapp.play-x.app:2095/43791/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Евгений Евстигнеев",Play-X Евгений Евстигнеев
+http://playxapp.play-x.app:2095/0449/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Евгений Леонов",Play-X Евгений Леонов
+http://playxapp.play-x.app:2095/0903/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Евгений Моргунов",Play-X Евгений Моргунов
+http://playxapp.play-x.app:2095/2024004/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ее звали Никита",Play-X Ее звали Никита
+http://playxapp.play-x.app:2095/0360/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ежи Штур",Play-X Ежи Штур
+http://playxapp.play-x.app:2095/0637/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Жан Рено",Play-X Жан Рено
+http://playxapp.play-x.app:2095/0040/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Жан клод вандам",Play-X Жан клод вандам
+http://playxapp.play-x.app:2095/0106/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Жан поль Бельмондо",Play-X Жан поль Бельмондо
+http://playxapp.play-x.app:2095/0213/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Женаты и с детьми",Play-X Женаты и с детьми
+http://playxapp.play-x.app:2095/0432/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Женщина с ароматом кофе",Play-X Женщина с ароматом кофе
+http://playxapp.play-x.app:2095/80607/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Жизнь с Луи",Play-X Жизнь с Луи
+http://playxapp.play-x.app:2095/28577/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Зачарованные",Play-X Зачарованные
+http://playxapp.play-x.app:2095/14101/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Звездный путь Вояджер",Play-X Звездный путь Вояджер
+http://playxapp.play-x.app:2095/09212/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Звездный путь",Play-X Звездный путь
+http://playxapp.play-x.app:2095/09211/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Звёздные врата: Атлантида",Play-X Звёздные врата: Атлантида
+http://playxapp.play-x.app:2095/0407/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Зена",Play-X Зена
+http://playxapp.play-x.app:2095/0361/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Игра престолов",Play-X Игра престолов
+http://playxapp.play-x.app:2095/0059/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Извне",Play-X Извне
+http://playxapp.play-x.app:2095/36461/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Индия",Play-X Индия
+http://playxapp.play-x.app:2095/0825/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Иннокентий Смоктуновский",Play-X Иннокентий Смоктуновский
+http://playxapp.play-x.app:2095/86322/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Каратэ",Play-X Каратэ
+http://playxapp.play-x.app:2095/0907/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Квентин Тарантино",Play-X Квентин Тарантино
+http://playxapp.play-x.app:2095/0045/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Киборг",Play-X Киборг
+http://playxapp.play-x.app:2095/3011/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Киллиан Мёрфи",Play-X Киллиан Мёрфи
+http://playxapp.play-x.app:2095/0384/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Киносказка",Play-X Киносказка
+http://playxapp.play-x.app:2095/0155/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Киностудия Горького",Play-X Киностудия Горького
+http://playxapp.play-x.app:2095/0009/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Кира Найтли",Play-X Кира Найтли
+http://playxapp.play-x.app:2095/0824/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Клан Сопрано",Play-X Клан Сопрано
+http://playxapp.play-x.app:2095/3001/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Клиника",Play-X Клиника
+http://playxapp.play-x.app:2095/0401/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Коломбо",Play-X Коломбо
+http://playxapp.play-x.app:2095/0813/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Константин Хабенский",Play-X Константин Хабенский
+http://playxapp.play-x.app:2095/0379/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Крис Коламбус",Play-X Крис Коламбус
+http://playxapp.play-x.app:2095/0922/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Круги Ада",Play-X Круги Ада
+http://playxapp.play-x.app:2095/0062/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Крутой Уокер",Play-X Крутой Уокер
+http://playxapp.play-x.app:2095/0362/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Кэмерон Диас",Play-X Кэмерон Диас
+http://playxapp.play-x.app:2095/0311/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X ЛЕГО Звездные войны Приключения изобретателей",Play-X ЛЕГО Звездные войны Приключения изобретателей
+http://playxapp.play-x.app:2095/24235/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Лев Дуров",Play-X Лев Дуров
+http://playxapp.play-x.app:2095/0427/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Леонардо Ди Каприо",Play-X Леонардо Ди Каприо
+http://playxapp.play-x.app:2095/0312/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Леонид Гайдай",Play-X Леонид Гайдай
+http://playxapp.play-x.app:2095/0107/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Леонид Куравлёв",Play-X Леонид Куравлёв
+http://playxapp.play-x.app:2095/0218/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Леонид Ярмольник",Play-X Леонид Ярмольник
+http://playxapp.play-x.app:2095/0461/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Лесли Нильсен",Play-X Лесли Нильсен
+http://playxapp.play-x.app:2095/90606/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Луи де Фюнес",Play-X Луи де Фюнес
+http://playxapp.play-x.app:2095/0072/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Любовь Полищук",Play-X Любовь Полищук
+http://playxapp.play-x.app:2095/2024005/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Людмила Гурченко",Play-X Людмила Гурченко
+http://playxapp.play-x.app:2095/0344/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Майкл Дуглас",Play-X Майкл Дуглас
+http://playxapp.play-x.app:2095/0345/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Марат Башаров",Play-X Марат Башаров
+http://playxapp.play-x.app:2095/0631/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Масяня",Play-X Масяня
+http://playxapp.play-x.app:2095/0375/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Маттиас Хьюз",Play-X Маттиас Хьюз
+http://playxapp.play-x.app:2095/0652/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мел Гибсон",Play-X Мел Гибсон
+http://playxapp.play-x.app:2095/0923/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Милла Йовович",Play-X Милла Йовович
+http://playxapp.play-x.app:2095/0346/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мимимишки",Play-X Мимимишки
+http://playxapp.play-x.app:2095/0811/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мисс Марпл Агаты Кристи",Play-X Мисс Марпл Агаты Кристи
+http://playxapp.play-x.app:2095/0386/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мистер Робот",Play-X Мистер Робот
+http://playxapp.play-x.app:2095/3002/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Михаил Ефремов",Play-X Михаил Ефремов
+http://playxapp.play-x.app:2095/0347/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Михаил Кокшенов",Play-X Михаил Кокшенов
+http://playxapp.play-x.app:2095/2024006/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Михаил Пуговкин",Play-X Михаил Пуговкин
+http://playxapp.play-x.app:2095/0425/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Михаил Ульянов",Play-X Михаил Ульянов
+http://playxapp.play-x.app:2095/77795/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 1",Play-X Мосфильм 1
+http://playxapp.play-x.app:2095/10001/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 10",Play-X Мосфильм 10
+http://playxapp.play-x.app:2095/10010/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 11",Play-X Мосфильм 11
+http://playxapp.play-x.app:2095/10011/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 12",Play-X Мосфильм 12
+http://playxapp.play-x.app:2095/10012/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 13",Play-X Мосфильм 13
+http://playxapp.play-x.app:2095/10013/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 14",Play-X Мосфильм 14
+http://playxapp.play-x.app:2095/10014/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 15",Play-X Мосфильм 15
+http://playxapp.play-x.app:2095/10015/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 16",Play-X Мосфильм 16
+http://playxapp.play-x.app:2095/10016/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 17",Play-X Мосфильм 17
+http://playxapp.play-x.app:2095/10017/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 18",Play-X Мосфильм 18
+http://playxapp.play-x.app:2095/10018/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 19",Play-X Мосфильм 19
+http://playxapp.play-x.app:2095/10019/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 2",Play-X Мосфильм 2
+http://playxapp.play-x.app:2095/10002/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 20",Play-X Мосфильм 20
+http://playxapp.play-x.app:2095/10020/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 3",Play-X Мосфильм 3
+http://playxapp.play-x.app:2095/10003/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 4",Play-X Мосфильм 4
+http://playxapp.play-x.app:2095/10004/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 5",Play-X Мосфильм 5
+http://playxapp.play-x.app:2095/10005/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 6",Play-X Мосфильм 6
+http://playxapp.play-x.app:2095/10006/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 7",Play-X Мосфильм 7
+http://playxapp.play-x.app:2095/10007/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 8",Play-X Мосфильм 8
+http://playxapp.play-x.app:2095/10008/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Мосфильм 9",Play-X Мосфильм 9
+http://playxapp.play-x.app:2095/10009/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Надежда Румянцева",Play-X Надежда Румянцева
+http://playxapp.play-x.app:2095/0979/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Наследники",Play-X Наследники
+http://playxapp.play-x.app:2095/3004/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Не сильный пол!",Play-X Не сильный пол!
+http://playxapp.play-x.app:2095/3065/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Николай Караченцов",Play-X Николай Караченцов
+http://playxapp.play-x.app:2095/0424/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Николас Кейдж",Play-X Николас Кейдж
+http://playxapp.play-x.app:2095/0404/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Николь Кидман",Play-X Николь Кидман
+http://playxapp.play-x.app:2095/0403/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Никулин Вицин",Play-X Никулин Вицин
+http://playxapp.play-x.app:2095/3063/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Нина Гребешкова",Play-X Нина Гребешкова
+http://playxapp.play-x.app:2095/2024007/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Новая семейка Аддамс",Play-X Новая семейка Аддамс
+http://playxapp.play-x.app:2095/3051/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ну погоди",Play-X Ну погоди
+http://playxapp.play-x.app:2095/1402/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Одеська Кіностудія 1",Play-X Одеська Кіностудія 1
+http://playxapp.play-x.app:2095/0054/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Одеська Кіностудія 2",Play-X Одеська Кіностудія 2
+http://playxapp.play-x.app:2095/0055/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Одеська Кіностудія 3",Play-X Одеська Кіностудія 3
+http://playxapp.play-x.app:2095/0056/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Одеська Кіностудія 4",Play-X Одеська Кіностудія 4
+http://playxapp.play-x.app:2095/0057/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Одеська Кіностудія 5",Play-X Одеська Кіностудія 5
+http://playxapp.play-x.app:2095/0058/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Олег Басилашвили",Play-X Олег Басилашвили
+http://playxapp.play-x.app:2095/95446/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Олег Табаков",Play-X Олег Табаков
+http://playxapp.play-x.app:2095/0643/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Она написала убийство",Play-X Она написала убийство
+http://playxapp.play-x.app:2095/3052/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Охотники за привидениями",Play-X Охотники за привидениями
+http://playxapp.play-x.app:2095/3044/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Павел Деревянко",Play-X Павел Деревянко
+http://playxapp.play-x.app:2095/0636/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Паоло Вилладжо",Play-X Паоло Вилладжо
+http://playxapp.play-x.app:2095/0905/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Первый Пограничный",Play-X Первый Пограничный
+http://playxapp.play-x.app:2095/2024012/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Пингвины из Мадагаскара",Play-X Пингвины из Мадагаскара
+http://playxapp.play-x.app:2095/30695/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Планета обезьян",Play-X Планета обезьян
+http://playxapp.play-x.app:2095/3018/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Полицейская академия",Play-X Полицейская академия
+http://playxapp.play-x.app:2095/3034/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Полтергейст: Наследие",Play-X Полтергейст: Наследие
+http://playxapp.play-x.app:2095/3055/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Польские фильмы в Советском прокате",Play-X Польские фильмы в Советском прокате
+http://playxapp.play-x.app:2095/0646/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Приключения мишек Гамми",Play-X Приключения мишек Гамми
+http://playxapp.play-x.app:2095/0445/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Пуаро",Play-X Пуаро
+http://playxapp.play-x.app:2095/16680/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Пьер Ришар",Play-X Пьер Ришар
+http://playxapp.play-x.app:2095/0124/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Райкин Аркадий",Play-X Райкин Аркадий
+http://playxapp.play-x.app:2095/0434/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ридли Скотт",Play-X Ридли Скотт
+http://playxapp.play-x.app:2095/0428/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Розовая пантера",Play-X Розовая пантера
+http://playxapp.play-x.app:2095/3021/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ролан Быков",Play-X Ролан Быков
+http://playxapp.play-x.app:2095/0465/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Роман Мадянов",Play-X Роман Мадянов
+http://playxapp.play-x.app:2095/2024008/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Русалочка",Play-X Русалочка
+http://playxapp.play-x.app:2095/0088/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Савелий Крамаров",Play-X Савелий Крамаров
+http://playxapp.play-x.app:2095/3035/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сваты",Play-X Сваты
+http://playxapp.play-x.app:2095/3040/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сверхъестественное",Play-X Сверхъестественное
+http://playxapp.play-x.app:2095/0147/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Семейный",Play-X Семейный
+http://playxapp.play-x.app:2095/0910/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сергей Бодров",Play-X Сергей Бодров
+http://playxapp.play-x.app:2095/0630/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сергей Бондарчук",Play-X Сергей Бондарчук
+http://playxapp.play-x.app:2095/32238/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сергей Гармаш",Play-X Сергей Гармаш
+http://playxapp.play-x.app:2095/3031/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сергей Филиппов",Play-X Сергей Филиппов
+http://playxapp.play-x.app:2095/2024009/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сергей Юрский",Play-X Сергей Юрский
+http://playxapp.play-x.app:2095/2024011/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сильвестр Сталлоне",Play-X Сильвестр Сталлоне
+http://playxapp.play-x.app:2095/0052/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Синтия Ротрок",Play-X Синтия Ротрок
+http://playxapp.play-x.app:2095/3015/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Служба 911",Play-X Служба 911
+http://playxapp.play-x.app:2095/0366/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Союз мультфильм",Play-X Союз мультфильм
+http://playxapp.play-x.app:2095/0416/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Спрут",Play-X Спрут
+http://playxapp.play-x.app:2095/0435/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Старый добрый фильм",Play-X Старый добрый фильм
+http://playxapp.play-x.app:2095/0909/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Стивен Сигал",Play-X Стивен Сигал
+http://playxapp.play-x.app:2095/0071/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Стивен Спилберг",Play-X Стивен Спилберг
+http://playxapp.play-x.app:2095/0916/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Сумеречная зона",Play-X Сумеречная зона
+http://playxapp.play-x.app:2095/3057/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Твин Пикс",Play-X Твин Пикс
+http://playxapp.play-x.app:2095/0821/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Теория большого взрыва",Play-X Теория большого взрыва
+http://playxapp.play-x.app:2095/0368/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Тимон и Пумба",Play-X Тимон и Пумба
+http://playxapp.play-x.app:2095/3045/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Том Хэнкс",Play-X Том Хэнкс
+http://playxapp.play-x.app:2095/0317/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Том и Джери",Play-X Том и Джери
+http://playxapp.play-x.app:2095/0374/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Тони Джа",Play-X Тони Джа
+http://playxapp.play-x.app:2095/26164/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Триллер",Play-X Триллер
+http://playxapp.play-x.app:2095/0900/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Тюрьма Оз",Play-X Тюрьма Оз
+http://playxapp.play-x.app:2095/3054/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Удивительные странствия Геракла",Play-X Удивительные странствия Геракла
+http://playxapp.play-x.app:2095/00799/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ужасы VHS",Play-X Ужасы VHS
+http://playxapp.play-x.app:2095/0912/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Уил смит",Play-X Уил смит
+http://playxapp.play-x.app:2095/0318/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Утиные истории",Play-X Утиные истории
+http://playxapp.play-x.app:2095/0083/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Фантастика",Play-X Фантастика
+http://playxapp.play-x.app:2095/0823/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Ферма монстров",Play-X Ферма монстров
+http://playxapp.play-x.app:2095/0901/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Фиксики",Play-X Фиксики
+http://playxapp.play-x.app:2095/0326/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Фильмы про войну в Украине",Play-X Фильмы про войну в Украине
+http://playxapp.play-x.app:2095/68542/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Финес и Ферб",Play-X Финес и Ферб
+http://playxapp.play-x.app:2095/3046/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Футурама",Play-X Футурама
+http://playxapp.play-x.app:2095/0319/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Фёдор Добронравов",Play-X Фёдор Добронравов
+http://playxapp.play-x.app:2095/0981/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Хью Джекман",Play-X Хью Джекман
+http://playxapp.play-x.app:2095/0378/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чак Норрис",Play-X Чак Норрис
+http://playxapp.play-x.app:2095/94342/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чарльз Бронсон",Play-X Чарльз Бронсон
+http://playxapp.play-x.app:2095/0394/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чародеи",Play-X Чародеи
+http://playxapp.play-x.app:2095/0980/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Человек-паук",Play-X Человек-паук
+http://playxapp.play-x.app:2095/0369/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Черепашки мутанты ниндзя",Play-X Черепашки мутанты ниндзя
+http://playxapp.play-x.app:2095/0370/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Черная жемчужина (1994)",Play-X Черная жемчужина (1994)
+http://playxapp.play-x.app:2095/0501/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Черный Плащ",Play-X Черный Плащ
+http://playxapp.play-x.app:2095/0810/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чип и Дейл",Play-X Чип и Дейл
+http://playxapp.play-x.app:2095/0800/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чисто английское убийство",Play-X Чисто английское убийство
+http://playxapp.play-x.app:2095/0027/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Чоу Юнь-Фат",Play-X Чоу Юнь-Фат
+http://playxapp.play-x.app:2095/73382/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Эдди Мерфи",Play-X Эдди Мерфи
+http://playxapp.play-x.app:2095/3030/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Эльдар Рязанов",Play-X Эльдар Рязанов
+http://playxapp.play-x.app:2095/0108/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Энистон Дженнифер",Play-X Энистон Дженнифер
+http://playxapp.play-x.app:2095/0185/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Эш против Зловещих мертвецов",Play-X Эш против Зловещих мертвецов
+http://playxapp.play-x.app:2095/60381/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Юрий Яковлев",Play-X Юрий Яковлев
+http://playxapp.play-x.app:2095/15923/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Яго темная страсть (2001)",Play-X Яго темная страсть (2001)
+http://playxapp.play-x.app:2095/0500/index.m3u8?token=free_play_x_app_ru_server
+#EXTINF:-1 group-title="Без группы" tvg-name="Play-X Янковский Олег",Play-X Янковский Олег
+http://playxapp.play-x.app:2095/3049/index.m3u8?token=free_play_x_app_ru_server
 #EXTINF:-1 group-title="Без группы",Sci-Fi
 http://31.148.48.15:80/SONY_SCI_FI/index.m3u8
 #EXTINF:-1 group-title="Без группы",TV1000 кино
 https://flussonic.mkpnet.ru/tv-7510472b0133abb2/video.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="velveteurkinohd" tvg-name="Velvet. Европейское кино HD",Velvet. Европейское кино HD
+https://cdn.rostelekom-tv.xyz/live/LQ3j0n7j0Kq4OQm8.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="velvetzolotohd" tvg-name="Velvet. Золотая коллекция HD",Velvet. Золотая коллекция HD
+https://cdn.rostelekom-tv.xyz/live/v804qFZr0QVQ1s9Z.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="velvetmenthd" tvg-name="Velvet. Ментовские Сериалы HD",Velvet. Ментовские Сериалы HD
+https://cdn.rostelekom-tv.xyz/live/tWQ0ge9rspBQhRst.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="velvetsvatyhd" tvg-name="Velvet. Сваты HD" tvg-logo="https://cdn.rostelekom-tv.xyz/picons/5c274519467ec9c5.png",Velvet. Сваты HD
+https://cdn.rostelekom-tv.xyz/live/HSxyMqDlSVR54UTN.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="serialyhityhd" tvg-name="Velvet. Сериалы Хиты HD",Velvet. Сериалы Хиты HD
+https://cdn.rostelekom-tv.xyz/live/DeWr3Sgw1Aj2lJd0.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="velvetsovetskoehd" tvg-name="Velvet. Советское кино HD",Velvet. Советское кино HD
+https://cdn.rostelekom-tv.xyz/live/nF4sFCa49nFPHSF_.m3u8
 #EXTINF:-1 group-title="Без группы",Vip Comedy
 https://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/video.m3u8
 #EXTINF:-1 group-title="Без группы",Vip Premiere
 https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
 #EXTINF:-1 group-title="Без группы",viju TV1000 romantica
-https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/Romantika_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=q5_imdW9DMiPdP52oLjuPA&e=1787944976&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
+https://live-hls-viasat-secure-flus.cdnvideo.ru/viasat/Romantika_HD.smil/tracks-v1a1/mono.ts.m3u8?filter.tracks=v1v2v3a1&md5=ow4POWusg5YWczvB4Gak7A&e=1789049075&hls_proxy_host=e2c000defa6aa845b219ba5ca0db8ad5
 #EXTINF:-1 group-title="Без группы",Бестселлер
 http://31.148.48.15:80/Russkiy_Bestseller/index.m3u8
 #EXTINF:-1 group-title="Без группы",Бестселлер
 https://flussonic.mkpnet.ru/tv-ccf8c891702508a7/video.m3u8
+#EXTINF:-1 group-title="Без группы" tvg-id="detvoraplushd" tvg-name="ДетвораПлюс HD",ДетвораПлюс HD
+https://cdn.rostelekom-tv.xyz/live/WAYU4PTJ_VVz4wAQ.m3u8
 #EXTINF:-1 group-title="Без группы",Детектив
 http://31.148.48.15:80/Russkiy_Detektiv/index.m3u8
 #EXTINF:-1 group-title="Без группы",Детектив
