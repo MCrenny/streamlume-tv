@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 29.08.26 19:48 User: yuri1245 IP: 172.184.166.98 channels 92 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 06.09.26 19:48 User: yuri1245 IP: 64.236.176.150 channels 96 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
 https://stream8.cinerama.uz/1043/tracks-v1a1/mono.m3u8
@@ -9,20 +9,30 @@ http://45.145.32.13:20440/bigplanet/index.m3u8?token=test
 https://stream8.cinerama.uz/1039/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://89.tv-internet.pro/wp-content/uploads/2019/12/160-%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B-%D0%93%D0%B0%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-HD.png" channelId="391" tvg-id="galaxy-tv",Galaxy
 http://45.145.32.13:20440/outdoor_channel/index.m3u8?token=test
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/0205.png" logo="https://i.postimg.cc/Vk4NhKDK/83315b3988ce2e44f1c4344be2dca8e0.png" channelId="1202" tvg-id="h2",H2 HD
+http://dtv.vol.net.ua/H2-HD/index.m3u8
+#EXTINF:-1 group-title="Познавательные",History HD UA
+http://dtv.vol.net.ua/History_HD/index.m3u8
 #EXTINF:-1 group-title="Познавательные",Insight TV HD
 https://stream8.cinerama.uz/1416/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Познавательные",Investigation-Discovery
+http://dtv.vol.net.ua/Investigation-Discovery/index.m3u8
 #EXTINF:-1 group-title="Познавательные",Motorvision TV
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=535
 #EXTINF:-1 group-title="Познавательные",NAT GEO WILD
 https://stream8.cinerama.uz/1042/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/20101.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-HD-220x132-tr.png" channelId="206" tvg-id="nat-geo-wild",Nat Geo Wild HD
-http://dtv.vol.net.ua/Nat_Geo_Wild_HD/index.m3u8
+http://dtv.vol.net.ua/Nat-Geo-Wild_HD/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/0203.png" logo="http://ex.iptvin.ru/pic/2/National-Geographic-HD-220x132-tr.png" channelId="207" tvg-id="national-geographic",National Geographic HD
+http://dtv.vol.net.ua/National_Geographic-HD/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
 https://stream8.cinerama.uz/1041/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
 http://178.124.153.123:44400/rtg
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
 http://hls127.freeott.top:8080/RTG_TV/video.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/TLC-189x189.jpg" logo="http://overlay.iptvin.ru/epg/PIC/TLC.png" channelId="67" tvg-id="tlc",TLC
+http://dtv.vol.net.ua/TLC/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x220.png" logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x132-tr.png" channelId="596" tvg-id="travel-adventure",Travel+Adventure
 http://45.145.32.13:20440/travel_adventure/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
@@ -36,11 +46,9 @@ https://stream8.cinerama.uz/1046/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
 http://45.145.32.13:20440/viasat_nature/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
-https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные",Viasat_History
-http://dtv.vol.net.ua/Viasat_History/index.m3u8
-#EXTINF:-1 group-title="Познавательные",Viasat_Nature
 http://dtv.vol.net.ua/Viasat_Nature/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
 https://stream8.cinerama.uz/1430/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто Плюс

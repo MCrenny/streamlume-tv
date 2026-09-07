@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 01.09.26 20:49 User: yuri1245 IP: 172.184.166.98 channels 247 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 06.09.26 18:49 User: yuri1245 IP: 64.236.176.150 channels 262 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -125,6 +125,12 @@ http://stream.mcquack.net/157/index.m3u8
 http://portal.ott.pink/C3UK_UATVRU/index.m3u8?token=927E03BF1A83DF5DE6628CAF78BA2C13
 #EXTINF:-1 tvg-logo="http://ottpink.network/picons/my-ukraine_165x165.png" group-title="Информационные" logo="https://i.postimg.cc/W4Pnr2SL/9d71f5adbe5232cc6833f23929148d15.png" channelId="-1" tvg-id="my-ukraina",Ми-Україна HD
 http://portal.ott.pink/C4UK_MuUkraineHD/index.m3u8?token=B0B73593320445A22451378DF37B3E76
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/0205.png" logo="https://i.postimg.cc/Vk4NhKDK/83315b3988ce2e44f1c4344be2dca8e0.png" channelId="1202" tvg-id="h2",H2 HD
+http://dtv.vol.net.ua/H2-HD/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/20101.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-HD-220x132-tr.png" channelId="206" tvg-id="nat-geo-wild",Nat Geo Wild HD
+http://dtv.vol.net.ua/Nat-Geo-Wild_HD/index.m3u8
+#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+http://dtv.vol.net.ua/Viasat_Nature/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x132-tr.png" channelId="-1" tvg-id="mason-tv",Масон ТВ
 http://195.189.60.253/mason_tv_hd/video.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
@@ -144,6 +150,10 @@ http://5.188.159.128:8070/megogo_sport/index.m3u8
 #EXTINF:-1 group-title="Спорт",Суспільне Київ
 #EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.41/index.m3u8
+#EXTINF:-1 group-title="Спорт",футбол
+http://dtv.vol.net.ua/UPL-TV/index.m3u8
+#EXTINF:-1 group-title="Развлекательные" tvg-logo="http://ex.iptvin.ru/pic/2/TLC-189x189.jpg" logo="http://overlay.iptvin.ru/epg/PIC/TLC.png" channelId="67" tvg-id="tlc",TLC
+http://dtv.vol.net.ua/TLC/index.m3u8
 #EXTINF:-1 group-title="Детские",Da Vinci Explore the World HD
 https://stitch-ua6.fastad.pro/stream.m3u8?c=2086&dt=2&is_kids=false&o=aHR0cHM6Ly9obHMxMi5zd2VldC50di9zdHJlYW0vdGR3ZDJmZXpjODZjNjg2OHFzem5zdjk5OXhraXh2aXZwanlicTY1dzRtam13M21rMmI5eTU2em5zcTNyZXczaWl5ZjR3bWtxeWppdG1zeTJlZTk4OTM5endia3Z6ZG5hYXVjdzRrZXFkeHNhYW5mZm1udnY1N2o4Z2plM2JyZnBlZTRiOTdtM2tweW5lcWM4eXF5aGY5MzV6cDN4dmt2YmE0ZHdybXA4c3VuY3hqNXE3bXljcW54ZHF2aTdzeWF3Mm4zbWc3NnQ%3D&p=1&session=9431904034085699136&u=4658946636260375128&variant=2
 #EXTINF:-1 group-title="Детские" tvg-logo="https://i.postimg.cc/MThBV5bP/3a558e4de99cc970633ac390001ce3a2.png" logo="https://i.postimg.cc/T2Dgf8fZ/f315e5e4d45e6464f4bed52aadd01d1a.png" channelId="171" tvg-id="da-vinci",Da Vinci
@@ -172,6 +182,10 @@ https://stitch-ua6.fastad.pro/stream.m3u8?c=1777&dt=2&is_kids=false&o=aHR0cHM6Ly
 https://tv.mediacp.eu:8081/happyradio/index.m3u8
 #EXTINF:-1 group-title="Музыкальные",Megogo live HD
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
+#EXTINF:-1 tvg-id="http://ottiptvfilmtvgroup.zapto.org:8568/epg.xml" tvg-name="FILM TV HD" tvg-logo="http://filmtvgroup.site/uploads/channel/FILMTVHD.png" group-title="Кино и сериалы" logo="https://i114.fastpic.ru/big/2021/0513/bc/cc3999bbe7de88ce79e493088e816ebc.png" channelId="-1" group-title="filmtvgroup",FILM TV HD
+#EXTINF:-1 group-title="Без группы" tvg-id="http://ottiptvfilmtvgroup.zapto.org:8568/epg.xml" tvg-name="FILM TV Кінозал" tvg-logo="http://filmtvgroup.site/uploads/channel/K1.png" group-title="filmtvgroup",FILM TV Кінозал
+#EXTINF:-1 group-title="Детские" group-title="filmtvgroup",Film TV Kids
+#EXTINF:-1 tvg-id="http://ottiptvfilmtvgroup.zapto.org:8568/epg.xml" tvg-name="Новосілки ТБ" tvg-logo="http://filmtvgroup.site/uploads/channel/novosilkylogo2024best.png" group-title="Кино и сериалы" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1" group-title="filmtvgroup",Новосілки ТБ
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
 http://hls127.freeott.top:8080/Amedia_1/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
@@ -182,12 +196,14 @@ http://195.189.60.253/118/index.m3u8
 http://88.99.215.227/FilmUADrama/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00200.jpg" logo="http://ex.iptvin.ru/pic/2/Hollywood-512x436-tr.png" channelId="3919" tvg-id="hollywood",Hollywood
 https://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/RZPsH3q3/7f641a9896ed469ea98741f60c0981ef.png" logo="https://i.postimg.cc/8khZbXjg/ba8c69c1cdca6e845ad9b4c6e777f444.png" channelId="-1" tvg-id="kinosweet",Kinosweet
+http://dtv.vol.net.ua/Kinosweet/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/c253421f971beb6a69910bf66bc1bafb.png" logo="http://ex.iptvin.ru/pic/2/b073ab5957ed4aee4c9ac8ed3e083b36.png" channelId="607" tvg-id="vip-comedy-cee",Viasat Kino Comedy
 http://ukr.ukrainske.tv/493/keytvainua/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/Novos-lki-TB-220x220.png" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1",Новосілки ТБ
-http://filmtvgroup.hopto.org/novosilkiTB/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/c5287780793e5ba069207b6fe3a3e1b2.png" logo="http://ex.iptvin.ru/pic/2/8041598340e508fd7a4c80de5ce4c909.png" channelId="66" tvg-id="tv1000-cee",Viasat Kino
+http://dtv.vol.net.ua/Viasat_Kino/index.m3u8
 #EXTINF:-1 group-title="Наш Нет" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
 #EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.33/index.m3u8
@@ -376,7 +392,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw9411591129480
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw944357014104
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -435,28 +451,38 @@ https://stitch-ua9.fastad.pro/stream.m3u8?c=3171&dt=2&is_kids=false&o=aHR0cHM6Ly
 http://portal.ott.pink/C4UK_D1UA/index.m3u8?token=2B8378CADCB27AA393170BD7EDB7C0E9
 #EXTINF:-1 group-title="Без группы",Espreso TV
 https://dash3.antik.sk/live/test_espresso/playlist.m3u8
-#EXTINF:-1 group-title="Без группы",FILM TV Кінозал
-http://filmtvgroup.hopto.org/FILMTVKinozaL/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
 #EXTINF:-1 group-title="Без группы",FREE ДОМ
 https://dash2.antik.sk/live/test_uatv/playlist.m3u8
-#EXTINF:-1 group-title="Без группы",Film TV Group
-http://filmtvgroup.hopto.org/FILM_TV_GROUP/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjEwMDgwNzMsImV4cCI6MTc2MTA5NDQ3Mywic3ViIjoiQWRtaW4ifQ.q63jEFty3Ry19ORUfTNUPhkvCSFnFBk9mHhXIwaxgLQ
 #EXTINF:-1 group-title="Без группы",HIT
 https://stitch-ua1.fastad.pro/stream.m3u8?c=3198&dt=2&is_kids=false&o=aHR0cHM6Ly9obHM0Ni5zd2VldC50di9zdHJlYW0vNzZ1dTI3cG1kbXM0ZXNqZ3ZhdzRqcWczeHh0NzNrMjh4ZTI3M2pnMzh2cnM2OXN1NnpzdnB2YmdjOGVyZnNyZm1qdm5hajJzamJ0Y2kzcXlkOHRtMjhjdHd3OGh2c3ZoYXhzbThiM3A5bW4yeXc5cTNtZHF2aWFoYXN3eWRhZDR4YXhkanQ3anI3NDIzYnoybWtod255OXQ4eTR6NXRtNzRtYWc3dWRkcHIycmRnYTQ2a3hpejVpNGt4NnVlZnV4cXgzM25keHFicz09PT09PQ%3D%3D&p=1&session=2867218917837537517&u=4658946636260375128&variant=0
+#EXTINF:-1 group-title="Без группы",History HD UA
+http://dtv.vol.net.ua/History_HD/index.m3u8
 #EXTINF:-1 group-title="Без группы",ITV (Рівне)
 http://cdn10.live-tv.od.ua:8081/itvrv/abr-lq/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",Inter
 http://89.33.29.115:8080/Inter/index.m3u8
+#EXTINF:-1 group-title="Без группы",Investigation-Discovery
+http://dtv.vol.net.ua/Investigation-Discovery/index.m3u8
+#EXTINF:-1 group-title="Без группы",K2
+http://dtv.vol.net.ua/K-2/index.m3u8
+#EXTINF:-1 group-title="Без группы",Kinowood
+http://dtv.vol.net.ua/KINOWOOD/index.m3u8
 #EXTINF:-1 group-title="Без группы",PTV Полтавское TV
 https://cdn10.live-tv.cloud/hrpl/hrpl-abr/playlist.m3u8
+#EXTINF:-1 group-title="Без группы",ProKino
+http://dtv.vol.net.ua/ProKino/index.m3u8
 #EXTINF:-1 group-title="Без группы",TET HD
 http://89.33.29.115:8080/TET/index.m3u8
 #EXTINF:-1 group-title="Без группы",TV Rivne 1
 https://cdn1.live-tv.cloud/rivne1/rivne1-abr/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",TV
 http://89.33.29.115:8080/STB/index.m3u8
+#EXTINF:-1 group-title="Без группы",TV2
+http://dtv.vol.net.ua/ICTV-2/index.m3u8
 #EXTINF:-1 group-title="Без группы",Tv1000 Action HD
 https://stream8.cinerama.uz/1225/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Без группы",Viasat_Kino Action HD
+http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 #EXTINF:-1 group-title="Без группы",ІНТЕР
 http://line.tvdsz.cc:80/play/live.php?mac=00:1B:79:F8:22:9D&stream=384895&extension=ts
 #EXTINF:-1 group-title="Без группы",Ізмаіл ТВ
@@ -517,3 +543,7 @@ http://178.217.215.57/mob/mystream.m3u8
 http://cdn1.live-tv.od.ua:8081/31chod/31chod-abr/31chod/31chod/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",Чернівецький Промінь HD
 http://langate.tv/promin/live_720/index.m3u8
+https://filmtvgroup.hopto.org:8080/NovosilkiTB/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODg2ODMzNjIsImV4cCI6MTc4ODc2OTc2Miwic3ViIjoiQWRtaW4ifQ.elQlt9rDrYlfbg85aZPXxIarprRqhdf58qFUNs3wQqs
+https://ottiptvfilmtvgroup.zapto.org:8080/FILMTVKinozal/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODg2ODMzNjIsImV4cCI6MTc4ODc2OTc2Miwic3ViIjoiQWRtaW4ifQ.elQlt9rDrYlfbg85aZPXxIarprRqhdf58qFUNs3wQqs
+https://ottiptvfilmtvgroup.zapto.org:8080/FilmTVKids/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODg2ODMzNjIsImV4cCI6MTc4ODc2OTc2Miwic3ViIjoiQWRtaW4ifQ.elQlt9rDrYlfbg85aZPXxIarprRqhdf58qFUNs3wQqs
+https://ottiptvfilmtvgroup.zapto.org:8080/kino_tv/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODg2ODMzNjIsImV4cCI6MTc4ODc2OTc2Miwic3ViIjoiQWRtaW4ifQ.elQlt9rDrYlfbg85aZPXxIarprRqhdf58qFUNs3wQqs
