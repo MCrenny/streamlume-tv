@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 06.09.26 19:48 User: yuri1245 IP: 172.174.223.243 channels 96 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 09.09.26 17:48 User: yuri1245 IP: 4.246.134.182 channels 95 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
 https://stream8.cinerama.uz/1043/tracks-v1a1/mono.m3u8
@@ -85,8 +85,6 @@ https://stream8.cinerama.uz/1410/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1428/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные",Зоопарк
 https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/pTD09mKF/25d5bb3d693e280120466ca58a0edfe2.png" logo="https://i.postimg.cc/xTg4yNhG/8fffa05cffe31b04248544830aef6ccf.png" channelId="430" tvg-id="mega-ua",Мега HD
-http://dtv.vol.net.ua/MEGA-HD/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="53" tvg-id="moya-planeta",Моя Планета
 https://stream8.cinerama.uz/1247/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/398.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Моя планета HD
