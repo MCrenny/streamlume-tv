@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 13.09.26 12:48 User: yuri1245 IP: 135.232.225.25 channels 77 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 16.09.26 18:48 User: yuri1245 IP: 134.33.75.22 channels 113 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",6 Соток
 http://stream.mcquack.net/405/index.m3u8
@@ -119,6 +119,78 @@ https://stream8.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1222/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
 https://stream8.cinerama.uz/1427/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/2202.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-HD-220x132-tr.png" channelId="240" tvg-id="animal-planet",Animal Planet HD
+http://89.33.29.115:8080/Animal_Planet_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/Discovery-Channel-HD-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/Discovery%20Channel%20HD.png" channelId="341" tvg-id="discovery-channel",Discovery Channel HD
+http://89.33.29.115:8080/Discovery_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/1d4adc8ae7ef3d1e2282076a2ae97531.png" logo="https://i.postimg.cc/HnG45Tg6/d2267edede8d3c2a087dc9d2b8499db4.png" channelId="672" tvg-id="docubox-hd",DocuBox HD
+http://89.33.29.115:8080/DocuBoxHD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1534.jpg" logo="https://img11.lostpic.net/2018/08/09/945258a7e5e7a1e75d8c0f32386447d7.png" channelId="1800" tvg-id="eureka-hd",Eureka HD
+http://89.33.29.115:8080/Eureka_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0205.png" logo="https://i.postimg.cc/Vk4NhKDK/83315b3988ce2e44f1c4344be2dca8e0.png" channelId="1202" tvg-id="h2",H2 HD
+http://89.33.29.115:8080/H2_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ID_HD_logo_2017.jpg/115px-ID_HD_logo_2017.jpg" logo="http://cbilling.pw/img/streams/id-xtra-hd.png" channelId="3770" tvg-id="id-xtra-ru",Investigation Discovery HD
+http://89.33.29.115:8080/ID_Xtra_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/20101.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-HD-220x132-tr.png" channelId="206" tvg-id="nat-geo-wild",Nat Geo Wild HD
+http://89.33.29.115:8080/Nat_Geo_Wild_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0203.png" logo="http://ex.iptvin.ru/pic/2/National-Geographic-HD-220x132-tr.png" channelId="207" tvg-id="national-geographic",National Geographic HD
+http://89.33.29.115:8080/National_Geo_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/072019/rtghd_black.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20HD.png" channelId="1494" tvg-id="rtg-hd",RTG HD
+http://89.33.29.115:8080/RTG_TV/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/082019/rtvi_logo_2017_28329.png" logo="http://ex.iptvin.ru/pic/2/RTVi-527x316-tr.png" channelId="405" tvg-id="rtvi",RTVi
+http://89.33.29.115:8080/RTVi/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/TERRA-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/TERRA-HD-220x132-tr.png" channelId="-1" tvg-name="TERRA" tvg-id="terra-ru",TERRA HD
+http://89.33.29.115:8080/TERRA_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/815.png" logo="https://i115.fastpic.org/big/2021/0914/e0/eb123f5e40146453c62e29ba7ee6bde0.png" channelId="1040" tvg-id="tlc",TLC HD
+http://89.33.29.115:8080/TLC_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x220.png" logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x132-tr.png" channelId="596" tvg-id="travel-adventure",Travel+Adventure
+http://89.33.29.115:8080/Travel_Adventure_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://kis.lt/wp-content/uploads/2020/12/468175cdcaf66214849404e0afb5812c.jpg" logo="https://i.postimg.cc/sDd1GQM4/a2e17bdcfb4b541576a46d1dce1f43f6.png" channelId="4118" tvg-id="viasat-explore",Viasat Explore HD
+http://89.33.29.115:8080/Viasat_Explorer/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://kis.lt/wp-content/uploads/2020/12/e3a5231a398effae0ae93d6e5368293b.jpg" logo="https://i.postimg.cc/KcgRYr8Y/e65738da0a55fbb3910d0bc8e81d9a81.png" channelId="757" tvg-id="viasat-nature",Viasat Nature HD
+http://89.33.29.115:8080/Viasat_Nature_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost",АВТО ПЛЮС
+http://89.33.29.115:8080/Avto_Plyus/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
+http://89.33.29.115:8080/Avto_24/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost",В Мире животных HD
+http://89.33.29.115:8080/Animal_Family_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://i.postimg.cc/VsWMdq0R/39e22e8381e78d02e76053afa8e03393.png" logo="https://i.postimg.cc/43cHZVTp/eb6362d2b92345229b1d2be201ab34de.png" channelId="176" tvg-id="vremia",Время
+http://89.33.29.115:8080/Vremya/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0252.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%93%D0%BB%D0%B0%D0%B7%D0%B0%D0%BC%D0%B8%20%D1%82%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B0%20HD.png" channelId="4646" tvg-id="glazami-turista",Глазами туриста HD
+http://89.33.29.115:8080/Glazami_turista_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
+http://89.33.29.115:8080/24Dok/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/5563.png" logo="https://i115.fastpic.org/big/2021/0914/9d/c9fc56c0cacd01c49f1cd58bacddcf9d.png" channelId="220" tvg-id="drive",Драйв
+http://89.33.29.115:8080/Drayv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost",ЕДА Премиум
+http://89.33.29.115:8080/Eda/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",ЖИВИ!
+http://89.33.29.115:8080/Zhivi/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/dd858945401f5872e3f9f253673443d2.png" logo="http://ex.iptvin.ru/pic/2/6112098224542f3016cf23a7296ad0f9.png" channelId="562" tvg-id="zhivaya-planeta",Живая планета
+http://89.33.29.115:8080/Zhivaya_planeta/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://i.postimg.cc/854521rM/a1318212b765e610eeb0406af2822699.png" logo="https://i.postimg.cc/BnFvq5Kq/e2bd00f1b74aad7f41941afd1d065754.png" channelId="75" tvg-id="kuxnia-tv",Кухня ТВ
+http://89.33.29.115:8080/Kuhnya_TV/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/Muzhskoj-280x280.png" logo="https://i.postimg.cc/QM4HFf7F/6af0402151028746a625767550547828.png" channelId="323" tvg-id="muzhskoy",Мужской
+http://89.33.29.115:8080/Muzhskoy/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/bec4ebd144916068ffcb7ee4fd17b796.png" logo="http://ex.iptvin.ru/pic/2/Nastoyashchee-Vremya-220x220-tr.png" channelId="4640" tvg-id="nastoyaschee-vremia",Настоящее Время
+http://89.33.29.115:8080/Nast_vremya/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://i.postimg.cc/gc8X1vKp/b61847ed21b33d47f27049b2c35fabeb.png" logo="https://i.postimg.cc/zXkLG8MP/4851c2946a3895d11221233e519a94f0.png" channelId="4742" tvg-id="nauka",Наука HD
+http://89.33.29.115:8080/Nauka_2.0/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/22cca564450dbfc57a7e47e797e57ab1.png" logo="http://ex.iptvin.ru/pic/2/1f206a2ea46909c23ac33baf846138a5.png" channelId="335" tvg-id="oxotnik-i-rybolov-hd",Охотник и рыболов HD
+http://89.33.29.115:8080/Ohotnik_i_Ryibolov_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0168.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Планета HD
+http://89.33.29.115:8080/IQ_HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/b5620abbd89de1ea79aa690ef36632de.jpg" logo="http://ex.iptvin.ru/pic/2/Sovershenno-sekretno-205x150-tr.png" channelId="175" tvg-id="sovsek",Совершенно секретно
+http://89.33.29.115:8080/Sovershenno_sekretno/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/858b33fe748dda9fb3c559d999714773.png" logo="http://ex.iptvin.ru/pic/2/8527603a877883b4cdb226f75b613fa8.png" channelId="302" tvg-id="teleputeshestvia",Телепутешествия
+http://89.33.29.115:8080/Teleputeshestviya/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/f29c66c9aeabb21b8c209337d4ebd17a.png" logo="http://ex.iptvin.ru/pic/2/77523699d7ed019c7c93c7331cb22df3.png" channelId="162" tvg-id="texno-24",Техно 24
+http://89.33.29.115:8080/Tehno_24/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
+http://89.33.29.115:8080/Usadba/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost",кто есть кто
+http://89.33.29.115:8080/kto_est_kto/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Tест-08",Eda
 http://89.33.29.115:8080/Eda/index.m3u8
 #EXTINF:-1 group-title="Tест-08",Teleputeshestviya

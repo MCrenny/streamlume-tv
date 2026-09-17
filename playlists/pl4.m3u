@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 14.09.26 17:49 User: yuri1245 IP: 135.232.225.25 channels 361 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 16.09.26 18:49 User: yuri1245 IP: 134.33.75.22 channels 369 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -172,6 +172,22 @@ https://stitch-ua6.fastad.pro/stream.m3u8?c=1777&dt=2&is_kids=false&o=aHR0cHM6Ly
 https://tv.mediacp.eu:8081/happyradio/index.m3u8
 #EXTINF:-1 group-title="Музыкальные",Megogo live HD
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
+#EXTINF:-1 group-title="Interhost",1+1 UA
+http://89.33.29.115:8080/1plus1/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
+http://89.33.29.115:8080/2plus2/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/489.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%98%D0%BD%D1%82%D0%B5%D1%80.png" channelId="421" tvg-id="inter-ua",Интер UA
+http://89.33.29.115:8080/Inter/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://ex.iptvin.ru/pic/2/fab0397111da48957d582fdde4fcab9f.png" logo="http://ex.iptvin.ru/pic/2/59e429c9976bc40368f02b7be6ed266b.png" channelId="3156" tvg-id="kvartal-tv",Квартал ТВ
+http://89.33.29.115:8080/UA_kvartal/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="http://only4.tv/ch/0157.png" logo="https://upload.wikimedia.org/wikipedia/commons/5/56/Logotipe_ntn_tv.png" channelId="426" tvg-id="ntn-ua",НТН
+http://89.33.29.115:8080/NTN/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Interhost",ТБ UA
+http://89.33.29.115:8080/STB/mono.m3u8
+#EXTINF:-1 group-title="Interhost" tvg-logo="https://i.postimg.cc/h4MsrThP/04cdd825629f13623cb5ea89d6771a00.png" logo="https://i.postimg.cc/bvQH22KP/2bb7fffee6f2ebb38dec41788edde9da.png" channelId="434" tvg-id="tet-ua",ТЕТ HD
+http://89.33.29.115:8080/TET/mono.m3u8
+#EXTINF:-1 group-title="Interhost",Эспресо TV UA
+http://89.33.29.115:8080/EspresoTVUA/mono.m3u8
 #EXTINF:-1 group-title="Tест-10-09" tvg-logo="http://ex.iptvin.ru/pic/2/1-1-Marafon-HD-220x220.png" logo="http://ex.iptvin.ru/pic/2/1plus1-Marafon-HD-220x132-tr.png" channelId="424" tvg-id="1plus1",1+1 Марафон HD
 http://s1.00x00.es/10602/index.m3u8?token=6AC15D94169C
 #EXTINF:-1 group-title="Tест-10-09" tvg-logo="http://ex.iptvin.ru/pic/2/1-1-Marafon-220x220.png" logo="http://ex.iptvin.ru/pic/2/1plus1-Marafon-220x132-tr.png" channelId="424" tvg-id="1plus1",1+1 Марафон
@@ -610,7 +626,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw949120744548
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw949001315416
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
