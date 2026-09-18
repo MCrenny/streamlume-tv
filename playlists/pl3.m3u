@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 16.09.26 18:48 User: yuri1245 IP: 134.33.75.22 channels 113 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 16.09.26 18:48 User: yuri1245 IP: 132.196.94.178 channels 113 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",6 Соток
 http://stream.mcquack.net/405/index.m3u8
