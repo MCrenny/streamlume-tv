@@ -1,5 +1,5 @@
 #EXTM3U deinterlace=1 m3uautoload=1 url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/EPG_LITE.xml.gz" refresh="86400" tvg-shift=0 cache=500
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web1 16.09.26 19:49 User: yuri1245 IP: 132.196.94.178 channels 437 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web1 16.09.26 19:49 User: yuri1245 IP: 134.33.67.116 channels 437 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="Эфир Ru" tvg-logo="https://i.postimg.cc/PxqLDYkp/77155b5c5f4b402270087106968fc25f.png" logo="https://i.postimg.cc/d3bDgfZr/126f7ce579c74bee6788041e2005a67b.png" channelId="277" tvg-id="match-premier",Матч! Премьер
 https://flussonic.mkpnet.ru/tv-ee3651e1e7ce5cbf/video.m3u8
@@ -29,7 +29,7 @@ http://95.47.155.244:8001/play/a010
 http://95.47.155.244:8001/play/a011
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/79.png" logo="https://chas.tv/img/channel/sts.png" channelId="12" tvg-id="sts",СТС
 http://95.47.155.244:8001/play/a013
-#EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/304.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="944454923620",Домашний
+#EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/304.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_44E_B_70_1680000_0_0_0.png" tvg-id="domashny" channelId="944500653800",Домашний
 http://95.47.155.244:8001/play/a014
 #EXTINF:-1 group-title="Эфирные" tvg-logo="http://epg.one/img2/698.png" logo="https://i.postimg.cc/vHMh7XGK/0445f903c7bc8f136486a8cefd534321.png" channelId="8" tvg-id="tv3-ru",ТВ-3
 https://bl.rutube.ru/livestream/7bf12d9c050f9a7ef3728db5730432ae/index.m3u8?s=EZMBZKJ77ps2VJm1WcNuEA&e=2071401226&scheme=https
@@ -304,7 +304,7 @@ https://vsd494.okcdn.ru/hls/19589922425446.m3u8/sig/-vb8lmbfgg0/expires/17896167
 #EXTINF:-1 group-title="Streamfree No 24-7" tvg-name="LiveStream" tvg-logo="https://i1.wp.com/st.depositphotos.com/1005920/3441/i/950/depositphotos_34415065-stock-photo-live-stream-icon.jpg",LiveStream
 https://vsd251.okcdn.ru/hls/19488946522811.m3u8/sig/eJHC_H3M25E/expires/1789616286144/srcIp/188.65.246.9/urls/95.163.35.77/clientType/36/srcAg/CHROME_YA/mid/16403515066299/video.m3u8?p
 #EXTINF:-1 group-title="Streamfree No 24-7" tvg-name="PikaKino" tvg-logo="https://files.kick.com/images/user/4412231/profile_image/conversion/e4f89350-351b-4539-bf5e-e88c9a2e4da9-fullsize.webp",PikaKino
-https://vsd103.okcdn.ru/hls/19357839329927.m3u8?bw948909847240/sig/2jzWZsWMnwQ/expires/1789636371116/srcIp/81.222.177.73/urls/176.112.172.47/clientType/36/srcAg/CHROME_YA/mid/16923610466183/video.m3u8?p
+https://vsd103.okcdn.ru/hls/19357839329927.m3u8?bw949001307600/sig/2jzWZsWMnwQ/expires/1789636371116/srcIp/81.222.177.73/urls/176.112.172.47/clientType/36/srcAg/CHROME_YA/mid/16923610466183/video.m3u8?p
 #EXTINF:-1 group-title="Streamfree No 24-7" tvg-name="dimkoftv" tvg-logo="https://files.kick.com/images/user/70653676/profile_image/conversion/888f2613-ae07-4afa-8bf1-fbaa4a01deba-fullsize.webp",dimkoftv
 https://vsd112.okcdn.ru/hls/17691053853390.m3u8/sig/eWev0W247ho/expires/1789636256467/srcIp/81.222.177.73/urls/185.226.55.72/clientType/36/srcAg/CHROME_YA/mid/15872424626126/video.m3u8?p
 #EXTINF:-1 group-title="Streamfree No 24-7" tvg-name="ЕСТЬ-СТРИМ" tvg-logo="https://images.live.vkvideo.ru/user/19192529/avatar?change_time=1760441532&croped=1&mh=140&mw=140",Есть-Стрим
@@ -419,9 +419,9 @@ http://37.192.119.31:81/udp/239.1.21.52:1234
 http://83.217.12.157:81/udp/239.1.1.208:1234
 #EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/0e5f26c0b175f980ffbc940f8c897ce6.png" logo="http://ex.iptvin.ru/pic/2/ae04e726476834e50e9844a1cc92e3c2.png" channelId="605" tvg-id="vip-premiere",viju+ Premiere
 http://37.192.119.31:81/udp/239.1.21.38:1234
-#EXTINF:-1 group-title="Udp" channelId="946682385430",Дом Кино +2
+#EXTINF:-1 group-title="Udp" channelId="946750980700",Дом Кино +2
 http://83.217.12.157:81/udp/239.1.1.91:1234
-#EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="946682385430",Дом кино Премиум HD
+#EXTINF:-1 group-title="Udp" tvg-logo="http://ex.iptvin.ru/pic/2/f5c1ff5166d689aa7e367f472c10785a.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="946750980700",Дом кино Премиум HD
 http://83.217.12.157:81/udp/239.1.1.90:1234
 #EXTINF:-1 group-title="Udp" tvg-logo="https://i.postimg.cc/rszKnPMC/a5c487f71b5ae29220f9a6dc2faeb741.png" logo="https://i.postimg.cc/y6rJgsyf/49dd91d5aec30501928147d42d794821.png" channelId="190" tvg-id="illuzion-plus",Иллюзион+
 http://37.192.119.31:81/udp/239.1.21.19:1234
@@ -504,7 +504,7 @@ https://cdn.rostelekom-tv.xyz/live/F5RnTtXKqlD6vnzR.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/2492.png" logo="http://ex.iptvin.ru/pic/2/A2-HD-new-white-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2 HD
 https://cdn.rostelekom-tv.xyz/live/twR-vSpzv2TGxGDt.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/2007.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Hit-HD-new-white-220x132-tr.png" channelId="1932" tvg-id="amedia-hit",Amedia Hit HD
-https://cdn.rostelekom-tv.xyz/live/FlmIGNd3orR6KPg7.m3u8?bw948909847240
+https://cdn.rostelekom-tv.xyz/live/FlmIGNd3orR6KPg7.m3u8?bw949001307600
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/1372.png" logo="http://ex.iptvin.ru/pic/2/Amedia-Premium-HD-new-whte-220x132-tr.png" channelId="915" tvg-id="amedia-premium",Amedia Premium HD
 https://cdn.rostelekom-tv.xyz/live/VBPTSjQg0Y1AA2Gq.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-name="APPLE TV+ ACTION TIME" tvg-logo="https://pic.rtbcdn.ru/video/2026-08-28/81/8c/818cc0846fd903cd2943d9cfc9a48486.jpg?width=500",Apple Tv+ Action Time
@@ -657,7 +657,7 @@ https://bl.rutube.ru/livestream/f6a3656e5ef574982994ddf2e5003341/index.m3u8?s=N6
 https://bl.rutube.ru/livestream/dcd36c7833f9431e6e6c902515c6c3ac/index.m3u8?s=8Rvr_KoGTYWePHeLLRUMlA&e=2088007313&scheme=https
 #EXTINF:-1 group-title="Кино и сериалы" tvg-name="Двач" tvg-logo="https://pic.rtbcdn.ru/user/d0/24/d02422c0078c8517a1a4c2678a25529b.jpg",Двач
 https://bl.rutube.ru/livestream/300560a65014ec501a25b1f79df9ad90/index.m3u8?s=gDOhfmWnk0J89LgBtDU-BQ&e=2089560978&scheme=https
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/2020.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="946682385430",Дом Кино Премиум HD
+#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/2020.png" logo="http://ex.iptvin.ru/pic/2/207708f34862f2c5cfe3017c2966eadf.png" tvg-id="domkino-premium" channelId="946750980700",Дом Кино Премиум HD
 https://cdn.rostelekom-tv.xyz/live/5qekkxfHYeXMcJlJ.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://epg.one/img/352.png" logo="https://antifriz.tv/storage/images/channel_logos/evrokino-hd.png" channelId="79" tvg-id="evrokino",Еврокино
 https://cdn.rostelekom-tv.xyz/live/b77OE2S10wvHq5bh.m3u8
