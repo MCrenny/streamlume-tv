@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 26.09.26 16:49 User: yuri1245 IP: 64.236.133.199 channels 291 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 28.09.26 20:49 User: yuri1245 IP: 20.186.238.2 channels 288 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
 http://stream.mcquack.net/173/index.m3u8
@@ -282,10 +282,6 @@ http://stream.mcquack.net/357/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/401/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/52dvJ2RF/fd9eed370e128931bfc9cc7a5c0efb0d.png" logo="https://i.postimg.cc/VNwjqk9c/d93bf5403bb86b4b939efbd46b610d42.png" channelId="-1" tvg-id="front-ua",Фронт
 http://stream.mcquack.net/489/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A1-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A1-new-220x132-tr.png" channelId="913" tvg-id="amedia1",Amedia 1
-http://hls127.freeott.top:8080/Amedia_1/video.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/A2-new-220x220.png" logo="http://ex.iptvin.ru/pic/2/A2-new-220x132-tr.png" channelId="914" tvg-id="amedia2",Amedia 2
-http://hls127.freeott.top:8080/Amedia_2_HD/video.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/cd1cceb65362324625b6d07846a68aa3.png" logo="http://ex.iptvin.ru/pic/2/ed27c808b622c8dce46ff995d59f6497.png" channelId="3658" tvg-id="epik-drama",Epic Drama HD
 http://195.189.60.253/118/index.m3u8
 #EXTINF:-1 tvg-id="http://ottiptvfilmtvgroup.zapto.org:8568/epg.xml" tvg-name="FILM TV HD" tvg-logo="http://filmtvgroup.site/uploads/channel/FILMTVHD.png" group-title="Кино и сериалы" logo="https://i114.fastpic.ru/big/2021/0513/bc/cc3999bbe7de88ce79e493088e816ebc.png" channelId="-1",FILM TV HD
@@ -488,7 +484,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw944356970268
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw941391179784
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
@@ -527,8 +523,6 @@ http://portal.ott.pink/C5UK_SyspilnePershiyT2/index.m3u8?token=B0B73593320445A22
 https://cdn1.live-tv.cloud/1tvkr/1tvkr-abr-lq/playlist.m3u8
 #EXTINF:-1 group-title="Без группы",1+1 UA
 http://m3u8.ott.blue/C5UK_1plus1SD/mpegts?token=94450098895765784220366841698509
-#EXTINF:-1 group-title="Без группы",CPS Fresh UA HD
-http://hls127.freeott.top:8080/CPS_Fresh_UA/video.m3u8
 #EXTINF:-1 group-title="Без группы",D1
 http://portal.ott.pink/C4UK_D1UA/index.m3u8?token=2B8378CADCB27AA393170BD7EDB7C0E9
 #EXTINF:-1 group-title="Без группы",Espreso TV

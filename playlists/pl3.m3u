@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 26.09.26 15:48 User: yuri1245 IP: 64.236.133.199 channels 112 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web4 02.10.26 00:48 User: yuri1245 IP: 20.186.238.2 channels 128 
 http://ex.iptvin.ru/iptvin.ru.mp4
 #EXTINF:-1 group-title="-1" tvg-rec="7" timeshift="7",6 Соток
 http://stream.mcquack.net/405/index.m3u8
@@ -23,12 +23,8 @@ http://stream.mcquack.net/401/index.m3u8
 http://stream.mcquack.net/489/index.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
 https://stream8.cinerama.uz/1043/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x220.png" logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x132-tr.png" channelId="5216" tvg-id="big-planet",Big Planet
-http://45.145.32.13:20440/bigplanet/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.sostav.ru/app/public/images/news/2014/03/12/FIRE_DC_HD_BLACK_RGB.jpg" logo="https://trinity-tv.net/storage/channels/dark_theme_336.png" channelId="341" tvg-id="discovery-channel",Discovery
 https://stream8.cinerama.uz/1039/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://89.tv-internet.pro/wp-content/uploads/2019/12/160-%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B-%D0%93%D0%B0%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-HD.png" channelId="391" tvg-id="galaxy-tv",Galaxy
-http://45.145.32.13:20440/outdoor_channel/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные",Insight TV HD
 https://stream8.cinerama.uz/1416/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные",Motorvision TV
@@ -39,20 +35,10 @@ https://stream8.cinerama.uz/1042/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1041/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
 http://178.124.153.123:44400/rtg
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/RTG-TV-157x157.png" logo="http://overlay.iptvin.ru/epg/PIC/RTG%20TV.png" channelId="301" tvg-id="rtg-tv",RTG TV
-http://hls127.freeott.top:8080/RTG_TV/video.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x220.png" logo="http://ex.iptvin.ru/pic/2/Travel-Plus-Adventure-220x132-tr.png" channelId="596" tvg-id="travel-adventure",Travel+Adventure
-http://45.145.32.13:20440/travel_adventure/index.m3u8?token=test
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
-http://45.145.32.13:20440/viasat_explore/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-explorer.png" logo="http://overlay.iptvin.ru/epg/PIC/Viasat%20Explore.png" channelId="165" tvg-id="viasat-explore",Viasat Explore
 https://stream8.cinerama.uz/1045/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
-http://45.145.32.13:20440/viasat_history/index.m3u8?token=test
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://i.postimg.cc/rFCh73hc/2b48b4ecec39207f86d5fd447ce6043f.png" logo="https://i.postimg.cc/wMDWqGgX/af3116c384fafcbf8663067347d3951f.png" channelId="166" tvg-id="viasat-history",Viasat History
 https://stream8.cinerama.uz/1046/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
-http://45.145.32.13:20440/viasat_nature/index.m3u8?token=test
 #EXTINF:-1 group-title="Познавательные" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
 https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто 24
@@ -65,8 +51,6 @@ https://stream8.cinerama.uz/1404/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1429/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные",Глазами Туриста
 https://stream8.cinerama.uz/1423/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
-http://hls127.freeott.top:8080/Dikiy/video.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
 http://185.46.16.239:8000/Doktor
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/536f4f356ac9050674dc07768a40b5dc.png" logo="http://ex.iptvin.ru/pic/2/d38b91a6b112f9ccff6f7ddbc723a79d.png" channelId="3647" tvg-id="doktor",Доктор
@@ -99,8 +83,6 @@ http://185.46.16.239:8000/Planeta_HD
 http://185.46.16.239:8000/Nauka_2.0
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
 http://178.134.1.158:8081/nauka/index.m3u8
-#EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
-http://hls127.freeott.top:8080/NAUKA/video.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
 https://stream8.cinerama.uz/1248/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Познавательные" tvg-logo="http://ex.iptvin.ru/pic/2/ohota-i-ribalka-icon.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20%D0%B8%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.png" channelId="221" tvg-id="oxota-i-rybalka",Охота и рыбалка
@@ -161,6 +143,56 @@ http://185.195.184.30:8000/play/a0es/index.m3u8
 http://185.195.184.30:8000/play/a02d/index.m3u8
 #EXTINF:-1 group-title="Hartum TV Srl" tvg-logo="http://ex.iptvin.ru/pic/2/usadba1.jpg" logo="http://infoua.biz/image/tv/stream/usadba.png" channelId="222" tvg-id="usadba",Усадьба
 http://185.195.184.30:8000/play/a02g/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/2202.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-HD-220x132-tr.png" channelId="240" tvg-id="animal-planet",Animal Planet HD
+http://46.32.176.50/AnimalPlanetHD/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/801.png" logo="http://ex.iptvin.ru/pic/2/Animal-Planet-220x132-tr.png" channelId="50" tvg-id="animal-planet",Animal Planet
+http://46.32.176.50/animalplanet/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x220.png" logo="http://ex.iptvin.ru/pic/2/Big-Planet-220x132-tr.png" channelId="5216" tvg-id="big-planet",Big Planet
+http://46.32.176.50/bigplanet/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0022/7859/brand.gif" logo="http://epg.openboxfan.com/picon/historyhd.png" channelId="1456" tvg-id="history-ru",History HD
+http://46.32.176.50/HistoryHD/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/19116.png" logo="http://ex.iptvin.ru/pic/2/Nat-Geo-Wild-220x132-tr.png" channelId="164" tvg-id="nat-geo-wild",Nat Geo Wild
+http://46.32.176.50/natgeowild/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/0203.png" logo="http://ex.iptvin.ru/pic/2/National-Geographic-HD-220x132-tr.png" channelId="207" tvg-id="national-geographic",National Geographic HD
+http://46.32.176.50/NationalGeographicHD/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/813.png" logo="http://overlay.iptvin.ru/epg/PIC/National%20Geographic.png" channelId="56" tvg-id="national-geographic",National Geographic
+http://46.32.176.50/nationalgeographic/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/TLC-189x189.jpg" logo="http://overlay.iptvin.ru/epg/PIC/TLC.png" channelId="67" tvg-id="tlc",TLC
+http://46.32.176.50/tlc/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="https://www.hrvatskitelekom.hr/webresources/images/maxtv-new/programi/viasat-nature.png" logo="http://ex.iptvin.ru/pic/2/Viasat-Nature-220x132-tr.png" channelId="172" tvg-id="viasat-nature",Viasat Nature
+http://46.32.176.50/viasatnature/index.m3u8
+#EXTINF:-1 group-title="Izone",Viasat explore
+http://46.32.176.50/viasatexplorer/index.m3u8
+#EXTINF:-1 group-title="Izone",Viasat history
+http://46.32.176.50/viasathistory/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/102.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_66_1_70_1680000_0_0_0.png" channelId="55" tvg-id="avto-plus",Авто Плюс
+http://46.32.176.50/avtoplyus/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/702.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_2BE_7_70_1680000_0_0_0.png" channelId="1282" tvg-id="avto24",Авто24
+http://46.32.176.50/avto24/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/2128.png" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_7D_1_70_1680000_0_0_0.png" channelId="3872" tvg-id="dikiy",Дикий
+http://46.32.176.50/dikiy/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/19112.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5.png" channelId="249" tvg-id="domashnie-zhivotnye",Домашние животные
+http://46.32.176.50/domashniejivotnie/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/dd858945401f5872e3f9f253673443d2.png" logo="http://ex.iptvin.ru/pic/2/6112098224542f3016cf23a7296ad0f9.png" channelId="562" tvg-id="zhivaya-planeta",Живая Планета
+http://46.32.176.50/jivayaplaneta/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://only4.tv/ch/6224.png" logo="http://epg.openboxfan.com/picon/%D0%B6%D0%B8%D0%B2%D0%B8.png" channelId="76" tvg-id="zhivi",Живи
+http://46.32.176.50/jivi/index.m3u8
+#EXTINF:-1 group-title="Izone",Зоопарк
+http://46.32.176.50/zoopark/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="https://i.postimg.cc/854521rM/a1318212b765e610eeb0406af2822699.png" logo="https://i.postimg.cc/BnFvq5Kq/e2bd00f1b74aad7f41941afd1d065754.png" channelId="75" tvg-id="kuxnia-tv",Кухня ТВ
+http://46.32.176.50/kuxnyatv/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="https://s.glaz.tv/images/logos/tv/big/moya-planeta.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9C%D0%BE%D1%8F%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%20HD.png" channelId="1762" tvg-id="moya-planeta",Моя планета
+http://46.32.176.50/moyaplaneta/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
+http://46.32.176.50/nauka/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/ohota-i-ribalka-icon.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%9E%D1%85%D0%BE%D1%82%D0%B0%20%D0%B8%20%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.png" channelId="221" tvg-id="oxota-i-rybalka",Охота и рыбалка
+http://46.32.176.50/oxotoiribalka/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/9044af12a4a9dbc01e92a76ffc00c365.png" logo="https://i.postimg.cc/WbLYFqDT/e5f45a4fdbc8482ca5946a1c4d987d8c.png" channelId="3295" tvg-id="poexali",Поехали!
+http://46.32.176.50/poexali/index.m3u8
+#EXTINF:-1 group-title="Izone" tvg-logo="http://ex.iptvin.ru/pic/2/Telekafe-s.jpg" logo="http://overlay.iptvin.ru/epg/PIC/1_0_16_338_8_70_168AFFC_0_0_0.png" channelId="161" tvg-id="telekafe",Телекафе
+http://46.32.176.50/telekafe/index.m3u8
+#EXTINF:-1 group-title="Izone",кто есть кто
+http://46.32.176.50/ktoestkto/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/Discovery-Channel-HD-220x220.png" logo="http://overlay.iptvin.ru/epg/PIC/Discovery%20Channel%20HD.png" channelId="341" tvg-id="discovery-channel",Discovery Channel HD
 http://stream.mcquack.net/177/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Insight TV HD
