@@ -1,126 +1,6 @@
 #EXTM3U url-tvg="http://iptvx.one/epg/epg.xml.gz"
-#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 28.09.26 20:49 User: yuri1245 IP: 20.186.238.2 channels 288 
+#EXTINF:-1 tvg-logo="http://host.iptvin.ru/images/iptvlogo.png",-web9 02.10.26 14:49 User: yuri1245 IP: 135.232.208.115 channels 239 
 http://ex.iptvin.ru/iptvin.ru.mp4
-#EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0152.png" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2%2B2_logo_2017.svg/1200px-2%2B2_logo_2017.svg.png" channelId="435" tvg-id="2plus2",2+2
-http://stream.mcquack.net/173/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/086444273bf44e7e1a80a099db9013dd.png" logo="http://ex.iptvin.ru/pic/2/3deef20815ed63a7bb6a2436b22478b3.png" channelId="4057" tvg-id="36-6-tv",36.6
-http://stream.mcquack.net/331/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://television-live.com/uploads/posts/cr4wrwerwefwefx.png" logo="https://i115.fastpic.org/big/2021/0914/b0/76bce59e100304b1821a55cb665f64b0.png" channelId="7" tvg-id="5kanal-ua",5 канал
-http://stream.mcquack.net/291/index.m3u8
-#EXTINF:-1 group-title="-1",6 Соток
-http://stream.mcquack.net/405/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/437-250.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%BB%D1%82%20HD%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F.png" channelId="3884" tvg-id="bolt" tvg-country="UA",Bolt
-http://stream.mcquack.net/73/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/QdMBjLB2/312a6a0219a5150311fd69dce13c0e5c.png" logo="https://i.postimg.cc/LsLmpvTd/6e610629496a3bdbb2728afb8af9c54e.png" channelId="-1" tvg-id="dynamo-kyiv-tv",Dynamo Kyiv TV
-http://stream.mcquack.net/396/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/3c31f0c6fcd7ef77d3dead6dbe413dc0.jpg" logo="http://overlay.iptvin.ru/epg/PIC/Eco%20TV.png" channelId="452" tvg-id="eko-tv",ECO TV
-http://stream.mcquack.net/222/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://img.prosto.tv/storage/channel/logo/15.png" channelId="431" tvg-id="enter-film",Enter-фільм
-http://stream.mcquack.net/322/index.m3u8
-#EXTINF:-1 group-title="-1",FilmUADrama
-http://stream.mcquack.net/273/index.m3u8
-#EXTINF:-1 group-title="-1",FreeДОМ
-http://stream.mcquack.net/63/index.m3u8
-#EXTINF:-1 group-title="-1",Maincast sport
-http://stream.mcquack.net/490/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/QdvjwF4R/8edfeac270e3fa61aa9459d21a974048.png" logo="https://i.postimg.cc/LsrhtCFg/c3a8de914d2775a014fd2d97a8459f4c.png" channelId="4848" tvg-id="setanta-sports",Setanta Sports 1
-http://stream.mcquack.net/234/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/SshkQwpd/d1668f0ff819030eee9ecd0908a6db86.png" logo="https://i.postimg.cc/ZnmRgWRT/7ad82ab63433550e5ce6ef363d1a9057.png" channelId="4849" tvg-id="setanta-sports-plus",Setanta Sports 2
-http://stream.mcquack.net/235/index.m3u8
-#EXTINF:-1 group-title="-1",Setanta Sports UA
-http://stream.mcquack.net/313/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/0cab448f41edca35edd5f05253861207.png" logo="http://ex.iptvin.ru/pic/2/Setanta-Sports-plus-220x132-tr.png" channelId="3045" tvg-name="Setanta Sports+ Ukraine" tvg-id="setanta-plus-ua",Setanta Sports+
-http://stream.mcquack.net/390/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/3cbd4113ed54b17f121f7805a6b07e55.png" logo="http://ex.iptvin.ru/pic/2/6269c90c0ac8aafd18f76266c2d379a1.png" channelId="-1" tvg-id="sport1-baltic",Sport 1 Baltic
-http://stream.mcquack.net/461/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/6QMqSM59/1cd2637e84d15684f37368894cfe2def.png" logo="https://i.postimg.cc/rpVzQBTn/55e739c729501cbdf4e9c200a93c250f.png" channelId="3951" tvg-id="sport1-lt",Sport 1
-http://stream.mcquack.net/391/index.m3u8
-#EXTINF:-1 group-title="-1",Sport 2
-http://stream.mcquack.net/392/index.m3u8
-#EXTINF:-1 group-title="-1",Sport 3
-http://stream.mcquack.net/393/index.m3u8
-#EXTINF:-1 group-title="-1",Sport 4
-http://stream.mcquack.net/394/index.m3u8
-#EXTINF:-1 group-title="-1",Sport 5
-http://stream.mcquack.net/212/index.m3u8
-#EXTINF:-1 group-title="-1",TV 2
-http://stream.mcquack.net/368/index.m3u8
-#EXTINF:-1 group-title="-1",Trace Sports
-http://stream.mcquack.net/256/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/g0P3d2rT/9bd1a1ffff2d8832fc67abb53c5bc531.png" logo="https://i.postimg.cc/ydjmLC1r/2d3e77cb3be90d1d1ecf20ce89f6d1e0.png" channelId="921" tvg-id="zoom-ua",Zoom
-http://stream.mcquack.net/327/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/c6d0d5604b4f1eed31eef2d466626877.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%98%D0%BD%D1%82%D0%B5%D1%80.png" channelId="421" tvg-id="inter-ua",Інтер
-http://stream.mcquack.net/174/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/8CjN7t4n/c22361156b63f562ba099b450e2c048e.png" logo="http://ex.iptvin.ru/pic/2/Inter-220x132-tr.png" channelId="318" tvg-id="inter-plus-ua",Інтер+
-http://stream.mcquack.net/345/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x132-white-tr.png" channelId="-1" tvg-id="armia-tv-ua",Армія TV
-http://stream.mcquack.net/468/index.m3u8
-#EXTINF:-1 group-title="-1",Вікторина
-http://stream.mcquack.net/146/index.m3u8
-#EXTINF:-1 group-title="-1",Дім
-http://stream.mcquack.net/383/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/679d7c285f7468b9dc0cef4507da9683.png" logo="http://ex.iptvin.ru/pic/2/d77181a0f09d28dadf33283235b599e7.png" channelId="1833" tvg-id="espreso-tv",Еспресо
-http://stream.mcquack.net/84/index.m3u8
-#EXTINF:-1 group-title="-1",ЖВЛ +
-http://stream.mcquack.net/139/index.m3u8
-#EXTINF:-1 group-title="-1",Закон
-http://stream.mcquack.net/406/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://www.alfaplus.com.ua/wp-content/uploads/2018/10/K1_62014.jpg" logo="http://epg.openboxfan.com/picon/к1.png" channelId="427" tvg-id="k1-ua",К1
-http://stream.mcquack.net/270/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/276ca22b34d6e147098cbcd271678700.png" logo="http://ex.iptvin.ru/pic/2/8b582fb6a45ccd3adddf4b3dec88ee10.png" channelId="428" tvg-id="k2-ua",К2
-http://stream.mcquack.net/324/index.m3u8
-#EXTINF:-1 group-title="-1",Масон
-http://stream.mcquack.net/346/index.m3u8
-#EXTINF:-1 group-title="-1",Машина Часу
-http://stream.mcquack.net/140/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/KY3p2qzQ/45e099c90763e4ef9656c0b711cb85fb.png" logo="https://i.postimg.cc/4NX09QLN/a1690946dd36ca796b75781de67fbf46.png" channelId="430" tvg-id="mega-ua",Мега
-http://stream.mcquack.net/325/index.m3u8
-#EXTINF:-1 group-title="-1",Ми - Україна
-http://stream.mcquack.net/442/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/0157.png" logo="https://upload.wikimedia.org/wikipedia/commons/5/56/Logotipe_ntn_tv.png" channelId="426" tvg-id="ntn-ua",НТН
-http://stream.mcquack.net/326/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
-http://stream.mcquack.net/403/index.m3u8
-#EXTINF:-1 group-title="-1",Невигадані Історії
-http://stream.mcquack.net/159/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/5538.png" logo="https://static.sweet.tv/images/icons/channels/100.png" channelId="455" tvg-id="otse",ОЦЕ
-http://stream.mcquack.net/329/index.m3u8
-#EXTINF:-1 group-title="-1",Опер За Викликом +
-http://stream.mcquack.net/50/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00096.png" channelId="442" tvg-id="1auto",Перший Автомобільний
-http://stream.mcquack.net/404/index.m3u8
-#EXTINF:-1 group-title="-1",Про Київ
-http://stream.mcquack.net/160/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/QMtMf7fp/7d16f96a100992e3d4556640944b5069.png" logo="https://i.postimg.cc/BQTtb481/a9b92e1d54c5ef59bc40736361aac07c.png" channelId="433" tvg-id="pixel",Піксель
-http://stream.mcquack.net/323/index.m3u8
-#EXTINF:-1 group-title="-1",Суспільне Київ
-http://stream.mcquack.net/439/index.m3u8
-#EXTINF:-1 group-title="-1",Суспільне Крим
-http://stream.mcquack.net/436/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/d6ebb39bd89728ad658993de8f4f735c.png" logo="http://ex.iptvin.ru/pic/2/Susp-lne-Kultura-220x132-tr.png" channelId="573" tvg-id="kultura-ua",Суспільне Культура
-http://stream.mcquack.net/435/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/3JTgJK8P/9f7e39aeef3527937e3bee7eb3f74664.png" logo="https://i.postimg.cc/zfcCJKvj/c7b3c287424c1ee381fe9ac7a0b31115.png" channelId="439" tvg-id="ua-pershy",Суспільне Перший
-http://stream.mcquack.net/437/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/mggq8Pps/073ed229a35753907149db4002a3ddaf.png" logo="https://i.postimg.cc/R0ngDKcj/6565294881b6037921e4b7713d5c3a4f.png" channelId="-1" tvg-id="suspilne-sport-ua",Суспільне Спорт
-http://stream.mcquack.net/444/index.m3u8
-#EXTINF:-1 group-title="-1",Сімейні Мелодрами +
-http://stream.mcquack.net/137/index.m3u8
-#EXTINF:-1 group-title="-1",ТБ
-http://stream.mcquack.net/156/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/8ckHGPXS/b6e02e4659e9b86e7c987b908b8d132e.png" logo="https://i.postimg.cc/15tHYXN0/4a6ba89a1e5049b7a7cb74aeb11f48c2.png" channelId="434" tvg-id="tet-ua",ТЕТ
-http://stream.mcquack.net/338/index.m3u8
-#EXTINF:-1 group-title="-1",Твій Серіал
-http://stream.mcquack.net/466/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/7506712675aedd4640bc908b70ddc6e8.png" logo="http://ex.iptvin.ru/pic/2/5e8ade8c597fb7a4538a2d1a96dde8ae.png" channelId="2485" tvg-id="terra",Терра
-http://stream.mcquack.net/402/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
-http://stream.mcquack.net/357/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="http://only4.tv/ch/6182.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A4%D0%B0%D1%83%D0%BD%D0%B0.png" channelId="4814" tvg-id="fauna",Фауна
-http://stream.mcquack.net/401/index.m3u8
-#EXTINF:-1 group-title="-1" tvg-logo="https://i.postimg.cc/52dvJ2RF/fd9eed370e128931bfc9cc7a5c0efb0d.png" logo="https://i.postimg.cc/VNwjqk9c/d93bf5403bb86b4b939efbd46b610d42.png" channelId="-1" tvg-id="front-ua",Фронт
-http://stream.mcquack.net/489/index.m3u8
-#EXTINF:-1 group-title="-1",канал
-http://stream.mcquack.net/157/index.m3u8
 #EXTINF:-1 group-title="Информационные" tvg-logo="http://ex.iptvin.ru/pic/2/Free-DOM-TV-Ukraine-220x220.jpg" logo="http://ex.iptvin.ru/pic/2/Free-DOM-220x132-tr.png" channelId="-1" tvg-name="Freedom UA" tvg-id="ua-tv",Freedom UA HD
 http://portal.ott.pink/C3UK_UATVRU/index.m3u8?token=927E03BF1A83DF5DE6628CAF78BA2C13
 #EXTINF:-1 tvg-logo="http://ottpink.network/picons/my-ukraine_165x165.png" group-title="Информационные" logo="https://i.postimg.cc/W4Pnr2SL/9d71f5adbe5232cc6833f23929148d15.png" channelId="-1" tvg-id="my-ukraina",Ми-Україна HD
@@ -178,6 +58,10 @@ http://stream.mcquack.net/219/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/173/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/086444273bf44e7e1a80a099db9013dd.png" logo="http://ex.iptvin.ru/pic/2/3deef20815ed63a7bb6a2436b22478b3.png" channelId="4057" tvg-id="36-6-tv",36.6
 http://stream.mcquack.net/331/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="https://television-live.com/uploads/posts/cr4wrwerwefwefx.png" logo="https://i115.fastpic.org/big/2021/0914/b0/76bce59e100304b1821a55cb665f64b0.png" channelId="7" tvg-id="5kanal-ua",5 канал
+http://stream.mcquack.net/291/index.m3u8
+#EXTINF:-1 group-title="Ott Club",6 Соток
+http://stream.mcquack.net/405/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/437-250.jpg" logo="http://overlay.iptvin.ru/epg/PIC/%D0%91%D0%BE%D0%BB%D1%82%20HD%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F.png" channelId="3884" tvg-id="bolt" tvg-country="UA",Bolt
 http://stream.mcquack.net/73/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/QdMBjLB2/312a6a0219a5150311fd69dce13c0e5c.png" logo="https://i.postimg.cc/LsLmpvTd/6e610629496a3bdbb2728afb8af9c54e.png" channelId="-1" tvg-id="dynamo-kyiv-tv",Dynamo Kyiv TV HD
@@ -186,6 +70,8 @@ http://stream.mcquack.net/396/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/322/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="https://uz-tv.net/storage/images/iptv/channels/1602.jpg" logo="http://overlay.iptvin.ru/epg/PIC/FilmUADrama.png" channelId="3031" tvg-id="filmua-drama",Film UA Drama
 http://stream.mcquack.net/273/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club",FreeДОМ
+http://stream.mcquack.net/63/index.m3u8
 #EXTINF:-1 group-title="Ott Club",IVI Sport
 http://stream.mcquack.net/457/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/c6d0d5604b4f1eed31eef2d466626877.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%98%D0%BD%D1%82%D0%B5%D1%80.png" channelId="421" tvg-id="inter-ua",Iнтер
@@ -220,6 +106,8 @@ http://stream.mcquack.net/461/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/368/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Zoom Украина
 http://stream.mcquack.net/327/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Arm-ya-TV-220x132-white-tr.png" channelId="-1" tvg-id="armia-tv-ua",Армія TV
+http://stream.mcquack.net/468/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/9aa90c1cefd58d6f504a9568351597a7.png" logo="http://ex.iptvin.ru/pic/2/38f170ac6704cc8a277d5f00abe8734a.png" channelId="1515" tvg-id="bigudi",Бiгудi
 http://stream.mcquack.net/340/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Вікторина
@@ -230,10 +118,14 @@ http://stream.mcquack.net/383/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/84/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",ЖВЛ+
 http://stream.mcquack.net/139/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club",Загублений Світ
+http://stream.mcquack.net/223/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/Zakon-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Zakon-TV-220x132-tr.png" channelId="-1" tvg-id="zakon-tv",Закон ТВ
 http://stream.mcquack.net/406/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Зоосвіт
 http://stream.mcquack.net/460/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://www.alfaplus.com.ua/wp-content/uploads/2018/10/K1_62014.jpg" logo="http://epg.openboxfan.com/picon/к1.png" channelId="427" tvg-id="k1-ua",К1
+http://stream.mcquack.net/270/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/15e171838b0995f8f30fcbf7ab1e84c5.png" logo="http://ex.iptvin.ru/pic/2/b44b0ae54dbfa8cb025789dd2641dc30.png" channelId="428" tvg-id="k2-ua",К2 HD
 http://stream.mcquack.net/324/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x220.png" logo="http://ex.iptvin.ru/pic/2/Mason-TV-220x132-tr.png" channelId="-1" tvg-id="mason-tv",Масон ТВ
@@ -246,20 +138,24 @@ http://stream.mcquack.net/325/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/326/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://img.prosto.tv/storage/channel/logo/Nauka.png" channelId="4742" tvg-id="nauka",Наука
 http://stream.mcquack.net/403/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club",Невигадані Історії
+http://stream.mcquack.net/159/index.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://only4.tv/ch/5538.png" logo="https://static.sweet.tv/images/icons/channels/100.png" channelId="455" tvg-id="otse",ОЦЕ
+http://stream.mcquack.net/329/index.m3u8
 #EXTINF:-1 group-title="Ott Club",Опер за викликом +
 http://stream.mcquack.net/50/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club",ПЛЮС ПЛЮС
+http://stream.mcquack.net/339/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",ПРО КИЇВ
 http://stream.mcquack.net/160/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Панянка + Селянка
 http://stream.mcquack.net/134/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/pXqnWP5X/6b6870a2143984d1430216e9b9b6ed9a.png" logo="https://i.postimg.cc/nccCwNS8/30385108076e1a4f79a616aadffeaddb.png" channelId="456" tvg-id="plusplus",ПлюсПлюс
-http://stream.mcquack.net/339/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://img.prosto.tv/storage/channel/logo/ch00096.png" channelId="442" tvg-id="1auto",Перший Автомобільний
+http://stream.mcquack.net/404/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/QMtMf7fp/7d16f96a100992e3d4556640944b5069.png" logo="https://i.postimg.cc/BQTtb481/a9b92e1d54c5ef59bc40736361aac07c.png" channelId="433" tvg-id="pixel",Піксель
-http://stream.mcquack.net/223/tracks-v1a1/mono.ts.m3u8
+http://stream.mcquack.net/323/index.m3u8
 #EXTINF:-1 group-title="Ott Club",Сiмейнi Мелодрами+
 http://stream.mcquack.net/137/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Ott Club",Свiт на виворiт
-http://stream.mcquack.net/49/tracks-v1a1/mono.ts.m3u
 #EXTINF:-1 group-title="Ott Club",Свiт на виворiт
 http://stream.mcquack.net/49/tracks-v1a1/mono.ts.m3u
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/5125394c6ca729ad1898722213ef203d.png" logo="http://ex.iptvin.ru/pic/2/cde27c74dbdaf5c97f0881ed46a31417.png" channelId="748" tvg-id="sport1-ua",Спорт 1 Украина
@@ -270,12 +166,20 @@ http://stream.mcquack.net/393/tracks-v1a1/mono.ts.m3u8
 http://stream.mcquack.net/394/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Спорт 5
 http://stream.mcquack.net/212/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club",Суспільне Крим
+http://stream.mcquack.net/436/index.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/d6ebb39bd89728ad658993de8f4f735c.png" logo="http://ex.iptvin.ru/pic/2/Susp-lne-Kultura-220x132-tr.png" channelId="573" tvg-id="kultura-ua",Суспільне Культура
+http://stream.mcquack.net/435/index.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/mggq8Pps/073ed229a35753907149db4002a3ddaf.png" logo="https://i.postimg.cc/R0ngDKcj/6565294881b6037921e4b7713d5c3a4f.png" channelId="-1" tvg-id="suspilne-sport-ua",Суспільне Спорт
+http://stream.mcquack.net/444/index.m3u8
 #EXTINF:-1 group-title="Ott Club",ТБ HD
 http://stream.mcquack.net/156/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="https://i.postimg.cc/h4MsrThP/04cdd825629f13623cb5ea89d6771a00.png" logo="https://i.postimg.cc/bvQH22KP/2bb7fffee6f2ebb38dec41788edde9da.png" channelId="434" tvg-id="tet-ua",ТЕТ HD
 http://stream.mcquack.net/338/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club",Твiй серiал
 http://stream.mcquack.net/466/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/7506712675aedd4640bc908b70ddc6e8.png" logo="http://ex.iptvin.ru/pic/2/5e8ade8c597fb7a4538a2d1a96dde8ae.png" channelId="2485" tvg-id="terra",Терра
+http://stream.mcquack.net/402/index.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://ex.iptvin.ru/pic/2/301a3827203d4e9d13181f955a088204.png" logo="http://ex.iptvin.ru/pic/2/df7db7163055aa2c17848e94c1b60da5.png" channelId="1718" tvg-id="trofey",Трофей
 http://stream.mcquack.net/357/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Ott Club" tvg-logo="http://only4.tv/ch/6182.png" logo="http://overlay.iptvin.ru/epg/PIC/%D0%A4%D0%B0%D1%83%D0%BD%D0%B0.png" channelId="4814" tvg-id="fauna",Фауна
@@ -292,8 +196,6 @@ http://88.99.215.227/FilmUADrama/index.m3u8
 https://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Кино и сериалы" tvg-logo="https://i.postimg.cc/ht70K77W/8d9f27f3c166fdf63627154a059a809f.png" logo="https://i.postimg.cc/zXvjPQzf/2800ee9c9686b408d444725bd631b885.png" channelId="66" tvg-id="tv1000",TV1000
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Кино и сериалы" tvg-logo="http://ex.iptvin.ru/pic/2/c253421f971beb6a69910bf66bc1bafb.png" logo="http://ex.iptvin.ru/pic/2/b073ab5957ed4aee4c9ac8ed3e083b36.png" channelId="607" tvg-id="vip-comedy-cee",Viasat Kino Comedy
-http://ukr.ukrainske.tv/493/keytvainua/video.m3u8
 #EXTINF:-1 tvg-id="http://ottiptvfilmtvgroup.zapto.org:8568/epg.xml" tvg-name="Новосілки ТБ" tvg-logo="http://filmtvgroup.site/uploads/channel/novosilkylogo2024best.png" group-title="Кино и сериалы" logo="http://ex.iptvin.ru/pic/2/4ebb011c8fcdcbe24eb81f1459ab5e60.png" channelId="-1",Новосілки ТБ
 https://filmtvgroup.hopto.org:8080/NovosilkiTB/index.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODg2ODMzNjIsImV4cCI6MTc4ODc2OTc2Miwic3ViIjoiQWRtaW4ifQ.elQlt9rDrYlfbg85aZPXxIarprRqhdf58qFUNs3wQqs
 #EXTINF:-1 group-title="Наш Нет" tvg-logo="http://ex.iptvin.ru/pic/2/dd6fb99a30367702b378dce180d88031-high.png" logo="http://overlay.iptvin.ru/epg/PIC/24%20News.png" channelId="446" tvg-id="24news-ua",24 канал
@@ -484,7 +386,7 @@ http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 group-title="Россия региoнальные" tvg-logo="https://dic.academic.ru/pictures/wiki/files/78/NTKlogo.jpg" channelId="394" tvg-id="ntk-kz",НТК
 http://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал (Хмельницький)
-https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw941391179784
+https://33news.org/33chanel/live/chunklist_w459617257.m3u8?bw949120727500
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://epg.one/img/2752.png" logo="http://overlay.iptvin.ru/epg/PIC/33%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB.png" channelId="4817",33 канал
 https://33news.org/33chanel/live/chunklist_w1484176056.m3u8
 #EXTINF:-1 group-title="Украина региoнальные" tvg-logo="http://ex.iptvin.ru/pic/2/460fedaa629da8239f6ce3f99cb8a476.png" logo="http://ex.iptvin.ru/pic/2/2be9c9235e67b2156f5622c2ee75658b.png" channelId="-1" tvg-name="Аверс" tvg-id="avers" shift="3",Аверс (Луцьк)
